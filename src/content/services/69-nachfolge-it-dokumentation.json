@@ -1,0 +1,82 @@
+{
+  "id": "69",
+  "slug": "nachfolge-it-dokumentation",
+  "category": "wachstum",
+  "categorySlug": "foerderung-team-nachfolge",
+  "alsoIn": [
+    "buero"
+  ],
+  "sectors": [
+    "nachfolge"
+  ],
+  "tier": "catalog",
+  "audience": "b2b",
+  "name": "Nachfolge-Ready: digitale Übergabe dokumentieren",
+  "problem": "Ich will meinen Betrieb in zwei Jahren übergeben. Die IT kennt nur ich.",
+  "summary": "Wir erfassen alle Systeme, Konten, Lizenzen und digitalen Abläufe und dokumentieren sie in einem sauberen Übergabe-Dossier. Das macht die Übergabe planbar und den Betrieb für Nachfolger verständlicher.",
+  "includes": [
+    "Inventur aller Systeme, Konten und Lizenzen",
+    "Dokumentation der digitalen Abläufe",
+    "Klärung, welche Konten auf wen laufen",
+    "Übergabe-Dossier mit Zugangskonzept",
+    "Liste der Risiken vor der Übergabe"
+  ],
+  "excludes": [
+    "Unternehmensbewertung",
+    "Rechts- und Steuerberatung zur Nachfolge",
+    "Behebung aller Risiken (separat zum Festpreis)"
+  ],
+  "needs": [
+    "Zeit für zwei bis drei Gespräche",
+    "Zugang zu den Systemen oder eine Person mit Zugang"
+  ],
+  "steps": [
+    "Kurzes Gespräch zum Zeitplan der Übergabe.",
+    "Festpreis und Zahlungslink.",
+    "Inventur und Dokumentation.",
+    "Übergabe des Dossiers."
+  ],
+  "result": "Ein Übergabe-Dossier, das Nachfolger, Käufer oder Berater direkt nutzen können.",
+  "price": {
+    "type": "fixed",
+    "from": 699,
+    "display": "699 €",
+    "note": "Festpreis",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "1–2 Wochen",
+  "tags": [],
+  "factNote": null,
+  "guardrail": false,
+  "faq": [
+    {
+      "q": "Bin ich M&A-Berater oder IHK-Nachfolgeberater, kann ich das empfehlen?",
+      "a": "Ja. Auf der Partnerseite steht, wie die Zusammenarbeit funktioniert."
+    },
+    {
+      "q": "Wann sollte ich damit anfangen?",
+      "a": "Am besten ein bis zwei Jahre vor der Übergabe. Dann bleibt Zeit, gefundene Risiken in Ruhe zu beheben."
+    }
+  ],
+  "related": [
+    "70",
+    "29",
+    "71"
+  ],
+  "seo": {
+    "title": "Nachfolge-Ready: digitale Übergabe dokumentieren",
+    "description": "Wir erfassen alle Systeme, Konten, Lizenzen und digitalen Abläufe und dokumentieren sie in einem sauberen Übergabe-Dossier."
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g11"
+  ],
+  "keywords": [
+    "Digitale Bestandsaufnahme für die Nachfolge",
+    "Digital succession inventory",
+    "Zugangsdossier für den Firmenverkauf",
+    "Company sale access dossier",
+    "Digitale Übergabe dokumentieren",
+    "Digital handover documentation"
+  ]
+}

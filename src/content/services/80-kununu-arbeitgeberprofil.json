@@ -1,0 +1,76 @@
+{
+  "id": "80",
+  "slug": "kununu-arbeitgeberprofil",
+  "category": "kunden",
+  "categorySlug": "sichtbarkeit-termine",
+  "alsoIn": [],
+  "sectors": [
+    "handwerk",
+    "gastronomie-hotellerie"
+  ],
+  "tier": "catalog",
+  "audience": "b2b",
+  "name": "Arbeitgeberbewertungen auf kununu und Google",
+  "problem": "Bewerbende schauen auf kununu, und dort stehen wir bei 2,4 Sternen.",
+  "summary": "Wir übernehmen und vervollständigen dein kununu-Profil, schreiben Antwortvorlagen für kritische Bewertungen und richten einen fairen Ablauf ein, mit dem dein Team ehrlich bewerten kann.",
+  "includes": [
+    "Übernahme und Ausbau des kununu-Profils",
+    "Prüfung deines Arbeitgeberauftritts bei Google",
+    "Antwortvorlagen für kritische Bewertungen",
+    "Fairer Ablauf, um Mitarbeitende um ehrliche Bewertungen zu bitten"
+  ],
+  "excludes": [
+    "Löschung echter Bewertungen",
+    "Gekaufte oder vorgeschriebene Bewertungen",
+    "Kostenpflichtige kununu-Pakete"
+  ],
+  "needs": [
+    "Zugang zu kununu und Google",
+    "Infos zu Benefits, Team und Arbeitsweise"
+  ],
+  "steps": [
+    "Du gibst uns Zugang und Infos.",
+    "Festpreis und Zahlungslink.",
+    "Profilausbau, Vorlagen und Ablauf.",
+    "Übergabe mit Anleitung."
+  ],
+  "result": "Ein vollständiges Arbeitgeberprofil, Antwortvorlagen und ein Ablauf für ehrliche Bewertungen.",
+  "price": {
+    "type": "fixed",
+    "from": 299,
+    "display": "299 €",
+    "note": "Festpreis",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "1 Woche",
+  "tags": [],
+  "factNote": null,
+  "guardrail": false,
+  "faq": [
+    {
+      "q": "Könnt ihr schlechte Bewertungen entfernen?",
+      "a": "Nein. Echte Bewertungen bleiben. Gegen Bewertungen, die gegen Richtlinien verstoßen, nutzt du den offiziellen Meldeweg der Plattform."
+    },
+    {
+      "q": "Dürfen wir Mitarbeitende um Bewertungen bitten?",
+      "a": "Ja, wenn die Bitte freiwillig ist und niemand vorgibt, was drinsteht. Genau so richten wir den Ablauf ein."
+    }
+  ],
+  "related": [
+    "36",
+    "43",
+    "39"
+  ],
+  "seo": {
+    "title": "Arbeitgeberbewertungen auf kununu und Google | TechieBuddy",
+    "description": "Wir übernehmen und vervollständigen dein kununu-Profil, schreiben Antwortvorlagen für kritische Bewertungen und richten einen fairen Ablauf ein, mit …"
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g09"
+  ],
+  "keywords": [
+    "kununu-Arbeitgeberprofil aufräumen",
+    "Kununu employer profile cleanup"
+  ]
+}

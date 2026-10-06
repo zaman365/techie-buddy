@@ -1,0 +1,77 @@
+{
+  "id": "64",
+  "slug": "evergabe-oeffentliche-auftraege",
+  "category": "wachstum",
+  "categorySlug": "foerderung-team-nachfolge",
+  "alsoIn": [],
+  "sectors": [
+    "handwerk",
+    "kanzleien-bueros"
+  ],
+  "tier": "catalog",
+  "audience": "b2b",
+  "name": "eVergabe: Zugang zu öffentlichen Aufträgen",
+  "problem": "Öffentliche Ausschreibungen wären interessant, aber die Portale sind ein Albtraum.",
+  "summary": "Wir richten deine Konten auf den relevanten Vergabeplattformen ein, stellen Suchaufträge für dein Gewerk und deine Region ein und begleiten dich bei der ersten digitalen Angebotsabgabe.",
+  "includes": [
+    "Registrierung auf den relevanten Vergabeplattformen",
+    "Suchaufträge für Gewerk und Region",
+    "Technische Voraussetzungen für die Abgabe",
+    "Begleitung der ersten digitalen Angebotsabgabe"
+  ],
+  "excludes": [
+    "Kalkulation oder Inhalt deines Angebots",
+    "Zusage eines Zuschlags",
+    "Rechtsberatung zum Vergaberecht"
+  ],
+  "needs": [
+    "Unternehmensdaten und Nachweise",
+    "Gewerk, Region und gewünschte Auftragsgrößen"
+  ],
+  "steps": [
+    "Du nennst Gewerk und Region.",
+    "Festpreis und Zahlungslink.",
+    "Registrierung und Suchaufträge.",
+    "Begleitung der ersten Abgabe."
+  ],
+  "result": "Eingerichtete Konten, laufende Suchaufträge und eine begleitete erste Abgabe.",
+  "price": {
+    "type": "fixed",
+    "from": 299,
+    "display": "299 €",
+    "note": "Festpreis",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "1 Woche",
+  "tags": [],
+  "factNote": null,
+  "guardrail": true,
+  "faq": [
+    {
+      "q": "Gewinnt ihr die Aufträge für mich?",
+      "a": "Nein. Wir räumen die technische Hürde aus dem Weg. Den Auftrag gewinnt dein Angebot."
+    },
+    {
+      "q": "Welche Plattformen sind relevant?",
+      "a": "Das hängt von Region und Gewerk ab. In Sachsen sind andere Portale wichtig als in Bayern. Wir wählen nach deinem Profil."
+    }
+  ],
+  "related": [
+    "63",
+    "62",
+    "52"
+  ],
+  "seo": {
+    "title": "eVergabe: Zugang zu öffentlichen Aufträgen | TechieBuddy",
+    "description": "Wir richten deine Konten auf den relevanten Vergabeplattformen ein, stellen Suchaufträge für dein Gewerk und deine Region ein und begleiten dich bei …"
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g10"
+  ],
+  "keywords": [
+    "Vergabeportal: Start für Ausschreibungen",
+    "Public tender portal starter",
+    "Public tender portal setup"
+  ]
+}

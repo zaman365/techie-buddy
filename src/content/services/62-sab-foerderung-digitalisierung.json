@@ -1,0 +1,84 @@
+{
+  "id": "62",
+  "slug": "sab-foerderung-digitalisierung",
+  "category": "wachstum",
+  "categorySlug": "foerderung-team-nachfolge",
+  "alsoIn": [
+    "website"
+  ],
+  "sectors": [
+    "handwerk"
+  ],
+  "tier": "catalog",
+  "audience": "b2b",
+  "name": "SAB-geförderte Digitalisierungsprojekte in Sachsen",
+  "problem": "Ich will digitalisieren, aber 9.000 € kann ich nicht einfach so ausgeben.",
+  "summary": "Wir bündeln passende Leistungen zu einem förderfähigen Digitalisierungsprojekt von 5.000 bis 10.000 €, unterstützen dich beim SAB-Antrag vor Projektstart und setzen das Projekt danach um. Die SAB fördert berechtigte Erstprojekte mit bis zu 60 %.",
+  "includes": [
+    "Kostenloses Erstgespräch zum Projekt",
+    "Projektarchitektur aus passenden Leistungen",
+    "Angebot und Unterlagen für den Antrag",
+    "Unterstützung im SAB-Portal (du stellst den Antrag)",
+    "Umsetzung nach Bewilligung"
+  ],
+  "excludes": [
+    "Garantie auf Förderung (entscheidet die SAB)",
+    "Fördermittelberatung im rechtlichen Sinn",
+    "Projektstart vor Antragstellung"
+  ],
+  "needs": [
+    "Unternehmensdaten (Sitz in Sachsen, Größe, Umsatz)",
+    "Dein Vorhaben in Stichpunkten",
+    "Zugang zum SAB-Förderportal"
+  ],
+  "steps": [
+    "Kostenloses Erstgespräch: Passt dein Vorhaben?",
+    "Projektarchitektur und Angebot.",
+    "Du stellst den Antrag vor Projektstart, wir unterstützen.",
+    "Umsetzung nach Bewilligung."
+  ],
+  "result": "Ein förderfähig geplantes Projekt, vollständige Antragsunterlagen und nach Bewilligung die Umsetzung.",
+  "price": {
+    "type": "project",
+    "from": 5000,
+    "to": 10000,
+    "display": "5.000–10.000 €",
+    "note": "Projektbudget, bis zu 60 % förderfähig für berechtigte Erstprojekte",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "je nach Förderverfahren",
+  "tags": [],
+  "factNote": "Laut Programm-Flyer der SAB können berechtigte erste Digitalisierungsprojekte mit bis zu 60 % gefördert werden. Ob das Programm aktuell verfügbar ist, welche Kosten förderfähig sind und dass der Antrag vor Projektstart gestellt wird, prüfen wir für jeden Fall neu.",
+  "guardrail": true,
+  "faq": [
+    {
+      "q": "Wer stellt den Antrag?",
+      "a": "Du. Antragsteller ist immer dein Unternehmen. Wir bereiten Unterlagen und Angebot vor und begleiten dich im Portal."
+    },
+    {
+      "q": "Darf ich vorher schon anfangen?",
+      "a": "Nein. Der Antrag muss vor Projektstart gestellt werden. Deshalb beginnt die Umsetzung erst nach der Bewilligung."
+    },
+    {
+      "q": "Ist eine Förderung sicher?",
+      "a": "Nein. Die Entscheidung trifft die SAB. Wir prüfen vorher, ob dein Vorhaben gute Chancen hat, und sagen es dir ehrlich."
+    }
+  ],
+  "related": [
+    "63",
+    "36",
+    "21"
+  ],
+  "seo": {
+    "title": "SAB-geförderte Digitalisierungsprojekte in Sachsen",
+    "description": "Wir bündeln passende Leistungen zu einem förderfähigen Digitalisierungsprojekt von 5.000 bis 10.000 €, unterstützen dich beim SAB-Antrag vor …"
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g10"
+  ],
+  "keywords": [
+    "SAB-Antrag: Unterlagen und Portal ordnen",
+    "SAB portal application workspace"
+  ]
+}

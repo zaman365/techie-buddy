@@ -1,0 +1,80 @@
+{
+  "id": "71",
+  "slug": "familienarchiv-digitalisieren",
+  "category": "zuhause",
+  "categorySlug": "zuhause-familie-energie",
+  "alsoIn": [],
+  "sectors": [
+    "familien-senioren",
+    "nachfolge"
+  ],
+  "tier": "catalog",
+  "audience": "b2c",
+  "name": "Familienarchiv digitalisieren",
+  "problem": "Dias, Fotoalben und VHS-Kassetten liegen im Keller, und das Haus wird bald verkauft.",
+  "summary": "Dias, Negative, Fotoalben, VHS- und Super-8-Filme werden zu einem geordneten digitalen Familienarchiv, bevor die Erinnerungen verloren gehen.",
+  "includes": [
+    "Digitalisierung von Dias, Negativen, Fotos und Videos",
+    "Ordnung nach Jahr, Person oder Ereignis",
+    "Übergabe auf Datenträger und in der Cloud",
+    "Teilen mit der Familie"
+  ],
+  "excludes": [
+    "Aufwendige Restaurierung beschädigter Bilder",
+    "Kosten für Datenträger und Speicher"
+  ],
+  "needs": [
+    "Die Materialien",
+    "Wunsch, wie sortiert werden soll"
+  ],
+  "steps": [
+    "Du schätzt die Menge.",
+    "Festpreis nach Sichtung und Zahlungslink.",
+    "Digitalisierung und Ordnung.",
+    "Übergabe an die Familie."
+  ],
+  "result": "Ein digitales Familienarchiv, gesichert und mit der Familie teilbar.",
+  "price": {
+    "type": "from",
+    "from": 299,
+    "display": "ab 299 €",
+    "note": "Festpreis nach Sichtung der Menge",
+    "vat": "inkl. MwSt."
+  },
+  "turnaround": "2 Wochen",
+  "tags": [],
+  "factNote": null,
+  "guardrail": false,
+  "faq": [
+    {
+      "q": "Bekomme ich die Originale zurück?",
+      "a": "Ja, vollständig."
+    },
+    {
+      "q": "Wie lange dauert es?",
+      "a": "Etwa zwei Wochen, je nach Menge. Den genauen Zeitraum nennen wir nach der Sichtung."
+    }
+  ],
+  "related": [
+    "33",
+    "34",
+    "73"
+  ],
+  "seo": {
+    "title": "Familienarchiv digitalisieren | TechieBuddy",
+    "description": "Dias, Negative, Fotoalben, VHS- und Super-8-Filme werden zu einem geordneten digitalen Familienarchiv, bevor die Erinnerungen verloren gehen."
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g11",
+    "g19"
+  ],
+  "keywords": [
+    "Familienarchiv digitalisieren: erster Schwung",
+    "Family archive digitization starter",
+    "Fotoarchiv digitalisieren",
+    "Photo archive digitization",
+    "VHS- und MiniDV-Kassetten digitalisieren",
+    "VHS/MiniDV digitization coordination"
+  ]
+}

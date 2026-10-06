@@ -1,0 +1,78 @@
+{
+  "id": "75",
+  "slug": "pv-wallbox-anmeldung-monitoring",
+  "category": "zuhause",
+  "categorySlug": "zuhause-familie-energie",
+  "alsoIn": [],
+  "sectors": [
+    "energie"
+  ],
+  "tier": "catalog",
+  "audience": "b2c",
+  "name": "PV-Anlage und Wallbox: Anmeldung und Monitoring",
+  "problem": "Der Installateur ist weg, die Apps verwirren mich, und ich sehe meine Zahlen nicht.",
+  "summary": "Wir erledigen die Registrierung im Marktstammdatenregister und beim Netzbetreiber, richten Wechselrichter- und Monitoring-Apps ein und erklären dir dein Verbrauchs-Dashboard.",
+  "includes": [
+    "Registrierung im Marktstammdatenregister",
+    "Unterstützung bei der Meldung an den Netzbetreiber",
+    "Einrichtung von Wechselrichter- und Monitoring-Apps",
+    "Wallbox-App einrichten",
+    "Erklärung deines Verbrauchs-Dashboards"
+  ],
+  "excludes": [
+    "Elektroinstallation und Inbetriebnahme",
+    "Steuerliche Fragen zur Anlage"
+  ],
+  "needs": [
+    "Datenblätter, Inbetriebnahmeprotokoll",
+    "Zugangsdaten der Anlage"
+  ],
+  "steps": [
+    "Du schickst Unterlagen.",
+    "Festpreis und Zahlungslink.",
+    "Registrierung und App-Einrichtung.",
+    "Kurze Erklärung, was du wo siehst."
+  ],
+  "result": "Erledigte Registrierungen und Apps, die dir deine Zahlen zeigen.",
+  "price": {
+    "type": "fixed",
+    "from": 149,
+    "display": "149 €",
+    "note": "Festpreis",
+    "vat": "inkl. MwSt."
+  },
+  "turnaround": "48 h",
+  "tags": [],
+  "factNote": null,
+  "guardrail": true,
+  "faq": [
+    {
+      "q": "Macht ihr auch die Steuer für die PV-Anlage?",
+      "a": "Nein. Steuerliche Fragen klärt deine Steuerberatung."
+    },
+    {
+      "q": "Wer meldet die Anlage beim Netzbetreiber?",
+      "a": "Meist der Installationsbetrieb. Hat der das nicht erledigt, unterstützen wir dich dabei."
+    }
+  ],
+  "related": [
+    "74",
+    "77",
+    "76"
+  ],
+  "seo": {
+    "title": "PV-Anlage und Wallbox: Anmeldung und Monitoring",
+    "description": "Wir erledigen die Registrierung im Marktstammdatenregister und beim Netzbetreiber, richten Wechselrichter- und Monitoring-Apps ein und erklären dir …"
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g10",
+    "g13"
+  ],
+  "keywords": [
+    "Marktstammdatenregister: Anmeldung",
+    "Marktstammdatenregister registration help",
+    "PV-Anlage registrieren: Unterstützung",
+    "PV registration support"
+  ]
+}

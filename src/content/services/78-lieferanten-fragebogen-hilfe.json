@@ -1,0 +1,79 @@
+{
+  "id": "78",
+  "slug": "lieferanten-fragebogen-hilfe",
+  "category": "compliance",
+  "categorySlug": "compliance",
+  "alsoIn": [],
+  "sectors": [
+    "kanzleien-bueros"
+  ],
+  "tier": "catalog",
+  "audience": "b2b",
+  "name": "Fragebogen-Feuerwehr: Lieferanten-Selbstauskünfte",
+  "problem": "Unser größter Kunde will bis Freitag einen ESG-Fragebogen. Wir wissen nicht, was wir antworten sollen.",
+  "summary": "Wir sortieren, was gefragt ist, sammeln, was bei dir schon existiert, entwerfen ehrliche Antworten und markieren echte Lücken mit einem Plan. Rechtzeitig vor deiner Frist.",
+  "includes": [
+    "Sichtung des Fragebogens (z. B. LkSG, ESG, NIS2)",
+    "Sammlung vorhandener Nachweise und Dokumente",
+    "Entwurf ehrlicher Antworten zur Freigabe durch dich",
+    "Liste offener Lücken mit Maßnahmenplan"
+  ],
+  "excludes": [
+    "Rechtliche Bewertung von Pflichten",
+    "Zertifizierungen oder Audits",
+    "Antworten, die nicht durch Nachweise gedeckt sind"
+  ],
+  "needs": [
+    "Den Fragebogen und die Frist",
+    "Ansprechperson für Rückfragen",
+    "Vorhandene Dokumente (Richtlinien, Zertifikate, IT-Infos)"
+  ],
+  "steps": [
+    "Du schickst Fragebogen und Frist.",
+    "Festpreis nach Umfang und Zahlungslink.",
+    "Sichtung, Nachweissammlung und Antwortentwurf.",
+    "Freigabe durch dich, Übergabe von Antworten und Lückenplan."
+  ],
+  "result": "Ein ausgefüllter Fragebogen zur Freigabe, eine Nachweismappe und ein Plan für die offenen Punkte.",
+  "price": {
+    "type": "from",
+    "from": 399,
+    "display": "ab 399 €",
+    "note": "Festpreis je nach Umfang des Fragebogens",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "vor deiner Frist",
+  "tags": [],
+  "factNote": null,
+  "guardrail": true,
+  "faq": [
+    {
+      "q": "Schafft ihr das bis zu meiner Frist?",
+      "a": "Wir starten, sobald Zahlung, Fragebogen und Ansprechperson da sind, und richten den Ablauf an deiner Frist aus. Ist die Frist zu knapp für den Umfang, sagen wir das vor der Zahlung."
+    },
+    {
+      "q": "Schreibt ihr Antworten, die gut klingen?",
+      "a": "Wir schreiben Antworten, die stimmen. Wo etwas fehlt, benennen wir die Lücke und den Weg, sie zu schließen."
+    }
+  ],
+  "related": [
+    "79",
+    "67",
+    "07"
+  ],
+  "seo": {
+    "title": "Fragebogen-Feuerwehr: Lieferanten-Selbstauskünfte",
+    "description": "Wir sortieren, was gefragt ist, sammeln, was bei dir schon existiert, entwerfen ehrliche Antworten und markieren echte Lücken mit einem Plan."
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g06",
+    "g10"
+  ],
+  "keywords": [
+    "Lieferanten-Fragebogen: Sprint",
+    "Supplier compliance questionnaire sprint",
+    "Lieferanten-Fragebogen beantworten",
+    "Supplier questionnaire completion support"
+  ]
+}

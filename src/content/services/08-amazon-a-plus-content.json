@@ -1,0 +1,76 @@
+{
+  "id": "08",
+  "slug": "amazon-a-plus-content",
+  "category": "marktplaetze",
+  "categorySlug": "amazon-marktplaetze",
+  "alsoIn": [],
+  "sectors": [
+    "online-handel"
+  ],
+  "tier": "launch-reserve",
+  "audience": "b2b",
+  "name": "A+ Content, der Rückfragen und Retouren senkt",
+  "problem": "Meine Produktseite sieht hübsch aus, aber Kunden fragen ständig nach der Größe und schicken zurück.",
+  "summary": "Drei A+ Module mit deutschem Text, gebaut nach einer Methode aus dem eigenen Betrieb: Passform, Größen und die häufigsten Retourengründe werden beantwortet, bevor sie zur Frage werden.",
+  "includes": [
+    "Analyse von Rezensionen, Fragen und Retourengründen",
+    "Konzept für 3 A+ Module mit klarer Reihenfolge",
+    "Deutsche Texte für alle Module",
+    "Bildvorgaben oder Gestaltung aus deinem Material",
+    "Upload in Seller Central"
+  ],
+  "excludes": [
+    "Fotoshooting",
+    "Premium-A+ oder Markenshop-Seiten",
+    "Freigabe durch Amazon"
+  ],
+  "needs": [
+    "Zugang zu Seller Central mit Markenregistrierung",
+    "Produktfotos und Größentabellen",
+    "Wenn vorhanden: Retourengründe und Kundenfragen"
+  ],
+  "steps": [
+    "Du nennst das Produkt und schickst dein Bildmaterial.",
+    "Festpreis und Zahlungslink.",
+    "Analyse, Konzept, Text und Gestaltung der Module.",
+    "Upload, Einreichung und Übergabe der Dateien."
+  ],
+  "result": "Drei eingereichte A+ Module mit deutschem Text, dazu die Dateien und die Analyse für weitere Produkte.",
+  "price": {
+    "type": "fixed",
+    "from": 299,
+    "display": "299 €",
+    "note": "pro Produkt",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "72 h",
+  "tags": [
+    "erprobt"
+  ],
+  "factNote": null,
+  "guardrail": false,
+  "faq": [
+    {
+      "q": "Brauche ich eine Markenregistrierung?",
+      "a": "Ja, A+ Content setzt die Amazon-Markenregistrierung voraus. Falls sie fehlt, sagen wir dir vorher, was nötig ist."
+    },
+    {
+      "q": "Woher kommt die Methode?",
+      "a": "Aus dem eigenen Betrieb: Wir haben sie für eine eigene Modemarke entwickelt, mit Fokus auf Passform, Größen und Retourengründe."
+    }
+  ],
+  "related": [
+    "12",
+    "19",
+    "09"
+  ],
+  "seo": {
+    "title": "A+ Content, der Rückfragen und Retouren senkt | TechieBuddy",
+    "description": "Drei A+ Module mit deutschem Text, gebaut nach einer Methode aus dem eigenen Betrieb: Passform, Größen und die häufigsten Retourengründe werden …"
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g08"
+  ],
+  "keywords": []
+}

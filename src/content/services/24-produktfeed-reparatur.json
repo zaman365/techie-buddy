@@ -1,0 +1,79 @@
+{
+  "id": "24",
+  "slug": "produktfeed-reparatur",
+  "category": "marktplaetze",
+  "categorySlug": "amazon-marktplaetze",
+  "alsoIn": [],
+  "sectors": [
+    "online-handel"
+  ],
+  "tier": "catalog",
+  "audience": "b2b",
+  "name": "Produktfeed reparieren: Google Shopping und Idealo",
+  "problem": "Google Shopping hat die Hälfte meiner Produkte abgelehnt. Fehlende GTINs, sagt der Bericht.",
+  "summary": "Wir beheben Feed-Fehler, abgelehnte Produkte und fehlende GTINs in Google Merchant Center und Idealo, damit deine Produkte wieder ausgespielt werden können.",
+  "includes": [
+    "Diagnose der Feed- und Produktfehler",
+    "Korrektur von GTIN, Marke, Kategorie und Pflichtattributen",
+    "Anpassung der Feed-Regeln oder des Exports",
+    "Erneute Einreichung und Kontrolle"
+  ],
+  "excludes": [
+    "Sperren auf Kontoebene (dafür gibt es die Marktplatz-Freischaltung)",
+    "Werbekampagnen und Budget",
+    "Neuanlage fehlender GTINs bei GS1"
+  ],
+  "needs": [
+    "Zugang zu Merchant Center oder Idealo-Händlerkonto",
+    "Zugang zu Shop oder Feed-Tool"
+  ],
+  "steps": [
+    "Du schickst einen Screenshot der Diagnose.",
+    "Festpreis und Zahlungslink.",
+    "Korrektur der Daten und Feed-Regeln.",
+    "Neueinreichung und Übergabe mit Protokoll."
+  ],
+  "result": "Ein bereinigter Feed, ein Protokoll der Änderungen und die Liste der wieder eingereichten Produkte.",
+  "price": {
+    "type": "fixed",
+    "from": 149,
+    "display": "149 €",
+    "note": "Festpreis pro Feed",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "48 h",
+  "tags": [],
+  "factNote": null,
+  "guardrail": false,
+  "faq": [
+    {
+      "q": "Was, wenn mir GTINs fehlen?",
+      "a": "Wir zeigen dir, für welche Produkte GTINs nötig sind und wie du sie bekommst, oder setzen eine zulässige Ausnahme, wo es passt."
+    },
+    {
+      "q": "Ist das dasselbe wie eine Kontosperre?",
+      "a": "Nein. Bei einer Sperre des ganzen Kontos hilft die Marktplatz-Freischaltung."
+    }
+  ],
+  "related": [
+    "11",
+    "09",
+    "59"
+  ],
+  "seo": {
+    "title": "Produktfeed reparieren: Google Shopping und Idealo",
+    "description": "Wir beheben Feed-Fehler, abgelehnte Produkte und fehlende GTINs in Google Merchant Center und Idealo, damit deine Produkte wieder ausgespielt werden …"
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g01",
+    "g08"
+  ],
+  "keywords": [
+    "Google Merchant Center: abgelehnte Produkte",
+    "Google Merchant Center disapproval triage",
+    "Google Merchant Center suspension triage",
+    "Produktfeed analysieren",
+    "Product feed diagnostics"
+  ]
+}

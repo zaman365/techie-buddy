@@ -1,0 +1,76 @@
+{
+  "id": "10",
+  "slug": "amazon-konto-gesperrt-massnahmenplan",
+  "category": "marktplaetze",
+  "categorySlug": "amazon-marktplaetze",
+  "alsoIn": [],
+  "sectors": [
+    "online-handel"
+  ],
+  "tier": "catalog",
+  "audience": "b2b",
+  "name": "Amazon-Konto gesperrt? Maßnahmenplan in 24 h",
+  "problem": "Amazon hat mein Verkäuferkonto gesperrt. Jeder Tag kostet Umsatz.",
+  "summary": "Wir analysieren die Ursache der Sperrung und schreiben einen professionellen Maßnahmenplan (Plan of Action), der zeigt, was passiert ist, was du geändert hast und wie es nicht wieder passiert.",
+  "includes": [
+    "Analyse der Sperrbegründung und Kontozustandsdaten",
+    "Ursachenanalyse mit dir",
+    "Maßnahmenplan auf Deutsch oder Englisch",
+    "Checkliste der Belege, die Amazon sehen will",
+    "Begleitung bei der Einreichung"
+  ],
+  "excludes": [
+    "Garantie auf Wiederherstellung (die Entscheidung trifft Amazon)",
+    "Rechtsberatung",
+    "Fälschung oder Beschönigung von Belegen"
+  ],
+  "needs": [
+    "Zugang zu Seller Central oder Screenshots der Benachrichtigungen",
+    "Rechnungen, Lieferantendaten und weitere angeforderte Belege",
+    "Ehrliche Angaben zum Hergang"
+  ],
+  "steps": [
+    "Du schickst die Sperrbenachrichtigung.",
+    "Festpreis und Zahlungslink.",
+    "Ursachenanalyse und Entwurf des Maßnahmenplans zur Freigabe.",
+    "Einreichung und Übergabe aller Dokumente."
+  ],
+  "result": "Ein eingereichter Maßnahmenplan mit Belegmappe und ein Präventionsplan für deinen Account.",
+  "price": {
+    "type": "fixed",
+    "from": 349,
+    "display": "349 €",
+    "note": "Festpreis pro Fall",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "24 h",
+  "tags": [
+    "notfall"
+  ],
+  "factNote": null,
+  "guardrail": false,
+  "faq": [
+    {
+      "q": "Wird mein Konto sicher wieder freigeschaltet?",
+      "a": "Das kann niemand versprechen. Wir liefern einen vollständigen, ehrlichen und gut belegten Maßnahmenplan. Die Entscheidung trifft Amazon."
+    },
+    {
+      "q": "Wie schnell geht es?",
+      "a": "Den Plan bekommst du innerhalb von 24 Stunden, sobald Zahlung und Unterlagen vorliegen."
+    }
+  ],
+  "related": [
+    "11",
+    "02",
+    "09"
+  ],
+  "seo": {
+    "title": "Amazon-Konto gesperrt? Maßnahmenplan in 24 h | TechieBuddy",
+    "description": "Wir analysieren die Ursache der Sperrung und schreiben einen professionellen Maßnahmenplan (Plan of Action), der zeigt, was passiert ist, was du …"
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g01"
+  ],
+  "keywords": []
+}

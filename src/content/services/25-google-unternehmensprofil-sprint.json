@@ -1,0 +1,87 @@
+{
+  "id": "25",
+  "slug": "google-unternehmensprofil-sprint",
+  "category": "kunden",
+  "categorySlug": "sichtbarkeit-termine",
+  "alsoIn": [],
+  "sectors": [
+    "handwerk",
+    "praxen-salons",
+    "gastronomie-hotellerie"
+  ],
+  "tier": "catalog",
+  "audience": "b2b",
+  "name": "Google-Profil-Sprint: lokal gefunden werden",
+  "problem": "Wer in der Nähe nach uns sucht, findet zuerst die Konkurrenz.",
+  "summary": "Wir bauen dein Google-Unternehmensprofil vollständig aus, richten ein System für Bewertungsanfragen ein, planen zehn lokale Beiträge und setzen die Grundlagen für lokales SEO.",
+  "includes": [
+    "Vollständiges Profil: Kategorien, Leistungen, Fotos, Zeiten",
+    "System für Bewertungsanfragen (QR-Code und Link)",
+    "10 geplante lokale Beiträge",
+    "Grundlagen für lokales SEO auf deiner Website",
+    "Kurze Anleitung für die Pflege"
+  ],
+  "excludes": [
+    "Gekaufte oder gefilterte Bewertungen",
+    "Werbeanzeigen",
+    "Zusage von Rankingplätzen"
+  ],
+  "needs": [
+    "Zugang zu deinem Google-Unternehmensprofil (oder Daten für die Neuanlage)",
+    "Fotos von Betrieb, Team und Arbeiten",
+    "Liste deiner Leistungen"
+  ],
+  "steps": [
+    "Du gibst uns Zugang und Fotos.",
+    "Festpreis und Zahlungslink.",
+    "Ausbau, Bewertungssystem und Beiträge.",
+    "Übergabe mit Pflege-Anleitung."
+  ],
+  "result": "Ein vollständiges Profil, ein laufendes Bewertungssystem und zehn geplante Beiträge.",
+  "price": {
+    "type": "fixed",
+    "from": 299,
+    "display": "299 €",
+    "note": "Festpreis für den Sprint",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "1 Woche",
+  "tags": [],
+  "factNote": null,
+  "guardrail": false,
+  "faq": [
+    {
+      "q": "Bin ich danach auf Platz 1?",
+      "a": "Das kann niemand versprechen. Ein vollständiges, gepflegtes Profil ist aber die wichtigste Grundlage für lokale Sichtbarkeit."
+    },
+    {
+      "q": "Was, wenn mein Profil gesperrt ist?",
+      "a": "Für gesperrte Profile gibt es eine eigene Leistung zur Wiederherstellung."
+    }
+  ],
+  "related": [
+    "43",
+    "FT",
+    "16"
+  ],
+  "seo": {
+    "title": "Google-Profil-Sprint: lokal gefunden werden | TechieBuddy",
+    "description": "Wir bauen dein Google-Unternehmensprofil vollständig aus, richten ein System für Bewertungsanfragen ein, planen zehn lokale Beiträge und setzen die …"
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g04",
+    "g07",
+    "g08"
+  ],
+  "keywords": [
+    "Google-Unternehmensprofil anlegen",
+    "Google Business Profile launch",
+    "Lokaler Start mit Google",
+    "Google-first local launch",
+    "Google-Präsenz für die neue Filiale",
+    "New branch Google presence setup",
+    "Google-Profil auf Anfragen trimmen",
+    "Google Business Profile conversion tune-up"
+  ]
+}

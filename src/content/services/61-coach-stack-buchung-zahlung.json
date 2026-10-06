@@ -1,0 +1,72 @@
+{
+  "id": "61",
+  "slug": "coach-stack-buchung-zahlung",
+  "category": "branchen-pakete",
+  "categorySlug": "branchen-loesungen",
+  "alsoIn": [],
+  "sectors": [
+    "creator-coaches"
+  ],
+  "tier": "catalog",
+  "audience": "b2b",
+  "name": "Coach-Stack: Buchung, Zahlung und Zoom in einem Ablauf",
+  "problem": "Interessenten buchen, zahlen nicht und finden den Zoom-Link nicht.",
+  "summary": "Calendly, Stripe, Zoom und Erinnerungsmails werden zu einem nahtlosen Ablauf verbunden, dazu eine klare Angebotsseite.",
+  "includes": [
+    "Buchung mit Calendly oder ähnlichem Tool",
+    "Bezahlung über Stripe bei der Buchung",
+    "Automatischer Zoom-Link",
+    "Erinnerungsmails",
+    "Einseitige Angebotsseite"
+  ],
+  "excludes": [
+    "Lizenz- und Transaktionsgebühren",
+    "Texte für dein Coaching-Angebot (auf Wunsch extra)"
+  ],
+  "needs": [
+    "Angebote mit Dauer und Preis",
+    "Zugänge zu Kalender, Stripe und Zoom"
+  ],
+  "steps": [
+    "Du nennst Angebote und Tools.",
+    "Festpreis und Zahlungslink.",
+    "Verknüpfung und Testbuchungen.",
+    "Übergabe mit Anleitung."
+  ],
+  "result": "Ein Ablauf von der Buchung bis zum Termin, der ohne Handarbeit funktioniert.",
+  "price": {
+    "type": "fixed",
+    "from": 399,
+    "display": "399 €",
+    "note": "Festpreis",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "72 h",
+  "tags": [],
+  "factNote": null,
+  "guardrail": false,
+  "faq": [
+    {
+      "q": "Funktioniert das auch mit anderen Tools?",
+      "a": "Ja, oft mit Alternativen zu Calendly oder Zoom. Wir prüfen das vor der Zahlung."
+    },
+    {
+      "q": "Was passiert bei Absagen?",
+      "a": "Wir richten die Regeln für Absage und Erstattung so ein, wie du sie festlegst, und testen sie vorher."
+    }
+  ],
+  "related": [
+    "41",
+    "18",
+    "60"
+  ],
+  "seo": {
+    "title": "Coach-Stack: Buchung, Zahlung und Zoom in einem Ablauf",
+    "description": "Calendly, Stripe, Zoom und Erinnerungsmails werden zu einem nahtlosen Ablauf verbunden, dazu eine klare Angebotsseite. 399 € zzgl. MwSt., Lieferzeit 72 h."
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g16"
+  ],
+  "keywords": []
+}

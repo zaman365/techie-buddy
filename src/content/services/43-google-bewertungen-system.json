@@ -1,0 +1,88 @@
+{
+  "id": "43",
+  "slug": "google-bewertungen-system",
+  "category": "kunden",
+  "categorySlug": "sichtbarkeit-termine",
+  "alsoIn": [],
+  "sectors": [
+    "handwerk",
+    "praxen-salons",
+    "gastronomie-hotellerie"
+  ],
+  "tier": "catalog",
+  "audience": "b2b",
+  "name": "Bewertungs-System: mehr echte Google-Rezensionen",
+  "problem": "Zufriedene Kunden bewerten fast nie, unzufriedene immer.",
+  "summary": "QR-Karten und automatische Bewertungsanfragen nach dem Besuch, plus professionelle Antwortvorlagen für negative Bewertungen. Gefälschte Bewertungen meldest du über den offiziellen Google-Weg.",
+  "includes": [
+    "QR-Karten und Bewertungslink",
+    "Automatische Anfrage nach dem Besuch (SMS oder E-Mail)",
+    "Antwortvorlagen für positive und negative Bewertungen",
+    "Anleitung zum Melden gefälschter Bewertungen bei Google"
+  ],
+  "excludes": [
+    "Gekaufte, gefilterte oder geschönte Bewertungen",
+    "Löschung echter negativer Bewertungen",
+    "Druckkosten"
+  ],
+  "needs": [
+    "Zugang zum Google-Unternehmensprofil",
+    "Kundenkontakte aus Kasse oder Buchungssystem (mit Einwilligung)"
+  ],
+  "steps": [
+    "Du gibst uns Zugang.",
+    "Festpreis und Zahlungslink.",
+    "Einrichtung von QR, Anfragen und Vorlagen.",
+    "Übergabe mit Anleitung fürs Team."
+  ],
+  "result": "Ein laufendes System für Bewertungsanfragen, druckfertige QR-Karten und Antwortvorlagen.",
+  "price": {
+    "type": "fixed",
+    "from": 199,
+    "display": "199 €",
+    "note": "Festpreis",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "48 h",
+  "tags": [],
+  "factNote": null,
+  "guardrail": false,
+  "faq": [
+    {
+      "q": "Ist das erlaubt?",
+      "a": "Ja, wenn alle Kundinnen und Kunden gleich gefragt werden und nichts gekauft oder gefiltert wird. Genau so richten wir es ein."
+    },
+    {
+      "q": "Wie schnell kommen mehr Bewertungen?",
+      "a": "Das hängt davon ab, wie viele Kundinnen und Kunden du hast und wie konsequent dein Team fragt. Das System macht das Fragen einfach."
+    }
+  ],
+  "related": [
+    "25",
+    "80",
+    "37"
+  ],
+  "seo": {
+    "title": "Bewertungs-System: mehr echte Google-Rezensionen",
+    "description": "QR-Karten und automatische Bewertungsanfragen nach dem Besuch, plus professionelle Antwortvorlagen für negative Bewertungen."
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g04",
+    "g07",
+    "g08",
+    "g09"
+  ],
+  "keywords": [
+    "Bewertungen sammeln: Startsystem",
+    "Review collection starter system",
+    "Google-Bewertungslink und QR-Code",
+    "Google review link and QR setup",
+    "Bewertungen nach dem Termin anfragen",
+    "Review request workflow",
+    "Bewertungs-QR für die Theke",
+    "Review QR counter kit",
+    "Bewertungen systematisch sammeln",
+    "Review generation system"
+  ]
+}

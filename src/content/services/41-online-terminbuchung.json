@@ -1,0 +1,81 @@
+{
+  "id": "41",
+  "slug": "online-terminbuchung",
+  "category": "kunden",
+  "categorySlug": "sichtbarkeit-termine",
+  "alsoIn": [],
+  "sectors": [
+    "praxen-salons"
+  ],
+  "tier": "catalog",
+  "audience": "b2b",
+  "name": "Online-Terminbuchung einrichten",
+  "problem": "Das Telefon klingelt den ganzen Tag, nur für Terminabsprachen.",
+  "summary": "Wir wählen das passende Buchungssystem, etwa Doctolib oder Jameda für Praxen, Fresha oder Treatwell für Salons, Calendly für Coaches, richten es ein, verbinden es mit deinem Kalender und bauen es auf deiner Website ein.",
+  "includes": [
+    "Auswahl des Systems passend zu Branche und Budget",
+    "Einrichtung von Leistungen, Zeiten und Puffern",
+    "Synchronisation mit deinem bestehenden Kalender",
+    "Einbau auf Website und Google-Profil",
+    "Kurze Einweisung fürs Team"
+  ],
+  "excludes": [
+    "Lizenzkosten des Buchungssystems",
+    "Schnittstellen zu Praxis-Verwaltungssoftware (prüfen wir vorher)"
+  ],
+  "needs": [
+    "Leistungen mit Dauer und Preisen",
+    "Zugang zu Kalender und Website"
+  ],
+  "steps": [
+    "Du schickst Leistungen und Arbeitszeiten.",
+    "Festpreis und Zahlungslink.",
+    "Einrichtung, Sync und Einbau.",
+    "Testbuchungen und Übergabe."
+  ],
+  "result": "Ein laufendes Buchungssystem auf Website und Google-Profil, synchron mit deinem Kalender.",
+  "price": {
+    "type": "fixed",
+    "from": 249,
+    "display": "249 €",
+    "note": "Festpreis, Software-Lizenz separat",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "72 h",
+  "tags": [],
+  "factNote": null,
+  "guardrail": false,
+  "faq": [
+    {
+      "q": "Welches System ist das richtige?",
+      "a": "Das hängt von Branche, Teamgröße und Budget ab. Wir empfehlen ohne Bindung an einen Anbieter."
+    },
+    {
+      "q": "Was passiert mit Terminen, die telefonisch kommen?",
+      "a": "Die trägst du oder dein Team einfach in dasselbe System ein. So bleibt ein Kalender die Wahrheit."
+    }
+  ],
+  "related": [
+    "40",
+    "42",
+    "61"
+  ],
+  "seo": {
+    "title": "Online-Terminbuchung einrichten | TechieBuddy",
+    "description": "Wir wählen das passende Buchungssystem, etwa Doctolib oder Jameda für Praxen, Fresha oder Treatwell für Salons, Calendly für Coaches, richten es ein, …"
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g04",
+    "g05",
+    "g16"
+  ],
+  "keywords": [
+    "Online-Terminbuchung starten",
+    "Online appointment starter",
+    "Calendly einrichten",
+    "Calendly setup and routing",
+    "Terminplattform für die Praxis konfigurieren",
+    "Appointment platform configuration"
+  ]
+}

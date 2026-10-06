@@ -1,0 +1,73 @@
+{
+  "id": "15",
+  "slug": "amazon-ppc-audit",
+  "category": "marktplaetze",
+  "categorySlug": "amazon-marktplaetze",
+  "alsoIn": [],
+  "sectors": [
+    "online-handel"
+  ],
+  "tier": "catalog",
+  "audience": "b2b",
+  "name": "Amazon-PPC-Audit: Werbebudget-Verschwendung finden",
+  "problem": "Meine Werbekosten steigen, aber der Umsatz nicht.",
+  "summary": "In 48 Stunden finden wir verschwendetes Werbebudget in deinen Amazon-Kampagnen: fehlende negative Keywords, ausufernde Auto-Kampagnen und Kannibalisierung. Du bekommst eine priorisierte Maßnahmenliste.",
+  "includes": [
+    "Analyse der Suchbegriffsberichte",
+    "Lücken bei negativen Keywords",
+    "Auto-Kampagnen mit hohen Kosten ohne Umsatz",
+    "Kannibalisierung zwischen Kampagnen",
+    "Priorisierte Maßnahmenliste mit geschätzter Einsparung"
+  ],
+  "excludes": [
+    "Laufende Kampagnenbetreuung (auf Anfrage als monatlicher Check)",
+    "Werbebudget",
+    "Umsatzversprechen"
+  ],
+  "needs": [
+    "Lesezugriff auf die Amazon-Werbekonsole",
+    "Ziel-ACoS oder Margenrahmen, falls vorhanden"
+  ],
+  "steps": [
+    "Du gibst uns Lesezugriff.",
+    "Festpreis und Zahlungslink.",
+    "Auswertung der letzten Monate.",
+    "Bericht mit Maßnahmenliste in 48 Stunden."
+  ],
+  "result": "Ein Bericht mit Fundstellen, geschätzter Einsparung und einer Liste, die du selbst oder mit uns umsetzt.",
+  "price": {
+    "type": "fixed",
+    "from": 249,
+    "display": "249 €",
+    "note": "Festpreis für das Audit",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "48 h",
+  "tags": [],
+  "factNote": null,
+  "guardrail": false,
+  "faq": [
+    {
+      "q": "Setzt ihr die Änderungen auch um?",
+      "a": "Auf Wunsch ja, zum Festpreis nach dem Audit. Als monatlicher Check ist das Audit auch als Betreuung möglich."
+    },
+    {
+      "q": "Brauche ich Schreibzugriff?",
+      "a": "Für das Audit reicht Lesezugriff."
+    }
+  ],
+  "related": [
+    "12",
+    "08",
+    "09"
+  ],
+  "seo": {
+    "title": "Amazon-PPC-Audit: Werbebudget-Verschwendung finden",
+    "description": "In 48 Stunden finden wir verschwendetes Werbebudget in deinen Amazon-Kampagnen: fehlende negative Keywords, ausufernde Auto-Kampagnen und Kannibalisierung."
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g08"
+  ],
+  "keywords": []
+}

@@ -1,0 +1,77 @@
+{
+  "id": "70",
+  "slug": "nachfolger-modernisierung",
+  "category": "wachstum",
+  "categorySlug": "foerderung-team-nachfolge",
+  "alsoIn": [],
+  "sectors": [
+    "nachfolge"
+  ],
+  "tier": "catalog",
+  "audience": "b2b",
+  "name": "Modernisierungs-Sprint für neue Inhaber",
+  "problem": "Ich habe einen Betrieb übernommen: Fax, Papier und eine Website von 2009.",
+  "summary": "Ein Sprint über zwei bis drei Wochen: E-Mail auf eigener Domain, Online-Terminbuchung, passende Software und ein Google-Auftritt, der zum neuen Betrieb passt.",
+  "includes": [
+    "Bestandsaufnahme der übernommenen Technik",
+    "E-Mail auf eigener Domain",
+    "Online-Terminbuchung oder Anfrageweg",
+    "Einrichtung passender Branchensoftware",
+    "Google-Unternehmensprofil aktualisiert",
+    "Übergabe aller Konten auf dich"
+  ],
+  "excludes": [
+    "Lizenz- und Hardwarekosten",
+    "Neue Website (auf Wunsch als Paket)"
+  ],
+  "needs": [
+    "Zugänge, die du vom Vorgänger bekommen hast",
+    "Deine Prioritäten für die ersten Monate"
+  ],
+  "steps": [
+    "Erstgespräch zu Prioritäten.",
+    "Festpreis je nach Umfang und Zahlungslink.",
+    "Sprint in festgelegter Reihenfolge.",
+    "Übergabe mit Dokumentation."
+  ],
+  "result": "Ein modernisierter Grundstock: E-Mail, Buchung, Software und Google-Auftritt, alles auf deinen Namen.",
+  "price": {
+    "type": "range",
+    "from": 1500,
+    "to": 3000,
+    "display": "1.500–3.000 €",
+    "note": "Festpreis je nach Umfang",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "2–3 Wochen",
+  "tags": [],
+  "factNote": null,
+  "guardrail": false,
+  "faq": [
+    {
+      "q": "Kann das gefördert werden?",
+      "a": "Möglicherweise, wenn es als Digitalisierungsprojekt geplant wird. Wir prüfen das im Förder-Check."
+    },
+    {
+      "q": "Was, wenn der Vorgänger keine Zugänge übergeben hat?",
+      "a": "Dann holen wir sie über die offiziellen Wege der Anbieter zurück, mit Nachweis, dass der Betrieb jetzt dir gehört."
+    }
+  ],
+  "related": [
+    "69",
+    "62",
+    "52"
+  ],
+  "seo": {
+    "title": "Modernisierungs-Sprint für neue Inhaber | TechieBuddy",
+    "description": "Ein Sprint über zwei bis drei Wochen: E-Mail auf eigener Domain, Online-Terminbuchung, passende Software und ein Google-Auftritt, der zum neuen Betrieb …"
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g11"
+  ],
+  "keywords": [
+    "Modernisierungs-Sprint für neue Inhaber",
+    "New owner modernization sprint"
+  ]
+}

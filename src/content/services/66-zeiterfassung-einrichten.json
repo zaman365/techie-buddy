@@ -1,0 +1,80 @@
+{
+  "id": "66",
+  "slug": "zeiterfassung-einrichten",
+  "category": "compliance",
+  "categorySlug": "compliance",
+  "alsoIn": [],
+  "sectors": [
+    "handwerk",
+    "kanzleien-bueros"
+  ],
+  "tier": "catalog",
+  "audience": "b2b",
+  "name": "Zeiterfassung einrichten in 48 Stunden",
+  "problem": "Wir schreiben Arbeitszeiten auf Zettel. Reicht das noch?",
+  "summary": "Wir wählen mit dir ein passendes Zeiterfassungs-Tool, richten es ein, erklären es deinem Team und sorgen für einen Export, den deine Steuerberatung weiterverarbeiten kann.",
+  "includes": [
+    "Auswahl eines Tools passend zu Teamgröße und Arbeitsweise",
+    "Einrichtung von Mitarbeitenden, Arbeitszeitmodellen und Pausenregeln",
+    "Kurze Einweisung fürs Team (App und Browser)",
+    "Export für Lohnbuchhaltung oder Steuerberatung"
+  ],
+  "excludes": [
+    "Arbeitsrechtliche Beratung",
+    "Lizenzkosten für das Tool",
+    "Lohnabrechnung"
+  ],
+  "needs": [
+    "Liste der Mitarbeitenden und Arbeitszeitmodelle",
+    "Ansprechperson in der Lohnbuchhaltung, falls ein Export abgestimmt werden soll"
+  ],
+  "steps": [
+    "Kurzer Fragebogen zu Team und Arbeitsweise.",
+    "Festpreis und Zahlungslink.",
+    "Einrichtung und Test mit einer Probewoche.",
+    "Einweisung und Übergabe der Zugänge."
+  ],
+  "result": "Ein laufendes Zeiterfassungssystem, eingewiesenes Team und ein getesteter Export für die Lohnbuchhaltung.",
+  "price": {
+    "type": "fixed",
+    "from": 249,
+    "display": "249 €",
+    "note": "Festpreis, Tool-Lizenz separat",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "48 h",
+  "tags": [
+    "pflicht"
+  ],
+  "factNote": null,
+  "guardrail": true,
+  "faq": [
+    {
+      "q": "Ist Zeiterfassung Pflicht?",
+      "a": "Nach der Rechtsprechung des Bundesarbeitsgerichts müssen Arbeitgeber Arbeitszeiten systematisch erfassen. Details zur Umsetzung in deinem Betrieb klärt deine Rechts- oder Steuerberatung."
+    },
+    {
+      "q": "Welche Tools nutzt ihr?",
+      "a": "Je nach Bedarf zum Beispiel Clockodo oder timr. Wir empfehlen, was zu deinem Team passt, und haben keine Bindung an einen Anbieter."
+    }
+  ],
+  "related": [
+    "03",
+    "54",
+    "38"
+  ],
+  "seo": {
+    "title": "Zeiterfassung einrichten in 48 Stunden | TechieBuddy",
+    "description": "Wir wählen mit dir ein passendes Zeiterfassungs-Tool, richten es ein, erklären es deinem Team und sorgen für einen Export, den deine Steuerberatung …"
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g06"
+  ],
+  "keywords": [
+    "Zeiterfassung einführen",
+    "Working-time tool implementation",
+    "Arbeitszeiterfassung ausrollen",
+    "Working-time recording rollout"
+  ]
+}

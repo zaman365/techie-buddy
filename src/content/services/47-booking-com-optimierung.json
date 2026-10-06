@@ -1,0 +1,72 @@
+{
+  "id": "47",
+  "slug": "booking-com-optimierung",
+  "category": "kunden",
+  "categorySlug": "sichtbarkeit-termine",
+  "alsoIn": [],
+  "sectors": [
+    "gastronomie-hotellerie"
+  ],
+  "tier": "catalog",
+  "audience": "b2b",
+  "name": "Booking.com-Optimierung für kleine Pensionen",
+  "problem": "Auf Booking.com stehen wir ganz hinten, obwohl die Gäste zufrieden sind.",
+  "summary": "Fotos, Inhaltsbewertung, Preispläne und Antworten auf Bewertungen: Wir übertragen das Listing-Wissen aus dem Marktplatz-Handel auf deine Unterkunft.",
+  "includes": [
+    "Audit deines Unterkunftsprofils",
+    "Optimierung von Texten, Fotoauswahl und Ausstattungsangaben",
+    "Prüfung von Preisplänen und Stornoregeln",
+    "Antwortvorlagen für Bewertungen"
+  ],
+  "excludes": [
+    "Fotoshooting",
+    "Zusage von Rankingplätzen",
+    "Provisionen der Plattform"
+  ],
+  "needs": [
+    "Zugang zum Extranet",
+    "Aktuelle Fotos"
+  ],
+  "steps": [
+    "Du gibst uns Zugang.",
+    "Festpreis und Zahlungslink.",
+    "Audit und Optimierung.",
+    "Übergabe mit Bericht."
+  ],
+  "result": "Ein überarbeitetes Profil, ein Bericht mit den Änderungen und Vorlagen für Bewertungsantworten.",
+  "price": {
+    "type": "fixed",
+    "from": 299,
+    "display": "299 €",
+    "note": "Festpreis",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "72 h",
+  "tags": [],
+  "factNote": null,
+  "guardrail": false,
+  "faq": [
+    {
+      "q": "Gilt das auch für Airbnb?",
+      "a": "Die Methode ja. Für den Abgleich mehrerer Plattformen gibt es den Channel-Manager-Service."
+    },
+    {
+      "q": "Wie schnell wirkt das?",
+      "a": "Änderungen sind sofort sichtbar. Wie sich Buchungen entwickeln, hängt auch von Saison und Bewertungen ab."
+    }
+  ],
+  "related": [
+    "46",
+    "43",
+    "25"
+  ],
+  "seo": {
+    "title": "Booking.com-Optimierung für kleine Pensionen | TechieBuddy",
+    "description": "Fotos, Inhaltsbewertung, Preispläne und Antworten auf Bewertungen: Wir übertragen das Listing-Wissen aus dem Marktplatz-Handel auf deine Unterkunft."
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g08"
+  ],
+  "keywords": []
+}

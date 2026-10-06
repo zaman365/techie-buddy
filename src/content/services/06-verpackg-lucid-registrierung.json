@@ -1,0 +1,82 @@
+{
+  "id": "06",
+  "slug": "verpackg-lucid-registrierung",
+  "category": "compliance",
+  "categorySlug": "compliance",
+  "alsoIn": [
+    "marktplaetze"
+  ],
+  "sectors": [
+    "online-handel"
+  ],
+  "tier": "catalog",
+  "audience": "b2b",
+  "name": "VerpackG und LUCID: Registrierung erledigt",
+  "problem": "Ich will auf Amazon verkaufen und soll mich bei LUCID registrieren. Wo fange ich an?",
+  "summary": "Wir erledigen mit dir die LUCID-Registrierung, richten die Systembeteiligung für deine Verpackungen ein und tragen die Daten bei deinen Marktplätzen ein. Für Neu-Seller in 24 Stunden erledigt.",
+  "includes": [
+    "Registrierung im Verpackungsregister LUCID",
+    "Einrichtung der Systembeteiligung (Lizenzierung deiner Verpackungen)",
+    "Eintrag der Registrierungsnummer bei deinen Marktplätzen",
+    "Kurze Übersicht der wiederkehrenden Meldungen"
+  ],
+  "excludes": [
+    "Kosten der Systembeteiligung (zahlst du direkt an den Anbieter)",
+    "Rechtliche Einordnung von Sonderfällen",
+    "Laufende Mengenmeldungen (auf Wunsch als eigene Leistung)"
+  ],
+  "needs": [
+    "Firmendaten und Ansprechperson",
+    "Geschätzte Verpackungsmengen nach Material",
+    "Zugang zu deinem Seller- oder Marktplatzkonto"
+  ],
+  "steps": [
+    "Du schickst Firmendaten und Verpackungsmengen.",
+    "Festpreis und Zahlungslink.",
+    "Registrierung, Systembeteiligung und Eintrag bei den Marktplätzen.",
+    "Übergabe mit Fristen-Übersicht."
+  ],
+  "result": "LUCID-Nummer, abgeschlossene Systembeteiligung und hinterlegte Daten in deinen Marktplatzkonten, mit Übersicht der Folgetermine.",
+  "price": {
+    "type": "fixed",
+    "from": 99,
+    "display": "99 €",
+    "note": "Festpreis, Lizenzgebühren des Systems separat",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "24 h",
+  "tags": [
+    "erprobt"
+  ],
+  "factNote": null,
+  "guardrail": true,
+  "faq": [
+    {
+      "q": "Brauche ich LUCID auch als kleiner Händler?",
+      "a": "Wer verpackte Ware an Endkunden in Deutschland verschickt, muss in der Regel registriert sein. Im Zweifel klärt das deine Rechtsberatung; die technische Umsetzung übernehmen wir."
+    },
+    {
+      "q": "Was kostet die Lizenzierung der Verpackungen?",
+      "a": "Das hängt von Menge und Material ab und wird direkt an das duale System gezahlt. Unser Festpreis deckt die Einrichtung."
+    }
+  ],
+  "related": [
+    "02",
+    "07",
+    "14"
+  ],
+  "seo": {
+    "title": "VerpackG und LUCID: Registrierung erledigt | TechieBuddy",
+    "description": "Wir erledigen mit dir die LUCID-Registrierung, richten die Systembeteiligung für deine Verpackungen ein und tragen die Daten bei deinen Marktplätzen ein."
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g06"
+  ],
+  "keywords": [
+    "LUCID-Registrierung: Unterstützung",
+    "LUCID packaging registration assistance",
+    "VerpackG/LUCID einrichten",
+    "VerpackG/LUCID setup assistance"
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "id": "02",
+  "slug": "gpsr-rettung-amazon",
+  "category": "marktplaetze",
+  "categorySlug": "amazon-marktplaetze",
+  "alsoIn": [
+    "compliance"
+  ],
+  "sectors": [
+    "online-handel"
+  ],
+  "tier": "launch",
+  "audience": "b2b",
+  "name": "GPSR-Rettung für Amazon-Seller",
+  "problem": "Amazon hat meine Listings wegen fehlender GPSR-Angaben gesperrt.",
+  "summary": "Wir machen deinen Katalog GPSR-konform, per Flat-File statt Handarbeit: Herstellerangaben, verantwortliche Person und Sicherheitsinformationen. Gesperrte Listings bringen wir zur erneuten Prüfung.",
+  "includes": [
+    "Abgleich deines Katalogs mit den GPSR-Pflichtfeldern",
+    "Hersteller und verantwortliche Person in der EU hinterlegen",
+    "Sicherheitsinformationen und Warnhinweise im Katalog",
+    "Massenänderung per Flat-File statt Einzelbearbeitung",
+    "Wiedereinreichung unterdrückter oder gesperrter Listings"
+  ],
+  "excludes": [
+    "Rechtliche Bewertung deiner Produktsicherheit",
+    "Erstellung von Sicherheitsdokumenten oder Prüfberichten",
+    "Entscheidung von Amazon über die Freischaltung"
+  ],
+  "needs": [
+    "Zugang zu Seller Central (Nutzerberechtigung, kein Passwort)",
+    "Herstellerdaten und Kontakt der verantwortlichen Person",
+    "Vorhandene Sicherheitsinformationen zu deinen Produkten"
+  ],
+  "steps": [
+    "Du schickst Katalogumfang und gesperrte ASINs.",
+    "Festpreis je nach Katalogumfang und Zahlungslink.",
+    "Flat-File-Aufbereitung, Upload und Kontrolle der Fehlerberichte.",
+    "Wiedereinreichung und Übergabe mit Vorher-Nachher-Nachweis."
+  ],
+  "result": "Ein GPSR-vollständiger Katalog, ein Upload-Protokoll und eine Liste der wieder eingereichten Listings.",
+  "price": {
+    "type": "from",
+    "from": 149,
+    "display": "ab 149 €",
+    "note": "pro Katalog-Batch, Festpreis je nach Katalogumfang",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "48 h",
+  "tags": [
+    "erprobt"
+  ],
+  "factNote": null,
+  "guardrail": true,
+  "faq": [
+    {
+      "q": "Garantiert ihr, dass Amazon die Listings freischaltet?",
+      "a": "Nein. Wir liefern vollständige Daten und reichen sauber ein. Ob Amazon freischaltet, entscheidet Amazon."
+    },
+    {
+      "q": "Wie groß ist ein Katalog-Batch?",
+      "a": "Das hängt von Varianten und Datenlage ab. Du bekommst den Festpreis nach einem kurzen Blick auf deinen Katalog, bevor du zahlst."
+    },
+    {
+      "q": "Habt ihr das schon gemacht?",
+      "a": "Ja. Im eigenen Betrieb haben wir 91 Amazon-Produkte GPSR-konform gemacht, mit genau diesem Ablauf."
+    }
+  ],
+  "related": [
+    "09",
+    "06",
+    "11"
+  ],
+  "seo": {
+    "title": "GPSR-Rettung für Amazon-Seller | TechieBuddy",
+    "description": "Wir machen deinen Katalog GPSR-konform, per Flat-File statt Handarbeit: Herstellerangaben, verantwortliche Person und Sicherheitsinformationen."
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g01",
+    "g06"
+  ],
+  "keywords": [
+    "GPSR-Daten im Marktplatz nachtragen",
+    "Marketplace GPSR data repair",
+    "GPSR-Angaben in allen Listings",
+    "GPSR listing data implementation"
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "id": "53",
+  "slug": "backup-3-2-1",
+  "category": "buero",
+  "categorySlug": "buero-it-daten",
+  "alsoIn": [],
+  "sectors": [
+    "handwerk",
+    "kanzleien-bueros"
+  ],
+  "tier": "catalog",
+  "audience": "b2b",
+  "name": "Backup-Airbag: 3-2-1-Sicherung mit Test",
+  "problem": "Wir haben kein richtiges Backup. Wenn der Rechner stirbt, ist alles weg.",
+  "summary": "Wir richten eine automatische Sicherung nach der 3-2-1-Regel ein, lokal und in der Cloud, und testen die Wiederherstellung. Den Schritt, den die meisten überspringen. Alles auf einer Seite dokumentiert.",
+  "includes": [
+    "Sicherungskonzept nach der 3-2-1-Regel",
+    "Automatische lokale Sicherung",
+    "Verschlüsselte Cloud-Sicherung",
+    "Getestete Wiederherstellung",
+    "Einseitige Dokumentation mit Notfallschritten"
+  ],
+  "excludes": [
+    "Kosten für Festplatten, NAS oder Cloud-Speicher",
+    "Datenrettung von defekten Datenträgern"
+  ],
+  "needs": [
+    "Liste der Geräte und wichtigen Datenorte",
+    "Zugang zu den Geräten"
+  ],
+  "steps": [
+    "Du nennst Geräte und Datenorte.",
+    "Festpreis und Zahlungslink.",
+    "Einrichtung und Testwiederherstellung.",
+    "Übergabe der Dokumentation."
+  ],
+  "result": "Eine laufende, getestete Sicherung und eine Seite, auf der steht, was im Ernstfall zu tun ist.",
+  "price": {
+    "type": "fixed",
+    "from": 299,
+    "display": "299 €",
+    "note": "Festpreis, Hardware und Speicher separat",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "1 Tag",
+  "tags": [],
+  "factNote": null,
+  "guardrail": false,
+  "faq": [
+    {
+      "q": "Was heißt 3-2-1?",
+      "a": "Drei Kopien deiner Daten, auf zwei verschiedenen Medien, eine davon außer Haus, zum Beispiel in der Cloud."
+    },
+    {
+      "q": "Prüft ihr die Sicherung danach regelmäßig?",
+      "a": "Auf Wunsch als monatliche Backup-Kontrolle in der Betreuung."
+    }
+  ],
+  "related": [
+    "79",
+    "29",
+    "56"
+  ],
+  "seo": {
+    "title": "Backup-Airbag: 3-2-1-Sicherung mit Test | TechieBuddy",
+    "description": "Wir richten eine automatische Sicherung nach der 3-2-1-Regel ein, lokal und in der Cloud, und testen die Wiederherstellung."
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g12"
+  ],
+  "keywords": []
+}

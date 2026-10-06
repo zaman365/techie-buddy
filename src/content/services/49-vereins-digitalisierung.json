@@ -1,0 +1,77 @@
+{
+  "id": "49",
+  "slug": "vereins-digitalisierung",
+  "category": "branchen-pakete",
+  "categorySlug": "branchen-loesungen",
+  "alsoIn": [],
+  "sectors": [
+    "vereine-gemeinden"
+  ],
+  "tier": "catalog",
+  "audience": "b2b",
+  "name": "Vereins-Digitalisierung: Mitglieder und Beiträge",
+  "problem": "Unsere Mitgliederliste ist eine Excel-Datei, die nur der Kassenwart versteht.",
+  "summary": "Wir richten eine Vereinsverwaltung wie easyVerein oder Campai ein, mit SEPA-Beitragseinzug, Newsletter und einer gemeinsamen Cloud für den Vorstand.",
+  "includes": [
+    "Einrichtung der Vereinssoftware",
+    "Übernahme der Mitgliederliste",
+    "SEPA-Lastschrift für Beiträge",
+    "Newsletter an Mitglieder",
+    "Gemeinsame Ablage für den Vorstand"
+  ],
+  "excludes": [
+    "Lizenzkosten",
+    "Steuer- oder Vereinsrechtsberatung",
+    "Buchhaltung"
+  ],
+  "needs": [
+    "Mitgliederliste",
+    "Beitragsordnung",
+    "Bankverbindung und Gläubiger-ID"
+  ],
+  "steps": [
+    "Du schickst Mitgliederliste und Beitragsordnung.",
+    "Festpreis und Zahlungslink.",
+    "Einrichtung und Datenübernahme.",
+    "Einweisung für den Vorstand."
+  ],
+  "result": "Eine laufende Vereinsverwaltung mit Beitragseinzug und ein eingewiesener Vorstand.",
+  "price": {
+    "type": "fixed",
+    "from": 449,
+    "display": "449 €",
+    "note": "Festpreis, Lizenz separat",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "1–2 Wochen",
+  "tags": [],
+  "factNote": null,
+  "guardrail": false,
+  "faq": [
+    {
+      "q": "Brauchen wir eine Gläubiger-ID?",
+      "a": "Für den SEPA-Einzug ja. Wir zeigen dir, wie du sie bei der Bundesbank beantragst."
+    },
+    {
+      "q": "Kann der ganze Vorstand darauf zugreifen?",
+      "a": "Ja, mit Rechten je Rolle. Wer ausscheidet, wird sauber ausgetragen, ohne dass Daten verloren gehen."
+    }
+  ],
+  "related": [
+    "50",
+    "48",
+    "52"
+  ],
+  "seo": {
+    "title": "Vereins-Digitalisierung: Mitglieder und Beiträge",
+    "description": "Wir richten eine Vereinsverwaltung wie easyVerein oder Campai ein, mit SEPA-Beitragseinzug, Newsletter und einer gemeinsamen Cloud für den Vorstand."
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g05"
+  ],
+  "keywords": [
+    "Vereinssoftware einrichten",
+    "Membership software setup"
+  ]
+}

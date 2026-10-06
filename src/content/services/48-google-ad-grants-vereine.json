@@ -1,0 +1,74 @@
+{
+  "id": "48",
+  "slug": "google-ad-grants-vereine",
+  "category": "kunden",
+  "categorySlug": "sichtbarkeit-termine",
+  "alsoIn": [],
+  "sectors": [
+    "vereine-gemeinden"
+  ],
+  "tier": "catalog",
+  "audience": "b2b",
+  "name": "Google Ad Grants: kostenlose Anzeigen für Vereine",
+  "problem": "Wir sind ein gemeinnütziger Verein und haben kein Budget für Werbung.",
+  "summary": "Google vergibt an berechtigte gemeinnützige Organisationen kostenlose Suchanzeigen im Wert von bis zu 10.000 US-Dollar im Monat. Wir prüfen die Voraussetzungen, begleiten den Antrag und richten Konto und erste Kampagnen ein.",
+  "includes": [
+    "Check der Voraussetzungen",
+    "Begleitung bei Antrag und Verifizierung",
+    "Einrichtung des Ads-Kontos nach den Programmregeln",
+    "Erste Kampagnen mit passenden Suchbegriffen",
+    "Kurze Anleitung zur Pflege"
+  ],
+  "excludes": [
+    "Garantie auf Zulassung (entscheidet Google)",
+    "Rechtliche Prüfung deiner Gemeinnützigkeit",
+    "Laufende Kampagnenbetreuung"
+  ],
+  "needs": [
+    "Nachweis der Gemeinnützigkeit",
+    "Zugang zur Website",
+    "Ansprechperson im Vorstand"
+  ],
+  "steps": [
+    "Kurzer Check der Voraussetzungen.",
+    "Festpreis und Zahlungslink.",
+    "Antrag, Verifizierung und Kontoeinrichtung.",
+    "Erste Kampagnen und Übergabe."
+  ],
+  "result": "Ein eingerichtetes Ad-Grants-Konto mit ersten Kampagnen, sofern Google zulässt, und eine Pflege-Anleitung.",
+  "price": {
+    "type": "fixed",
+    "from": 499,
+    "display": "499 €",
+    "note": "Festpreis",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "2 Wochen",
+  "tags": [],
+  "factNote": null,
+  "guardrail": true,
+  "faq": [
+    {
+      "q": "Bekommt jeder Verein Ad Grants?",
+      "a": "Nein. Google prüft die Voraussetzungen, etwa die Gemeinnützigkeit und die Website. Wir klären die Eignung vor der Zahlung."
+    },
+    {
+      "q": "Warum dauert das zwei Wochen?",
+      "a": "Ein Teil liegt bei Google und den Verifizierungsstellen. Die Lieferzeit startet, wenn Zahlung und Unterlagen vorliegen."
+    }
+  ],
+  "related": [
+    "49",
+    "50",
+    "25"
+  ],
+  "seo": {
+    "title": "Google Ad Grants: kostenlose Anzeigen für Vereine",
+    "description": "Google vergibt an berechtigte gemeinnützige Organisationen kostenlose Suchanzeigen im Wert von bis zu 10.000 US-Dollar im Monat."
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g10"
+  ],
+  "keywords": []
+}

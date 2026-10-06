@@ -1,0 +1,73 @@
+{
+  "id": "46",
+  "slug": "ferienwohnung-channel-manager",
+  "category": "kunden",
+  "categorySlug": "sichtbarkeit-termine",
+  "alsoIn": [],
+  "sectors": [
+    "gastronomie-hotellerie"
+  ],
+  "tier": "catalog",
+  "audience": "b2b",
+  "name": "Ferienwohnung: Kalender-Sync und Channel-Manager",
+  "problem": "Wir vermieten über Airbnb und Booking.com und hatten schon zwei Doppelbuchungen.",
+  "summary": "Wir verbinden Airbnb, Booking.com und FeWo-direkt über einen Channel-Manager, damit Doppelbuchungen aufhören, und richten auf Wunsch ein Tool für dynamische Preise ein.",
+  "includes": [
+    "Auswahl und Einrichtung eines Channel-Managers",
+    "Verbindung von Airbnb, Booking.com und FeWo-direkt",
+    "Abgleich von Kalendern, Preisen und Regeln",
+    "Optional: dynamische Preisgestaltung",
+    "Testbuchungen und Übergabe"
+  ],
+  "excludes": [
+    "Lizenzkosten der Tools",
+    "Provisionen der Plattformen",
+    "Steuerliche Fragen zur Vermietung"
+  ],
+  "needs": [
+    "Zugänge zu deinen Plattformkonten",
+    "Preise und Buchungsregeln"
+  ],
+  "steps": [
+    "Du nennst deine Plattformen und Einheiten.",
+    "Festpreis und Zahlungslink.",
+    "Einrichtung und Synchronisation.",
+    "Testbuchungen und Übergabe."
+  ],
+  "result": "Ein synchronisierter Kalender über alle Plattformen und eine dokumentierte Einrichtung.",
+  "price": {
+    "type": "fixed",
+    "from": 349,
+    "display": "349 €",
+    "note": "Festpreis, Tool-Lizenz separat",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "1 Woche",
+  "tags": [],
+  "factNote": null,
+  "guardrail": false,
+  "faq": [
+    {
+      "q": "Wie viele Wohnungen sind enthalten?",
+      "a": "Der Festpreis gilt für eine übliche private Vermietung. Bei mehreren Einheiten nennen wir den Preis vor der Zahlung."
+    },
+    {
+      "q": "Was ist ein Channel-Manager?",
+      "a": "Ein Tool, das Kalender und Preise zwischen Airbnb, Booking.com und anderen Plattformen abgleicht. Wird ein Zeitraum gebucht, ist er überall blockiert."
+    }
+  ],
+  "related": [
+    "47",
+    "25",
+    "43"
+  ],
+  "seo": {
+    "title": "Ferienwohnung: Kalender-Sync und Channel-Manager",
+    "description": "Wir verbinden Airbnb, Booking.com und FeWo-direkt über einen Channel-Manager, damit Doppelbuchungen aufhören, und richten auf Wunsch ein Tool für …"
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g16"
+  ],
+  "keywords": []
+}

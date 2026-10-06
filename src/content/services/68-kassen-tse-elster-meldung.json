@@ -1,0 +1,83 @@
+{
+  "id": "68",
+  "slug": "kassen-tse-elster-meldung",
+  "category": "compliance",
+  "categorySlug": "compliance",
+  "alsoIn": [],
+  "sectors": [
+    "gastronomie-hotellerie"
+  ],
+  "tier": "catalog",
+  "audience": "b2b",
+  "name": "Kassen-Compliance: TSE erneuern und Kasse melden",
+  "problem": "Das TSE-Zertifikat meiner Kasse läuft ab, und ich weiß nicht, wie die ELSTER-Meldung geht.",
+  "summary": "Wir prüfen den Status deiner Kasse und der TSE, koordinieren Verlängerung oder Austausch und übermitteln die Kassenmeldung technisch über ELSTER.",
+  "includes": [
+    "Statusprüfung von Kasse und TSE-Zertifikat",
+    "Koordination von Verlängerung oder Austausch der TSE",
+    "Vorbereitung der Kassendaten",
+    "Technische Übermittlung der Kassenmeldung über ELSTER",
+    "Übersicht der nächsten Fristen"
+  ],
+  "excludes": [
+    "Steuerliche Beratung",
+    "Kosten für neue TSE-Hardware oder Kassensoftware",
+    "Reparatur der Kasse selbst"
+  ],
+  "needs": [
+    "Zugang zur Kasse oder zum Kassenanbieter",
+    "ELSTER-Zugang deines Unternehmens",
+    "Kaufbelege oder Seriennummern der Kassen"
+  ],
+  "steps": [
+    "Du schickst Kassenmodell und Zugänge.",
+    "Festpreis und Zahlungslink.",
+    "Statusprüfung, TSE-Koordination und Datenvorbereitung.",
+    "Übermittlung der Meldung und Übergabe der Bestätigung."
+  ],
+  "result": "Eine gültige TSE, eine übermittelte Kassenmeldung mit Bestätigung und eine Übersicht der kommenden Fristen.",
+  "price": {
+    "type": "fixed",
+    "from": 199,
+    "display": "199 €",
+    "note": "pro Kasse",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "48 h",
+  "tags": [
+    "pflicht"
+  ],
+  "factNote": null,
+  "guardrail": true,
+  "faq": [
+    {
+      "q": "Wie oft muss die TSE erneuert werden?",
+      "a": "TSE-Zertifikate laufen nach einigen Jahren ab, häufig nach etwa fünf. Wir prüfen den Stand deiner Kasse."
+    },
+    {
+      "q": "Macht ihr meine Steuererklärung?",
+      "a": "Nein. Wir übernehmen die technische Meldung der Kassen. Steuerliche Fragen klärt deine Steuerberatung."
+    }
+  ],
+  "related": [
+    "44",
+    "03",
+    "54"
+  ],
+  "seo": {
+    "title": "Kassen-Compliance: TSE erneuern und Kasse melden",
+    "description": "Wir prüfen den Status deiner Kasse und der TSE, koordinieren Verlängerung oder Austausch und übermitteln die Kassenmeldung technisch über ELSTER."
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g06"
+  ],
+  "keywords": [
+    "Kassenmeldung: technische Unterstützung",
+    "Cash-register reporting assistance",
+    "Kassendaten über ELSTER melden",
+    "Cash-register reporting support",
+    "TSE-Ablauf prüfen und erneuern",
+    "TSE expiry check and coordination"
+  ]
+}

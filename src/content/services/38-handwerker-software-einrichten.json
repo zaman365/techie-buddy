@@ -1,0 +1,76 @@
+{
+  "id": "38",
+  "slug": "handwerker-software-einrichten",
+  "category": "branchen-pakete",
+  "categorySlug": "branchen-loesungen",
+  "alsoIn": [],
+  "sectors": [
+    "handwerk"
+  ],
+  "tier": "catalog",
+  "audience": "b2b",
+  "name": "Handwerker-Software einrichten",
+  "problem": "Angebote schreiben wir in Word, Rechnungen in Excel und Termine im Kopf.",
+  "summary": "Digitale Angebote, Rechnungen und Einsatzplanung: Wir wählen mit dir das passende Tool, etwa ToolTime, Plancraft oder Craftboxx, übernehmen deine Kundendaten, richten Vorlagen ein und schulen dein Team eine Stunde.",
+  "includes": [
+    "Auswahl der passenden Handwerker-Software",
+    "Übernahme deiner Kundendaten",
+    "Vorlagen für Angebote und Rechnungen",
+    "Einsatzplanung und mobile Nutzung",
+    "1 Stunde Schulung fürs Team"
+  ],
+  "excludes": [
+    "Lizenzkosten der Software",
+    "Steuerliche Beratung zu Rechnungen"
+  ],
+  "needs": [
+    "Kundenliste (Excel oder Export)",
+    "Beispiel-Angebote und Rechnungen",
+    "Logo und Firmendaten"
+  ],
+  "steps": [
+    "Du schickst Kundenliste und Beispiele.",
+    "Festpreis und Zahlungslink.",
+    "Einrichtung und Datenübernahme.",
+    "Schulung und Übergabe."
+  ],
+  "result": "Eine eingerichtete Software mit deinen Kunden, Vorlagen und einem geschulten Team.",
+  "price": {
+    "type": "fixed",
+    "from": 399,
+    "display": "399 €",
+    "note": "Festpreis, Lizenz separat",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "1 Woche",
+  "tags": [],
+  "factNote": null,
+  "guardrail": false,
+  "faq": [
+    {
+      "q": "Welche Software ist die beste?",
+      "a": "Das hängt von Gewerk und Teamgröße ab. Wir empfehlen ohne Bindung an einen Anbieter."
+    },
+    {
+      "q": "Was passiert mit unseren alten Angeboten und Rechnungen?",
+      "a": "Die bleiben, wo sie sind, und werden archiviert. Kundendaten übernehmen wir, damit neue Angebote direkt im neuen Tool entstehen."
+    }
+  ],
+  "related": [
+    "66",
+    "03",
+    "36"
+  ],
+  "seo": {
+    "title": "Handwerker-Software einrichten | TechieBuddy",
+    "description": "Digitale Angebote, Rechnungen und Einsatzplanung: Wir wählen mit dir das passende Tool, etwa ToolTime, Plancraft oder Craftboxx, übernehmen deine …"
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g05"
+  ],
+  "keywords": [
+    "Auftragssoftware fürs Handwerk einrichten",
+    "Job management software setup"
+  ]
+}

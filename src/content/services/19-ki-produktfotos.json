@@ -1,0 +1,73 @@
+{
+  "id": "19",
+  "slug": "ki-produktfotos",
+  "category": "ki",
+  "categorySlug": "ki-automatisierung",
+  "alsoIn": [],
+  "sectors": [
+    "online-handel",
+    "creator-coaches"
+  ],
+  "tier": "catalog",
+  "audience": "b2b",
+  "name": "KI-Produktfotos aus Handyaufnahmen",
+  "problem": "Ein Fotoshooting können wir uns für 200 Produkte nicht leisten.",
+  "summary": "Aus deinen Handyfotos werden Produktbilder in Studioqualität: freigestellte Hintergründe, Lifestyle-Szenen und Model-Aufnahmen über einen KI-Workflow. 20 Bilder pro Paket.",
+  "includes": [
+    "20 bearbeitete Bilder",
+    "Freistellung und saubere Hintergründe",
+    "Lifestyle-Szenen passend zu deiner Marke",
+    "Formate für Marktplätze, Shop und Social Media"
+  ],
+  "excludes": [
+    "Fotoshooting vor Ort",
+    "Darstellungen, die das Produkt verfälschen",
+    "Nutzung von Markenlogos Dritter"
+  ],
+  "needs": [
+    "Handyfotos deiner Produkte (gutes Licht reicht)",
+    "Beispiele für den gewünschten Stil"
+  ],
+  "steps": [
+    "Du schickst Fotos und Stilbeispiele.",
+    "Festpreis und Zahlungslink.",
+    "Bearbeitung und Vorschau.",
+    "Eine Korrekturrunde, dann Übergabe aller Dateien."
+  ],
+  "result": "20 fertige Bilder in allen benötigten Formaten.",
+  "price": {
+    "type": "fixed",
+    "from": 299,
+    "display": "299 €",
+    "note": "für 20 Bilder",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "72 h",
+  "tags": [],
+  "factNote": null,
+  "guardrail": false,
+  "faq": [
+    {
+      "q": "Darf ich KI-Bilder auf Amazon nutzen?",
+      "a": "Bilder müssen das Produkt korrekt zeigen und die Bildrichtlinien der Plattform erfüllen. Wir achten darauf, dass nichts verfälscht wird."
+    },
+    {
+      "q": "Wie lange dauert es?",
+      "a": "72 Stunden, sobald Zahlung und Fotos da sind."
+    }
+  ],
+  "related": [
+    "08",
+    "FT",
+    "14"
+  ],
+  "seo": {
+    "title": "KI-Produktfotos aus Handyaufnahmen | TechieBuddy",
+    "description": "Aus deinen Handyfotos werden Produktbilder in Studioqualität: freigestellte Hintergründe, Lifestyle-Szenen und Model-Aufnahmen über einen KI-Workflow."
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g08"
+  ],
+  "keywords": []
+}

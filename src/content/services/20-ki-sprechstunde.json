@@ -1,0 +1,72 @@
+{
+  "id": "20",
+  "slug": "ki-sprechstunde",
+  "category": "ki",
+  "categorySlug": "ki-automatisierung",
+  "alsoIn": [],
+  "sectors": [
+    "handwerk",
+    "kanzleien-bueros"
+  ],
+  "tier": "catalog",
+  "audience": "b2b",
+  "name": "KI-Sprechstunde: 90 Minuten für deinen Betrieb",
+  "problem": "Alle reden über KI. Was davon bringt meinem Betrieb wirklich etwas?",
+  "summary": "Ein bezahltes 1:1-Gespräch über 90 Minuten: wo KI in deinem Betrieb konkret Zeit oder Geld spart, welche Tools passen und was du dir sparen kannst. Mit schriftlicher Zusammenfassung.",
+  "includes": [
+    "90 Minuten 1:1, online oder vor Ort in Chemnitz",
+    "Vorab-Fragebogen zu deinen Abläufen",
+    "Konkrete Einsatzideen mit Aufwand und Nutzen",
+    "Schriftliche Zusammenfassung mit Tool-Empfehlungen"
+  ],
+  "excludes": [
+    "Umsetzung (auf Wunsch als eigene Leistung)",
+    "Rechtliche Bewertung"
+  ],
+  "needs": [
+    "Ausgefüllter Vorab-Fragebogen",
+    "Terminwunsch"
+  ],
+  "steps": [
+    "Du buchst und füllst den Fragebogen aus.",
+    "Wir bereiten uns auf deine Abläufe vor.",
+    "90 Minuten Sprechstunde.",
+    "Zusammenfassung mit Empfehlungen."
+  ],
+  "result": "Eine schriftliche Liste mit sinnvollen KI-Einsätzen für deinen Betrieb, Tools und nächsten Schritten.",
+  "price": {
+    "type": "fixed",
+    "from": 179,
+    "display": "179 €",
+    "note": "für 90 Minuten",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "diese Woche",
+  "tags": [],
+  "factNote": null,
+  "guardrail": false,
+  "faq": [
+    {
+      "q": "Ist das die bezahlte Diagnose für alles andere?",
+      "a": "Ja. Für Festpreis-Leistungen gibt es kein kostenloses Erstgespräch. Wenn du erst einmal sortieren willst, ist die KI-Sprechstunde der Einstieg."
+    },
+    {
+      "q": "Wann ist ein Termin möglich?",
+      "a": "In der Regel noch in derselben Woche."
+    }
+  ],
+  "related": [
+    "04",
+    "18",
+    "17"
+  ],
+  "seo": {
+    "title": "KI-Sprechstunde: 90 Minuten für deinen Betrieb | TechieBuddy",
+    "description": "Ein bezahltes 1:1-Gespräch über 90 Minuten: wo KI in deinem Betrieb konkret Zeit oder Geld spart, welche Tools passen und was du dir sparen kannst."
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g18"
+  ],
+  "keywords": []
+}

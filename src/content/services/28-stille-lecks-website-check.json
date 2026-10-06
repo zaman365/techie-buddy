@@ -1,0 +1,77 @@
+{
+  "id": "28",
+  "slug": "stille-lecks-website-check",
+  "category": "website",
+  "categorySlug": "website-shop",
+  "alsoIn": [],
+  "sectors": [
+    "handwerk",
+    "praxen-salons",
+    "gastronomie-hotellerie"
+  ],
+  "tier": "catalog",
+  "audience": "b2b",
+  "name": "Stille-Lecks-Check: Formulare, SSL, Kontaktdaten",
+  "problem": "Seit Wochen kommen keine Anfragen mehr über die Website. Liegt es an uns?",
+  "summary": "Ein 20-Punkte-Check für Fehler, die keiner bemerkt: Formulare, die nicht mehr senden, abgelaufene SSL-Zertifikate, falsche Telefonnummern bei Google. Gefundenes reparieren wir sofort, soweit im Check-Umfang.",
+  "includes": [
+    "20-Punkte-Check mit Testanfragen",
+    "Kontaktformulare, Zustellung und Spamfilter",
+    "SSL-Zertifikat und Weiterleitungen",
+    "Telefonnummern, Adressen und Öffnungszeiten auf Website und Google",
+    "Sofortreparatur kleiner Fehler"
+  ],
+  "excludes": [
+    "Größere Reparaturen (separat zum Festpreis)",
+    "Neubau von Formularen oder Seiten"
+  ],
+  "needs": [
+    "Link zur Website",
+    "Zugang zu Website-Admin und Google-Profil für die Reparatur"
+  ],
+  "steps": [
+    "Du schickst den Link.",
+    "Festpreis und Zahlungslink.",
+    "Check mit Testanfragen und Sofortreparatur.",
+    "Bericht mit Ergebnis jedes Prüfpunkts."
+  ],
+  "result": "Ein Bericht über alle 20 Punkte, reparierte Kleinigkeiten und ein Festpreis für alles Größere.",
+  "price": {
+    "type": "fixed",
+    "from": 99,
+    "display": "99 €",
+    "note": "Check-Preis inkl. Sofortreparatur kleiner Fehler",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "24 h",
+  "tags": [
+    "notfall"
+  ],
+  "factNote": null,
+  "guardrail": false,
+  "faq": [
+    {
+      "q": "Was gilt als kleiner Fehler?",
+      "a": "Zum Beispiel eine falsche Telefonnummer, ein falscher Empfänger im Formular oder eine fehlende Weiterleitung. Alles, was länger dauert, bekommst du als Festpreis-Angebot."
+    },
+    {
+      "q": "Wie oft sollte ich das prüfen lassen?",
+      "a": "Nach jeder größeren Änderung an der Website und sonst einmal im Jahr. Als laufende Website-Pflege geht es auch monatlich."
+    }
+  ],
+  "related": [
+    "22",
+    "59",
+    "25"
+  ],
+  "seo": {
+    "title": "Stille-Lecks-Check: Formulare, SSL, Kontaktdaten",
+    "description": "Ein 20-Punkte-Check für Fehler, die keiner bemerkt: Formulare, die nicht mehr senden, abgelaufene SSL-Zertifikate, falsche Telefonnummern bei Google."
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g02",
+    "g07"
+  ],
+  "keywords": []
+}

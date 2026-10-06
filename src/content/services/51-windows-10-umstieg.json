@@ -1,0 +1,77 @@
+{
+  "id": "51",
+  "slug": "windows-10-umstieg",
+  "category": "buero",
+  "categorySlug": "buero-it-daten",
+  "alsoIn": [],
+  "sectors": [
+    "kanzleien-bueros"
+  ],
+  "tier": "catalog",
+  "audience": "b2b",
+  "name": "Windows 10: Umstieg oder Weiterbetrieb klären",
+  "problem": "Unsere PCs laufen noch mit Windows 10. Was müssen wir jetzt tun?",
+  "summary": "Wir prüfen jeden PC: Ist Windows 11 möglich, lohnt sich ein Gerätetausch oder reicht vorerst ein Sicherheitsupdate-Programm? Dann führen wir den Umstieg durch und ziehen deine Daten mit um.",
+  "includes": [
+    "Kompatibilitäts-Check für Windows 11",
+    "Empfehlung: Upgrade, Austausch oder Übergangslösung",
+    "Upgrade auf Windows 11 mit Datensicherung",
+    "Übernahme von Daten und wichtigen Programmen",
+    "Kurzprotokoll je Gerät"
+  ],
+  "excludes": [
+    "Kosten für neue Hardware oder Lizenzen",
+    "Kosten für das kostenpflichtige Business-ESU-Programm",
+    "Reparatur defekter Hardware"
+  ],
+  "needs": [
+    "Liste der Geräte oder Zugang vor Ort",
+    "Zugangsdaten der Benutzerkonten",
+    "Lizenzen wichtiger Programme"
+  ],
+  "steps": [
+    "Du nennst Anzahl und Art der Geräte.",
+    "Festpreis pro Gerät und Zahlungslink.",
+    "Check, Upgrade und Datenübernahme.",
+    "Protokoll je Gerät."
+  ],
+  "result": "Geräte auf einem unterstützten Stand, übernommene Daten und ein Protokoll je PC.",
+  "price": {
+    "type": "fixed",
+    "from": 99,
+    "display": "99 €",
+    "note": "pro PC",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "pro Gerät",
+  "tags": [
+    "pflicht"
+  ],
+  "factNote": "Microsoft hat die kostenlosen erweiterten Sicherheitsupdates (ESU) für Privatkunden bis zum 12. Oktober 2027 verlängert. Für Unternehmen gibt es ein eigenes, kostenpflichtiges ESU-Programm. Wir klären, was für deine Geräte gilt.",
+  "guardrail": false,
+  "faq": [
+    {
+      "q": "Muss ich sofort umsteigen?",
+      "a": "Nicht unbedingt. Für Privatgeräte laufen kostenlose Sicherheitsupdates bis Oktober 2027, für Firmen gibt es ein kostenpflichtiges Programm. Wir rechnen mit dir durch, was günstiger ist."
+    },
+    {
+      "q": "Macht ihr das auch für Privat-PCs?",
+      "a": "Ja. Für Privathaushalte gibt es außerdem den Umzugs-Service auf ein neues Gerät."
+    }
+  ],
+  "related": [
+    "35",
+    "53",
+    "52"
+  ],
+  "seo": {
+    "title": "Windows 10: Umstieg oder Weiterbetrieb klären | TechieBuddy",
+    "description": "Wir prüfen jeden PC: Ist Windows 11 möglich, lohnt sich ein Gerätetausch oder reicht vorerst ein Sicherheitsupdate-Programm?"
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g06",
+    "g13"
+  ],
+  "keywords": []
+}

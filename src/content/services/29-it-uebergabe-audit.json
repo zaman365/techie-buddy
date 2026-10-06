@@ -1,0 +1,78 @@
+{
+  "id": "29",
+  "slug": "it-uebergabe-audit",
+  "category": "buero",
+  "categorySlug": "buero-it-daten",
+  "alsoIn": [
+    "wachstum"
+  ],
+  "sectors": [
+    "kanzleien-bueros",
+    "nachfolge"
+  ],
+  "tier": "catalog",
+  "audience": "b2b",
+  "name": "Der IT-Mensch ist weg: Übergabe-Audit",
+  "problem": "Der Einzige, der unsere Systeme kannte, hat die Firma verlassen.",
+  "summary": "Wir erfassen alles: Domains, Hosting, Lizenzen, Admin-Konten und Backups. Wir holen verlorene Zugänge über offizielle Wege zurück und dokumentieren alles in einer Übergabe-Mappe.",
+  "includes": [
+    "Bestandsaufnahme aller Systeme, Konten und Verträge",
+    "Wiederherstellung fehlender Admin-Zugänge über offizielle Wege",
+    "Prüfung der Backups",
+    "Übergabe-Mappe mit allen Zugängen und Zuständigkeiten",
+    "Liste der Risiken mit Prioritäten"
+  ],
+  "excludes": [
+    "Behebung aller gefundenen Probleme (separat zum Festpreis)",
+    "Zugriffe ohne Nachweis der Berechtigung"
+  ],
+  "needs": [
+    "Was du schon weißt: Rechnungen, E-Mails von Anbietern, Passwortlisten",
+    "Eine Ansprechperson mit Entscheidungsbefugnis"
+  ],
+  "steps": [
+    "Kurzes Gespräch zu bekannten Systemen.",
+    "Festpreis und Zahlungslink.",
+    "Bestandsaufnahme und Wiederherstellung von Zugängen.",
+    "Übergabe der Mappe und Risiko-Liste."
+  ],
+  "result": "Eine vollständige Übergabe-Mappe, zurückgeholte Zugänge und eine priorisierte Risiko-Liste.",
+  "price": {
+    "type": "fixed",
+    "from": 499,
+    "display": "499 €",
+    "note": "Festpreis für eine übliche Kleinbetriebs-IT",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "1 Woche",
+  "tags": [
+    "notfall"
+  ],
+  "factNote": null,
+  "guardrail": false,
+  "faq": [
+    {
+      "q": "Was, wenn wir ein Passwort gar nicht mehr haben?",
+      "a": "Dann gehen wir über die Wiederherstellungswege der Anbieter, mit Nachweisen, dass das Konto deiner Firma gehört."
+    },
+    {
+      "q": "Gibt es das auch zur Vorbereitung eines Verkaufs?",
+      "a": "Ja. Für Inhaber, die übergeben oder verkaufen wollen, gibt es die Nachfolge-Dokumentation."
+    }
+  ],
+  "related": [
+    "69",
+    "27",
+    "53"
+  ],
+  "seo": {
+    "title": "Der IT-Mensch ist weg: Übergabe-Audit | TechieBuddy",
+    "description": "Wir erfassen alles: Domains, Hosting, Lizenzen, Admin-Konten und Backups. 499 € zzgl. MwSt., Lieferzeit 1 Woche."
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g03",
+    "g11"
+  ],
+  "keywords": []
+}

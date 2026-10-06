@@ -1,0 +1,135 @@
+[
+  {
+    "id": "g01",
+    "name": "Konto gesperrt oder abgelehnt",
+    "quote": "Mein Konto wurde gesperrt.",
+    "intro": "Marktplatz, Zahlungsanbieter, Google-Profil oder Werbekonto gesperrt: Wir finden die Ursache und bereiten die Wiederherstellung über die offiziellen Wege vor.",
+    "count": 17
+  },
+  {
+    "id": "g02",
+    "name": "Etwas funktioniert seit heute nicht mehr",
+    "quote": "Seit heute geht nichts mehr.",
+    "intro": "E-Mail, Website, WLAN, Drucker oder Kasse fallen aus. Viele dieser Fixes starten noch am selben Werktag.",
+    "count": 21
+  },
+  {
+    "id": "g03",
+    "name": "Neue Mitarbeitende, Rollenwechsel oder Austritt",
+    "quote": "Jemand fängt an oder hört auf.",
+    "intro": "Neue Mitarbeitende brauchen Zugänge am ersten Tag, ausscheidende müssen sauber gesperrt werden. Ohne geteilte Passwörter.",
+    "count": 33
+  },
+  {
+    "id": "g04",
+    "name": "Neues Unternehmen, Büro oder neuer Standort",
+    "quote": "Wir gründen, ziehen um oder eröffnen.",
+    "intro": "Neue Firma, neues Büro, neuer Standort: Domain, E-Mail, Internet, Kasse und Google-Profil richtig von Anfang an.",
+    "count": 31
+  },
+  {
+    "id": "g05",
+    "name": "Software gekauft, aber nicht eingerichtet",
+    "quote": "Software gekauft, aber nicht eingerichtet.",
+    "intro": "Das Tool ist bezahlt, aber keiner hat Zeit, es einzurichten. Wir machen es nutzbar: CRM, Newsletter, Buchung, Teams und mehr.",
+    "count": 17
+  },
+  {
+    "id": "g06",
+    "name": "Gesetzliche Pflicht oder Frist",
+    "quote": "Eine Pflicht oder Frist steht an.",
+    "intro": "Barrierefreiheit, E-Rechnung, Verpackung, Kasse, Zeiterfassung oder Datenschutz: technisch umgesetzt, bevor die Frist drückt.",
+    "count": 10
+  },
+  {
+    "id": "g07",
+    "name": "Kunden finden oder erreichen dich nicht",
+    "quote": "Kunden finden oder erreichen uns nicht.",
+    "intro": "Falsche Öffnungszeiten, kein Rückruf, unauffindbar in Maps: Wir sorgen dafür, dass dich deine Kundschaft findet und erreicht.",
+    "count": 11
+  },
+  {
+    "id": "g08",
+    "name": "Anfragen, Verkäufe oder Buchungen gehen zurück",
+    "quote": "Es kommen weniger Anfragen.",
+    "intro": "Anfragen, Verkäufe oder Buchungen gehen zurück. Wir finden die Hürden im Shop, im Formular oder im Google-Profil und räumen sie weg.",
+    "count": 25
+  },
+  {
+    "id": "g09",
+    "name": "Bewertungen oder Ruf",
+    "quote": "Wir haben ein Problem mit Bewertungen.",
+    "intro": "Zu wenige Bewertungen, eine unfaire Kritik oder ein schlechter Ruf als Arbeitgeber: mit ehrlichen, regelkonformen Wegen.",
+    "count": 7
+  },
+  {
+    "id": "g10",
+    "name": "Portale, Formulare und Papierkram",
+    "quote": "Das Portal macht mich fertig.",
+    "intro": "ELSTER, BundID, Vergabeportale, Förderanträge und PDF-Formulare: Wir machen Portale und Papierkram bedienbar.",
+    "count": 18
+  },
+  {
+    "id": "g11",
+    "name": "Umzug, Übergabe oder Nachfolge",
+    "quote": "Wir übergeben oder ziehen um.",
+    "intro": "Nachfolge, Verkauf oder Systemwechsel: Daten, Konten und Zugänge sicher übertragen, ohne dass etwas verloren geht.",
+    "count": 19
+  },
+  {
+    "id": "g12",
+    "name": "Sicherheitsvorfall oder Versicherungsanfrage",
+    "quote": "Wir hatten einen Sicherheitsvorfall.",
+    "intro": "Phishing, gekaperte Postfächer, verlorene Laptops oder der Fragebogen der Cyber-Versicherung: eindämmen, absichern, dokumentieren.",
+    "count": 19
+  },
+  {
+    "id": "g13",
+    "name": "Neues Gerät oder Technik vor Ort",
+    "quote": "Neues Gerät oder neue Technik vor Ort.",
+    "intro": "Neuer Laptop, neues Handy, Drucker, Router, Kamera oder Kartenterminal: eingerichtet, abgesichert, erklärt.",
+    "count": 20
+  },
+  {
+    "id": "g14",
+    "name": "Chaotische oder unzugängliche Daten",
+    "quote": "Unsere Daten sind ein Chaos.",
+    "intro": "Verstreute Dateien, Dubletten, kaputte Tabellen und alte Archive: geordnet, bereinigt und wieder zugänglich.",
+    "count": 5
+  },
+  {
+    "id": "g15",
+    "name": "Website neu gestartet oder geändert",
+    "quote": "Die Website ist neu oder geändert.",
+    "intro": "Nach dem Start oder Relaunch: Messung, Weiterleitungen, Spam-Schutz, Backups und Überwachung prüfen und reparieren.",
+    "count": 11
+  },
+  {
+    "id": "g16",
+    "name": "Chaos bei Terminen und Kommunikation",
+    "quote": "Termine und Nachrichten laufen durcheinander.",
+    "intro": "Verpasste Anrufe, verstreute Nachrichten, Terminausfälle: ein klarer Kanal und automatische Erinnerungen.",
+    "count": 8
+  },
+  {
+    "id": "g17",
+    "name": "Saison- oder Event-Termin",
+    "quote": "Saison oder Event steht vor der Tür.",
+    "intro": "Weihnachtsmarkt, Messe, Pop-up oder Saisonstart: Kartenzahlung, Anmeldung, WLAN und Öffnungszeiten rechtzeitig fertig.",
+    "count": 9
+  },
+  {
+    "id": "g18",
+    "name": "Zu viele Kleinigkeiten oder laufende Betreuung",
+    "quote": "Zu viele Kleinigkeiten auf einmal.",
+    "intro": "Wenn sich Kleinkram stapelt oder du laufende Betreuung willst: Aufräumtage, Checks und feste monatliche Pakete.",
+    "count": 26
+  },
+  {
+    "id": "g19",
+    "name": "Privathaushalt oder Senioren brauchen Hilfe",
+    "quote": "Zu Hause oder bei den Eltern hakt es.",
+    "intro": "Handy, Fernseher, E-Rezept, Fotos oder Betrugsschutz: Hilfe für Privathaushalte und ältere Menschen, Preise inklusive Mehrwertsteuer.",
+    "count": 7
+  }
+]

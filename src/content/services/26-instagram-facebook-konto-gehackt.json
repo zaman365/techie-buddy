@@ -1,0 +1,81 @@
+{
+  "id": "26",
+  "slug": "instagram-facebook-konto-gehackt",
+  "category": "kunden",
+  "categorySlug": "sichtbarkeit-termine",
+  "alsoIn": [],
+  "sectors": [
+    "online-handel",
+    "handwerk",
+    "praxen-salons",
+    "gastronomie-hotellerie"
+  ],
+  "tier": "next",
+  "audience": "b2b",
+  "name": "Instagram oder Facebook gehackt: Wiederherstellung begleiten",
+  "problem": "Unser Instagram-Konto wurde gehackt. Meta antwortet nicht.",
+  "summary": "Wir begleiten dich durch den offiziellen Wiederherstellungsprozess von Meta, sichern deine übrigen Konten und richten überall Zwei-Faktor-Anmeldung ein. Ehrlich als Begleitung, ohne Garantie und ohne Tricks.",
+  "includes": [
+    "Start innerhalb von 24 Stunden nach Zahlung",
+    "Begleitung durch Identitätsprüfung und Formulare von Meta",
+    "Prüfung, ob Meta Verified als Weg in Frage kommt",
+    "Absicherung von E-Mail und weiteren Konten",
+    "Zwei-Faktor-Anmeldung für alle wichtigen Konten",
+    "Dokumentation aller Schritte"
+  ],
+  "excludes": [
+    "Garantie auf Wiederherstellung (die Entscheidung trifft Meta)",
+    "Zurückhacken oder inoffizielle Wege",
+    "Kosten für Meta Verified"
+  ],
+  "needs": [
+    "Benutzername und E-Mail-Adresse des Kontos",
+    "Ausweisdokument für die Identitätsprüfung",
+    "Zugriff auf dein E-Mail-Postfach"
+  ],
+  "steps": [
+    "Du schilderst, was passiert ist.",
+    "Festpreis und Zahlungslink.",
+    "Wir starten innerhalb von 24 Stunden mit Absicherung und Wiederherstellungsantrag.",
+    "Begleitung bis zur Entscheidung von Meta, danach Härtung."
+  ],
+  "result": "Ein dokumentierter Wiederherstellungsversuch über die offiziellen Wege und abgesicherte Konten mit Zwei-Faktor-Anmeldung.",
+  "price": {
+    "type": "fixed",
+    "from": 249,
+    "display": "249 €",
+    "note": "Festpreis für die Begleitung",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "Start in 24 h",
+  "tags": [
+    "notfall"
+  ],
+  "factNote": null,
+  "guardrail": false,
+  "faq": [
+    {
+      "q": "Bekomme ich mein Konto sicher zurück?",
+      "a": "Das entscheidet Meta. Wir sorgen dafür, dass der offizielle Prozess vollständig und korrekt durchlaufen wird und deine anderen Konten sicher sind."
+    },
+    {
+      "q": "Was heißt Start in 24 Stunden?",
+      "a": "Wir beginnen innerhalb von 24 Stunden, sobald Zahlung und Unterlagen da sind. Wie lange Meta braucht, liegt nicht in unserer Hand."
+    }
+  ],
+  "related": [
+    "30",
+    "32",
+    "22"
+  ],
+  "seo": {
+    "title": "Instagram oder Facebook gehackt: Wiederherstellung begleiten",
+    "description": "Wir begleiten dich durch den offiziellen Wiederherstellungsprozess von Meta, sichern deine übrigen Konten und richten überall Zwei-Faktor-Anmeldung ein."
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g01",
+    "g12"
+  ],
+  "keywords": []
+}

@@ -1,0 +1,81 @@
+{
+  "id": "52",
+  "slug": "e-mail-eigene-domain",
+  "category": "buero",
+  "categorySlug": "buero-it-daten",
+  "alsoIn": [],
+  "sectors": [
+    "handwerk",
+    "praxen-salons",
+    "kanzleien-bueros"
+  ],
+  "tier": "catalog",
+  "audience": "b2b",
+  "name": "Profi-E-Mail mit eigener Domain",
+  "problem": "Wir schreiben Kunden immer noch von einer GMX-Adresse.",
+  "summary": "Aus kanzlei-mueller@gmx.de wird info@kanzlei-mueller.de: mit Microsoft 365 oder Google Workspace, kompletter Übernahme deiner alten Mails, Signaturen und eingerichteten Handys.",
+  "includes": [
+    "Einrichtung von Microsoft 365 oder Google Workspace",
+    "Postfächer auf deiner Domain mit sauberer DNS-Authentifizierung",
+    "Übernahme der bisherigen E-Mails, Kontakte und Kalender",
+    "Signaturen für alle Postfächer",
+    "Einrichtung auf PCs und Handys"
+  ],
+  "excludes": [
+    "Lizenzkosten für Microsoft 365 oder Google Workspace",
+    "Domainkosten",
+    "Mehr als die vereinbarte Zahl an Postfächern"
+  ],
+  "needs": [
+    "Zugang zum alten Postfach",
+    "Domain oder Wunschdomain",
+    "Liste der Personen und Geräte"
+  ],
+  "steps": [
+    "Du nennst Domain, Postfächer und Geräte.",
+    "Festpreis und Zahlungslink.",
+    "Einrichtung, Umzug und Test.",
+    "Übergabe mit Zugangsmappe."
+  ],
+  "result": "Professionelle E-Mail-Adressen auf deiner Domain, alle alten Mails übernommen, alle Geräte eingerichtet.",
+  "price": {
+    "type": "fixed",
+    "from": 199,
+    "display": "199 €",
+    "note": "Festpreis für ein kleines Team, Lizenzen separat",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "48 h",
+  "tags": [],
+  "factNote": null,
+  "guardrail": false,
+  "faq": [
+    {
+      "q": "Gehen alte Mails verloren?",
+      "a": "Nein. Wir übernehmen Mails, Kontakte und Kalender und prüfen das Ergebnis mit dir."
+    },
+    {
+      "q": "Microsoft oder Google?",
+      "a": "Das hängt von deinen Programmen und Gewohnheiten ab. Wir empfehlen, was zu dir passt."
+    }
+  ],
+  "related": [
+    "53",
+    "81",
+    "29"
+  ],
+  "seo": {
+    "title": "Profi-E-Mail mit eigener Domain | TechieBuddy",
+    "description": "Aus kanzlei-mueller@gmx.de wird info@kanzlei-mueller.de: mit Microsoft 365 oder Google Workspace, kompletter Übernahme deiner alten Mails, Signaturen …"
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g04"
+  ],
+  "keywords": [
+    "Eigene Domain und E-Mail zum Start",
+    "Company-owned domain and email launch",
+    "E-Mail mit eigener Domain",
+    "Professional domain email setup"
+  ]
+}

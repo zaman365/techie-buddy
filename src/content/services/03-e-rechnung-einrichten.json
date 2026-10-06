@@ -1,0 +1,86 @@
+{
+  "id": "03",
+  "slug": "e-rechnung-einrichten",
+  "category": "compliance",
+  "categorySlug": "compliance",
+  "alsoIn": [],
+  "sectors": [
+    "online-handel",
+    "handwerk",
+    "kanzleien-bueros"
+  ],
+  "tier": "catalog",
+  "audience": "b2b",
+  "name": "E-Rechnung einrichten: empfangen und senden",
+  "problem": "Mein Steuerberater sagt, ich muss E-Rechnungen empfangen können. Wie geht das technisch?",
+  "summary": "Wir richten den Empfang von XRechnung und ZUGFeRD ein, wählen mit dir das passende Tool und bauen einen Ablauf, der zu deiner Buchhaltung passt. Auch für das spätere Versenden wirst du vorbereitet.",
+  "includes": [
+    "Bestandsaufnahme: Wie kommen Rechnungen heute rein und raus?",
+    "Empfang von XRechnung und ZUGFeRD einrichten",
+    "Auswahl eines passenden Tools für deine Größe",
+    "Ablauf für Prüfung, Weitergabe und Archivierung",
+    "Kurze Anleitung für dein Team"
+  ],
+  "excludes": [
+    "Steuerliche Beratung (bleibt bei deiner Steuerberatung)",
+    "Lizenzkosten für Software",
+    "Buchhaltung oder Belegerfassung"
+  ],
+  "needs": [
+    "Zugang zu deinem Rechnungs- oder Buchhaltungsprogramm",
+    "Die E-Mail-Adresse, an die Rechnungen gehen sollen",
+    "Kontakt zu deiner Steuerberatung, falls Abstimmung nötig ist"
+  ],
+  "steps": [
+    "Du schickst uns, wie Rechnungen heute bei dir laufen.",
+    "Festpreis und Zahlungslink.",
+    "Wir richten Empfang, Tool und Ablauf ein und testen mit Beispielrechnungen.",
+    "Übergabe mit Anleitung und Check für das spätere Versenden."
+  ],
+  "result": "Du kannst E-Rechnungen empfangen und lesen, der Ablauf ist dokumentiert und dein Team weiß, was zu tun ist.",
+  "price": {
+    "type": "fixed",
+    "from": 199,
+    "display": "199 €",
+    "note": "Festpreis, zzgl. eventueller Software-Lizenzen",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "48 h",
+  "tags": [
+    "pflicht"
+  ],
+  "factNote": "Seit 2025 müssen inländische Unternehmen E-Rechnungen empfangen können. Für das Versenden gelten Übergangsregeln: Sie enden grundsätzlich Ende 2026, für Unternehmen mit bis zu 800.000 € Vorjahresumsatz Ende 2027. Ausnahmen, etwa für Kleinunternehmer, bleiben bestehen.",
+  "guardrail": true,
+  "faq": [
+    {
+      "q": "Muss ich schon E-Rechnungen verschicken?",
+      "a": "Das hängt von deinem Umsatz und den Übergangsregeln ab. Empfangen können musst du sie bereits. Was für dich beim Versenden gilt, klärt deine Steuerberatung; wir setzen es technisch um."
+    },
+    {
+      "q": "Reicht ein PDF per E-Mail nicht mehr?",
+      "a": "Für den Empfang im B2B-Bereich nicht: Eine E-Rechnung ist ein strukturiertes Datenformat wie XRechnung oder ZUGFeRD. Wir richten ein, dass du sie lesen und weiterverarbeiten kannst."
+    },
+    {
+      "q": "Arbeitet ihr mit DATEV?",
+      "a": "Ja, wir richten den Ablauf so ein, dass er zu deiner Buchhaltung passt. Für die Anbindung an DATEV Unternehmen online gibt es eine eigene Leistung."
+    }
+  ],
+  "related": [
+    "54",
+    "66",
+    "52"
+  ],
+  "seo": {
+    "title": "E-Rechnung einrichten: empfangen und senden | TechieBuddy",
+    "description": "Wir richten den Empfang von XRechnung und ZUGFeRD ein, wählen mit dir das passende Tool und bauen einen Ablauf, der zu deiner Buchhaltung passt."
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g06"
+  ],
+  "keywords": [
+    "E-Rechnungen empfangen können",
+    "E-invoice receiving readiness setup",
+    "E-invoice readiness setup"
+  ]
+}

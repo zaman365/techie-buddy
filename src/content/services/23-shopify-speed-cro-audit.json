@@ -1,0 +1,76 @@
+{
+  "id": "23",
+  "slug": "shopify-speed-cro-audit",
+  "category": "website",
+  "categorySlug": "website-shop",
+  "alsoIn": [],
+  "sectors": [
+    "online-handel"
+  ],
+  "tier": "catalog",
+  "audience": "b2b",
+  "name": "Shopify-Audit: Speed und Conversion",
+  "problem": "Mein Shop lädt ewig, und viele brechen vor dem Kauf ab.",
+  "summary": "Wir finden, was deinen Shop bremst und Käufe verhindert: render-blockierende Schriften, überladene Skripte, Conversion-Killer. Du bekommst einen Bericht und eine Fix-Liste mit Festpreisen.",
+  "includes": [
+    "Messung der Ladezeiten auf Handy und Desktop",
+    "Analyse von Schriften, Skripten, Apps und Bildern",
+    "Durchgang durch Produktseite, Warenkorb und Checkout",
+    "Bericht mit Fundstellen und Wirkung",
+    "Fix-Liste mit Festpreisen"
+  ],
+  "excludes": [
+    "Umsetzung der Fixes (separat zum Festpreis)",
+    "Theme-Wechsel oder Neubau",
+    "Umsatzversprechen"
+  ],
+  "needs": [
+    "Link zum Shop",
+    "Mitarbeiterzugang zu Shopify (für Theme und Apps)"
+  ],
+  "steps": [
+    "Du schickst den Link.",
+    "Festpreis und Zahlungslink.",
+    "Messung und Analyse.",
+    "Bericht mit Fix-Liste."
+  ],
+  "result": "Ein Bericht mit Messwerten, Ursachen und einer priorisierten Fix-Liste mit Festpreisen.",
+  "price": {
+    "type": "fixed",
+    "from": 249,
+    "display": "249 €",
+    "note": "Audit-Preis, Fixes separat",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "72 h",
+  "tags": [
+    "erprobt"
+  ],
+  "factNote": null,
+  "guardrail": false,
+  "faq": [
+    {
+      "q": "Funktioniert das auch für Headless-Shops?",
+      "a": "Ja. Ein solches Audit haben wir für einen Shopify-Hydrogen-Shop im eigenen Betrieb durchgeführt."
+    },
+    {
+      "q": "Auch für andere Shopsysteme?",
+      "a": "Der Schwerpunkt liegt auf Shopify. Für WooCommerce und andere Systeme klären wir vor der Zahlung, ob es passt."
+    }
+  ],
+  "related": [
+    "59",
+    "05",
+    "01"
+  ],
+  "seo": {
+    "title": "Shopify-Audit: Speed und Conversion | TechieBuddy",
+    "description": "Wir finden, was deinen Shop bremst und Käufe verhindert: render-blockierende Schriften, überladene Skripte, Conversion-Killer."
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g08",
+    "g15"
+  ],
+  "keywords": []
+}

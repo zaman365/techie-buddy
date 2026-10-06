@@ -1,0 +1,75 @@
+{
+  "id": "14",
+  "slug": "tiktok-shop-einrichten",
+  "category": "marktplaetze",
+  "categorySlug": "amazon-marktplaetze",
+  "alsoIn": [],
+  "sectors": [
+    "online-handel"
+  ],
+  "tier": "catalog",
+  "audience": "b2b",
+  "name": "TikTok Shop einrichten",
+  "problem": "Ich will auf TikTok Shop verkaufen, aber die Einrichtung ist undurchsichtig.",
+  "summary": "Wir richten deinen TikTok Shop ein, synchronisieren deine Produkte und planen die ersten shoppable Inhalte. Unsere eigene Marke ist dort live: Du bekommst dokumentierte Erfahrung, keine Theorie.",
+  "includes": [
+    "Einrichtung des Shops und der Verkäuferdaten",
+    "Produkt-Synchronisation mit deinem Shop",
+    "Versand- und Rückgabeeinstellungen",
+    "Plan für die ersten shoppable Inhalte"
+  ],
+  "excludes": [
+    "Produktion von Videos",
+    "Influencer-Kooperationen",
+    "Entscheidung von TikTok über die Freischaltung"
+  ],
+  "needs": [
+    "Firmendaten und Unterlagen für die Verifizierung",
+    "Zugang zu deinem Shop-System",
+    "Dein TikTok-Konto"
+  ],
+  "steps": [
+    "Kurzer Check von Sortiment und Unterlagen.",
+    "Festpreis und Zahlungslink.",
+    "Einrichtung, Synchronisation und Tests.",
+    "Übergabe mit Inhaltsplan."
+  ],
+  "result": "Ein eingerichteter TikTok Shop mit synchronisierten Produkten und einem Plan für die ersten Inhalte.",
+  "price": {
+    "type": "fixed",
+    "from": 449,
+    "display": "449 €",
+    "note": "Festpreis für die Einrichtung",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "1 Woche",
+  "tags": [
+    "erprobt"
+  ],
+  "factNote": null,
+  "guardrail": false,
+  "faq": [
+    {
+      "q": "Erstellt ihr auch die Videos?",
+      "a": "Nein. Wir liefern den Plan, welche Inhalte du wie mit Produkten verknüpfst. Für KI-gestützte Produktbilder gibt es eine eigene Leistung."
+    },
+    {
+      "q": "Welche Shop-Systeme unterstützt ihr?",
+      "a": "Gängige Systeme wie Shopify; für andere Systeme klären wir den Weg vor der Zahlung."
+    }
+  ],
+  "related": [
+    "13",
+    "19",
+    "FT"
+  ],
+  "seo": {
+    "title": "TikTok Shop einrichten | TechieBuddy",
+    "description": "Wir richten deinen TikTok Shop ein, synchronisieren deine Produkte und planen die ersten shoppable Inhalte. 449 € zzgl. MwSt., Lieferzeit 1 Woche."
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g04"
+  ],
+  "keywords": []
+}

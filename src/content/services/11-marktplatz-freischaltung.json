@@ -1,0 +1,81 @@
+{
+  "id": "11",
+  "slug": "marktplatz-freischaltung",
+  "category": "marktplaetze",
+  "categorySlug": "amazon-marktplaetze",
+  "alsoIn": [],
+  "sectors": [
+    "online-handel"
+  ],
+  "tier": "catalog",
+  "audience": "b2b",
+  "name": "Marktplatz-Freischaltung: Merchant Center, Pinterest, TikTok",
+  "problem": "Google Merchant Center hat meinen Shop gesperrt, und ich verstehe die Begründung nicht.",
+  "summary": "Bei Sperren und Ablehnungen in Google Merchant Center, Pinterest oder TikTok Shop finden wir die Ursache und liefern einen konkreten Fix-Plan, auf Wunsch mit Umsetzung.",
+  "includes": [
+    "Diagnose von Sperrgrund, Feed und Shop",
+    "Prüfung von Pflichtseiten, Domain und Verifizierung",
+    "Fix-Plan mit Reihenfolge und Zuständigkeiten",
+    "Vorbereitung der erneuten Prüfung"
+  ],
+  "excludes": [
+    "Garantie auf Freischaltung (entscheidet die Plattform)",
+    "Größere Shop-Umbauten (separat zum Festpreis)",
+    "Werbebudget"
+  ],
+  "needs": [
+    "Zugang zum betroffenen Konto (Nutzerberechtigung)",
+    "Screenshots der Sperrmeldung",
+    "Zugang zum Shop-Backend für die Umsetzung"
+  ],
+  "steps": [
+    "Du schickst die Sperrmeldung.",
+    "Festpreis und Zahlungslink.",
+    "Diagnose und Fix-Plan.",
+    "Umsetzung auf Wunsch und erneute Prüfung beantragen."
+  ],
+  "result": "Eine klare Diagnose, ein umsetzbarer Fix-Plan und, wenn beauftragt, die eingereichte erneute Prüfung.",
+  "price": {
+    "type": "fixed",
+    "from": 199,
+    "display": "199 €",
+    "note": "Diagnose und Fix-Plan",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "48 h",
+  "tags": [
+    "notfall",
+    "erprobt"
+  ],
+  "factNote": null,
+  "guardrail": false,
+  "faq": [
+    {
+      "q": "Welche Plattformen deckt ihr ab?",
+      "a": "Google Merchant Center, Pinterest, TikTok Shop und Meta Commerce. Eine Pinterest-Ablehnung haben wir im eigenen Betrieb selbst gelöst."
+    },
+    {
+      "q": "Ist die Umsetzung im Preis enthalten?",
+      "a": "Der Preis umfasst Diagnose und Fix-Plan. Die Umsetzung bekommst du danach zum Festpreis, wenn du willst."
+    }
+  ],
+  "related": [
+    "24",
+    "10",
+    "14"
+  ],
+  "seo": {
+    "title": "Marktplatz-Freischaltung: Merchant Center, Pinterest, TikTok",
+    "description": "Bei Sperren und Ablehnungen in Google Merchant Center, Pinterest oder TikTok Shop finden wir die Ursache und liefern einen konkreten Fix-Plan, auf …"
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g01"
+  ],
+  "keywords": [
+    "Meta-Commerce-Konto abgelehnt",
+    "Meta Commerce account rejection repair",
+    "Pinterest-Händlerkonto verifizieren",
+    "Pinterest merchant verification repair"
+  ]
+}

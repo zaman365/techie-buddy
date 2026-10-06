@@ -1,0 +1,79 @@
+{
+  "id": "67",
+  "slug": "hinweisgeber-meldekanal",
+  "category": "compliance",
+  "categorySlug": "compliance",
+  "alsoIn": [],
+  "sectors": [
+    "kanzleien-bueros"
+  ],
+  "tier": "catalog",
+  "audience": "b2b",
+  "name": "Hinweisgeber-Meldekanal einrichten",
+  "problem": "Wir haben über 50 Mitarbeitende und noch keinen Meldekanal für Hinweisgeber.",
+  "summary": "Wir richten einen digitalen Meldekanal ein, dokumentieren den internen Ablauf und erstellen einen einseitigen Aushang für dein Team. So steht der Kanal, den das Hinweisgeberschutzgesetz verlangt.",
+  "includes": [
+    "Auswahl und Einrichtung eines digitalen Meldetools",
+    "Zugriffsrechte für die zuständige Meldestelle",
+    "Dokumentation des internen Ablaufs",
+    "Einseitiger Aushang für Mitarbeitende"
+  ],
+  "excludes": [
+    "Rechtliche Prüfung des Verfahrens",
+    "Bearbeitung eingehender Meldungen",
+    "Lizenzkosten für das Meldetool"
+  ],
+  "needs": [
+    "Benennung der internen oder externen Meldestelle",
+    "Unternehmensdaten und Logo für den Aushang"
+  ],
+  "steps": [
+    "Kurze Abstimmung zu Größe und Zuständigkeiten.",
+    "Festpreis und Zahlungslink.",
+    "Einrichtung von Tool, Rechten und Ablauf.",
+    "Übergabe mit Dokumentation und Aushang."
+  ],
+  "result": "Ein funktionierender Meldekanal, ein dokumentierter Ablauf und ein Aushang zum Verteilen.",
+  "price": {
+    "type": "fixed",
+    "from": 399,
+    "display": "399 €",
+    "note": "Festpreis, Tool-Lizenz separat",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "1 Woche",
+  "tags": [
+    "pflicht"
+  ],
+  "factNote": null,
+  "guardrail": true,
+  "faq": [
+    {
+      "q": "Ab wann brauche ich einen Meldekanal?",
+      "a": "Unternehmen mit in der Regel mindestens 50 Beschäftigten müssen eine interne Meldestelle einrichten. Ob das für dich gilt, klärt im Zweifel deine Rechtsberatung."
+    },
+    {
+      "q": "Bearbeitet ihr auch die Meldungen?",
+      "a": "Nein. Wir bauen den Kanal und den Ablauf. Die Bearbeitung liegt bei der benannten Meldestelle."
+    }
+  ],
+  "related": [
+    "79",
+    "78",
+    "66"
+  ],
+  "seo": {
+    "title": "Hinweisgeber-Meldekanal einrichten | TechieBuddy",
+    "description": "Wir richten einen digitalen Meldekanal ein, dokumentieren den internen Ablauf und erstellen einen einseitigen Aushang für dein Team."
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g06"
+  ],
+  "keywords": [
+    "Hinweisgeber-Tool einrichten",
+    "Whistleblower channel tool setup",
+    "Hinweisgeber-Meldekanal umsetzen",
+    "Whistleblower channel implementation"
+  ]
+}

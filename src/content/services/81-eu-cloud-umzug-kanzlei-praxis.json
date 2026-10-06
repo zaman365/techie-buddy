@@ -1,0 +1,77 @@
+{
+  "id": "81",
+  "slug": "eu-cloud-umzug-kanzlei-praxis",
+  "category": "buero",
+  "categorySlug": "buero-it-daten",
+  "alsoIn": [],
+  "sectors": [
+    "praxen-salons",
+    "kanzleien-bueros"
+  ],
+  "tier": "catalog",
+  "audience": "b2b",
+  "name": "EU-Cloud-Umzug für Kanzleien und Praxen",
+  "problem": "Mandanten fragen, ob ihre Daten bei uns in einer US-Cloud liegen.",
+  "summary": "Wir ziehen Dateien und Kalender aus US-Clouds in EU-gehostete Dienste wie Nextcloud oder IONOS um: verschlüsselt, mit klaren Zugriffsrechten und dokumentiert für deine Datenschutz-Unterlagen.",
+  "includes": [
+    "Auswahl eines EU-gehosteten Dienstes",
+    "Umzug von Dateien und Kalendern",
+    "Verschlüsselung und Zugriffsrechte",
+    "Dokumentation für dein Datenschutz-Verzeichnis",
+    "Einweisung fürs Team"
+  ],
+  "excludes": [
+    "Datenschutzrechtliche Beratung",
+    "Lizenz- und Hostingkosten",
+    "Umzug von Fachsoftware-Datenbanken"
+  ],
+  "needs": [
+    "Zugang zu den bisherigen Diensten",
+    "Liste der Nutzer und Rechte"
+  ],
+  "steps": [
+    "Bestandsaufnahme von Daten und Nutzern.",
+    "Festpreis und Zahlungslink.",
+    "Einrichtung, Umzug und Rechte.",
+    "Parallelphase, Einweisung und Übergabe."
+  ],
+  "result": "Deine Dateien und Kalender in einer EU-Cloud, mit dokumentierten Rechten und Einstellungen.",
+  "price": {
+    "type": "from",
+    "from": 799,
+    "display": "ab 799 €",
+    "note": "Festpreis nach Datenmenge und Nutzerzahl",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "1–2 Wochen",
+  "tags": [],
+  "factNote": null,
+  "guardrail": true,
+  "faq": [
+    {
+      "q": "Ist danach alles DSGVO-konform?",
+      "a": "Wir setzen die technische Seite sauber um und dokumentieren sie. Die rechtliche Bewertung trifft deine Datenschutzberatung."
+    },
+    {
+      "q": "Müssen wir Fachsoftware wechseln?",
+      "a": "Nein. Es geht um Dateien und Kalender. Fachsoftware bleibt, wie sie ist."
+    }
+  ],
+  "related": [
+    "82",
+    "52",
+    "53"
+  ],
+  "seo": {
+    "title": "EU-Cloud-Umzug für Kanzleien und Praxen | TechieBuddy",
+    "description": "Wir ziehen Dateien und Kalender aus US-Clouds in EU-gehostete Dienste wie Nextcloud oder IONOS um: verschlüsselt, mit klaren Zugriffsrechten und …"
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g11"
+  ],
+  "keywords": [
+    "Kanzlei: Dateien auf EU-Plattform umziehen",
+    "EU-hosted file platform migration"
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "id": "88",
+  "slug": "ankommen-in-deutschland-tech",
+  "category": "wachstum",
+  "categorySlug": "foerderung-team-nachfolge",
+  "alsoIn": [],
+  "sectors": [
+    "internationale-fachkraefte"
+  ],
+  "tier": "catalog",
+  "audience": "b2c",
+  "name": "Ankommens-Tech-Paket für Newcomer",
+  "problem": "Ich bin neu in Deutschland. SIM, Bank, Versicherung, ELSTER: Alles ist digital, aber auf Deutsch.",
+  "summary": "Die digitale Hälfte des Ankommens, in deiner Sprache (Englisch oder Bengali): deutsche SIM, Bankkonto, Krankenkassen-App, ELSTER-Grundlagen, Bahn- und ÖPNV-Apps und der sichere Umgang mit PayPal und Klarna.",
+  "includes": [
+    "Termin auf Englisch oder Bengali",
+    "SIM-Karte und Handyvertrag verstehen",
+    "Bankkonto und Banking-App einrichten",
+    "Krankenkassen-App und ELSTER-Grundlagen",
+    "Bahn- und ÖPNV-Apps",
+    "Sicher bezahlen: PayPal, Klarna und Betrugsmaschen"
+  ],
+  "excludes": [
+    "Rechts-, Aufenthalts- oder Steuerberatung",
+    "Gebühren von Banken und Anbietern",
+    "Behördengänge in deinem Namen"
+  ],
+  "needs": [
+    "Pass und Meldebescheinigung",
+    "Dein Smartphone",
+    "Was schon erledigt ist"
+  ],
+  "steps": [
+    "Du schreibst uns auf Englisch, Bengali oder Deutsch.",
+    "Festpreis und Zahlungslink.",
+    "Termin vor Ort in Chemnitz oder online.",
+    "Checkliste für die nächsten Schritte."
+  ],
+  "result": "Eingerichtete Apps und Konten, verständlich erklärt, und eine Checkliste für alles Weitere.",
+  "price": {
+    "type": "fixed",
+    "from": 149,
+    "display": "149 €",
+    "note": "pro Person",
+    "vat": "inkl. MwSt."
+  },
+  "turnaround": "1 Termin",
+  "tags": [],
+  "factNote": null,
+  "guardrail": true,
+  "faq": [
+    {
+      "q": "Do you speak English?",
+      "a": "Yes. We also offer this in Bengali (বাংলা)."
+    },
+    {
+      "q": "Können Arbeitgeber das für neue Mitarbeitende buchen?",
+      "a": "Ja. Für Arbeitgeber gibt es außerdem das Onboarding-Kit für internationale Fachkräfte."
+    }
+  ],
+  "related": [
+    "90",
+    "89",
+    "35"
+  ],
+  "seo": {
+    "title": "Ankommens-Tech-Paket für Newcomer | TechieBuddy",
+    "description": "Die digitale Hälfte des Ankommens, in deiner Sprache (Englisch oder Bengali): deutsche SIM, Bankkonto, Krankenkassen-App, ELSTER-Grundlagen, Bahn- und …"
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g10"
+  ],
+  "keywords": [
+    "Digital ankommen in Deutschland",
+    "Germany arrival digital setup"
+  ]
+}

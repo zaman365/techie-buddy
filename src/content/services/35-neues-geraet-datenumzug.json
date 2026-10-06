@@ -1,0 +1,79 @@
+{
+  "id": "35",
+  "slug": "neues-geraet-datenumzug",
+  "category": "zuhause",
+  "categorySlug": "zuhause-familie-energie",
+  "alsoIn": [],
+  "sectors": [
+    "familien-senioren"
+  ],
+  "tier": "catalog",
+  "audience": "b2c",
+  "name": "Neuer PC oder neues Handy: Daten-Umzug",
+  "problem": "Ich habe ein neues Handy und Angst, dass meine Fotos und WhatsApp-Chats weg sind.",
+  "summary": "Wir ziehen alles vom alten aufs neue Gerät um: Daten, WhatsApp-Verlauf, Banking-Apps, Drucker und E-Mail. Damit dein Wochenende dir gehört.",
+  "includes": [
+    "Datenübertragung vom alten aufs neue Gerät",
+    "WhatsApp-Verlauf umziehen",
+    "Banking-Apps neu einrichten (mit dir)",
+    "E-Mail und Drucker einrichten",
+    "Altgerät auf Wunsch sicher löschen"
+  ],
+  "excludes": [
+    "Kosten für Geräte oder Zubehör",
+    "Datenrettung von defekten Geräten"
+  ],
+  "needs": [
+    "Beide Geräte, geladen",
+    "Deine Zugangsdaten (Apple-ID, Google-Konto, Banking)"
+  ],
+  "steps": [
+    "Du nennst altes und neues Gerät.",
+    "Festpreis und Zahlungslink.",
+    "Ein Termin bei dir oder in Chemnitz.",
+    "Kurzer Check, ob alles da ist."
+  ],
+  "result": "Ein eingerichtetes neues Gerät mit allen Daten, Chats und Apps.",
+  "price": {
+    "type": "fixed",
+    "from": 129,
+    "display": "129 €",
+    "note": "Festpreis pro Gerät",
+    "vat": "inkl. MwSt."
+  },
+  "turnaround": "1 Termin vor Ort",
+  "tags": [],
+  "factNote": null,
+  "guardrail": false,
+  "faq": [
+    {
+      "q": "Auch von Android zu iPhone?",
+      "a": "Ja, auch der Wechsel zwischen den Systemen ist möglich. Bei WhatsApp prüfen wir vorher den Weg."
+    },
+    {
+      "q": "Was passiert mit dem alten Gerät?",
+      "a": "Auf Wunsch löschen wir es sicher, damit du es verkaufen oder verschenken kannst."
+    }
+  ],
+  "related": [
+    "51",
+    "32",
+    "73"
+  ],
+  "seo": {
+    "title": "Neuer PC oder neues Handy: Daten-Umzug | TechieBuddy",
+    "description": "Wir ziehen alles vom alten aufs neue Gerät um: Daten, WhatsApp-Verlauf, Banking-Apps, Drucker und E-Mail. 129 € inkl. MwSt., Lieferzeit 1 Termin vor Ort."
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g11",
+    "g13",
+    "g19"
+  ],
+  "keywords": [
+    "Neues Handy: kompletter Umzug",
+    "New phone complete migration",
+    "Altes Handy, neues Handy: Umzug",
+    "Old phone to new phone migration"
+  ]
+}

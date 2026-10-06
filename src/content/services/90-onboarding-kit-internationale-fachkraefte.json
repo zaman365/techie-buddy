@@ -1,0 +1,76 @@
+{
+  "id": "90",
+  "slug": "onboarding-kit-internationale-fachkraefte",
+  "category": "wachstum",
+  "categorySlug": "foerderung-team-nachfolge",
+  "alsoIn": [],
+  "sectors": [
+    "internationale-fachkraefte"
+  ],
+  "tier": "catalog",
+  "audience": "b2b",
+  "name": "Onboarding-Kit für Arbeitgeber internationaler Fachkräfte",
+  "problem": "Unsere neuen Pflegekräfte aus dem Ausland kommen nächsten Monat. Wie bereiten wir das vor?",
+  "summary": "Mehrsprachige Onboarding-Seiten, Dokumenten-Checklisten und die Technik-Einrichtung in der Ankunftswoche: Für Pflegeheime, Hotels und Handwerksbetriebe, die international einstellen.",
+  "includes": [
+    "Mehrsprachige Onboarding-Seite",
+    "Checklisten für Dokumente und erste Schritte",
+    "Plan für die Ankunftswoche",
+    "Technik-Einrichtung für die neuen Mitarbeitenden (wie im Ankommens-Paket)",
+    "Ansprechpartner-Übersicht"
+  ],
+  "excludes": [
+    "Aufenthalts- und arbeitsrechtliche Beratung",
+    "Wohnungssuche und Behördengänge",
+    "Übersetzung offizieller Dokumente"
+  ],
+  "needs": [
+    "Anzahl und Herkunftssprachen der neuen Mitarbeitenden",
+    "Infos zu Betrieb, Abläufen und Ansprechpersonen"
+  ],
+  "steps": [
+    "Kurzes Gespräch zu Anzahl und Zeitplan.",
+    "Festpreis und Zahlungslink.",
+    "Aufbau von Seite und Checklisten.",
+    "Einrichtung in der Ankunftswoche."
+  ],
+  "result": "Eine fertige Onboarding-Seite, Checklisten und eingerichtete Technik für deine neuen Mitarbeitenden.",
+  "price": {
+    "type": "fixed",
+    "from": 699,
+    "display": "699 €",
+    "note": "Festpreis für ein Ankunftsteam",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "1–2 Wochen",
+  "tags": [],
+  "factNote": null,
+  "guardrail": true,
+  "faq": [
+    {
+      "q": "Passt das zum Mitarbeiter-Funnel?",
+      "a": "Ja. Viele Betriebe verbinden beides: erst gewinnen, dann gut ankommen lassen."
+    },
+    {
+      "q": "In welchen Sprachen?",
+      "a": "Deutsch und Englisch als Standard, Bengali auf Anfrage. Weitere Sprachen prüfen wir vor der Zahlung."
+    }
+  ],
+  "related": [
+    "88",
+    "36",
+    "89"
+  ],
+  "seo": {
+    "title": "Onboarding-Kit für Arbeitgeber internationaler Fachkräfte",
+    "description": "Mehrsprachige Onboarding-Seiten, Dokumenten-Checklisten und die Technik-Einrichtung in der Ankunftswoche: Für Pflegeheime, Hotels und …"
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g03"
+  ],
+  "keywords": [
+    "IT-Start für internationale Mitarbeitende",
+    "International employee arrival-tech setup"
+  ]
+}

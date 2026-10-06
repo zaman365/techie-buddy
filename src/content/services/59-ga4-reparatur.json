@@ -1,0 +1,75 @@
+{
+  "id": "59",
+  "slug": "ga4-reparatur",
+  "category": "website",
+  "categorySlug": "website-shop",
+  "alsoIn": [],
+  "sectors": [
+    "online-handel"
+  ],
+  "tier": "catalog",
+  "audience": "b2b",
+  "name": "GA4 reparieren: Zahlen wieder sehen",
+  "problem": "Seit der Umstellung auf GA4 sehe ich meine Zahlen nicht mehr.",
+  "summary": "Wir richten Google Analytics 4 sauber ein, definieren die wichtigen Conversions und bauen dir ein lesbares Monats-Dashboard, statt dich durch die Google-Oberfläche zu schicken.",
+  "includes": [
+    "Prüfung und Reparatur der GA4-Einrichtung",
+    "Conversion-Ereignisse für Anfragen oder Käufe",
+    "Abgleich mit deinem Cookie-Banner (Einwilligung)",
+    "Ein Monats-Dashboard mit den wichtigsten Zahlen"
+  ],
+  "excludes": [
+    "Rechtliche Bewertung des Trackings",
+    "Werbekampagnen",
+    "Datenschutz-Texte"
+  ],
+  "needs": [
+    "Zugang zu Google Analytics und Tag Manager",
+    "Zugang zur Website"
+  ],
+  "steps": [
+    "Du gibst uns Zugang.",
+    "Festpreis und Zahlungslink.",
+    "Reparatur, Conversions und Dashboard.",
+    "Übergabe mit kurzer Erklärung."
+  ],
+  "result": "Funktionierende Messung, definierte Conversions und ein Dashboard mit den Zahlen, die du wirklich brauchst.",
+  "price": {
+    "type": "fixed",
+    "from": 199,
+    "display": "199 €",
+    "note": "Festpreis",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "48 h",
+  "tags": [],
+  "factNote": null,
+  "guardrail": false,
+  "faq": [
+    {
+      "q": "Ist Analytics mit der DSGVO vereinbar?",
+      "a": "Technisch richten wir es so ein, dass es nur nach Einwilligung misst. Die rechtliche Bewertung bleibt bei deiner Datenschutzberatung."
+    },
+    {
+      "q": "Brauche ich GA4 überhaupt?",
+      "a": "Nicht zwingend. Wenn du lieber ein datensparsames Tool willst, sprechen wir vorher darüber."
+    }
+  ],
+  "related": [
+    "05",
+    "23",
+    "28"
+  ],
+  "seo": {
+    "title": "GA4 reparieren: Zahlen wieder sehen | TechieBuddy",
+    "description": "Wir richten Google Analytics 4 sauber ein, definieren die wichtigen Conversions und bauen dir ein lesbares Monats-Dashboard, statt dich durch die …"
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g15"
+  ],
+  "keywords": [
+    "GA4: Basis-Messung reparieren",
+    "GA4 basic measurement repair"
+  ]
+}

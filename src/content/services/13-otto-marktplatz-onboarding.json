@@ -1,0 +1,75 @@
+{
+  "id": "13",
+  "slug": "otto-marktplatz-onboarding",
+  "category": "marktplaetze",
+  "categorySlug": "amazon-marktplaetze",
+  "alsoIn": [],
+  "sectors": [
+    "online-handel"
+  ],
+  "tier": "catalog",
+  "audience": "b2b",
+  "name": "Otto-Marktplatz: Onboarding bis zum ersten Listing",
+  "problem": "Wir wollen auf Otto verkaufen, kommen aber durch den Bewerbungsprozess nicht durch.",
+  "summary": "Wir begleiten dich von der Bewerbung über das Mapping deiner Produktdaten bis zu den ersten Live-Listings. Das Otto-Onboarding haben wir im eigenen Betrieb selbst durchlaufen.",
+  "includes": [
+    "Vorbereitung und Begleitung der Händlerbewerbung",
+    "Mapping deiner Produktdaten auf das Otto-Format",
+    "Anlage der ersten Listings",
+    "Kontrolle der Fehlerberichte im Partnerportal"
+  ],
+  "excludes": [
+    "Zulassungsentscheidung von Otto",
+    "Provisionen und Gebühren von Otto",
+    "Laufende Kontoführung (auf Wunsch als Betreuung)"
+  ],
+  "needs": [
+    "Firmendaten und Unterlagen für die Bewerbung",
+    "Produktdaten (Export aus Shop oder Amazon)",
+    "Zugang zum Otto-Partnerportal nach der Zulassung"
+  ],
+  "steps": [
+    "Kurzer Check, ob dein Sortiment zu Otto passt.",
+    "Festpreis und Zahlungslink.",
+    "Bewerbung, Datenmapping und erste Listings.",
+    "Übergabe mit Anleitung für weitere Produkte."
+  ],
+  "result": "Ein Otto-Account mit ersten Live-Listings, dokumentiertem Datenmapping und einer Anleitung für den Rest deines Sortiments.",
+  "price": {
+    "type": "fixed",
+    "from": 599,
+    "display": "599 €",
+    "note": "Festpreis für das Onboarding",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "2 Wochen",
+  "tags": [
+    "erprobt"
+  ],
+  "factNote": null,
+  "guardrail": false,
+  "faq": [
+    {
+      "q": "Nimmt Otto jeden Händler auf?",
+      "a": "Nein, Otto prüft Bewerbungen. Wir bereiten sie bestmöglich vor; die Entscheidung trifft Otto."
+    },
+    {
+      "q": "Warum dauert es zwei Wochen?",
+      "a": "Ein Teil der Zeit liegt bei Otto: Prüfung der Bewerbung und Freischaltung. Die Lieferzeit startet, wenn Zahlung, Unterlagen und Daten vorliegen."
+    }
+  ],
+  "related": [
+    "14",
+    "24",
+    "06"
+  ],
+  "seo": {
+    "title": "Otto-Marktplatz: Onboarding bis zum ersten Listing",
+    "description": "Wir begleiten dich von der Bewerbung über das Mapping deiner Produktdaten bis zu den ersten Live-Listings. 599 € zzgl. MwSt., Lieferzeit 2 Wochen."
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g04"
+  ],
+  "keywords": []
+}

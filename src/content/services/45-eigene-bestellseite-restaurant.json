@@ -1,0 +1,75 @@
+{
+  "id": "45",
+  "slug": "eigene-bestellseite-restaurant",
+  "category": "website",
+  "categorySlug": "website-shop",
+  "alsoIn": [
+    "kunden"
+  ],
+  "sectors": [
+    "gastronomie-hotellerie"
+  ],
+  "tier": "catalog",
+  "audience": "b2b",
+  "name": "Eigene Bestellseite ohne Provision",
+  "problem": "Lieferando nimmt uns bis zu 30 Prozent Provision ab.",
+  "summary": "Eine eigene Bestellseite auf deiner Domain, ohne Provision pro Bestellung, plus QR-Flyer für jede Lieferung: So bestellen deine Stammkunden beim nächsten Mal direkt bei dir.",
+  "includes": [
+    "Bestellseite auf deiner Domain mit deiner Speisekarte",
+    "Online-Zahlung und Bestellbenachrichtigung",
+    "QR-Flyer zum Beilegen",
+    "Einweisung für dein Team"
+  ],
+  "excludes": [
+    "Gebühren von Zahlungsanbietern",
+    "Lieferfahrer und Logistik",
+    "Druckkosten"
+  ],
+  "needs": [
+    "Speisekarte mit Preisen und Allergenangaben",
+    "Logo und Fotos",
+    "Liefergebiet und Zeiten"
+  ],
+  "steps": [
+    "Du schickst Karte und Liefergebiet.",
+    "Festpreis und Zahlungslink.",
+    "Aufbau und Testbestellungen.",
+    "Livegang, Flyer und Einweisung."
+  ],
+  "result": "Eine eigene Bestellseite mit Online-Zahlung, ein druckfertiger QR-Flyer und ein eingewiesenes Team.",
+  "price": {
+    "type": "fixed",
+    "from": 599,
+    "display": "599 €",
+    "note": "Festpreis, Zahlungsgebühren separat",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "1 Woche",
+  "tags": [],
+  "factNote": null,
+  "guardrail": false,
+  "faq": [
+    {
+      "q": "Muss ich Lieferando kündigen?",
+      "a": "Nein. Viele Betriebe nutzen beides und holen Stammkunden Schritt für Schritt auf die eigene Seite."
+    },
+    {
+      "q": "Gibt es laufende Kosten?",
+      "a": "Hosting und Gebühren des Zahlungsanbieters. Die nennen wir dir vor dem Start."
+    }
+  ],
+  "related": [
+    "44",
+    "25",
+    "43"
+  ],
+  "seo": {
+    "title": "Eigene Bestellseite ohne Provision | TechieBuddy",
+    "description": "Eine eigene Bestellseite auf deiner Domain, ohne Provision pro Bestellung, plus QR-Flyer für jede Lieferung: So bestellen deine Stammkunden beim …"
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g08"
+  ],
+  "keywords": []
+}

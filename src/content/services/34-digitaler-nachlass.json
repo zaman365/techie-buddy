@@ -1,0 +1,78 @@
+{
+  "id": "34",
+  "slug": "digitaler-nachlass",
+  "category": "zuhause",
+  "categorySlug": "zuhause-familie-energie",
+  "alsoIn": [],
+  "sectors": [
+    "familien-senioren"
+  ],
+  "tier": "catalog",
+  "audience": "b2c",
+  "name": "Digitaler Nachlass: Ordnung und Zugang",
+  "problem": "Mein Vater ist gestorben, und wir kommen an keines seiner Konten.",
+  "summary": "Zwei Wege: Wir ordnen deinen digitalen Nachlass zu Lebzeiten (Kontenliste, Notfallzugang) oder helfen Hinterbliebenen, Konten über die offiziellen Wege der Anbieter zu erreichen und zu schließen.",
+  "includes": [
+    "Vorsorge: Liste aller Konten, Abos und Geräte",
+    "Vorsorge: Notfallzugang und sichere Aufbewahrung",
+    "Hinterbliebene: Übersicht der Konten der verstorbenen Person",
+    "Hinterbliebene: Anträge bei Anbietern über offizielle Wege",
+    "Kündigung von Abos und Sicherung von Fotos, wo möglich"
+  ],
+  "excludes": [
+    "Rechtsberatung oder Erbschaftsfragen",
+    "Formulierung von Vollmachten (dafür Notariat oder Anwalt)",
+    "Zugriff ohne Nachweis der Berechtigung"
+  ],
+  "needs": [
+    "Vorsorge: deine Geräte und Konten",
+    "Hinterbliebene: Sterbeurkunde, Erbnachweis oder Vollmacht"
+  ],
+  "steps": [
+    "Du schilderst deine Situation.",
+    "Festpreis je nach Umfang und Zahlungslink.",
+    "Bestandsaufnahme und Anträge.",
+    "Übergabe mit Dokumentation."
+  ],
+  "result": "Eine geordnete Konten-Übersicht und, je nach Fall, ein Notfallzugang oder gestellte Anträge bei den Anbietern.",
+  "price": {
+    "type": "range",
+    "from": 199,
+    "to": 349,
+    "display": "199–349 €",
+    "note": "Festpreis je nach Umfang",
+    "vat": "inkl. MwSt."
+  },
+  "turnaround": "1–2 Wochen",
+  "tags": [],
+  "factNote": null,
+  "guardrail": true,
+  "faq": [
+    {
+      "q": "Kommt ihr in jedes Konto?",
+      "a": "Nein. Wir gehen nur über die offiziellen Wege der Anbieter. Manche verlangen Erbnachweise, manche gewähren keinen Zugang, sondern nur die Löschung."
+    },
+    {
+      "q": "Wie lange dauert es?",
+      "a": "Die Vorsorge ein bis zwei Wochen. Bei Hinterbliebenen hängt es von den Bearbeitungszeiten der Anbieter ab."
+    }
+  ],
+  "related": [
+    "71",
+    "32",
+    "73"
+  ],
+  "seo": {
+    "title": "Digitaler Nachlass: Ordnung und Zugang | TechieBuddy",
+    "description": "Zwei Wege: Wir ordnen deinen digitalen Nachlass zu Lebzeiten (Kontenliste, Notfallzugang) oder helfen Hinterbliebenen, Konten über die offiziellen Wege …"
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g11",
+    "g19"
+  ],
+  "keywords": [
+    "Digitaler Nachlass: erste Bestandsaufnahme",
+    "Digital estate inventory starter"
+  ]
+}
