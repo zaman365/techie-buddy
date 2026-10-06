@@ -1,0 +1,60 @@
+---
+import Icon from './Icon.astro';
+import { site } from '../lib/data.ts';
+interface Props {
+  items: { label: string; href?: string }[];
+}
+const { items } = Astro.props;
+const ld = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [{ label: 'Start', href: '/' }, ...items].map((it, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: it.label,
+    ...(it.href ? { item: new URL(it.href, site.brand.url).href } : {})
+  }))
+};
+---
+<nav class="crumbs" aria-label="Brotkrümelnavigation">
+  <ol role="list">
+    <li><a href="/">Start</a></li>
+    {
+      items.map((it, i) => (
+        <li>
+          <Icon name="chevron-right" size={14} />
+          {it.href && i < items.length - 1 ? <a href={it.href}>{it.label}</a> : <span aria-current="page">{it.label}</span>}
+        </li>
+      ))
+    }
+  </ol>
+</nav>
+<script type="application/ld+json" set:html={JSON.stringify(ld)} />
+<style>
+  .crumbs ol {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: center;
+    font-size: var(--fs-13);
+    color: var(--text-3);
+  }
+  .crumbs li {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .crumbs a {
+    color: var(--text-2);
+    text-decoration: none;
+  }
+  .crumbs a:hover {
+    color: var(--text);
+  }
+  .crumbs [aria-current] {
+    color: var(--text-2);
+  }
+  .crumbs .icon {
+    color: var(--text-3);
+  }
+</style>

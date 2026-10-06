@@ -1,0 +1,9 @@
+/* Loaded only when JavaScript is off (<noscript>). Shows content that scripts would reveal. */
+[data-check] fieldset[hidden],
+[data-noscript-show][hidden] {
+  display: grid !important;
+}
+[data-check] .wizard__actions,
+[data-js-only] {
+  display: none !important;
+}

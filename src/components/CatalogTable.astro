@@ -1,0 +1,72 @@
+---
+// Dense table of catalog rows: name, outcome, Richtpreis, Lieferzeit, Anfragen.
+import PriceLabel from './PriceLabel.astro';
+import { inquiryUrl, type CatalogRow } from '../lib/data.ts';
+interface Props {
+  rows: CatalogRow[];
+  caption: string;
+  anchors?: boolean;
+  maxHeight?: boolean;
+}
+const { rows, caption, anchors = false, maxHeight = false } = Astro.props;
+const DELIVERY: Record<CatalogRow['delivery'], string> = { remote: 'Remote', 'vor-ort': 'Vor Ort', hybrid: 'Remote + vor Ort' };
+---
+<div class:list={['table-wrap', maxHeight && 'table-wrap--max']}>
+  <table class="dtable dtable--stack">
+    <caption class="sr-only">{caption}</caption>
+    <thead>
+      <tr>
+        <th scope="col">Leistung</th>
+        <th scope="col">Richtpreis und Lieferzeit</th>
+        <th scope="col">Umsetzung</th>
+        <th scope="col"><span class="sr-only">Aktion</span></th>
+      </tr>
+    </thead>
+    <tbody>
+      {
+        rows.map((r) => (
+          <tr id={anchors ? r.key : undefined}>
+            <th scope="row">
+              <div class="name">{r.name}</div>
+              <div class="sub">{r.outcome}</div>
+            </th>
+            <td data-label="Richtpreis und Lieferzeit">
+              <PriceLabel price={r.price.display} time={r.turnaround} size="s" />
+              <div class="sub">{r.price.vat}</div>
+            </td>
+            <td data-label="Umsetzung" class="muted">{DELIVERY[r.delivery]}</td>
+            <td>
+              <a class="btn btn--secondary btn--sm" href={inquiryUrl({ katalog: r.key })}>
+                Anfragen<span class="sr-only">: {r.name}</span>
+              </a>
+            </td>
+          </tr>
+        ))
+      }
+    </tbody>
+  </table>
+</div>
+<style>
+  .table-wrap--max {
+    --table-max: 640px;
+  }
+  th[scope='row'] {
+    font-weight: 400;
+    min-width: 260px;
+  }
+  td:last-child {
+    text-align: right;
+  }
+  tr:target > * {
+    background: var(--accent-wash);
+  }
+  @media (max-width: 767px) {
+    td:last-child {
+      text-align: left;
+      padding-top: var(--s-3);
+    }
+    th[scope='row'] {
+      min-width: 0;
+    }
+  }
+</style>

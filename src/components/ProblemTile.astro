@@ -1,0 +1,64 @@
+---
+// Buying moment as a small, quote-led tile.
+import Icon from './Icon.astro';
+import type { Moment } from '../lib/data.ts';
+interface Props {
+  moment: Moment;
+  count?: number;
+}
+const { moment: m, count = m.count } = Astro.props;
+---
+<a class="ptile" href={`/alle-leistungen/?moment=${m.id}`}>
+  <span class="ptile__quote">{m.quote}</span>
+  <span class="ptile__name">{m.name}</span>
+  <span class="ptile__meta mono">{count} Fixes <Icon name="arrow-right" size={14} /></span>
+</a>
+<style>
+  .ptile {
+    display: grid;
+    gap: 6px;
+    align-content: start;
+    min-height: 132px;
+    padding: var(--s-5);
+    border: 1px solid var(--line);
+    border-radius: var(--r-16);
+    background: rgba(255, 255, 255, 0.015);
+    text-decoration: none;
+    transition: border-color var(--t-fast) var(--ease), background-color var(--t-fast) var(--ease);
+  }
+  .ptile:hover {
+    border-color: var(--line-3);
+    background: rgba(255, 255, 255, 0.03);
+  }
+  .ptile__quote {
+    font-size: var(--fs-16);
+    font-weight: 540;
+    line-height: 1.35;
+    letter-spacing: -0.01em;
+    color: var(--text);
+  }
+  .ptile__quote::before {
+    content: '„';
+    color: var(--text-3);
+  }
+  .ptile__quote::after {
+    content: '“';
+    color: var(--text-3);
+  }
+  .ptile__name {
+    font-size: var(--fs-13);
+    color: var(--text-2);
+  }
+  .ptile__meta {
+    margin-top: auto;
+    padding-top: var(--s-2);
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: var(--fs-12);
+    color: var(--text-3);
+  }
+  .ptile:hover .ptile__meta {
+    color: var(--accent);
+  }
+</style>

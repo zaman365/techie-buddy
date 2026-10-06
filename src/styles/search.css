@@ -1,0 +1,78 @@
+/* Result rows shared by the ⌘K palette and the hero command bar. */
+.sr-group {
+  padding: var(--s-2) 0;
+}
+.sr-group + .sr-group {
+  border-top: 1px solid var(--line);
+}
+.sr-group__label {
+  padding: 6px var(--s-3);
+  font-size: var(--fs-12);
+  font-weight: 500;
+  color: var(--text-3);
+}
+.sr-opt {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2px var(--s-4);
+  align-items: center;
+  padding: 10px var(--s-3);
+  border-radius: var(--r-10);
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--text);
+}
+.sr-opt[aria-selected='true'] {
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: inset 2px 0 0 var(--accent);
+}
+.sr-opt__title {
+  font-size: var(--fs-14);
+  font-weight: 520;
+  line-height: 1.35;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+.sr-opt__meta {
+  grid-column: 1;
+  font-size: var(--fs-12);
+  color: var(--text-2);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.sr-opt .pl {
+  grid-row: 1 / span 2;
+  grid-column: 2;
+}
+.sr-empty {
+  display: grid;
+  gap: var(--s-3);
+  justify-items: start;
+  padding: var(--s-6) var(--s-4);
+  color: var(--text-2);
+  font-size: var(--fs-14);
+}
+.sr-empty strong {
+  color: var(--text);
+  font-size: var(--fs-16);
+  font-weight: 560;
+}
+.sr-hint {
+  padding: var(--s-4);
+  color: var(--text-3);
+  font-size: var(--fs-13);
+}
+@media (max-width: 480px) {
+  .sr-opt {
+    grid-template-columns: 1fr;
+  }
+  .sr-opt .pl {
+    grid-row: auto;
+    grid-column: 1;
+    justify-self: start;
+    margin-top: 4px;
+  }
+}

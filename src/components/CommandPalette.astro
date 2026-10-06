@@ -1,0 +1,139 @@
+---
+// ⌘K command palette: modal <dialog> with a combobox and a grouped listbox.
+// Search runs client-side on /search-index.json (scripts/palette.ts, scripts/search.ts).
+import Icon from './Icon.astro';
+---
+<dialog class="cp" id="palette" aria-labelledby="cp-title" data-palette>
+  <div class="cp__panel">
+    <h2 id="cp-title" class="sr-only">Leistungen durchsuchen</h2>
+    <div class="cp__bar">
+      <Icon name="search" size={18} />
+      <input
+        class="cp__input"
+        type="text"
+        role="combobox"
+        aria-expanded="true"
+        aria-controls="cp-results"
+        aria-autocomplete="list"
+        aria-label="Was ist kaputt? Suche in allen Leistungen"
+        placeholder="Was ist kaputt? z. B. Listing gesperrt"
+        autocomplete="off"
+        autocorrect="off"
+        spellcheck="false"
+        enterkeyhint="go"
+        data-search-input
+      />
+      <button class="cp__esc" type="button" data-palette-close aria-label="Suche schließen"><kbd>Esc</kbd></button>
+    </div>
+    <div class="cp__results" id="cp-results" role="listbox" aria-label="Suchergebnisse" data-search-results></div>
+    <p class="sr-only" aria-live="polite" data-search-status></p>
+    <div class="cp__foot" aria-hidden="true">
+      <span><kbd>↑</kbd><kbd>↓</kbd> auswählen</span>
+      <span><kbd>↵</kbd> öffnen</span>
+      <span><kbd>Esc</kbd> schließen</span>
+    </div>
+  </div>
+</dialog>
+<style>
+  .cp {
+    width: min(680px, calc(100% - 2 * var(--gutter)));
+    max-height: min(640px, calc(100% - 120px));
+    margin: 96px auto auto;
+    padding: 0;
+    border: 1px solid var(--line-2);
+    border-radius: var(--r-24);
+    background: var(--glass-strong);
+    -webkit-backdrop-filter: blur(24px) saturate(140%);
+    backdrop-filter: blur(24px) saturate(140%);
+    color: var(--text);
+    box-shadow: var(--float-shadow);
+    overflow: hidden;
+  }
+  .cp[open] {
+    animation: cp-in var(--t) var(--ease);
+  }
+  @keyframes cp-in {
+    from {
+      opacity: 0;
+      transform: translateY(-4px) scale(0.99);
+    }
+  }
+  .cp::backdrop {
+    background: rgba(3, 6, 10, 0.6);
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+  }
+  .cp__panel {
+    display: flex;
+    flex-direction: column;
+    max-height: inherit;
+  }
+  .cp__bar {
+    display: flex;
+    align-items: center;
+    gap: var(--s-3);
+    padding: 0 var(--s-4) 0 var(--s-5);
+    height: 60px;
+    border-bottom: 1px solid var(--line);
+    color: var(--text-2);
+    flex: none;
+  }
+  .cp__input {
+    flex: 1;
+    height: 100%;
+    border: 0;
+    background: none;
+    font-size: var(--fs-18);
+    color: var(--text);
+    min-width: 0;
+  }
+  .cp__input:focus-visible {
+    outline: none;
+  }
+  .cp__input::placeholder {
+    color: var(--text-3);
+  }
+  .cp__esc {
+    border: 0;
+    background: none;
+    padding: 4px;
+  }
+  kbd {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    padding: 2px 6px;
+    border-radius: var(--r-6);
+    border: 1px solid var(--line-2);
+    color: var(--text-2);
+    background: rgba(255, 255, 255, 0.03);
+  }
+  .cp__results {
+    overflow-y: auto;
+    padding: var(--s-2);
+    flex: 1;
+    min-height: 120px;
+  }
+  .cp__foot {
+    display: flex;
+    gap: var(--s-5);
+    padding: 10px var(--s-5);
+    border-top: 1px solid var(--line);
+    font-size: var(--fs-12);
+    color: var(--text-3);
+    flex: none;
+  }
+  .cp__foot span {
+    display: inline-flex;
+    gap: 4px;
+    align-items: center;
+  }
+  @media (max-width: 767px) {
+    .cp {
+      margin-top: 16px;
+      max-height: calc(100% - 32px);
+    }
+    .cp__foot {
+      display: none;
+    }
+  }
+</style>

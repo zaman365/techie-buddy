@@ -103,6 +103,7 @@ export const categorySchema = z.object({
 
 export const sectorSchema = z.object({
   id: sectorId,
+  order: z.number(),
   name: nonEmpty,
   icon: nonEmpty,
   short: nonEmpty,

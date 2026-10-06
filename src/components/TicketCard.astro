@@ -1,0 +1,147 @@
+---
+// A service as a ticket: problem quote, name, price label, three includes, CTA.
+// Notched edges come from a CSS mask; the launch variant gets a turquoise top hairline.
+import Icon from './Icon.astro';
+import PriceLabel from './PriceLabel.astro';
+import Badge from './Badge.astro';
+import { serviceUrl, inquiryUrl, type Service } from '../lib/data.ts';
+
+interface Props {
+  service: Service;
+  headingLevel?: 'h2' | 'h3' | 'h4';
+  showBadges?: boolean;
+}
+const { service: s, headingLevel = 'h3', showBadges = true } = Astro.props;
+const Tag = headingLevel;
+const launch = s.tier === 'launch' || s.tier === 'launch-reserve';
+const href = serviceUrl(s);
+---
+<article class:list={['ticket', launch && 'ticket--launch']}>
+  <div class="ticket__body">
+    <p class="quote ticket__quote">{s.problem}</p>
+    <Tag class="ticket__name"><a href={href}>{s.name}</a></Tag>
+    <ul class="checks ticket__inc" role="list">
+      {s.includes.slice(0, 3).map((i) => <li><Icon name="check" />{i}</li>)}
+    </ul>
+    {showBadges && s.tags.length > 0 && <div class="cluster ticket__tags">{s.tags.map((t) => <Badge tag={t} />)}</div>}
+  </div>
+  <div class="ticket__stub">
+    <div class="ticket__price">
+      <PriceLabel price={s.price.display} time={s.turnaround} />
+      <span class="meta">{s.price.vat}</span>
+    </div>
+    <div class="ticket__cta">
+      <a class="btn btn--ghost btn--sm" href={href}>Details<span class="sr-only"> zu {s.name}</span></a>
+      {
+        s.stripePaymentLink ? (
+          <a class="btn btn--primary btn--sm" href={s.stripePaymentLink} rel="noopener">Jetzt buchen<span class="sr-only">: {s.name}</span></a>
+        ) : (
+          <a class="btn btn--secondary btn--sm" href={inquiryUrl({ service: s.slug })}>Anfragen<span class="sr-only">: {s.name}</span></a>
+        )
+      }
+    </div>
+  </div>
+</article>
+
+<style>
+  .ticket {
+    --stub: 74px;
+    --notch: 9px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: var(--card-fill);
+    border: 1px solid var(--line);
+    border-radius: var(--r-16);
+    box-shadow: var(--highlight);
+    transition: border-color var(--t-fast) var(--ease);
+    -webkit-mask:
+      radial-gradient(circle at 0 calc(100% - var(--stub)), transparent var(--notch), #000 calc(var(--notch) + 0.5px)) left / 51% 100% no-repeat,
+      radial-gradient(circle at 100% calc(100% - var(--stub)), transparent var(--notch), #000 calc(var(--notch) + 0.5px)) right / 51% 100% no-repeat;
+    mask:
+      radial-gradient(circle at 0 calc(100% - var(--stub)), transparent var(--notch), #000 calc(var(--notch) + 0.5px)) left / 51% 100% no-repeat,
+      radial-gradient(circle at 100% calc(100% - var(--stub)), transparent var(--notch), #000 calc(var(--notch) + 0.5px)) right / 51% 100% no-repeat;
+  }
+  .ticket:hover {
+    border-color: var(--line-3);
+  }
+  .ticket--launch::before {
+    content: '';
+    position: absolute;
+    inset: -1px 24px auto;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  }
+  .ticket__body {
+    flex: 1;
+    padding: var(--s-6) var(--s-6) var(--s-5);
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-3);
+  }
+  .ticket__name {
+    font-size: var(--fs-20);
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+  }
+  .ticket__name a {
+    text-decoration: none;
+  }
+  .ticket__name a::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+  .ticket__name a:focus-visible {
+    outline: none;
+  }
+  .ticket:has(.ticket__name a:focus-visible) {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+  .ticket__inc {
+    margin-top: var(--s-1);
+    font-size: var(--fs-14);
+  }
+  .ticket__tags {
+    --gap: 6px;
+    margin-top: auto;
+    padding-top: var(--s-2);
+  }
+  .ticket__stub {
+    position: relative;
+    z-index: 1;
+    min-height: var(--stub);
+    padding: var(--s-4) var(--s-6);
+    border-top: 1px dashed var(--line-2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--s-3);
+    flex-wrap: wrap;
+  }
+  .ticket__price {
+    display: flex;
+    align-items: center;
+    gap: var(--s-2);
+    flex-wrap: wrap;
+  }
+  .ticket__cta {
+    display: flex;
+    gap: var(--s-1);
+    margin-left: auto;
+  }
+  @media (max-width: 480px) {
+    .ticket {
+      --stub: 116px;
+    }
+    .ticket__body {
+      padding: var(--s-5) var(--s-5) var(--s-4);
+    }
+    .ticket__stub {
+      padding: var(--s-4) var(--s-5);
+    }
+  }
+</style>

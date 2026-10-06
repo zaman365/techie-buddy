@@ -278,10 +278,11 @@ const categoriesOut = site.categories.map((c: any, i: number) => {
   };
 });
 
-const sectorsOut = site.sectors.map((s: any) => {
+const sectorsOut = site.sectors.map((s: any, i: number) => {
   const t = taxonomy.sectors[s.id];
   return {
     id: s.id,
+    order: i + 1,
     name: s.name_de,
     icon: t.icon,
     short: t.short,

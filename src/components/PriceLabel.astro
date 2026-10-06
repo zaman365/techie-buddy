@@ -1,0 +1,14 @@
+---
+// The signature object: [ price │ turnaround ], set in Geist Mono with tabular figures.
+interface Props {
+  price: string;
+  time?: string;
+  size?: 's' | 'm' | 'l';
+  class?: string;
+}
+const { price, time, size = 'm', class: cls } = Astro.props;
+---
+<span class:list={['pl', size !== 'm' && `pl--${size}`, cls]}>
+  <span class="pl__price"><span class="sr-only">Preis: </span>{price}</span>
+  {time && <span class="pl__time"><span class="sr-only">, Lieferzeit: </span>{time}</span>}
+</span>

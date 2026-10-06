@@ -1,0 +1,94 @@
+---
+// Category tile for the bento grid. Large tiles carry a live UI vignette (slot).
+import Icon from './Icon.astro';
+import { categoryUrl, type Category } from '../lib/data.ts';
+interface Props {
+  category: Category;
+  size?: 'lg' | 'md' | 'sm';
+}
+const { category: c, size = 'sm' } = Astro.props;
+const total = c.counts.named + c.counts.catalog;
+---
+<a class:list={['bento', `bento--${size}`]} href={categoryUrl(c)}>
+  <span class="bento__head">
+    <span class="bento__icon"><Icon name={c.icon} size={18} /></span>
+    <span class="bento__count mono">{total} Fixes</span>
+  </span>
+  <span class="bento__name">{c.name}</span>
+  <span class="bento__short">{c.short}</span>
+  {Astro.slots.has('default') && <span class="bento__vignette"><slot /></span>}
+  <span class="bento__go">Bereich ansehen <Icon name="arrow-right" size={14} /></span>
+</a>
+<style>
+  .bento {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-2);
+    padding: var(--s-6);
+    border: 1px solid var(--line);
+    border-radius: var(--r-24);
+    background: var(--card-fill);
+    box-shadow: var(--highlight);
+    text-decoration: none;
+    overflow: hidden;
+    transition: border-color var(--t-fast) var(--ease);
+  }
+  .bento:hover {
+    border-color: var(--line-3);
+  }
+  .bento__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--s-3);
+  }
+  .bento__icon {
+    display: grid;
+    place-items: center;
+    width: 36px;
+    height: 36px;
+    border-radius: var(--r-10);
+    border: 1px solid var(--line-2);
+    color: var(--text);
+    background: rgba(255, 255, 255, 0.03);
+  }
+  .bento__count {
+    font-size: var(--fs-12);
+    color: var(--text-3);
+  }
+  .bento__name {
+    font-size: var(--fs-20);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.25;
+    color: var(--text);
+  }
+  .bento__short {
+    font-size: var(--fs-14);
+    color: var(--text-2);
+  }
+  .bento__vignette {
+    display: block;
+    margin-top: var(--s-5);
+  }
+  .bento__go {
+    margin-top: auto;
+    padding-top: var(--s-5);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: var(--fs-13);
+    color: var(--text-3);
+  }
+  .bento:hover .bento__go {
+    color: var(--accent);
+  }
+  .bento--lg .bento__name {
+    font-size: var(--fs-30);
+    letter-spacing: -0.03em;
+  }
+  .bento--lg .bento__short {
+    font-size: var(--fs-16);
+  }
+</style>

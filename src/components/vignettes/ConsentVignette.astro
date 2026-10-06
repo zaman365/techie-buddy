@@ -1,0 +1,82 @@
+---
+// Decorative: a consent banner with category toggles; marketing off until consent.
+---
+<div class="vg" aria-hidden="true">
+  <p class="t">Datenschutz-Einstellungen</p>
+  <div class="opt"><span>Notwendig</span><span class="tg tg--on tg--lock"></span></div>
+  <div class="opt"><span>Statistik</span><span class="tg"></span></div>
+  <div class="opt"><span>Marketing <em>Meta-Pixel wartet</em></span><span class="tg"></span></div>
+  <div class="btns"><span class="b">Ablehnen</span><span class="b">Auswählen</span><span class="b b--p">Alle akzeptieren</span></div>
+</div>
+<style>
+  .vg {
+    border: 1px solid var(--line-2);
+    border-radius: var(--r-10);
+    background: rgba(7, 11, 18, 0.6);
+    padding: 12px;
+    font-size: 12px;
+    display: grid;
+    gap: 8px;
+  }
+  .t {
+    font-weight: 560;
+    color: var(--text);
+  }
+  .opt {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-2);
+  }
+  .opt em {
+    font-style: normal;
+    color: var(--ok);
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    margin-left: 6px;
+  }
+  .tg {
+    position: relative;
+    width: 26px;
+    height: 15px;
+    border-radius: 999px;
+    background: var(--line-2);
+  }
+  .tg::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: var(--text-2);
+  }
+  .tg--on {
+    background: var(--accent-deep);
+  }
+  .tg--on::after {
+    left: 13px;
+    background: var(--text);
+  }
+  .tg--lock {
+    opacity: 0.6;
+  }
+  .btns {
+    display: flex;
+    gap: 6px;
+    margin-top: 4px;
+  }
+  .b {
+    flex: 1;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    border: 1px solid var(--line-2);
+    color: var(--text-2);
+    font-size: 11px;
+  }
+  .b--p {
+    border-color: var(--line-2);
+  }
+</style>

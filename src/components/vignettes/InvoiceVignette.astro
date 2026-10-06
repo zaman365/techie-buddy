@@ -1,0 +1,62 @@
+---
+// Decorative: an invoice with an "XRechnung" tag.
+---
+<div class="vg" aria-hidden="true">
+  <div class="top"><b>Rechnung 2026-0142</b><span class="x">XRechnung</span></div>
+  <div class="ln"><span>Wartung Heizung</span><span class="mono">480,00</span></div>
+  <div class="ln"><span>Material</span><span class="mono">126,40</span></div>
+  <div class="ln sum"><span>Summe</span><span class="mono">721,62 €</span></div>
+  <div class="foot"><span class="ok"></span>Empfangen · geprüft · archiviert</div>
+</div>
+<style>
+  .vg {
+    border: 1px solid var(--line-2);
+    border-radius: var(--r-10);
+    background: rgba(7, 11, 18, 0.6);
+    padding: 12px;
+    font-size: 12px;
+    display: grid;
+    gap: 6px;
+    color: var(--text-2);
+  }
+  .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+  }
+  .top b {
+    color: var(--text);
+    font-weight: 560;
+  }
+  .x {
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    padding: 2px 7px;
+    border-radius: 6px;
+    border: 1px solid var(--accent-line);
+    color: var(--accent);
+  }
+  .ln {
+    display: flex;
+    justify-content: space-between;
+  }
+  .sum {
+    border-top: 1px solid var(--line);
+    padding-top: 6px;
+    color: var(--text);
+  }
+  .foot {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 4px;
+    font-size: 11px;
+  }
+  .ok {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--ok);
+  }
+</style>

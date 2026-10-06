@@ -1,0 +1,114 @@
+---
+// Decorative: a marketplace listing row going from "Gesperrt" to "Aktiv". Static, no motion.
+---
+<div class="vg" aria-hidden="true">
+  <div class="vg__bar"><span></span><span></span><span></span><em>Katalog · 91 Artikel</em></div>
+  <div class="vg__rows">
+    <div class="row">
+      <span class="thumb"></span>
+      <span class="txt"><b>Leinenhemd, Slim Fit</b><i>ASIN B0··· · GPSR: verantwortliche Person ergänzt</i></span>
+      <span class="state"><s class="pill pill--bad">Gesperrt</s><span class="arrow">→</span><span class="pill pill--ok">Aktiv</span></span>
+    </div>
+    <div class="row dim">
+      <span class="thumb"></span>
+      <span class="txt"><b>Chino, Regular</b><i>Sicherheitsinformationen hinterlegt</i></span>
+      <span class="state"><span class="pill pill--ok">Aktiv</span></span>
+    </div>
+    <div class="row dim">
+      <span class="thumb"></span>
+      <span class="txt"><b>Overshirt, Wolle</b><i>Hersteller und EU-Kontakt geprüft</i></span>
+      <span class="state"><span class="pill pill--ok">Aktiv</span></span>
+    </div>
+  </div>
+</div>
+<style>
+  .vg {
+    border: 1px solid var(--line-2);
+    border-radius: var(--r-10);
+    background: rgba(7, 11, 18, 0.6);
+    overflow: hidden;
+    font-size: 12px;
+  }
+  .vg__bar {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    padding: 8px 10px;
+    border-bottom: 1px solid var(--line);
+  }
+  .vg__bar span {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--line-3);
+  }
+  .vg__bar em {
+    font-style: normal;
+    margin-left: 8px;
+    color: var(--text-3);
+    font-family: var(--font-mono);
+    font-size: 11px;
+  }
+  .row {
+    display: grid;
+    grid-template-columns: 28px 1fr auto;
+    gap: 10px;
+    align-items: center;
+    padding: 10px;
+  }
+  .row + .row {
+    border-top: 1px solid var(--line);
+  }
+  .dim {
+    opacity: 0.55;
+  }
+  .thumb {
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    background: linear-gradient(135deg, var(--surface-2), #1c2a44);
+    border: 1px solid var(--line);
+  }
+  .txt {
+    display: grid;
+    min-width: 0;
+  }
+  .txt b {
+    font-weight: 540;
+    color: var(--text);
+  }
+  .txt i {
+    font-style: normal;
+    color: var(--text-3);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .state {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .arrow {
+    color: var(--text-3);
+  }
+  .pill {
+    padding: 2px 8px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 500;
+    text-decoration: none;
+  }
+  .pill--bad {
+    color: #ffb3b3;
+    background: var(--danger-wash);
+    border: 1px solid rgba(255, 107, 107, 0.3);
+    text-decoration: line-through;
+    text-decoration-color: rgba(255, 179, 179, 0.6);
+  }
+  .pill--ok {
+    color: var(--ok);
+    background: rgba(94, 227, 161, 0.08);
+    border: 1px solid rgba(94, 227, 161, 0.3);
+  }
+</style>

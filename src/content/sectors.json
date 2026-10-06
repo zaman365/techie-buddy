@@ -1,6 +1,7 @@
 [
   {
     "id": "online-handel",
+    "order": 1,
     "name": "Online-Händler & Amazon-Seller",
     "icon": "shopping-cart",
     "short": "Amazon, Otto, TikTok Shop, Shopify und Pflichten",
@@ -39,6 +40,7 @@
   },
   {
     "id": "handwerk",
+    "order": 2,
     "name": "Handwerk & lokale Betriebe",
     "icon": "hammer",
     "short": "Website, Google, Personal, Software und Förderung",
@@ -74,6 +76,7 @@
   },
   {
     "id": "praxen-salons",
+    "order": 3,
     "name": "Praxen, Salons & Studios",
     "icon": "calendar-check",
     "short": "Terminbuchung, Erinnerungen, Anamnese, Fax-Ausstieg",
@@ -101,6 +104,7 @@
   },
   {
     "id": "gastronomie-hotellerie",
+    "order": 4,
     "name": "Gastronomie, Pensionen & Ferienwohnungen",
     "icon": "utensils",
     "short": "Speisekarte, Bestellseite, Kasse, Booking.com",
@@ -127,6 +131,7 @@
   },
   {
     "id": "vereine-gemeinden",
+    "order": 5,
     "name": "Vereine, NGOs & Gemeinden",
     "icon": "users",
     "short": "Mitglieder, Beiträge, Spenden, Ad Grants",
@@ -145,6 +150,7 @@
   },
   {
     "id": "kanzleien-bueros",
+    "order": 6,
     "name": "Kanzleien, Büros & Selbständige",
     "icon": "briefcase",
     "short": "E-Mail, DATEV, Backups, EU-Cloud, Fragebögen",
@@ -181,6 +187,7 @@
   },
   {
     "id": "creator-coaches",
+    "order": 7,
     "name": "Creator, Coaches & Podcaster",
     "icon": "mic",
     "short": "Podcast, Buchung, KI-Sichtbarkeit, Automationen",
@@ -202,6 +209,7 @@
   },
   {
     "id": "familien-senioren",
+    "order": 8,
     "name": "Familien & Senioren",
     "icon": "heart-handshake",
     "short": "Kinderschutz, Betrug, Fotos, Eltern-Technik",
@@ -225,6 +233,7 @@
   },
   {
     "id": "energie",
+    "order": 9,
     "name": "Solar, Wallbox & E-Auto",
     "icon": "sun",
     "short": "Balkonkraftwerk, PV, Wallbox, THG-Quote",
@@ -245,6 +254,7 @@
   },
   {
     "id": "nachfolge",
+    "order": 10,
     "name": "Unternehmensnachfolge",
     "icon": "key-round",
     "short": "Übergabe vorbereiten, Betrieb modernisieren",
@@ -265,6 +275,7 @@
   },
   {
     "id": "internationale-fachkraefte",
+    "order": 11,
     "name": "Internationale Fachkräfte & Newcomer",
     "icon": "globe",
     "short": "Ankommen, Onboarding, Agentur-Technik",
@@ -284,6 +295,7 @@
   },
   {
     "id": "laendliche-nischen",
+    "order": 12,
     "name": "Jagd, Reitställe, Fahrschulen & Hofläden",
     "icon": "tractor",
     "short": "Jagd, Reitställe, Fahrschulen, Hofläden, Märkte",
