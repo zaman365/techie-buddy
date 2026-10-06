@@ -1,0 +1,7 @@
+# v1 URLs → v2 (301)
+/index.html             /                     301
+/impressum.html         /impressum/           301
+/datenschutz.html       /datenschutz/         301
+/barrierefreiheit.html  /barrierefreiheit/    301
+/sitemap.xml            /sitemap-index.xml    301
+/assets/favicon.svg     /favicon.svg          301
