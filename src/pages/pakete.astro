@@ -1,0 +1,198 @@
+---
+import Base from '../layouts/Base.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+import Packages from '../components/Packages.astro';
+import RecurringTable from '../components/RecurringTable.astro';
+import CatalogTable from '../components/CatalogTable.astro';
+import Icon from '../components/Icon.astro';
+import FinalCta from '../components/FinalCta.astro';
+import { getData, site } from '../lib/data.ts';
+const { catalogListed } = await getData();
+const careRows = catalogListed.filter((r) => r.recurring);
+const path = [
+  { n: '01', title: 'Diagnose', text: 'Ein Audit, ein Check oder die KI-Sprechstunde zeigt, was los ist und was es kostet.', icon: 'search' },
+  { n: '02', title: 'Umsetzung', text: 'Der Fix oder das Projekt zum Festpreis, mit Nachweis und Übergabe aller Zugänge.', icon: 'wrench' },
+  { n: '03', title: 'Betreuung', text: 'Wenn das Problem nicht wiederkommen soll: Pflege, Monitoring oder ein festes Monatspaket.', icon: 'refresh-cw' }
+];
+---
+<Base title="Pakete, Projekte und Betreuung" description="Website-, Business- und Shop-Pakete ab 999 € mit kostenlosem Erstgespräch, dazu laufende Betreuung mit festen Monatspreisen.">
+  <div class="container page-top">
+    <SectionHeader level="h1" title="Pakete und Betreuung" text="Wenn aus dem Fix ein Projekt wird: feste Pakete mit kostenlosem Erstgespräch. Und wenn ein Problem nicht wiederkommen soll: Betreuung mit festem Monatspreis." />
+    <Packages headingLevel="h2" />
+    <p class="meta intro-call"><Icon name="phone" size={14} />Für Projekte gibt es ein kostenloses Erstgespräch, weil der Umfang gemeinsam festgelegt wird. Festpreis-Leistungen brauchen keinen Termin.</p>
+  </div>
+
+  <section class="section section--raised section--line" aria-labelledby="pillars-title">
+    <div class="container">
+      <SectionHeader id="pillars-title" title="Was wir bauen" text="Vier Schwerpunkte für Projekte. Mobile Apps gibt es auf individuelles Angebot." />
+      <ul class="pillars" role="list">
+        {
+          site.pillars.map((p) => (
+            <li class="pillar">
+              <Icon name={p.icon} size={20} />
+              <h3>{p.name}</h3>
+              <p>{p.text}</p>
+              <ul role="list">
+                {p.features.map((f) => (
+                  <li>{f}</li>
+                ))}
+              </ul>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="path-title">
+    <div class="container">
+      <SectionHeader id="path-title" title="Vom ersten Fix zur Betreuung" text="Diagnose und Umsetzung bleiben getrennte Angebote. Du entscheidest nach jedem Schritt neu." />
+      <ol class="path" role="list">
+        {
+          path.map((p, i) => (
+            <li class="path__step">
+              <span class="path__n mono">{p.n}</span>
+              <Icon name={p.icon} size={20} />
+              <h3>{p.title}</h3>
+              <p>{p.text}</p>
+              {i < path.length - 1 && <span class="path__arrow" aria-hidden="true"><Icon name="arrow-right" size={18} /></span>}
+            </li>
+          ))
+        }
+      </ol>
+      <div class="sab">
+        <div>
+          <h3>Förderfähig bündeln</h3>
+          <p>Mehrere Leistungen lassen sich zu einem Digitalisierungsprojekt von 5.000 bis 10.000 € bündeln. In Sachsen kann die SAB berechtigte Erstprojekte mit bis zu 60 % fördern; der Antrag kommt vor dem Projektstart.</p>
+        </div>
+        <a class="btn btn--secondary" href="/foerderung/">Förderung prüfen lassen</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--raised section--line" aria-labelledby="betreuung">
+    <div class="container">
+      <SectionHeader id="betreuung" title="Betreuung und Abos" text="Feste Monatspreise, klarer Umfang. Die genauen Konditionen und die Kündigungsfrist stehen im Angebot." />
+      <RecurringTable />
+      <h3 class="care-h">Laufende Leistungen aus dem Katalog</h3>
+      <p class="muted care-p">{careRows.length} weitere Betreuungsleistungen mit Richtpreis je Abrechnungszeitraum.</p>
+      <CatalogTable rows={careRows} caption="Laufende Betreuungsleistungen" />
+    </div>
+  </section>
+
+  <FinalCta title="Lass uns über dein Projekt sprechen." text="Beschreib kurz, was du vorhast. Für Projekte gibt es ein kostenloses Erstgespräch." />
+</Base>
+<style>
+  .intro-call {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    margin-block: var(--s-6) var(--s-16);
+  }
+  .pillars {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: var(--s-4);
+  }
+  .pillar {
+    display: grid;
+    align-content: start;
+    gap: var(--s-3);
+    padding: var(--s-6);
+    border: 1px solid var(--line);
+    border-radius: var(--r-16);
+    background: var(--card-fill);
+  }
+  .pillar h3 {
+    font-size: var(--fs-18);
+  }
+  .pillar > p {
+    color: var(--text-2);
+    font-size: var(--fs-14);
+  }
+  .pillar ul {
+    display: grid;
+    gap: 4px;
+    font-size: var(--fs-13);
+    color: var(--text-2);
+    padding-top: var(--s-3);
+    border-top: 1px solid var(--line);
+  }
+  .path {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--s-8);
+  }
+  .path__step {
+    position: relative;
+    display: grid;
+    gap: var(--s-2);
+    align-content: start;
+    padding: var(--s-6);
+    border: 1px solid var(--line);
+    border-radius: var(--r-16);
+  }
+  .path__n {
+    color: var(--accent);
+    font-size: var(--fs-12);
+  }
+  .path__step h3 {
+    font-size: var(--fs-20);
+  }
+  .path__step p {
+    color: var(--text-2);
+    font-size: var(--fs-14);
+  }
+  .path__arrow {
+    position: absolute;
+    right: calc(var(--s-8) * -0.5 - 9px);
+    top: 50%;
+    translate: 0 -50%;
+    color: var(--text-3);
+  }
+  .sab {
+    margin-top: var(--s-8);
+    display: flex;
+    gap: var(--s-6);
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--s-6);
+    border: 1px solid var(--line);
+    border-radius: var(--r-24);
+  }
+  .sab h3 {
+    font-size: var(--fs-18);
+    margin-bottom: var(--s-2);
+  }
+  .sab p {
+    color: var(--text-2);
+    font-size: var(--fs-14);
+    max-width: 70ch;
+  }
+  .care-h {
+    margin-top: var(--s-12);
+    font-size: var(--fs-20);
+  }
+  .care-p {
+    margin-block: var(--s-2) var(--s-5);
+    font-size: var(--fs-14);
+  }
+  @media (max-width: 1079px) {
+    .pillars {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  @media (max-width: 767px) {
+    .pillars,
+    .path {
+      grid-template-columns: 1fr;
+    }
+    .path__arrow {
+      display: none;
+    }
+    .sab {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+</style>

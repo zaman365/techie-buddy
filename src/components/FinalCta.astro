@@ -1,0 +1,73 @@
+---
+// Closing call to action with a short form that hands the text to /kontakt/ (works without JS).
+import Icon from './Icon.astro';
+import { site } from '../lib/data.ts';
+interface Props {
+  title?: string;
+  text?: string;
+}
+const { title = 'Schreib uns, was los ist.', text = 'Ein paar Sätze reichen. Du bekommst eine Antwort mit Umfang, Festpreis und Lieferzeit.' } = Astro.props;
+---
+<section class="section section--line final" aria-labelledby="final-title">
+  <div class="container final__inner">
+    <div>
+      <h2 id="final-title" class="final__title">{title}</h2>
+      <p class="lede final__text">{text}</p>
+      <ul class="final__facts" role="list">
+        <li><Icon name="mail" size={16} /><a href={`mailto:${site.contact.email}`}>{site.contact.email}</a></li>
+        <li><Icon name="clock" size={16} />{site.contact.hours}</li>
+        <li><Icon name="languages" size={16} />Deutsch, English, <span lang="bn">বাংলা</span></li>
+      </ul>
+    </div>
+    <form class="final__form card" action="/kontakt/" method="get">
+      <label class="field__label" for="final-text">Was ist passiert?</label>
+      <textarea class="textarea" id="final-text" name="text" rows="4" placeholder="z. B. Seit gestern sind 12 Listings wegen fehlender GPSR-Angaben gesperrt."></textarea>
+      <button class="btn btn--primary btn--lg" type="submit">Weiter zur Anfrage<Icon name="arrow-right" /></button>
+      <p class="meta">Im nächsten Schritt ergänzt du Name und E-Mail. Auf dieser Website wird nichts gespeichert.</p>
+    </form>
+  </div>
+</section>
+<style>
+  .final__inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: var(--s-12);
+    align-items: center;
+  }
+  .final__title {
+    font-size: clamp(var(--fs-38), 5vw, var(--fs-64));
+    letter-spacing: -0.04em;
+    line-height: 1.02;
+  }
+  .final__text {
+    margin-top: var(--s-5);
+  }
+  .final__facts {
+    margin-top: var(--s-8);
+    display: grid;
+    gap: var(--s-2);
+    color: var(--text-2);
+    font-size: var(--fs-14);
+  }
+  .final__facts li {
+    display: flex;
+    gap: var(--s-2);
+    align-items: center;
+  }
+  .final__facts a {
+    color: var(--text);
+  }
+  .final__form {
+    display: grid;
+    gap: var(--s-3);
+    padding: var(--s-6);
+  }
+  .final__form .btn {
+    justify-self: start;
+  }
+  @media (max-width: 900px) {
+    .final__inner {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

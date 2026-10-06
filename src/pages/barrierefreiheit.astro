@@ -1,0 +1,32 @@
+---
+import Legal from '../layouts/Legal.astro';
+import { site } from '../lib/data.ts';
+---
+<Legal title="Erklärung zur Barrierefreiheit" description="Wie techiebuddy.de barrierefrei gebaut und geprüft wurde, nach WCAG 2.1 AA.">
+  <h1>Erklärung zur Barrierefreiheit</h1>
+  <p>Wir möchten, dass alle Menschen diese Website nutzen können. Sie wurde nach den Anforderungen der WCAG 2.1, Stufe AA, gebaut. Barrierefreiheit gehört zu dem, was wir verkaufen; deshalb prüfen wir sie auch bei uns selbst.</p>
+
+  <h2>Was wir umgesetzt haben</h2>
+  <ul>
+    <li>Semantische Struktur: eine Hauptüberschrift pro Seite, logische Überschriftenfolge, Landmarken und ein Link zum Überspringen der Navigation.</li>
+    <li>Vollständige Bedienbarkeit per Tastatur, mit sichtbarem Fokusrahmen an jedem bedienbaren Element. Menüs schließen mit Esc und geben den Fokus zurück.</li>
+    <li>Die Suche (Strg+K bzw. ⌘K) ist ein zugänglicher Dialog mit Kombinationsfeld und Ergebnisliste, bedienbar mit Pfeiltasten, Enter und Esc.</li>
+    <li>Farbkontraste von mindestens 4,5:1 für Text und 3:1 für Bedienelemente, auch auf allen Flächenfarben.</li>
+    <li>Skalierbare Schrift und ein Layout, das ab 320 Pixel Breite ohne seitliches Scrollen funktioniert. Tabellen werden auf kleinen Bildschirmen zu Listen.</li>
+    <li>Weniger Bewegung, wenn dein System „Bewegung reduzieren“ eingestellt hat: Dann sind alle Animationen aus.</li>
+    <li>Formularfelder mit sichtbaren Beschriftungen und verständlichen Fehlermeldungen.</li>
+    <li>Fremdsprachige Inhalte (Englisch, Bengali) sind als solche ausgezeichnet.</li>
+  </ul>
+
+  <h2>Wie wir geprüft haben</h2>
+  <p>Automatisiert mit axe auf den wichtigsten Seitentypen bei 390 und 1440 Pixel Breite, dazu manuell per Tastatur und mit reduzierter Bewegung. Eine externe Prüfung steht noch aus.</p>
+
+  <h2>Stand der Vereinbarkeit</h2>
+  <p>Die Website ist nach unserer eigenen Prüfung weitgehend mit WCAG 2.1 AA vereinbar. Bekannte Einschränkung: Die beiden Checks im Bereich Wissen benötigen JavaScript für die Auswertung; ohne JavaScript verweisen sie auf die passende Leistung.</p>
+
+  <h2>Feedback</h2>
+  <p>Stößt du auf eine Barriere? Schreib uns an <a href={`mailto:${site.contact.email}`}>{site.contact.email}</a>. Wir antworten und beheben das Problem so schnell wie möglich.</p>
+
+  <h2>Marktüberwachung</h2>
+  <p>Zuständig für die Überwachung nach dem Barrierefreiheitsstärkungsgesetz ist die Marktüberwachungsstelle der Länder für die Barrierefreiheit von Produkten und Dienstleistungen (MLBF).</p>
+</Legal>

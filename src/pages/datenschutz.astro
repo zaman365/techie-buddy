@@ -1,0 +1,30 @@
+---
+import Legal from '../layouts/Legal.astro';
+import { site } from '../lib/data.ts';
+---
+<Legal title="Datenschutzerklärung" description="Datenschutzerklärung von techiebuddy.de: keine Cookies, kein Tracking, keine Drittanbieter-Inhalte.">
+  <h1>Datenschutzerklärung</h1>
+  <p><strong>Kurz vorweg:</strong> Diese Website setzt keine Cookies, nutzt keine Analyse- oder Werbe-Tools und lädt keine Inhalte von Drittanbietern. Schriften, Icons und alle anderen Dateien liegen auf unserem eigenen Webspace. Es gibt kein Konto, keinen Newsletter und kein Kontaktformular, das Daten an unseren Server sendet.</p>
+
+  <h2>1. Verantwortlicher</h2>
+  <p><mark class="todo">TODO: Firma bzw. Name, Anschrift</mark><br />E-Mail: <a href={`mailto:${site.contact.email}`}>{site.contact.email}</a></p>
+
+  <h2>2. Hosting und Server-Protokolle</h2>
+  <p>Diese Website wird über Cloudflare Pages bereitgestellt (Cloudflare, Inc., 101 Townsend St., San Francisco, CA 94107, USA). Beim Aufruf verarbeitet Cloudflare technisch notwendige Daten wie IP-Adresse, Zeitpunkt, aufgerufene Seite und Browserinformationen, um die Seite auszuliefern und vor Angriffen zu schützen. Rechtsgrundlage ist unser berechtigtes Interesse an einem sicheren und stabilen Betrieb (Art. 6 Abs. 1 lit. f DSGVO). Cloudflare ist unter dem EU-U.S. Data Privacy Framework zertifiziert; mit Cloudflare besteht ein Auftragsverarbeitungsvertrag <mark class="todo">TODO: AVV mit Cloudflare abschließen bzw. bestätigen</mark>.</p>
+
+  <h2>3. Keine Cookies, kein Tracking</h2>
+  <p>Wir setzen keine Cookies und verwenden weder Analyse- noch Marketing-Werkzeuge. Deshalb gibt es auch keinen Cookie-Banner. Die Suche und die Checks (BFSG-Check, Förder-Check) laufen vollständig in deinem Browser; deine Eingaben werden nicht übertragen oder gespeichert. Zuletzt gesuchte Begriffe behält die Suche nur, solange die Seite geöffnet ist.</p>
+
+  <h2>4. Kontakt per E-Mail und Kontaktformular</h2>
+  <p>Das Kontaktformular sendet keine Daten an unseren Server. Es öffnet dein E-Mail-Programm mit einer vorbereiteten Nachricht oder kopiert den Text in deine Zwischenablage. Wenn du uns schreibst, verarbeiten wir deine Angaben, um deine Anfrage zu beantworten und gegebenenfalls einen Auftrag durchzuführen (Art. 6 Abs. 1 lit. b DSGVO). Eingehende E-Mails werden über Cloudflare Email Routing an unser Postfach weitergeleitet. Wir löschen die Daten, wenn sie dafür nicht mehr erforderlich sind und keine gesetzlichen Aufbewahrungspflichten bestehen.</p>
+
+  <h2>5. Zahlungen</h2>
+  <p>Für bezahlte Aufträge versenden wir Zahlungslinks eines Zahlungsdienstleisters (<mark class="todo">TODO: z. B. Stripe – Anbieter und Datenschutzhinweis ergänzen, sobald eingerichtet</mark>). Die Zahlungsdaten gibst du direkt beim Zahlungsdienstleister ein; wir erhalten nur die Information, dass und wofür bezahlt wurde. Ein Klick auf „Jetzt buchen“ führt dich zum Zahlungsdienstleister.</p>
+
+  <h2>6. Zugänge, die du uns für einen Auftrag gibst</h2>
+  <p>Für die Umsetzung brauchen wir manchmal Zugang zu deinen Systemen. Wir nutzen diese Zugänge nur für den Auftrag, bitten wo möglich um eigene Nutzerrollen statt Passwörter und geben alles nach Abschluss dokumentiert zurück. Wo wir dabei personenbezogene Daten in deinem Auftrag verarbeiten, schließen wir mit dir eine Vereinbarung zur Auftragsverarbeitung.</p>
+
+  <h2>7. Deine Rechte</h2>
+  <p>Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch (Art. 15–21 DSGVO). Schreib dazu an <a href={`mailto:${site.contact.email}`}>{site.contact.email}</a>.</p>
+  <p>Du kannst dich außerdem bei einer Datenschutz-Aufsichtsbehörde beschweren, zum Beispiel bei der Sächsischen Datenschutz- und Transparenzbeauftragten.</p>
+</Legal>

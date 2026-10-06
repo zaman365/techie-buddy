@@ -227,3 +227,10 @@ export function suggestions(index: Prepared[]): Grouped[] {
     { id: 'top', label: 'Häufig gesucht', results: top }
   ];
 }
+
+/** Filter helper for list pages: every query token must prefix-match a word (or a synonym). */
+export function matchesText(words: string[], query: string): boolean {
+  const qs = tokens(query).filter((t) => !STOP.has(t));
+  if (!qs.length) return true;
+  return qs.every((q) => alternatives(q).some(({ term }) => words.some((w) => w.startsWith(term) || (term.length >= 4 && w.includes(term)))));
+}

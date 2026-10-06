@@ -1,0 +1,195 @@
+---
+// Bengali landing page. All Bengali copy is marked needs_review in docs/content-report.md.
+import Base from '../../layouts/Base.astro';
+import Icon from '../../components/Icon.astro';
+import PriceLabel from '../../components/PriceLabel.astro';
+import '../../styles/bengali.css';
+import { getData, site, serviceUrl } from '../../lib/data.ts';
+const { serviceById } = await getData();
+const items = [
+  { id: '25', bn: 'গুগল প্রোফাইল সাজানো: আশেপাশের গ্রাহকরা যেন আপনাকে আগে খুঁজে পান' },
+  { id: '21', bn: '৪৮ ঘণ্টায় ব্যবসার ওয়েবসাইট, ইমপ্রেসাম ও ডেটা সুরক্ষা পাতাসহ' },
+  { id: '40', bn: 'এসএমএস বা হোয়াটসঅ্যাপে স্বয়ংক্রিয় অ্যাপয়েন্টমেন্ট রিমাইন্ডার, সেলুন ও বারবারশপের জন্য' },
+  { id: '45', bn: 'রেস্টুরেন্টের নিজস্ব অর্ডার পেজ, কমিশন ছাড়া' },
+  { id: '44', bn: 'অ্যালার্জেন তথ্যসহ কিউআর মেনু' },
+  { id: '88', bn: 'জার্মানিতে নতুন? সিম, ব্যাংক, স্বাস্থ্যবীমা অ্যাপ ও ELSTER বুঝিয়ে সেটআপ' }
+].map((x) => ({ ...x, s: serviceById.get(x.id)! }));
+const steps = [
+  { t: 'সমস্যার কথা লিখুন', d: 'ইমেইলে বাংলা, ইংরেজি বা জার্মানে। স্ক্রিনশট থাকলে ভালো।' },
+  { t: 'নির্দিষ্ট দাম ও পেমেন্ট লিংক', d: 'কী থাকবে, কী থাকবে না, কত সময় লাগবে আর দাম কত, সব লিখিতভাবে।' },
+  { t: 'পেমেন্ট, তারপর কাজ শুরু', d: 'পেমেন্ট, প্রয়োজনীয় অ্যাক্সেস ও কাগজপত্র পেলেই সময় গোনা শুরু।' },
+  { t: 'প্রমাণসহ সমাধান', d: 'আগে-পরে প্রমাণ, চেকলিস্ট, ছোট রিপোর্ট, আর সব অ্যাক্সেস আপনার কাছে ফেরত।' }
+];
+const subject = encodeURIComponent('অনুরোধ (বাংলা)');
+---
+<Base
+  title="TechieBuddy – বাংলায় ডিজিটাল সমাধান"
+  description="জার্মানিতে বাংলাভাষী ব্যবসা ও নতুন আসা মানুষদের জন্য ডিজিটাল সমস্যার সমাধান, নির্দিষ্ট দামে। ওয়েবসাইট, গুগল প্রোফাইল, অর্ডার পেজ, নতুনদের জন্য সেটআপ।"
+  lang="bn"
+  translations={[
+    { lang: 'de', href: '/' },
+    { lang: 'en', href: '/en/' },
+    { lang: 'bn', href: '/bn/' }
+  ]}
+>
+  <link slot="head" rel="preload" href="/fonts/noto-sans-bengali-600.woff2" as="font" type="font/woff2" crossorigin />
+  <section class="container page-top hero" aria-labelledby="bn-title">
+    <h1 id="bn-title" class="bn-title">আপনার ডিজিটাল সমস্যা। নির্দিষ্ট দাম। পরিষ্কার সমাধান।</h1>
+    <p class="lede">TechieBuddy জার্মানির কেমনিৎস থেকে ছোট ব্যবসা ও নতুন আসা মানুষদের ডিজিটাল সমস্যার সমাধান করে। দাম আর সময় আগেই জানিয়ে দিই। আমরা বাংলা, ইংরেজি ও জার্মান ভাষায় কথা বলি।</p>
+    <p class="who">রেস্টুরেন্ট, গ্রোসারি দোকান, সেলুন ও বারবারশপ, ট্রাভেল এজেন্সি, ছাত্রছাত্রী ও নতুন কর্মীদের জন্য।</p>
+    <div class="cluster">
+      <a class="btn btn--primary btn--lg" href={`mailto:${site.contact.email}?subject=${subject}`}>বাংলায় লিখুন</a>
+      <a class="btn btn--secondary btn--lg" href="/" hreflang="de" lang="de">Deutsch</a>
+      <a class="btn btn--ghost btn--lg" href="/en/" hreflang="en" lang="en">English</a>
+    </div>
+  </section>
+
+  <section class="section section--raised section--line" aria-labelledby="svc-title">
+    <div class="container">
+      <h2 id="svc-title">যেসব কাজ আমরা প্রায়ই করি</h2>
+      <p class="sub muted">দাম জার্মান নিয়মে লেখা: ব্যবসার জন্য ভ্যাট আলাদা (zzgl. MwSt.), ব্যক্তিগত সেবায় ভ্যাটসহ (inkl. MwSt.)। বিস্তারিত পাতা জার্মান ভাষায়।</p>
+      <ul class="list" role="list">
+        {
+          items.map((x) => (
+            <li>
+              <a class="row" href={x.id === '88' ? '/en/arriving-in-germany/' : serviceUrl(x.s)}>
+                <span class="row__text">{x.bn}</span>
+                <span class="row__de" lang="de">{x.s.name}</span>
+                <span class="row__price" lang="de">
+                  <PriceLabel price={x.s.price.display} time={x.s.turnaround} size="s" />
+                  <span class="meta">{x.s.price.vat}</span>
+                </span>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="how-title">
+    <div class="container">
+      <h2 id="how-title">কীভাবে কাজ হয়</h2>
+      <ol class="steps" role="list">
+        {steps.map((s, i) => <li><span class="mono" lang="de">{String(i + 1).padStart(2, '0')}</span><h3>{s.t}</h3><p>{s.d}</p></li>)}
+      </ol>
+    </div>
+  </section>
+
+  <section class="section section--raised section--line" aria-labelledby="contact-title">
+    <div class="container contact">
+      <h2 id="contact-title">যোগাযোগ</h2>
+      <p class="lede">কয়েক লাইনে সমস্যাটা লিখুন। আমরা কাজের পরিধি, নির্দিষ্ট দাম আর সময় জানিয়ে উত্তর দেব।</p>
+      <p>ইমেইল: <a href={`mailto:${site.contact.email}?subject=${subject}`} lang="de">{site.contact.email}</a><br />সোম থেকে শুক্র, সকাল ৯টা থেকে সন্ধ্যা ৬টা (জার্মান সময়)<br />কেমনিৎস, জার্মানি</p>
+    </div>
+  </section>
+</Base>
+<style>
+  .hero {
+    display: grid;
+    gap: var(--s-6);
+    padding-bottom: var(--s-16);
+  }
+  .bn-title {
+    font-size: clamp(2.25rem, 5.5vw, var(--fs-64));
+    line-height: 1.25;
+    max-width: 18ch;
+  }
+  .who {
+    color: var(--text-2);
+  }
+  .sub {
+    margin-block: var(--s-3) var(--s-8);
+    font-size: var(--fs-14);
+    max-width: 72ch;
+  }
+  .list {
+    border-top: 1px solid var(--line);
+  }
+  .list li {
+    border-bottom: 1px solid var(--line);
+  }
+  .row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 4px var(--s-6);
+    padding: var(--s-5) 0;
+    text-decoration: none;
+  }
+  .row__text {
+    font-weight: 600;
+    font-size: var(--fs-18);
+    line-height: 1.5;
+  }
+  .row__de {
+    grid-row: 2;
+    font-size: var(--fs-13);
+    color: var(--text-2);
+  }
+  .row__price {
+    grid-row: 1 / span 2;
+    grid-column: 2;
+    display: grid;
+    gap: 4px;
+    justify-items: end;
+    align-content: center;
+  }
+  .row:hover .row__text {
+    color: var(--accent-hover);
+  }
+  .steps {
+    margin-top: var(--s-8);
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: var(--s-4);
+  }
+  .steps li {
+    display: grid;
+    gap: var(--s-2);
+    align-content: start;
+    padding: var(--s-6);
+    border: 1px solid var(--line);
+    border-radius: var(--r-16);
+  }
+  .steps .mono {
+    color: var(--accent);
+    font-size: var(--fs-13);
+  }
+  .steps h3 {
+    font-size: var(--fs-18);
+    line-height: 1.5;
+  }
+  .steps p {
+    color: var(--text-2);
+    font-size: var(--fs-14);
+  }
+  .contact {
+    display: grid;
+    gap: var(--s-4);
+  }
+  .contact a {
+    color: var(--text);
+  }
+  h2 {
+    line-height: 1.35;
+  }
+  @media (max-width: 900px) {
+    .steps {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  @media (max-width: 600px) {
+    .steps {
+      grid-template-columns: 1fr;
+    }
+    .row {
+      grid-template-columns: 1fr;
+    }
+    .row__price {
+      grid-row: auto;
+      grid-column: 1;
+      justify-items: start;
+      margin-top: var(--s-2);
+    }
+  }
+</style>

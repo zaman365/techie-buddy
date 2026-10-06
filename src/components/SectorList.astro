@@ -1,0 +1,72 @@
+---
+// Sectors as a two-column list of rows (name, one-liner, arrow), not cards.
+import Icon from './Icon.astro';
+import { getData, sectorUrl } from '../lib/data.ts';
+const { sectors } = await getData();
+---
+<ul class="slist" role="list">
+  {
+    sectors.map((s) => (
+      <li>
+        <a class="slist__row" href={sectorUrl(s)}>
+          <Icon name={s.icon} size={18} class="slist__icon" />
+          <span class="slist__main">
+            <span class="slist__name">{s.name}</span>
+            <span class="slist__short">{s.short}</span>
+          </span>
+          <Icon name="arrow-right" size={16} class="slist__arrow" />
+        </a>
+      </li>
+    ))
+  }
+</ul>
+<style>
+  .slist {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: var(--s-12);
+    border-top: 1px solid var(--line);
+  }
+  .slist li {
+    border-bottom: 1px solid var(--line);
+  }
+  .slist__row {
+    display: grid;
+    grid-template-columns: 20px 1fr auto;
+    gap: var(--s-4);
+    align-items: center;
+    padding: var(--s-5) 0;
+    text-decoration: none;
+  }
+  .slist :global(.slist__icon) {
+    color: var(--text-3);
+  }
+  .slist__main {
+    display: grid;
+    gap: 2px;
+  }
+  .slist__name {
+    font-weight: 560;
+    letter-spacing: -0.01em;
+  }
+  .slist__short {
+    font-size: var(--fs-14);
+    color: var(--text-2);
+  }
+  .slist :global(.slist__arrow) {
+    color: var(--text-3);
+    transition: transform var(--t-fast) var(--ease), color var(--t-fast) var(--ease);
+  }
+  .slist__row:hover .slist__name {
+    color: var(--accent-hover);
+  }
+  .slist__row:hover :global(.slist__arrow) {
+    color: var(--accent);
+    transform: translateX(2px);
+  }
+  @media (max-width: 767px) {
+    .slist {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

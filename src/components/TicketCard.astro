@@ -28,10 +28,9 @@ const href = serviceUrl(s);
   <div class="ticket__stub">
     <div class="ticket__price">
       <PriceLabel price={s.price.display} time={s.turnaround} />
-      <span class="meta">{s.price.vat}</span>
+      <span class="ticket__vat">{s.price.vat}</span>
     </div>
     <div class="ticket__cta">
-      <a class="btn btn--ghost btn--sm" href={href}>Details<span class="sr-only"> zu {s.name}</span></a>
       {
         s.stripePaymentLink ? (
           <a class="btn btn--primary btn--sm" href={s.stripePaymentLink} rel="noopener">Jetzt buchen<span class="sr-only">: {s.name}</span></a>
@@ -45,31 +44,25 @@ const href = serviceUrl(s);
 
 <style>
   .ticket {
-    --stub: 74px;
-    --notch: 9px;
+    --ticket-line: var(--line);
     position: relative;
     display: flex;
     flex-direction: column;
     height: 100%;
     background: var(--card-fill);
-    border: 1px solid var(--line);
+    border: 1px solid var(--ticket-line);
     border-radius: var(--r-16);
     box-shadow: var(--highlight);
+    overflow: hidden;
     transition: border-color var(--t-fast) var(--ease);
-    -webkit-mask:
-      radial-gradient(circle at 0 calc(100% - var(--stub)), transparent var(--notch), #000 calc(var(--notch) + 0.5px)) left / 51% 100% no-repeat,
-      radial-gradient(circle at 100% calc(100% - var(--stub)), transparent var(--notch), #000 calc(var(--notch) + 0.5px)) right / 51% 100% no-repeat;
-    mask:
-      radial-gradient(circle at 0 calc(100% - var(--stub)), transparent var(--notch), #000 calc(var(--notch) + 0.5px)) left / 51% 100% no-repeat,
-      radial-gradient(circle at 100% calc(100% - var(--stub)), transparent var(--notch), #000 calc(var(--notch) + 0.5px)) right / 51% 100% no-repeat;
   }
   .ticket:hover {
-    border-color: var(--line-3);
+    --ticket-line: var(--line-3);
   }
   .ticket--launch::before {
     content: '';
     position: absolute;
-    inset: -1px 24px auto;
+    inset: 0 24px auto;
     height: 1px;
     background: linear-gradient(90deg, transparent, var(--accent), transparent);
   }
@@ -101,6 +94,9 @@ const href = serviceUrl(s);
     outline: 2px solid var(--accent);
     outline-offset: 3px;
   }
+  .ticket__name a:hover {
+    color: var(--accent-hover);
+  }
   .ticket__inc {
     margin-top: var(--s-1);
     font-size: var(--fs-14);
@@ -110,38 +106,55 @@ const href = serviceUrl(s);
     margin-top: auto;
     padding-top: var(--s-2);
   }
+  /* The stub: perforation line with punched notches that always sit on it. */
   .ticket__stub {
     position: relative;
-    z-index: 1;
-    min-height: var(--stub);
     padding: var(--s-4) var(--s-6);
     border-top: 1px dashed var(--line-2);
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: var(--s-3);
-    flex-wrap: wrap;
+  }
+  .ticket__stub::before,
+  .ticket__stub::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--page-bg, var(--bg));
+    border: 1px solid var(--ticket-line);
+    transition: border-color var(--t-fast) var(--ease);
+  }
+  .ticket__stub::before {
+    left: -11px;
+  }
+  .ticket__stub::after {
+    right: -11px;
   }
   .ticket__price {
-    display: flex;
-    align-items: center;
-    gap: var(--s-2);
-    flex-wrap: wrap;
+    display: grid;
+    gap: 4px;
+    justify-items: start;
+  }
+  .ticket__vat {
+    font-size: var(--fs-12);
+    color: var(--text-3);
   }
   .ticket__cta {
-    display: flex;
-    gap: var(--s-1);
-    margin-left: auto;
+    position: relative;
+    z-index: 1;
+    flex: none;
   }
   @media (max-width: 480px) {
-    .ticket {
-      --stub: 116px;
-    }
     .ticket__body {
       padding: var(--s-5) var(--s-5) var(--s-4);
     }
     .ticket__stub {
       padding: var(--s-4) var(--s-5);
+      flex-wrap: wrap;
     }
   }
 </style>

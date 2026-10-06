@@ -1,0 +1,224 @@
+---
+import Base from '../../layouts/Base.astro';
+import Icon from '../../components/Icon.astro';
+import PriceLabel from '../../components/PriceLabel.astro';
+import { getData, site, categoryUrl, serviceUrl } from '../../lib/data.ts';
+const { categories, serviceById, totalOffers } = await getData();
+const EN: Record<string, string> = {
+  compliance: 'Compliance and legal duties',
+  marktplaetze: 'Amazon and marketplaces',
+  website: 'Website and shop',
+  ki: 'AI and automation',
+  kunden: 'Visibility, bookings and reviews',
+  buero: 'Office IT, data and security',
+  wachstum: 'Funding, hiring and succession',
+  zuhause: 'Home, family and energy',
+  'branchen-pakete': 'Industry packages'
+};
+const steps = [
+  { title: 'Describe the problem', text: 'By e-mail or the form, in English, German or Bengali. Screenshots help.' },
+  { title: 'Fixed price and payment link', text: 'In writing: what is included, what is not, the turnaround and the price.' },
+  { title: 'Pay, the clock starts', text: 'The turnaround starts once payment, access and documents are complete.' },
+  { title: 'Solution with proof', text: 'Before/after evidence, a checklist, a short report and all access handed back to you.' }
+];
+const arrival = serviceById.get('88')!;
+---
+<Base
+  title="TechieBuddy – Digital problems fixed at a fixed price"
+  description="Small, urgent digital problems for businesses and newcomers in Germany: fixed price, turnaround on every offer, mostly 24–72 hours. In English, German and Bengali."
+  lang="en"
+  translations={[
+    { lang: 'de', href: '/' },
+    { lang: 'en', href: '/en/' },
+    { lang: 'bn', href: '/bn/' }
+  ]}
+>
+  <section class="hero container page-top" aria-labelledby="en-title">
+    <h1 id="en-title" class="display"><span>Your digital problem.</span> <span>A clear fixed price.</span> <span>Solved properly.</span></h1>
+    <p class="lede">TechieBuddy from Chemnitz fixes small, urgent digital problems for businesses and households in Germany: Amazon and marketplace blocks, hacked websites, e-invoicing, accessibility, office IT. Every offer shows its price and turnaround up front.</p>
+    <div class="cluster">
+      <a class="btn btn--primary btn--lg" href="/en/contact/">Describe your problem</a>
+      <a class="btn btn--secondary btn--lg" href="/en/arriving-in-germany/">New in Germany?</a>
+    </div>
+    <ul class="trust" role="list">
+      <li><Icon name="badge-euro" />Price fixed before we start</li>
+      <li><Icon name="clock" />Turnaround on every offer</li>
+      <li><Icon name="key-round" />Your access stays yours</li>
+      <li><Icon name="languages" />English, Deutsch, <span lang="bn">বাংলা</span></li>
+    </ul>
+  </section>
+
+  <section class="section section--raised section--line" aria-labelledby="how-title">
+    <div class="container">
+      <h2 id="how-title">How it works</h2>
+      <ol class="steps" role="list">
+        {steps.map((s, i) => <li><span class="mono">{String(i + 1).padStart(2, '0')}</span><h3>{s.title}</h3><p>{s.text}</p></li>)}
+      </ol>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="areas-title">
+    <div class="container">
+      <h2 id="areas-title">What we fix</h2>
+      <p class="lede sub">{totalOffers} fixed-price services in nine areas. The detailed service pages are in German; write to us in English and we answer in English.</p>
+      <ul class="areas" role="list">
+        {
+          categories.map((c) => (
+            <li>
+              <a href={categoryUrl(c)} hreflang="de">
+                <Icon name={c.icon} />
+                <span class="areas__name">{EN[c.id]}</span>
+                <span class="areas__de" lang="de">{c.name}</span>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section--raised section--line" aria-labelledby="arrive-title">
+    <div class="container arrive">
+      <div>
+        <h2 id="arrive-title">Just arrived in Germany?</h2>
+        <p class="lede">SIM card, bank account, health insurance app, ELSTER basics, train apps and safe online payments: the digital half of arriving, explained in English or Bengali.</p>
+      </div>
+      <div class="arrive__box panel">
+        <PriceLabel price={arrival.price.display} time="1 session" size="l" />
+        <p class="meta">per person, incl. VAT</p>
+        <a class="btn btn--primary" href="/en/arriving-in-germany/">Arrival tech package</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="contact-title">
+    <div class="container contact">
+      <h2 id="contact-title">Write to us.</h2>
+      <p class="lede">A few sentences are enough. You get the scope, a fixed price and the turnaround.</p>
+      <p><a href={`mailto:${site.contact.email}`}>{site.contact.email}</a> · Mon–Fri, 9:00–18:00 · Chemnitz, Saxony</p>
+      <a class="btn btn--primary" href="/en/contact/">Contact form</a>
+    </div>
+  </section>
+</Base>
+<style>
+  .hero {
+    display: grid;
+    gap: var(--s-6);
+    padding-bottom: var(--s-16);
+  }
+  .hero h1 span {
+    display: block;
+  }
+  .trust {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--s-3) var(--s-8);
+    padding-top: var(--s-6);
+    border-top: 1px solid var(--line);
+    color: var(--text-2);
+    font-size: var(--fs-14);
+  }
+  .trust li {
+    display: flex;
+    gap: var(--s-2);
+    align-items: center;
+  }
+  .trust :global(.icon) {
+    color: var(--accent);
+  }
+  .steps {
+    margin-top: var(--s-8);
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: var(--s-4);
+  }
+  .steps li {
+    display: grid;
+    gap: var(--s-2);
+    align-content: start;
+    padding: var(--s-6);
+    border: 1px solid var(--line);
+    border-radius: var(--r-16);
+  }
+  .steps .mono {
+    color: var(--accent);
+    font-size: var(--fs-13);
+  }
+  .steps h3 {
+    font-size: var(--fs-18);
+  }
+  .steps p {
+    color: var(--text-2);
+    font-size: var(--fs-14);
+  }
+  .sub {
+    margin-block: var(--s-4) var(--s-8);
+  }
+  .areas {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--s-2);
+  }
+  .areas a {
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    gap: 2px var(--s-3);
+    padding: var(--s-4) var(--s-5);
+    border: 1px solid var(--line);
+    border-radius: var(--r-16);
+    text-decoration: none;
+  }
+  .areas a:hover {
+    border-color: var(--line-3);
+  }
+  .areas :global(.icon) {
+    grid-row: span 2;
+    color: var(--text-2);
+    margin-top: 2px;
+  }
+  .areas__name {
+    font-weight: 560;
+  }
+  .areas__de {
+    font-size: var(--fs-13);
+    color: var(--text-2);
+  }
+  .arrive {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+    gap: var(--s-12);
+    align-items: center;
+  }
+  .arrive h2 {
+    margin-bottom: var(--s-4);
+  }
+  .arrive__box {
+    padding: var(--s-6);
+    display: grid;
+    gap: var(--s-3);
+    justify-items: start;
+  }
+  .contact {
+    display: grid;
+    gap: var(--s-4);
+    justify-items: start;
+  }
+  .contact a:not(.btn) {
+    color: var(--text);
+  }
+  @media (max-width: 960px) {
+    .steps,
+    .areas {
+      grid-template-columns: 1fr 1fr;
+    }
+    .arrive {
+      grid-template-columns: 1fr;
+    }
+  }
+  @media (max-width: 600px) {
+    .steps,
+    .areas {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

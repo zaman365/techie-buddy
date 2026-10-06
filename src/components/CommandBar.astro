@@ -1,0 +1,179 @@
+---
+// Hero command bar: "Was ist kaputt?" with live results under the input.
+// Placeholder cycles through real problems (static under reduced motion). scripts/hero.ts
+import Icon from './Icon.astro';
+interface Props {
+  chips?: { label: string; query: string }[];
+  id?: string;
+  placeholders?: string[];
+}
+const {
+  chips = [],
+  id = 'hero-search',
+  placeholders = ['Amazon hat mein Listing gesperrt …', 'Unsere Website ist gehackt …', 'Wir brauchen E-Rechnungen …', 'ChatGPT empfiehlt nur die Konkurrenz …']
+} = Astro.props;
+---
+<div class="cbar" data-commandbar>
+  <form class="cbar__form" action="/alle-leistungen/" method="get" role="search" aria-label="Leistungen durchsuchen">
+    <label class="sr-only" for={id}>Was ist kaputt? Beschreibe dein Problem</label>
+    <div class="cbar__field">
+      <Icon name="search" size={20} class="cbar__icon" />
+      <input
+        id={id}
+        class="cbar__input"
+        name="q"
+        type="text"
+        role="combobox"
+        aria-expanded="false"
+        aria-controls={`${id}-results`}
+        aria-autocomplete="list"
+        autocomplete="off"
+        spellcheck="false"
+        enterkeyhint="search"
+        placeholder={placeholders[0]}
+        data-placeholders={JSON.stringify(placeholders)}
+        data-cbar-input
+      />
+      <span class="cbar__hint" aria-hidden="true"><span class="cbar__hint-label">Was ist kaputt?</span><kbd data-kbd>⌘K</kbd></span>
+    </div>
+    <div class="cbar__panel" hidden data-cbar-panel>
+      <div id={`${id}-results`} role="listbox" aria-label="Vorschläge" data-cbar-results></div>
+    </div>
+    <p class="sr-only" aria-live="polite" data-cbar-status></p>
+  </form>
+  {
+    chips.length > 0 && (
+      <ul class="cbar__chips" role="list" aria-label="Häufige Probleme">
+        {chips.map((c) => (
+          <li>
+            <a class="chip" href={`/alle-leistungen/?q=${encodeURIComponent(c.query)}`} data-chip={c.query}>
+              {c.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    )
+  }
+</div>
+<style>
+  .cbar {
+    position: relative;
+    z-index: 5;
+  }
+  .cbar__form {
+    position: relative;
+  }
+  .cbar__field {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 62px;
+    border: 1px solid var(--line-3);
+    border-radius: var(--r-16);
+    background: rgba(15, 23, 38, 0.82);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    box-shadow: var(--highlight), 0 12px 40px -18px rgba(0, 0, 0, 0.8);
+    transition: border-color var(--t-fast) var(--ease), box-shadow var(--t-fast) var(--ease);
+  }
+  .cbar__field:hover {
+    border-color: rgba(255, 255, 255, 0.28);
+  }
+  .cbar__field:focus-within {
+    border-color: var(--accent-line);
+    box-shadow: var(--highlight), 0 0 0 4px rgba(96, 208, 207, 0.12), 0 12px 40px -18px rgba(0, 0, 0, 0.8);
+  }
+  .cbar :global(.cbar__icon) {
+    position: absolute;
+    left: 20px;
+    color: var(--text-2);
+    pointer-events: none;
+  }
+  .cbar__input {
+    width: 100%;
+    height: 100%;
+    padding: 0 150px 0 54px;
+    border: 0;
+    border-radius: inherit;
+    background: none;
+    font-size: var(--fs-18);
+    color: var(--text);
+  }
+  .cbar__input:focus-visible {
+    outline: none;
+  }
+  .cbar__input::placeholder {
+    color: var(--text-3);
+  }
+  .cbar__hint {
+    position: absolute;
+    right: 14px;
+    display: flex;
+    align-items: center;
+    gap: var(--s-2);
+    font-size: var(--fs-13);
+    color: var(--text-3);
+    pointer-events: none;
+  }
+  .cbar__hint kbd {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    padding: 2px 6px;
+    border-radius: var(--r-6);
+    border: 1px solid var(--line-2);
+    color: var(--text-2);
+  }
+  .cbar__panel {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    right: 0;
+    max-height: min(420px, 60vh);
+    overflow-y: auto;
+    padding: var(--s-2);
+    border: 1px solid var(--line-2);
+    border-radius: var(--r-16);
+    background: var(--glass-strong);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    box-shadow: var(--float-shadow);
+  }
+  .cbar__chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--s-2);
+    margin-top: var(--s-4);
+  }
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    height: 34px;
+    padding: 0 14px;
+    border: 1px solid var(--line-2);
+    border-radius: var(--r-pill);
+    font-size: var(--fs-14);
+    color: var(--text-2);
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.02);
+    transition: color var(--t-fast) var(--ease), border-color var(--t-fast) var(--ease);
+  }
+  .chip:hover {
+    color: var(--text);
+    border-color: var(--line-3);
+  }
+  @media (max-width: 767px) {
+    .cbar__field {
+      height: 56px;
+    }
+    .cbar__input {
+      padding-right: 16px;
+      font-size: var(--fs-16);
+    }
+    .cbar__hint {
+      display: none;
+    }
+    .chip {
+      height: 40px;
+    }
+  }
+</style>

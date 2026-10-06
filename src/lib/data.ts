@@ -95,10 +95,11 @@ export function inquiryUrl(target: { service?: string; katalog?: string }): stri
   return '/kontakt/';
 }
 
-/** Rounded-down count for copy, e.g. 405 → "über 400". */
-export function countPhrase(n: number): string {
+/** Rounded-down count for copy, e.g. 405 → "über 400" (or "Über 400" at sentence start). */
+export function countPhrase(n: number, capital = false): string {
   const floor = Math.floor(n / 100) * 100;
-  return n > floor ? `über ${floor}` : String(n);
+  if (n === floor) return String(n);
+  return `${capital ? 'Über' : 'über'} ${floor}`;
 }
 
 export const TAG_LABEL: Record<Service['tags'][number], string> = {

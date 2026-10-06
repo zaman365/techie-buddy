@@ -1,0 +1,350 @@
+---
+// The full menu: every named service and every listed catalog row, filterable.
+// Renders completely on the server; scripts/filters.ts only hides rows.
+import Base from '../layouts/Base.astro';
+import PriceLabel from '../components/PriceLabel.astro';
+import Badge from '../components/Badge.astro';
+import Icon from '../components/Icon.astro';
+import { getData, serviceUrl, inquiryUrl, countPhrase } from '../lib/data.ts';
+import { turnaroundBucket } from '../lib/format.ts';
+
+const { services, catalogListed, categories, categoryById, sectors, moments, totalOffers } = await getData();
+
+type Row = {
+  id: string;
+  kind: 'service' | 'catalog';
+  name: string;
+  sub: string;
+  href?: string;
+  inquiry: string;
+  cat: string;
+  also: string[];
+  moments: string[];
+  sectors: string[];
+  price: number;
+  priceLabel: string;
+  vat: string;
+  time: string;
+  bucket: string;
+  delivery: string;
+  tags: string[];
+  text: string;
+};
+
+const deliveryFor = (label: string) => (/vor Ort/.test(label) ? 'vor-ort' : /Fernhilfe|Termin/.test(label) ? 'hybrid' : 'remote');
+const rows: Row[] = [
+  ...services.map((s) => ({
+    id: `l-${s.id.toLowerCase()}`,
+    kind: 'service' as const,
+    name: s.name,
+    sub: `„${s.problem}“`,
+    href: serviceUrl(s),
+    inquiry: inquiryUrl({ service: s.slug }),
+    cat: s.category,
+    also: s.alsoIn,
+    moments: s.moments,
+    sectors: s.sectors,
+    price: s.price.from,
+    priceLabel: s.price.display,
+    vat: s.price.vat,
+    time: s.turnaround,
+    bucket: turnaroundBucket(s.turnaround),
+    delivery: deliveryFor(s.turnaround),
+    tags: s.tags,
+    text: [s.name, s.problem, s.summary, ...s.keywords, categoryById.get(s.category)!.name].join(' ')
+  })),
+  ...catalogListed.map((r) => ({
+    id: r.key,
+    kind: 'catalog' as const,
+    name: r.name,
+    sub: r.outcome,
+    inquiry: inquiryUrl({ katalog: r.key }),
+    cat: r.category,
+    also: [],
+    moments: [r.moment],
+    sectors: r.sectors,
+    price: r.price.band,
+    priceLabel: r.price.display,
+    vat: r.price.vat,
+    time: r.turnaround,
+    bucket: r.recurring ? 'projekt' : r.urgency === 'heute' ? 'heute' : r.urgency === '48h' ? '48h' : 'projekt',
+    delivery: r.delivery,
+    tags: r.recurring ? ['abo'] : r.urgency === 'heute' ? ['notfall'] : [],
+    text: [r.name, r.outcome, ...r.keywords, categoryById.get(r.category)!.name].join(' ')
+  }))
+];
+const sectorName = new Map(sectors.map((s) => [s.id, s.name]));
+void sectorName;
+---
+<Base
+  title="Alle Leistungen: das komplette Festpreis-Angebot"
+  description={`${countPhrase(totalOffers, true)} Festpreis-Leistungen auf einen Blick, filterbar nach Problem, Bereich, Branche, Preis und Lieferzeit.`}
+>
+  <div class="container page-top">
+    <header class="head">
+      <h1>Alle Leistungen</h1>
+      <p class="lede">
+        {totalOffers} Festpreis-Leistungen: {services.length} mit eigener Detailseite und {catalogListed.length} kleinere Fixes mit Richtpreis. Filter nach dem, was passiert ist.
+      </p>
+    </header>
+  </div>
+
+  <div class="filters" data-filters>
+    <div class="container">
+      <form class="filters__form" role="search" aria-label="Leistungen filtern" action="/alle-leistungen/" method="get">
+        <div class="filters__search">
+          <label class="sr-only" for="f-q">Suchbegriff</label>
+          <Icon name="search" size={18} />
+          <input class="input" id="f-q" name="q" type="search" placeholder="Suchen, z. B. Rechnung, gehackt, Drucker" autocomplete="off" />
+        </div>
+        <div class="filters__selects">
+          <label class="sr-only" for="f-moment">Was ist passiert?</label>
+          <select class="select" id="f-moment" name="moment">
+            <option value="">Was ist passiert?</option>
+            {moments.map((m) => <option value={m.id}>{m.name}</option>)}
+          </select>
+          <label class="sr-only" for="f-cat">Bereich</label>
+          <select class="select" id="f-cat" name="bereich">
+            <option value="">Alle Bereiche</option>
+            {categories.map((c) => <option value={c.id}>{c.name}</option>)}
+          </select>
+          <label class="sr-only" for="f-sector">Branche</label>
+          <select class="select" id="f-sector" name="branche">
+            <option value="">Alle Branchen</option>
+            {sectors.map((s) => <option value={s.id}>{s.name}</option>)}
+          </select>
+          <label class="sr-only" for="f-price">Preis</label>
+          <select class="select" id="f-price" name="preis">
+            <option value="">Jeder Preis</option>
+            <option value="149">bis 149 €</option>
+            <option value="299">bis 299 €</option>
+            <option value="599">bis 599 €</option>
+            <option value="600">ab 600 €</option>
+          </select>
+          <label class="sr-only" for="f-time">Lieferzeit</label>
+          <select class="select" id="f-time" name="zeit">
+            <option value="">Jede Lieferzeit</option>
+            <option value="heute">Notfall: am selben Tag</option>
+            <option value="48h">bis 48 h</option>
+            <option value="woche">bis 1 Woche</option>
+            <option value="projekt">Nach Termin oder Projekt</option>
+          </select>
+          <label class="sr-only" for="f-ort">Umsetzung</label>
+          <select class="select" id="f-ort" name="ort">
+            <option value="">Remote oder vor Ort</option>
+            <option value="remote">Remote möglich</option>
+            <option value="vor-ort">Mit Termin vor Ort</option>
+          </select>
+        </div>
+        <div class="filters__meta">
+          <p aria-live="polite"><span class="mono" data-count>{rows.length}</span> Leistungen</p>
+          <button class="btn btn--ghost btn--sm" type="button" data-reset hidden>Filter zurücksetzen</button>
+          <noscript><button class="btn btn--secondary btn--sm" type="submit">Filtern</button></noscript>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="container list-wrap">
+    <div class="table-wrap">
+      <table class="dtable dtable--stack list">
+        <caption class="sr-only">Alle Leistungen mit Preis und Lieferzeit</caption>
+        <thead>
+          <tr>
+            <th scope="col">Leistung</th>
+            <th scope="col">Bereich</th>
+            <th scope="col">Preis und Lieferzeit</th>
+            <th scope="col"><span class="sr-only">Aktion</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            rows.map((r) => (
+              <tr
+                id={r.id}
+                data-row
+                data-kind={r.kind}
+                data-cat={r.cat}
+                data-also={r.also.join(' ')}
+                data-moments={r.moments.join(' ')}
+                data-sectors={r.sectors.join(' ')}
+                data-price={r.price}
+                data-time={r.bucket}
+                data-delivery={r.delivery}
+                data-text={r.text}
+              >
+                <th scope="row">
+                  <div class="name">{r.href ? <a href={r.href}>{r.name}</a> : r.name}</div>
+                  <div class="sub">{r.sub}</div>
+                  {(r.kind === 'service' || r.tags.length > 0) && (
+                    <div class="tags">
+                      {r.kind === 'service' && <Badge label="Leistung mit Detailseite" variant="detail" />}
+                      {r.tags.map((t) => (
+                        <Badge tag={t as 'notfall' | 'abo' | 'pflicht' | 'erprobt'} />
+                      ))}
+                    </div>
+                  )}
+                </th>
+                <td data-label="Bereich" class="muted cat">
+                  {categoryById.get(r.cat)!.name}
+                </td>
+                <td data-label="Preis und Lieferzeit">
+                  <PriceLabel price={r.priceLabel} time={r.time} size="s" />
+                  <div class="sub">
+                    {r.vat}
+                    {r.kind === 'catalog' && ', Richtpreis'}
+                  </div>
+                </td>
+                <td class="act">
+                  <a class="btn btn--secondary btn--sm" href={r.inquiry}>
+                    Anfragen<span class="sr-only">: {r.name}</span>
+                  </a>
+                </td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+    <div class="empty" data-empty hidden>
+      <p class="empty__title">Nichts gefunden.</p>
+      <p class="muted">Schildere dein Problem, wir haben vermutlich trotzdem eine Lösung.</p>
+      <a class="btn btn--primary" href="/kontakt/" data-empty-link>Problem schildern</a>
+    </div>
+    <p class="meta foot">Richtpreise gelten für kleinere Fixes aus dem Katalog: Den Festpreis bekommst du nach kurzer Prüfung, bevor du zahlst. Preise für Privathaushalte inklusive Mehrwertsteuer.</p>
+  </div>
+</Base>
+
+<script>
+  import '../scripts/filters.ts';
+</script>
+
+<style>
+  .head {
+    max-width: 820px;
+    display: grid;
+    gap: var(--s-4);
+    margin-bottom: var(--s-8);
+  }
+  .filters {
+    position: sticky;
+    top: 86px;
+    z-index: 20;
+    padding-block: var(--s-3);
+    background: linear-gradient(180deg, var(--bg) 70%, rgba(7, 11, 18, 0));
+  }
+  .filters__form {
+    display: grid;
+    gap: var(--s-2);
+    padding: var(--s-3);
+    border: 1px solid var(--line-2);
+    border-radius: var(--r-16);
+    background: var(--glass-strong);
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+  }
+  .filters__search {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .filters__search :global(.icon) {
+    position: absolute;
+    left: 14px;
+    color: var(--text-3);
+  }
+  .filters__search .input {
+    padding-left: 42px;
+  }
+  .filters__selects {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: var(--s-2);
+  }
+  .filters__selects .select {
+    font-size: var(--fs-13);
+    min-height: 40px;
+    padding-block: 6px;
+  }
+  .filters__meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--s-3);
+    font-size: var(--fs-13);
+    color: var(--text-2);
+    min-height: 36px;
+  }
+  .list-wrap {
+    padding-block: var(--s-6) var(--s-20);
+  }
+  .list th[scope='row'] {
+    font-weight: 400;
+    min-width: 280px;
+  }
+  .list .name a {
+    text-decoration: none;
+  }
+  .list .name a:hover {
+    color: var(--accent-hover);
+  }
+  .list .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: var(--s-2);
+  }
+  .list .cat {
+    font-size: var(--fs-13);
+    min-width: 140px;
+  }
+  .list .act {
+    text-align: right;
+  }
+  .list tr:target > * {
+    background: var(--accent-wash);
+  }
+  .empty {
+    display: grid;
+    gap: var(--s-3);
+    justify-items: start;
+    padding: var(--s-10) var(--s-6);
+    border: 1px dashed var(--line-3);
+    border-radius: var(--r-16);
+    margin-top: var(--s-4);
+  }
+  .empty__title {
+    font-size: var(--fs-24);
+    font-weight: 600;
+  }
+  .foot {
+    margin-top: var(--s-6);
+    max-width: 80ch;
+  }
+  @media (max-width: 1079px) {
+    .filters__selects {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .filters {
+      top: 76px;
+    }
+  }
+  @media (max-width: 767px) {
+    .filters {
+      position: static;
+    }
+    .filters__selects {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .list th[scope='row'] {
+      min-width: 0;
+    }
+    .list .act {
+      text-align: left;
+      padding-top: var(--s-3);
+    }
+    .list .cat {
+      display: none;
+    }
+  }
+</style>

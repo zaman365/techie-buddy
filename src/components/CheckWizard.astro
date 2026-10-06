@@ -16,10 +16,11 @@ interface Props {
   id: 'bfsg' | 'foerder';
   questions: Question[];
   title: string;
+  links?: Record<string, string>;
 }
-const { id, questions, title } = Astro.props;
+const { id, questions, title, links = {} } = Astro.props;
 ---
-<form class="wizard card" data-check={id} novalidate aria-label={title}>
+<form class="wizard card" data-check={id} data-links={JSON.stringify(links)} novalidate aria-label={title}>
   <div class="wizard__progress" aria-hidden="true"><span data-progress></span></div>
   {
     questions.map((q, i) => (
@@ -129,6 +130,22 @@ const { id, questions, title } = Astro.props;
   }
   .wizard :global(.result__text) {
     color: var(--text-2);
+  }
+  .wizard :global(.result__title)::before {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
+    border-radius: 50%;
+    vertical-align: middle;
+    background: var(--accent);
+  }
+  .wizard :global(.result--ok .result__title)::before {
+    background: var(--ok);
+  }
+  .wizard :global(.result--warn .result__title)::before {
+    background: var(--warn);
   }
   @media (max-width: 600px) {
     .wizard {

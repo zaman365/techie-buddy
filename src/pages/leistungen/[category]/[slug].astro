@@ -1,0 +1,497 @@
+---
+// Service detail page: the most important template on the site.
+import Base from '../../../layouts/Base.astro';
+import Breadcrumb from '../../../components/Breadcrumb.astro';
+import PriceLabel from '../../../components/PriceLabel.astro';
+import Badge from '../../../components/Badge.astro';
+import Icon from '../../../components/Icon.astro';
+import Accordion from '../../../components/Accordion.astro';
+import TicketCard from '../../../components/TicketCard.astro';
+import Timeline from '../../../components/Timeline.astro';
+import { getData, site, categoryUrl, sectorUrl, inquiryUrl, type Service } from '../../../lib/data.ts';
+
+export async function getStaticPaths() {
+  const { services } = await getData();
+  return services.map((s) => ({ params: { category: s.categorySlug, slug: s.slug }, props: { id: s.id } }));
+}
+
+const { id } = Astro.props as { id: string };
+const { serviceById, categoryById, sectorById, momentById } = await getData();
+const s = serviceById.get(id) as Service;
+const cat = categoryById.get(s.category)!;
+const related = s.related.map((r) => serviceById.get(r)!);
+const sectors = s.sectors.map((x) => sectorById.get(x)!).filter(Boolean);
+const moments = s.moments.map((m) => momentById.get(m)!).filter(Boolean);
+const booking = Boolean(s.stripePaymentLink);
+const primaryHref = booking ? s.stripePaymentLink : inquiryUrl({ service: s.slug });
+const questionHref = `/kontakt/?leistung=${encodeURIComponent(s.slug)}&art=frage`;
+const isB2c = s.audience === 'b2c';
+const bfsg = s.id === '01';
+const url = new URL(Astro.url.pathname, site.brand.url).href;
+const translations = s.id === '88' ? [{ lang: 'de' as const, href: Astro.url.pathname }, { lang: 'en' as const, href: '/en/arriving-in-germany/' }] : [];
+
+const priceSpec: Record<string, unknown> = {
+  '@type': 'UnitPriceSpecification',
+  priceCurrency: 'EUR',
+  valueAddedTaxIncluded: isB2c
+};
+if (s.price.type === 'range' || s.price.type === 'project') {
+  priceSpec.minPrice = s.price.from;
+  priceSpec.maxPrice = s.price.to;
+} else if (s.price.type === 'from') {
+  priceSpec.minPrice = s.price.from;
+} else if (s.price.type === 'recurring') {
+  priceSpec.price = s.price.monthly ?? s.price.from;
+  priceSpec.unitText = 'Monat';
+} else {
+  priceSpec.price = s.price.from;
+}
+const ld = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: s.name,
+  description: s.summary,
+  serviceType: cat.name,
+  url,
+  areaServed: { '@type': 'Country', name: 'DE' },
+  provider: { '@type': 'ProfessionalService', name: 'TechieBuddy', url: `${site.brand.url}/`, email: site.contact.email },
+  offers: {
+    '@type': 'Offer',
+    url,
+    priceCurrency: 'EUR',
+    price: s.price.type === 'recurring' ? (s.price.monthly ?? s.price.from) : s.price.from,
+    priceSpecification: priceSpec,
+    availability: 'https://schema.org/InStock'
+  }
+};
+const steps = s.steps.map((t) => ({ title: t, text: '' }));
+---
+<Base title={s.seo.title} description={s.seo.description} ogImage={`/og/${cat.slug}.png`} translations={translations}>
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(ld)} />
+
+  <div class="container page-top svc">
+    <Breadcrumb items={[{ label: 'Leistungen', href: '/leistungen/' }, { label: cat.name, href: categoryUrl(cat) }, { label: s.name }]} />
+
+    <div class="svc__layout">
+      <div class="svc__main">
+        <header class="svc__head">
+          <p class="quote svc__quote">{s.problem}</p>
+          <h1 class="svc__title">{s.name}</h1>
+          <p class="lede svc__summary">{s.summary}</p>
+          {s.tags.length > 0 && <div class="cluster svc__tags">{s.tags.map((t) => <Badge tag={t} />)}</div>}
+        </header>
+
+        <div class="svc__sections">
+          <section class="row" aria-labelledby="h-problem">
+            <h2 class="row__label" id="h-problem">Das Problem</h2>
+            <div class="row__body">
+              <p class="row__lead">„{s.problem}“</p>
+              {
+                moments.length > 0 && (
+                  <p class="muted row__moments">
+                    Typischer Anlass:{' '}
+                    {moments.map((m, i) => (
+                      <>
+                        <a href={`/alle-leistungen/?moment=${m.id}`}>{m.name}</a>
+                        {i < moments.length - 1 ? ', ' : ''}
+                      </>
+                    ))}
+                  </p>
+                )
+              }
+            </div>
+          </section>
+
+          <section class="row" aria-labelledby="h-inc">
+            <h2 class="row__label" id="h-inc">Was du bekommst</h2>
+            <ul class="checks row__body" role="list">
+              {s.includes.map((i) => <li><Icon name="check" />{i}</li>)}
+            </ul>
+          </section>
+
+          <section class="row" aria-labelledby="h-exc">
+            <h2 class="row__label" id="h-exc">Nicht enthalten</h2>
+            <ul class="checks checks--minus row__body" role="list">
+              {s.excludes.map((i) => <li><Icon name="minus" />{i}</li>)}
+            </ul>
+          </section>
+
+          <section class="row" aria-labelledby="h-needs">
+            <h2 class="row__label" id="h-needs">Was wir von dir brauchen</h2>
+            <ul class="bullets row__body" role="list">
+              {s.needs.map((i) => <li>{i}</li>)}
+            </ul>
+          </section>
+
+          <section class="row" aria-labelledby="h-steps">
+            <h2 class="row__label" id="h-steps">So läuft’s</h2>
+            <div class="row__body">
+              <Timeline steps={steps} compact />
+              <p class="meta row__after">Die Lieferzeit startet, sobald Zahlung, Zugänge und Unterlagen vollständig sind.</p>
+            </div>
+          </section>
+
+          <section class="row" aria-labelledby="h-result">
+            <h2 class="row__label" id="h-result">Ergebnis und Nachweis</h2>
+            <div class="row__body">
+              <p class="row__result">{s.result}</p>
+              <p class="meta row__after">Alle Zugänge bleiben bei dir. Du kannst sie jederzeit entziehen.</p>
+            </div>
+          </section>
+
+          {
+            (s.factNote || s.guardrail || bfsg || isB2c) && (
+              <section class="row" aria-labelledby="h-good">
+                <h2 class="row__label" id="h-good">Gut zu wissen</h2>
+                <div class="row__body notes">
+                  {s.factNote && (
+                    <div class="note note--fact">
+                      <Icon name="calendar" />
+                      <p>
+                        <strong>Stand {site.asOf.label}.</strong> {s.factNote}
+                      </p>
+                    </div>
+                  )}
+                  {bfsg && (
+                    <div class="note">
+                      <Icon name="accessibility" />
+                      <p>
+                        <strong>Erst prüfen, dann zahlen.</strong> Ob das BFSG für dich gilt, kannst du vorab im kostenlosen <a href="/wissen/bfsg-check/">BFSG-Check</a> einschätzen.
+                      </p>
+                    </div>
+                  )}
+                  {s.guardrail && (
+                    <div class="note">
+                      <Icon name="info" />
+                      <p>
+                        <strong>Umsetzung, keine Beratung.</strong> {site.guardrail}
+                      </p>
+                    </div>
+                  )}
+                  {isB2c && (
+                    <div class="note">
+                      <Icon name="house" />
+                      <p>
+                        <strong>Für Privathaushalte.</strong> Der Preis enthält die Mehrwertsteuer.
+                      </p>
+                    </div>
+                  )}
+                </div>
+              </section>
+            )
+          }
+
+          <section class="row" aria-labelledby="h-faq">
+            <h2 class="row__label" id="h-faq">Fragen</h2>
+            <div class="row__body"><Accordion items={s.faq} schema /></div>
+          </section>
+
+          {
+            sectors.length > 0 && (
+              <section class="row" aria-labelledby="h-sectors">
+                <h2 class="row__label" id="h-sectors">Passt zu</h2>
+                <ul class="cluster row__body" role="list">
+                  {sectors.map((x) => (
+                    <li>
+                      <a class="chip-link" href={sectorUrl(x)}>
+                        <Icon name={x.icon} size={14} />
+                        {x.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            )
+          }
+        </div>
+      </div>
+
+      <aside class="svc__aside" aria-label="Preis und Buchung">
+        <div class="panel pricebox">
+          <PriceLabel price={s.price.display} time={s.turnaround} size="l" />
+          <p class="pricebox__vat">
+            {s.price.vat}
+            {s.price.note && <>, {s.price.note}</>}
+          </p>
+          <p class="pricebox__fixed"><Icon name="lock" size={14} />Der Preis steht vorher fest.</p>
+          <div class="pricebox__ctas">
+            <a class="btn btn--primary btn--lg btn--block" href={primaryHref} rel={booking ? 'noopener' : undefined}>{booking ? 'Jetzt buchen' : 'Anfragen'}</a>
+            <a class="btn btn--ghost btn--block" href={questionHref}>Frage stellen</a>
+          </div>
+          <ul class="pricebox__trust" role="list">
+            <li><Icon name="check" size={14} />Preis steht vorher fest</li>
+            <li><Icon name="check" size={14} />Zahlung per Link</li>
+            <li><Icon name="check" size={14} />Zugänge bleiben bei dir</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <section class="section section--raised section--line" aria-labelledby="h-related">
+    <div class="container">
+      <h2 id="h-related" class="related__title">Passende Leistungen</h2>
+      <ul class="related" role="list">
+        {related.map((r) => <li><TicketCard service={r} /></li>)}
+      </ul>
+      <p class="related__more"><a class="link-arrow" href={categoryUrl(cat)}>Alles aus {cat.name} <Icon name="arrow-right" /></a></p>
+    </div>
+  </section>
+
+  <div class="sticky-bar" aria-label="Preis und Anfrage">
+    <PriceLabel price={s.price.display} time={s.turnaround} size="s" />
+    <a class="btn btn--primary btn--sm" href={primaryHref} rel={booking ? 'noopener' : undefined}>{booking ? 'Jetzt buchen' : 'Anfragen'}</a>
+  </div>
+</Base>
+
+<style>
+  .svc {
+    padding-bottom: var(--s-16);
+  }
+  .svc__layout {
+    margin-top: var(--s-8);
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 340px;
+    gap: var(--s-16);
+    align-items: start;
+  }
+  .svc__quote {
+    font-size: var(--fs-16);
+  }
+  .svc__title {
+    margin-top: var(--s-3);
+    font-size: clamp(2.125rem, 4.4vw, var(--fs-48));
+    letter-spacing: -0.035em;
+    line-height: 1.05;
+  }
+  .svc__summary {
+    margin-top: var(--s-5);
+  }
+  .svc__tags {
+    --gap: 6px;
+    margin-top: var(--s-5);
+  }
+  .svc__sections {
+    margin-top: var(--s-12);
+    border-top: 1px solid var(--line);
+  }
+  .row {
+    display: grid;
+    grid-template-columns: 200px minmax(0, 1fr);
+    gap: var(--s-6);
+    padding-block: var(--s-8);
+    border-bottom: 1px solid var(--line);
+  }
+  .row__label {
+    font-size: var(--fs-14);
+    font-weight: 560;
+    color: var(--text);
+    letter-spacing: 0;
+    padding-top: 2px;
+  }
+  .row__lead {
+    font-size: var(--fs-20);
+    line-height: 1.45;
+    letter-spacing: -0.015em;
+  }
+  .row__moments {
+    margin-top: var(--s-3);
+    font-size: var(--fs-14);
+  }
+  .row__moments a {
+    color: var(--text);
+  }
+  .row__result {
+    color: var(--text);
+    font-size: var(--fs-18);
+    line-height: 1.5;
+  }
+  .row__after {
+    margin-top: var(--s-4);
+  }
+  .bullets {
+    display: grid;
+    gap: var(--s-2);
+    color: var(--text-2);
+  }
+  .bullets li {
+    position: relative;
+    padding-left: 18px;
+  }
+  .bullets li::before {
+    content: '';
+    position: absolute;
+    left: 2px;
+    top: 0.7em;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--text-3);
+  }
+  .notes {
+    display: grid;
+    gap: var(--s-3);
+  }
+  .notes a {
+    color: var(--text);
+  }
+  .row :global(.accordion) {
+    border-top: 0;
+  }
+  .row :global(.accordion summary) {
+    font-size: var(--fs-16);
+    padding: var(--s-4) 0;
+  }
+  .row :global(.accordion details:first-child summary) {
+    padding-top: 0;
+  }
+  .chip-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    min-height: 34px;
+    padding: 0 12px;
+    border: 1px solid var(--line-2);
+    border-radius: var(--r-pill);
+    font-size: var(--fs-13);
+    color: var(--text-2);
+    text-decoration: none;
+  }
+  .chip-link:hover {
+    color: var(--text);
+    border-color: var(--line-3);
+  }
+  .svc__aside {
+    position: sticky;
+    top: 104px;
+  }
+  .pricebox {
+    padding: var(--s-6);
+    display: grid;
+    gap: var(--s-3);
+    border-radius: var(--r-24);
+    background: var(--card-fill);
+  }
+  .pricebox :global(.pl) {
+    justify-self: start;
+  }
+  .pricebox__vat {
+    font-size: var(--fs-14);
+    color: var(--text-2);
+  }
+  .pricebox__fixed {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: var(--fs-13);
+    color: var(--text-2);
+  }
+  .pricebox__fixed :global(.icon) {
+    color: var(--accent);
+  }
+  .pricebox__ctas {
+    display: grid;
+    gap: var(--s-1);
+    margin-top: var(--s-2);
+  }
+  .pricebox__trust {
+    display: grid;
+    gap: 4px;
+    padding-top: var(--s-4);
+    margin-top: var(--s-2);
+    border-top: 1px solid var(--line);
+    font-size: var(--fs-13);
+    color: var(--text-2);
+  }
+  .pricebox__trust li {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .pricebox__trust :global(.icon) {
+    color: var(--ok);
+  }
+  .related__title {
+    font-size: var(--fs-30);
+    margin-bottom: var(--s-8);
+  }
+  .related {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--s-4);
+  }
+  .related__more {
+    margin-top: var(--s-8);
+  }
+  .sticky-bar {
+    display: none;
+  }
+  @media (max-width: 1079px) {
+    .svc__layout {
+      grid-template-columns: 1fr;
+      gap: var(--s-8);
+    }
+    .svc__aside {
+      position: static;
+      grid-row: 1;
+      grid-column: 1;
+      order: -1;
+      display: none;
+    }
+    .related {
+      grid-template-columns: 1fr;
+    }
+    .sticky-bar {
+      position: fixed;
+      left: var(--s-3);
+      right: var(--s-3);
+      bottom: calc(var(--s-3) + env(safe-area-inset-bottom));
+      z-index: var(--z-sticky);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--s-3);
+      padding: 10px 10px 10px 14px;
+      border: 1px solid var(--line-2);
+      border-radius: var(--r-16);
+      background: var(--glass-strong);
+      -webkit-backdrop-filter: blur(16px);
+      backdrop-filter: blur(16px);
+      box-shadow: var(--float-shadow);
+    }
+    .svc {
+      padding-bottom: var(--s-8);
+    }
+    :global(body:has(.sticky-bar)) :global(.footer) {
+      padding-bottom: calc(var(--s-10) + 76px);
+    }
+  }
+  @media (max-width: 1079px) {
+    /* On small screens the price panel moves under the summary. */
+    .svc__layout {
+      display: flex;
+      flex-direction: column;
+    }
+    .svc__main {
+      display: contents;
+    }
+    .svc__head {
+      order: 1;
+    }
+    .svc__aside {
+      order: 2;
+      display: block;
+    }
+    .svc__sections {
+      order: 3;
+      margin-top: 0;
+    }
+  }
+  @media (max-width: 767px) {
+    .row {
+      grid-template-columns: 1fr;
+      gap: var(--s-3);
+      padding-block: var(--s-6);
+    }
+  }
+</style>

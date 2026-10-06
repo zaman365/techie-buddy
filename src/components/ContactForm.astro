@@ -1,0 +1,143 @@
+---
+// mailto-based contact form: builds a ready-to-send e-mail, nothing is stored on the site.
+// Prefill: ?leistung=<slug|paket-…|notfall|partner>, ?katalog=<key>, ?text=, ?art=frage. scripts/contact.ts
+import Icon from './Icon.astro';
+import { getData, site } from '../lib/data.ts';
+
+interface Props {
+  lang?: 'de' | 'en';
+}
+const { lang = 'de' } = Astro.props;
+const { services, catalogListed } = await getData();
+const L =
+  lang === 'en'
+    ? {
+        name: 'Your name',
+        email: 'Your e-mail address',
+        service: 'Which service? (optional)',
+        serviceHint: 'Start typing to search all services.',
+        message: 'What happened?',
+        messagePh: 'e.g. Since yesterday 12 listings are suppressed for missing GPSR data.',
+        url: 'Shop or website URL (optional)',
+        language: 'Preferred language',
+        consent: 'The form opens your e-mail program with a prepared message. Nothing is stored on this website. We use your details only to answer your request.',
+        submit: 'Prepare e-mail',
+        copy: 'Copy text',
+        copied: 'Text copied. Paste it into an e-mail to',
+        error: 'Please enter your name, a valid e-mail address and a short description.',
+        opened: 'Your e-mail program should open now. If not, copy the text and send it to'
+      }
+    : {
+        name: 'Dein Name',
+        email: 'Deine E-Mail-Adresse',
+        service: 'Welche Leistung? (optional)',
+        serviceHint: 'Tippen zum Durchsuchen aller Leistungen.',
+        message: 'Was ist passiert?',
+        messagePh: 'z. B. Seit gestern sind 12 Listings wegen fehlender GPSR-Angaben gesperrt.',
+        url: 'Shop- oder Website-Adresse (optional)',
+        language: 'Bevorzugte Sprache',
+        consent: 'Das Formular öffnet dein E-Mail-Programm mit einer fertigen Nachricht. Auf dieser Website wird nichts gespeichert. Deine Angaben nutzen wir nur, um deine Anfrage zu beantworten.',
+        submit: 'E-Mail vorbereiten',
+        copy: 'Text kopieren',
+        copied: 'Text kopiert. Füge ihn in eine E-Mail an',
+        error: 'Bitte Name, eine gültige E-Mail-Adresse und eine kurze Beschreibung eintragen.',
+        opened: 'Dein E-Mail-Programm sollte sich jetzt öffnen. Falls nicht, kopiere den Text und schick ihn an'
+      };
+const data = {
+  services: Object.fromEntries(services.map((s) => [s.slug, s.name])),
+  catalog: Object.fromEntries(catalogListed.map((r) => [r.key, r.name])),
+  special: {
+    notfall: 'Notfall',
+    partner: 'Partnerprogramm',
+    'paket-starter': 'Projekt: Starter-Paket',
+    'paket-business': 'Projekt: Business-Paket',
+    'paket-e-commerce': 'Projekt: E-Commerce-Paket'
+  },
+  email: site.contact.email,
+  lang,
+  msg: { error: L.error, opened: L.opened, copied: L.copied }
+};
+---
+<form class="cform card" data-contact novalidate action={`mailto:${site.contact.email}`} method="post" enctype="text/plain">
+  <div class="cform__grid">
+    <div class="field">
+      <label class="field__label" for="c-name">{L.name}</label>
+      <input class="input" id="c-name" name="name" type="text" autocomplete="name" required />
+    </div>
+    <div class="field">
+      <label class="field__label" for="c-email">{L.email}</label>
+      <input class="input" id="c-email" name="email" type="email" autocomplete="email" required />
+    </div>
+  </div>
+  <div class="field">
+    <label class="field__label" for="c-service">{L.service}</label>
+    <input class="input" id="c-service" name="service" type="text" list="c-services" autocomplete="off" aria-describedby="c-service-hint" />
+    <span class="field__hint" id="c-service-hint">{L.serviceHint}</span>
+    <datalist id="c-services">
+      {services.map((s) => <option value={s.name} />)}
+      {catalogListed.map((r) => <option value={r.name} />)}
+    </datalist>
+  </div>
+  <div class="field">
+    <label class="field__label" for="c-message">{L.message}</label>
+    <textarea class="textarea" id="c-message" name="message" rows="6" required placeholder={L.messagePh}></textarea>
+  </div>
+  <div class="cform__grid">
+    <div class="field">
+      <label class="field__label" for="c-url">{L.url}</label>
+      <input class="input" id="c-url" name="url" type="url" inputmode="url" autocomplete="url" placeholder="https://" />
+    </div>
+    <div class="field">
+      <label class="field__label" for="c-lang">{L.language}</label>
+      <select class="select" id="c-lang" name="language">
+        <option value="Deutsch" selected={lang === 'de'}>Deutsch</option>
+        <option value="English" selected={lang === 'en'}>English</option>
+        <option value="Bengali" lang="bn">বাংলা (Bengali)</option>
+      </select>
+    </div>
+  </div>
+  <p class="meta cform__consent"><Icon name="lock" size={14} />{L.consent}</p>
+  <div class="cluster">
+    <button class="btn btn--primary btn--lg" type="submit"><Icon name="mail" />{L.submit}</button>
+    <button class="btn btn--secondary btn--lg" type="button" data-copy><Icon name="copy" />{L.copy}</button>
+  </div>
+  <p class="cform__status" role="status" aria-live="polite" data-status></p>
+  <script type="application/json" data-contact-data set:html={JSON.stringify(data)} />
+</form>
+<style>
+  .cform {
+    padding: var(--s-8);
+    display: grid;
+    gap: var(--s-5);
+  }
+  .cform__grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--s-5);
+  }
+  .cform__consent {
+    display: flex;
+    gap: var(--s-2);
+    align-items: flex-start;
+  }
+  .cform__consent :global(.icon) {
+    margin-top: 4px;
+    flex: none;
+  }
+  .cform__status {
+    font-size: var(--fs-14);
+    color: var(--text-2);
+    min-height: 1.5em;
+  }
+  .cform__status a {
+    color: var(--text);
+  }
+  @media (max-width: 640px) {
+    .cform {
+      padding: var(--s-5);
+    }
+    .cform__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

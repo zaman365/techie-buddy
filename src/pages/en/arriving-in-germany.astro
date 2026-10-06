@@ -1,0 +1,127 @@
+---
+import Base from '../../layouts/Base.astro';
+import Icon from '../../components/Icon.astro';
+import PriceLabel from '../../components/PriceLabel.astro';
+import { getData, serviceUrl } from '../../lib/data.ts';
+const { serviceById } = await getData();
+const s88 = serviceById.get('88')!;
+const s90 = serviceById.get('90')!;
+const inc88 = [
+  'One session in English or Bengali, in Chemnitz or online',
+  'German SIM card and phone contract explained',
+  'Bank account and banking app set up',
+  'Health insurance app and ELSTER (tax portal) basics',
+  'Deutsche Bahn and local transport apps',
+  'Paying safely online: PayPal, Klarna and common scams'
+];
+const exc88 = ['Legal, residence or tax advice', 'Fees charged by banks or providers', 'Visiting authorities on your behalf'];
+const inc90 = [
+  'Multilingual onboarding page for your new staff',
+  'Checklists for documents and first steps',
+  'A plan for the arrival week',
+  'Tech setup for each new employee (as in the arrival package)',
+  'Overview of contact persons'
+];
+---
+<Base
+  title="Arriving in Germany: the digital half, done right"
+  description="Arrival tech package for international students and workers in Germany: SIM, bank, health insurance app, ELSTER basics, transport apps. In English or Bengali. Plus an onboarding kit for employers."
+  lang="en"
+  translations={[
+    { lang: 'de', href: serviceUrl(s88) },
+    { lang: 'en', href: '/en/arriving-in-germany/' }
+  ]}
+>
+  <div class="container page-top">
+    <header class="head">
+      <h1>Arriving in Germany: the digital half, done right.</h1>
+      <p class="lede">Everything in Germany is digital, and most of it is in German. We set up the apps and accounts you need in your first weeks and explain them in English or Bengali.</p>
+    </header>
+
+    <div class="cards">
+      <article class="card offer">
+        <p class="quote" lang="en">“I'm new in Germany. SIM, bank, insurance, ELSTER: everything is digital, but in German.”</p>
+        <h2>Arrival tech package</h2>
+        <div class="offer__price">
+          <PriceLabel price={s88.price.display} time="1 session" size="l" />
+          <span class="meta">per person, incl. VAT</span>
+        </div>
+        <h3>What you get</h3>
+        <ul class="checks" role="list">{inc88.map((i) => <li><Icon name="check" />{i}</li>)}</ul>
+        <h3>Not included</h3>
+        <ul class="checks checks--minus" role="list">{exc88.map((i) => <li><Icon name="minus" />{i}</li>)}</ul>
+        <p class="meta">Please bring your passport, your registration certificate (Meldebescheinigung) and your smartphone.</p>
+        <div class="cluster">
+          <a class="btn btn--primary" href={`/en/contact/?leistung=${s88.slug}`}>Book a session</a>
+          <a class="btn btn--ghost" href={serviceUrl(s88)} hreflang="de">Details in German</a>
+        </div>
+      </article>
+
+      <article class="card offer">
+        <p class="quote" lang="en">“Our new care workers from abroad arrive next month. How do we prepare?”</p>
+        <h2>Onboarding kit for employers</h2>
+        <div class="offer__price">
+          <PriceLabel price={s90.price.display} time="1–2 weeks" size="l" />
+          <span class="meta">plus VAT</span>
+        </div>
+        <h3>What you get</h3>
+        <ul class="checks" role="list">{inc90.map((i) => <li><Icon name="check" />{i}</li>)}</ul>
+        <p class="meta">For care homes, hotels and trades that hire internationally. No residence or employment law advice.</p>
+        <div class="cluster">
+          <a class="btn btn--primary" href={`/en/contact/?leistung=${s90.slug}`}>Ask about the kit</a>
+          <a class="btn btn--ghost" href={serviceUrl(s90)} hreflang="de">Details in German</a>
+        </div>
+      </article>
+    </div>
+    <p class="bn"><a href="/bn/" hreflang="bn" lang="bn">বাংলায় পড়ুন</a></p>
+  </div>
+</Base>
+<style>
+  .head {
+    max-width: 820px;
+    display: grid;
+    gap: var(--s-4);
+    margin-bottom: var(--s-12);
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--s-4);
+  }
+  .offer {
+    padding: var(--s-8);
+    display: grid;
+    gap: var(--s-4);
+    align-content: start;
+  }
+  .offer h2 {
+    font-size: var(--fs-30);
+  }
+  .offer h3 {
+    font-size: var(--fs-14);
+    margin-top: var(--s-2);
+  }
+  .offer__price {
+    display: flex;
+    gap: var(--s-3);
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .offer .checks {
+    font-size: var(--fs-14);
+  }
+  .bn {
+    margin-block: var(--s-8) var(--s-20);
+  }
+  .bn a {
+    color: var(--text);
+  }
+  @media (max-width: 900px) {
+    .cards {
+      grid-template-columns: 1fr;
+    }
+    .offer {
+      padding: var(--s-5);
+    }
+  }
+</style>

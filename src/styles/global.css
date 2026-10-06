@@ -217,6 +217,7 @@ p {
   position: relative;
 }
 .section--raised {
+  --page-bg: var(--bg-raised);
   background: var(--bg-raised);
 }
 .section--line {
@@ -610,6 +611,9 @@ p {
   text-align: right;
   font-family: var(--font-mono);
   font-variant-numeric: tabular-nums;
+}
+.dtable thead th.num {
+  font-family: var(--font-sans);
 }
 .dtable .name {
   color: var(--text);

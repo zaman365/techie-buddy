@@ -1,0 +1,99 @@
+---
+// Horizontal teaser of the next deadlines from the Pflichten-Kalender.
+import Icon from './Icon.astro';
+import { site } from '../lib/data.ts';
+interface Props {
+  limit?: number;
+}
+const { limit = 5 } = Astro.props;
+const upcoming = site.deadlines.filter((d) => d.status === 'frist').slice(0, limit);
+---
+<ol class="dstrip" role="list">
+  {
+    upcoming.map((d) => (
+      <li class="dstrip__item">
+        <span class="dstrip__dot" aria-hidden="true" />
+        <time class="dstrip__date mono" datetime={d.date}>{d.dateLabel}</time>
+        <span class="dstrip__title">{d.title}</span>
+      </li>
+    ))
+  }
+</ol>
+<p class="dstrip__foot meta">
+  <Icon name="calendar" size={14} />Stand: {site.asOf.label}. Fristen mit Quelle im
+  <a href="/wissen/pflichten-kalender/">Pflichten-Kalender</a>.
+</p>
+<style>
+  .dstrip {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    position: relative;
+    padding-top: var(--s-6);
+  }
+  .dstrip::before {
+    content: '';
+    position: absolute;
+    top: calc(var(--s-6) + 5px);
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, var(--warn), var(--line-2) 30%, var(--line) 100%);
+  }
+  .dstrip__item {
+    position: relative;
+    display: grid;
+    align-content: start;
+    gap: 6px;
+    padding-right: var(--s-6);
+  }
+  .dstrip__dot {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: var(--bg-raised);
+    border: 2px solid var(--warn);
+    margin-bottom: var(--s-3);
+  }
+  .dstrip__date {
+    font-size: var(--fs-14);
+    color: var(--warn);
+  }
+  .dstrip__title {
+    font-size: var(--fs-14);
+    color: var(--text);
+    line-height: 1.4;
+  }
+  .dstrip__foot {
+    margin-top: var(--s-8);
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .dstrip__foot a {
+    color: var(--text);
+  }
+  @media (max-width: 900px) {
+    .dstrip {
+      grid-template-columns: 1fr;
+      gap: var(--s-5);
+      padding-top: 0;
+      padding-left: var(--s-6);
+    }
+    .dstrip::before {
+      top: 6px;
+      bottom: 6px;
+      left: 5px;
+      right: auto;
+      width: 1px;
+      height: auto;
+      background: linear-gradient(180deg, var(--warn), var(--line-2) 40%);
+    }
+    .dstrip__dot {
+      position: absolute;
+      left: calc(var(--s-6) * -1);
+      top: 4px;
+      margin: 0;
+    }
+  }
+</style>

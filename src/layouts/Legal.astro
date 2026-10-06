@@ -1,0 +1,52 @@
+---
+import Base from './Base.astro';
+interface Props {
+  title: string;
+  description: string;
+  noindex?: boolean;
+  draft?: boolean;
+  updated?: string;
+}
+const { title, description, noindex = false, draft = false, updated = 'Oktober 2026' } = Astro.props;
+---
+<Base title={title} description={description} noindex={noindex}>
+  <div class="container page-top legal">
+    {draft && <p class="draft" role="note">Entwurf – rechtliche Prüfung ausstehend. Diese Seite ist nicht verlinkt und nicht gültig.</p>}
+    <article class="prose">
+      <slot />
+      <p class="meta legal__updated">Stand: {updated}</p>
+    </article>
+  </div>
+</Base>
+<style>
+  .legal {
+    padding-bottom: var(--s-20);
+  }
+  .legal :global(h1) {
+    font-size: clamp(2.25rem, 5vw, var(--fs-48));
+    color: var(--text);
+    margin-bottom: var(--s-6);
+  }
+  .legal :global(mark.todo) {
+    background: rgba(255, 180, 92, 0.14);
+    color: var(--warn);
+    border: 1px dashed rgba(255, 180, 92, 0.5);
+    border-radius: 4px;
+    padding: 0 4px;
+  }
+  .legal :global(address) {
+    font-style: normal;
+  }
+  .draft {
+    max-width: 68ch;
+    margin-bottom: var(--s-8);
+    padding: var(--s-4) var(--s-5);
+    border: 1px dashed rgba(255, 180, 92, 0.5);
+    border-radius: var(--r-16);
+    color: var(--warn);
+    background: rgba(255, 180, 92, 0.06);
+  }
+  .legal__updated {
+    margin-top: var(--s-12);
+  }
+</style>

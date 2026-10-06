@@ -61,4 +61,16 @@ const { moment: m, count = m.count } = Astro.props;
   .ptile:hover .ptile__meta {
     color: var(--accent);
   }
+  @media (max-width: 600px) {
+    .ptile {
+      min-height: 0;
+      padding: var(--s-4);
+    }
+    .ptile__quote {
+      font-size: var(--fs-14);
+    }
+    .ptile__name {
+      display: none;
+    }
+  }
 </style>

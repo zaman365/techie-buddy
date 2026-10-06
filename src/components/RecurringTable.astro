@@ -1,0 +1,61 @@
+---
+// Betreuung/Abos as a compact table.
+import { site, getData, serviceUrl } from '../lib/data.ts';
+interface Props {
+  limit?: number;
+}
+const { limit } = Astro.props;
+const { serviceById } = await getData();
+const rows = (limit ? site.recurring.slice(0, limit) : site.recurring).map((r) => ({ ...r, href: r.service ? serviceUrl(serviceById.get(r.service)!) : null }));
+---
+<div class="table-wrap">
+  <table class="dtable dtable--stack">
+    <caption class="sr-only">Laufende Betreuung und Abos</caption>
+    <thead>
+      <tr>
+        <th scope="col">Betreuung</th>
+        <th scope="col">Was du bekommst</th>
+        <th scope="col" class="num">Preis</th>
+      </tr>
+    </thead>
+    <tbody>
+      {
+        rows.map((r) => (
+          <tr>
+            <th scope="row" class="name">{r.href ? <a href={r.href}>{r.name}</a> : r.name}</th>
+            <td data-label="Was du bekommst" class="muted">{r.text}</td>
+            <td data-label="Preis" class="num">
+              <span class="price">{r.price}</span>
+              <span class="sub">{'b2c' in r && r.b2c ? 'inkl. MwSt.' : 'zzgl. MwSt.'}</span>
+            </td>
+          </tr>
+        ))
+      }
+    </tbody>
+  </table>
+</div>
+<style>
+  th.name a {
+    text-decoration: none;
+  }
+  th.name a:hover {
+    color: var(--accent);
+  }
+  th[scope='row'] {
+    min-width: 200px;
+  }
+  .price {
+    display: block;
+    white-space: nowrap;
+    color: var(--text);
+  }
+  .sub {
+    display: block;
+    font-family: var(--font-sans);
+  }
+  @media (max-width: 767px) {
+    th[scope='row'] {
+      min-width: 0;
+    }
+  }
+</style>

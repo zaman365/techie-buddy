@@ -1,0 +1,79 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import CheckWizard from '../../components/CheckWizard.astro';
+import Icon from '../../components/Icon.astro';
+import { getData, site, serviceUrl } from '../../lib/data.ts';
+const { serviceById } = await getData();
+const questions = [
+  { id: 'sachsen', text: 'Hat dein Unternehmen seinen Sitz oder eine Betriebsstätte in Sachsen?', options: [{ value: 'ja', label: 'Ja' }, { value: 'nein', label: 'Nein' }] },
+  { id: 'groesse', text: 'Wie viele Personen beschäftigt dein Unternehmen?', options: [{ value: 'unter10', label: 'Weniger als 10' }, { value: '10bis49', label: '10 bis 49' }, { value: '50plus', label: '50 oder mehr' }] },
+  { id: 'erstes', text: 'Ist es euer erstes gefördertes Digitalisierungsprojekt?', options: [{ value: 'ja', label: 'Ja' }, { value: 'nein', label: 'Nein, wir hatten schon eins' }, { value: 'unklar', label: 'Weiß ich nicht' }] },
+  { id: 'budget', text: 'Wie groß ist das geplante Vorhaben?', options: [{ value: 'unter5', label: 'Unter 5.000 €' }, { value: '5bis10', label: '5.000 bis 10.000 €' }, { value: 'ueber10', label: 'Mehr als 10.000 €' }] },
+  { id: 'begonnen', text: 'Hat das Projekt schon begonnen?', hint: 'Zum Beispiel: Aufträge vergeben oder Verträge unterschrieben.', options: [{ value: 'nein', label: 'Nein, noch nicht' }, { value: 'ja', label: 'Ja' }] }
+];
+const links = { '62': serviceUrl(serviceById.get('62')!), '63': serviceUrl(serviceById.get('63')!) };
+---
+<Base title="Förder-Check: Passt die SAB-Digitalisierungsförderung?" description="Fünf Fragen zur Digitalisierungsförderung in Sachsen: Sitz, Größe, erstes Projekt, Budget, Projektstart. Läuft im Browser, nichts wird gesendet.">
+  <div class="container page-top">
+    <Breadcrumb items={[{ label: 'Wissen', href: '/wissen/' }, { label: 'Förder-Check' }]} />
+    <div class="layout">
+      <header class="head">
+        <h1>Passt eine Förderung für dein Projekt?</h1>
+        <p class="lede">Die SAB fördert berechtigte erste Digitalisierungsprojekte in Sachsen mit bis zu 60 %. Fünf Fragen zeigen, ob dein Vorhaben ins Raster passt.</p>
+        <ul class="facts" role="list">
+          <li><Icon name="check" />Der Antrag muss vor Projektstart gestellt werden.</li>
+          <li><Icon name="check" />Antragsteller ist immer dein Unternehmen.</li>
+          <li><Icon name="lock" />Läuft komplett im Browser. Nichts wird gesendet.</li>
+        </ul>
+        <p class="meta">Stand {site.asOf.label}. Quelle: <a href="https://sab.sachsen.de/documents/d/guest/flyer_digitalisierung_efre-pdf?download=true" rel="noopener">SAB, Programm-Flyer</a>. Orientierung, keine Förderzusage.</p>
+      </header>
+      <CheckWizard id="foerder" title="Förder-Check" questions={questions} links={links} />
+    </div>
+    <noscript><p class="note nojs">Für die Auswertung braucht der Check JavaScript. Alternativ prüfen wir es im <a href={links['63']}>Fördermittel-Check</a>.</p></noscript>
+  </div>
+</Base>
+<script>
+  import '../../scripts/checks.ts';
+</script>
+<style>
+  .layout {
+    margin-block: var(--s-8) var(--s-20);
+    display: grid;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    gap: var(--s-12);
+    align-items: start;
+  }
+  .head {
+    display: grid;
+    gap: var(--s-5);
+  }
+  .facts {
+    display: grid;
+    gap: var(--s-2);
+    color: var(--text-2);
+    font-size: var(--fs-14);
+  }
+  .facts li {
+    display: flex;
+    gap: var(--s-2);
+    align-items: flex-start;
+  }
+  .facts :global(.icon) {
+    color: var(--accent);
+    margin-top: 3px;
+  }
+  .head a,
+  .nojs a {
+    color: var(--text);
+  }
+  .nojs {
+    display: block;
+    margin-bottom: var(--s-12);
+  }
+  @media (max-width: 960px) {
+    .layout {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

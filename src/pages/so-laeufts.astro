@@ -1,0 +1,161 @@
+---
+import Base from '../layouts/Base.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+import Timeline from '../components/Timeline.astro';
+import Accordion from '../components/Accordion.astro';
+import Icon from '../components/Icon.astro';
+import FinalCta from '../components/FinalCta.astro';
+import { site } from '../lib/data.ts';
+const icons: Record<string, string> = { festpreis: 'badge-euro', lieferzeit: 'clock', vorkasse: 'credit-card', bericht: 'file-check' };
+const extraFaq = [
+  { q: 'Wann beginnt die Lieferzeit?', a: 'Sobald drei Dinge da sind: die Zahlung, die nötigen Zugänge und die Unterlagen aus „Was wir von dir brauchen“. Fehlt etwas, sagen wir dir sofort, was.' },
+  { q: 'Kann ich per Rechnung zahlen?', a: 'Festpreis-Leistungen bezahlst du vorab per Zahlungslink. Für Projekte steht die Zahlungsweise im Angebot.' },
+  { q: 'Was bekomme ich am Ende?', a: 'Einen kurzen Bericht mit Vorher-Nachher-Belegen und Checkliste, den du an dein Team, deine Steuerberatung oder Plattformen weitergeben kannst, plus alle Zugänge zurück.' }
+];
+---
+<Base title="So läuft’s: Festpreis, Lieferzeit, Nachweis" description="Problem schildern, Festpreis bekommen, per Link zahlen, Lösung mit Nachweis erhalten. Wie TechieBuddy arbeitet und was du erwarten kannst.">
+  <div class="container page-top">
+    <header class="head">
+      <h1>So läuft’s</h1>
+      <p class="lede">Kein Erstgespräch, kein Stundenzettel, keine Überraschung auf der Rechnung. Du weißt vor dem Start, was du bekommst, bis wann und zu welchem Preis.</p>
+    </header>
+    <div class="steps">
+      <Timeline steps={site.process} />
+    </div>
+  </div>
+
+  <section class="section section--raised section--line" aria-labelledby="principles-title">
+    <div class="container">
+      <SectionHeader id="principles-title" title="Vier Prinzipien" text="Sie gelten für jede Festpreis-Leistung." />
+      <ul class="principles" role="list">
+        {
+          site.principles.map((p) => (
+            <li>
+              <Icon name={icons[p.id]} size={20} />
+              <h3>{p.title}</h3>
+              <p>{p.text}</p>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="detail-title">
+    <div class="container details">
+      <SectionHeader id="detail-title" title="Was du dich vielleicht fragst" />
+      <div class="detail-list">
+        <article>
+          <h3><Icon name="clock" />Was „Lieferzeit“ bedeutet</h3>
+          <p>Die Lieferzeit steht auf jedem Angebot, wie auf einem Versandetikett. Sie startet, sobald Zahlung, Zugänge und Unterlagen vollständig sind. Hängt ein Schritt an einer Plattform oder Behörde, steht das im Angebot.</p>
+        </article>
+        <article>
+          <h3><Icon name="key-round" />Deine Zugänge bleiben deine</h3>
+          <p>Wir arbeiten mit Zugängen, die du vergibst und jederzeit entziehen kannst, wo möglich als eigene Nutzerrolle statt mit deinem Passwort. Am Ende ist alles dokumentiert übergeben. Domains, Konten und Lizenzen laufen auf dich.</p>
+        </article>
+        <article>
+          <h3><Icon name="file-check" />Nachweis statt Versprechen</h3>
+          <p>Jeder Auftrag endet mit Belegen: Screenshots vorher und nachher, eine Checkliste der erledigten Punkte und ein kurzer Bericht. Dazu ein Tipp, wie das Problem nicht wiederkommt.</p>
+        </article>
+        <article>
+          <h3><Icon name="life-buoy" />Was, wenn etwas nicht klappt</h3>
+          <p>Passt dein Fall nicht in den Rahmen einer Leistung, sagen wir das vor der Zahlung. Zeigt sich während der Arbeit, dass mehr nötig ist, halten wir an und sprechen mit dir, bevor zusätzliche Kosten entstehen. Ob Amazon, Google, Meta oder eine Behörde zustimmt, entscheiden sie; die vereinbarte Arbeit liefern wir vollständig und belegt.</p>
+        </article>
+        <article>
+          <h3><Icon name="scale" />Umsetzung, keine Rechtsberatung</h3>
+          <p>{site.guardrail}</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--raised section--line" aria-labelledby="faq-title">
+    <div class="container faq">
+      <SectionHeader id="faq-title" title="Häufige Fragen" />
+      <Accordion items={[...site.faq, ...extraFaq]} schema />
+    </div>
+  </section>
+
+  <FinalCta />
+</Base>
+<style>
+  .head {
+    max-width: 820px;
+    display: grid;
+    gap: var(--s-4);
+  }
+  .steps {
+    max-width: 760px;
+    margin-block: var(--s-16) var(--s-20);
+  }
+  .principles {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: var(--s-4);
+  }
+  .principles li {
+    display: grid;
+    gap: var(--s-3);
+    align-content: start;
+    padding: var(--s-6);
+    border: 1px solid var(--line);
+    border-radius: var(--r-16);
+    background: var(--card-fill);
+  }
+  .principles :global(.icon) {
+    color: var(--accent);
+  }
+  .principles h3 {
+    font-size: var(--fs-18);
+  }
+  .principles p {
+    color: var(--text-2);
+    font-size: var(--fs-14);
+  }
+  .details {
+    display: grid;
+    grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
+    gap: var(--s-12);
+  }
+  .detail-list {
+    border-top: 1px solid var(--line);
+  }
+  .detail-list article {
+    padding-block: var(--s-6);
+    border-bottom: 1px solid var(--line);
+  }
+  .detail-list h3 {
+    display: flex;
+    align-items: center;
+    gap: var(--s-3);
+    font-size: var(--fs-18);
+  }
+  .detail-list h3 :global(.icon) {
+    color: var(--text-2);
+  }
+  .detail-list p {
+    margin-top: var(--s-2);
+    color: var(--text-2);
+    max-width: 68ch;
+  }
+  .faq {
+    display: grid;
+    grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
+    gap: var(--s-12);
+  }
+  @media (max-width: 1079px) {
+    .principles {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .details,
+    .faq {
+      grid-template-columns: 1fr;
+      gap: var(--s-4);
+    }
+  }
+  @media (max-width: 600px) {
+    .principles {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

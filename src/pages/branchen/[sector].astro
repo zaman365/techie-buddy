@@ -1,0 +1,183 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import SectionHeader from '../../components/SectionHeader.astro';
+import TicketCard from '../../components/TicketCard.astro';
+import CatalogTable from '../../components/CatalogTable.astro';
+import Icon from '../../components/Icon.astro';
+import FinalCta from '../../components/FinalCta.astro';
+import { getData, site, byTier, serviceUrl, type Sector } from '../../lib/data.ts';
+
+export async function getStaticPaths() {
+  const { sectors } = await getData();
+  return sectors.map((s) => ({ params: { sector: s.id }, props: { id: s.id } }));
+}
+const { id } = Astro.props as { id: string };
+const { sectorById, serviceById, catalogListed } = await getData();
+const sec = sectorById.get(id) as Sector;
+const named = sec.services.map((x) => serviceById.get(x)!).sort(byTier);
+const rows = catalogListed.filter((r) => r.sectors.includes(sec.id));
+const deadlines = site.deadlines.filter((d) => sec.services.includes(d.service));
+const b2c = named.every((s) => s.audience === 'b2c');
+---
+<Base title={`${sec.name}: digitale Fixes zum Festpreis`} description={sec.intro.length > 155 ? `${sec.intro.slice(0, 150).replace(/\s\S*$/, '')} …` : sec.intro}>
+  <div class="container page-top">
+    <Breadcrumb items={[{ label: 'Branchen', href: '/branchen/' }, { label: sec.name }]} />
+    <div class="hero">
+      <div class="hero__text">
+        <span class="hero__icon"><Icon name={sec.icon} size={22} /></span>
+        <h1 class="hero__title">{sec.name}</h1>
+        <p class="lede">{sec.intro}</p>
+        {
+          sec.id === 'internationale-fachkraefte' && (
+            <p class="cluster langs">
+              <a class="btn btn--secondary btn--sm" href="/en/arriving-in-germany/" hreflang="en" lang="en">
+                In English
+              </a>
+              <a class="btn btn--secondary btn--sm" href="/bn/" hreflang="bn" lang="bn">
+                বাংলায় পড়ুন
+              </a>
+            </p>
+          )
+        }
+      </div>
+      <ul class="hero__quotes" role="list" aria-label="Typische Probleme">
+        {sec.problems.map((p) => <li>„{p}“</li>)}
+      </ul>
+    </div>
+  </div>
+
+  <section class="section section--raised section--line" aria-labelledby="named-title">
+    <div class="container">
+      <SectionHeader id="named-title" title="Passende Leistungen" text={b2c ? 'Mit Festpreis und Lieferzeit. Alle Preise inklusive Mehrwertsteuer.' : 'Mit Festpreis, Lieferzeit und eigener Detailseite.'} />
+      {
+        sec.id === 'vereine-gemeinden' && (
+          <div class="note callout">
+            <Icon name="info" />
+            <p>
+              <strong>Kostenlose Anzeigen für Gemeinnützige.</strong> Google vergibt an berechtigte Organisationen kostenlose Suchanzeigen. Ob ihr die Voraussetzungen erfüllt, prüfen wir vor der Zahlung im <a href={serviceUrl(serviceById.get('48')!)}>Ad-Grants-Check</a>.
+            </p>
+          </div>
+        )
+      }
+      <ul class="tickets" role="list">
+        {named.map((s) => <li><TicketCard service={s} /></li>)}
+      </ul>
+    </div>
+  </section>
+
+  {
+    deadlines.length > 0 && (
+      <section class="section section--tight" aria-labelledby="dl-title">
+        <div class="container">
+          <SectionHeader id="dl-title" title="Pflichten im Blick" text={`Stand ${site.asOf.label}. Details und Quellen im Pflichten-Kalender.`} />
+          <ul class="dl" role="list">
+            {deadlines.map((d) => (
+              <li>
+                <time class="mono" datetime={d.date}>{d.dateLabel}</time>
+                <span>{d.title}</span>
+                <a class="link-arrow" href={serviceUrl(serviceById.get(d.service)!)}>
+                  Passende Leistung <Icon name="arrow-right" />
+                </a>
+              </li>
+            ))}
+          </ul>
+          <p class="more"><a class="link-arrow" href="/wissen/pflichten-kalender/">Zum Pflichten-Kalender <Icon name="arrow-right" /></a></p>
+        </div>
+      </section>
+    )
+  }
+
+  {
+    rows.length > 0 && (
+      <section class="section section--line" aria-labelledby="rows-title">
+        <div class="container">
+          <SectionHeader id="rows-title" title="Weitere Fixes für deine Branche" text={`${rows.length} kleinere Leistungen mit Richtpreis. Festpreis nach kurzer Prüfung.`} />
+          <CatalogTable rows={rows} caption={`Weitere Fixes: ${sec.name}`} />
+        </div>
+      </section>
+    )
+  }
+
+  <FinalCta title="Dein Fall ist anders?" />
+</Base>
+<style>
+  .hero {
+    margin-top: var(--s-8);
+    margin-bottom: var(--s-16);
+    display: grid;
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+    gap: var(--s-12);
+    align-items: end;
+  }
+  .hero__text {
+    display: grid;
+    gap: var(--s-4);
+  }
+  .hero__icon {
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: var(--r-16);
+    border: 1px solid var(--line-2);
+  }
+  .hero__title {
+    font-size: clamp(2.375rem, 5vw, var(--fs-64));
+  }
+  .hero__quotes {
+    display: grid;
+    gap: var(--s-2);
+  }
+  .hero__quotes li {
+    padding: var(--s-4) var(--s-5);
+    border: 1px solid var(--line);
+    border-radius: var(--r-16);
+    color: var(--accent);
+    font-size: var(--fs-16);
+    background: rgba(255, 255, 255, 0.015);
+  }
+  .langs {
+    margin-top: var(--s-2);
+  }
+  .callout {
+    margin-bottom: var(--s-6);
+  }
+  .callout a {
+    color: var(--text);
+  }
+  .tickets {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 360px), 1fr));
+    gap: var(--s-4);
+  }
+  .dl {
+    border-top: 1px solid var(--line);
+  }
+  .dl li {
+    display: grid;
+    grid-template-columns: 160px 1fr auto;
+    gap: var(--s-4);
+    align-items: center;
+    padding: var(--s-4) 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .dl time {
+    color: var(--warn);
+    font-size: var(--fs-14);
+  }
+  .more {
+    margin-top: var(--s-6);
+  }
+  @media (max-width: 900px) {
+    .hero {
+      grid-template-columns: 1fr;
+    }
+  }
+  @media (max-width: 600px) {
+    .dl li {
+      grid-template-columns: 1fr;
+      gap: var(--s-1);
+    }
+  }
+</style>

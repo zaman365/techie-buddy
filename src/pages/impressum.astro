@@ -1,0 +1,32 @@
+---
+import Legal from '../layouts/Legal.astro';
+import { site } from '../lib/data.ts';
+// TODO_TUTUL: Betreiberangaben eintragen (Firma, Anschrift, Vertretung, Register, USt-IdNr., Telefon).
+// Danach site.legal.impressumComplete auf true setzen und X-Robots-Tag in public/_headers entfernen.
+---
+<Legal title="Impressum" description="Impressum von techiebuddy.de: Angaben gemäß § 5 DDG.">
+  <h1>Impressum</h1>
+  <h2>Angaben gemäß § 5 DDG</h2>
+  <address>
+    <mark class="todo">TODO: Firma bzw. Name des Inhabers</mark><br />
+    <mark class="todo">TODO: Straße und Hausnummer</mark><br />
+    <mark class="todo">TODO: PLZ</mark> Chemnitz<br />
+    Deutschland
+  </address>
+  <p>Vertreten durch: <mark class="todo">TODO: Geschäftsführer/in bzw. Inhaber/in</mark></p>
+  <h2>Kontakt</h2>
+  <p>
+    E-Mail: <a href={`mailto:${site.contact.email}`}>{site.contact.email}</a><br />
+    Telefon: <mark class="todo">TODO: Telefonnummer</mark>
+  </p>
+  <h2>Registereintrag</h2>
+  <p>Registergericht: <mark class="todo">TODO: Amtsgericht</mark><br />Registernummer: <mark class="todo">TODO: HRB-Nummer (falls vorhanden)</mark></p>
+  <h2>Umsatzsteuer</h2>
+  <p>Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG: <mark class="todo">TODO: USt-IdNr.</mark></p>
+  <h2>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
+  <p><mark class="todo">TODO: Name, Anschrift</mark></p>
+  <h2>Verbraucherstreitbeilegung</h2>
+  <p>Wir sind nicht bereit und nicht verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+  <h2>Hinweis zu unseren Leistungen</h2>
+  <p>{site.guardrail}</p>
+</Legal>
