@@ -1,0 +1,12 @@
+# Internal brief, strategy and pricing logic. Never commit (public repo).
+_context/
+
+# Build output and dependencies
+node_modules/
+dist/
+.astro/
+
+# QA artefacts
+test-results/
+playwright-report/
+.DS_Store
