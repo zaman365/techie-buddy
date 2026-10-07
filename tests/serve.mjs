@@ -3,6 +3,7 @@
 import { createServer } from 'node:http';
 import { readFileSync, existsSync, statSync } from 'node:fs';
 import { join, extname } from 'node:path';
+import { gzipSync } from 'node:zlib';
 
 const dist = join(process.cwd(), 'dist');
 const port = Number(process.env.PORT ?? 4322);
@@ -45,5 +46,11 @@ createServer((req, res) => {
     file = join(dist, '404.html');
   }
   res.setHeader('Content-Type', TYPES[extname(file)] ?? 'application/octet-stream');
-  res.end(readFileSync(file));
+  const body = readFileSync(file);
+  // Compress text like Cloudflare does, so Lighthouse numbers are realistic.
+  if (/gzip/.test(req.headers['accept-encoding'] ?? '') && /\.(html|css|js|json|svg|xml|txt)$/.test(file)) {
+    res.setHeader('Content-Encoding', 'gzip');
+    return res.end(gzipSync(body));
+  }
+  res.end(body);
 }).listen(port, () => console.log(`serving dist on http://localhost:${port}`));

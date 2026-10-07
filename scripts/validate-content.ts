@@ -6,6 +6,7 @@
  * non-zero on any schema or reference error, so a broken edit never ships.
  */
 import { readFileSync, readdirSync, statSync } from 'node:fs';
+import { createHash } from 'node:crypto';
 import { join, dirname, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import {
@@ -78,6 +79,12 @@ for (const r of catalog) {
 
 // ------------------------------------------------------------- internal language
 const FORBIDDEN = [/goldmine/i, /\bhot\b/i, /panik/i, /angst verkauft/i, /fear buys/i, /zero competition/i, /guilt-carrying/i, /\bscore/i, /dhaka/i, /\bmargin/i];
+// Unpublished internal names, stored as SHA-256 so this public file does not reveal them.
+// Matched case-sensitively in capitals (the German number "zehn" stays allowed).
+const FORBIDDEN_HASHES = new Set([
+  'ea046f21a685bb15772e6107cc2968a5ed48151fc07c421b63a517fc822e1d91',
+  '3cccf71a642a66c0ac8c4b2f13c2c9c8fe23189572948d6cdc54ca45a2284b1f'
+]);
 function scan(dir: string) {
   for (const f of readdirSync(dir)) {
     const p = join(dir, f);
@@ -91,6 +98,9 @@ function scan(dir: string) {
           if (/score/i.test(h) && /catalog\.json$/.test(p)) continue;
           err(`internal language "${h}" in ${relative(root, p)}`);
         }
+      }
+      for (const word of new Set(text.match(/\b[A-ZÄÖÜ]{4,}\b/g) ?? [])) {
+        if (FORBIDDEN_HASHES.has(createHash('sha256').update(word).digest('hex'))) err(`unpublished internal name in ${relative(root, p)}`);
       }
     }
   }

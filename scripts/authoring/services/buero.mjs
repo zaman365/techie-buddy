@@ -251,7 +251,7 @@ export default [
   note: "Festpreis nach Blick auf die Datei",
   fact: null,
   faq: [
-    ["Ist meine Datei bei euch sicher?", "Wir arbeiten mit der Datei nur für den Auftrag und löschen sie nach Abschluss. Sensible Daten kannst du vorher anonymisieren."],
+    ["Ist meine Datei bei euch sicher?", "Wir nutzen die Datei nur für deinen Auftrag. Sensible Daten kannst du vorher anonymisieren oder durch Beispieldaten ersetzen."],
     ["Geht das auch mit Google Sheets?", "Ja."]
   ],
   rel: ["57", "58", "18"],

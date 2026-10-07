@@ -4,7 +4,7 @@ import Icon from './Icon.astro';
 import { site } from '../lib/data.ts';
 import { eur } from '../lib/format.ts';
 interface Props {
-  headingLevel?: 'h3' | 'h4';
+  headingLevel?: 'h2' | 'h3' | 'h4';
 }
 const { headingLevel = 'h3' } = Astro.props;
 const Tag = headingLevel;
@@ -104,7 +104,7 @@ const Tag = headingLevel;
   }
   @media (max-width: 960px) {
     .pkgs {
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(0, 1fr);
       gap: var(--s-6);
     }
   }

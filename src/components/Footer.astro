@@ -196,7 +196,7 @@ void currentLang;
   }
   @media (max-width: 1079px) {
     .footer__top {
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(0, 1fr);
     }
     .footer__cols {
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -204,7 +204,7 @@ void currentLang;
   }
   @media (max-width: 480px) {
     .footer__cols {
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(0, 1fr);
     }
     .footer__cols a {
       display: inline-flex;

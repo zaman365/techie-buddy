@@ -70,7 +70,7 @@ import { site } from '../lib/data.ts';
   }
   @media (max-width: 960px) {
     .layout {
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(0, 1fr);
     }
     .intro {
       position: static;
@@ -78,7 +78,7 @@ import { site } from '../lib/data.ts';
   }
   @media (max-width: 480px) {
     .facts div {
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(0, 1fr);
       gap: 2px;
     }
   }

@@ -51,7 +51,7 @@ const rows: Row[] = [
     bucket: turnaroundBucket(s.turnaround),
     delivery: deliveryFor(s.turnaround),
     tags: s.tags,
-    text: [s.name, s.problem, s.summary, ...s.keywords, categoryById.get(s.category)!.name].join(' ')
+    text: [s.name, s.problem, ...s.keywords, categoryById.get(s.category)!.name].join(' ')
   })),
   ...catalogListed.map((r) => ({
     id: r.key,

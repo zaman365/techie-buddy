@@ -184,7 +184,7 @@ export default [
 {
   id: "35",
   name: "Neuer PC oder neues Handy: Daten-Umzug",
-  problem: "Ich habe ein neues Handy und Angst, dass meine Fotos und WhatsApp-Chats weg sind.",
+  problem: "Ich habe ein neues Handy und will meine Fotos und WhatsApp-Chats nicht verlieren.",
   summary: "Wir ziehen alles vom alten aufs neue Gerät um: Daten, WhatsApp-Verlauf, Banking-Apps, Drucker und E-Mail. Damit dein Wochenende dir gehört.",
   inc: [
     "Datenübertragung vom alten aufs neue Gerät",
@@ -313,7 +313,7 @@ export default [
     "Kurzer Bericht an dich nach jedem Besuch, wenn deine Eltern einverstanden sind."
   ],
   result: "Eltern, die mit ihrer Technik zurechtkommen, und ein Kind, das nicht mehr jeden Abend telefonischer Support ist.",
-  note: "monatlich kündbar nach Konditionen im Angebot",
+  note: "Laufzeit und Kündigung stehen im Angebot",
   fact: null,
   faq: [
     ["Wo bietet ihr Hausbesuche an?", "In Chemnitz und Umgebung. Für andere Orte fragen wir nach, ob es eine Lösung gibt."],

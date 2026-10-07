@@ -2,7 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import Icon from '../../components/Icon.astro';
 import PriceLabel from '../../components/PriceLabel.astro';
-import { getData, site, categoryUrl, serviceUrl } from '../../lib/data.ts';
+import { getData, site, categoryUrl } from '../../lib/data.ts';
 const { categories, serviceById, totalOffers } = await getData();
 const EN: Record<string, string> = {
   compliance: 'Compliance and legal duties',
@@ -209,16 +209,16 @@ const arrival = serviceById.get('88')!;
   @media (max-width: 960px) {
     .steps,
     .areas {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
     .arrive {
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(0, 1fr);
     }
   }
   @media (max-width: 600px) {
     .steps,
     .areas {
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(0, 1fr);
     }
   }
 </style>

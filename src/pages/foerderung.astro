@@ -152,7 +152,7 @@ const example = ['36', '39', '41', '38'].map((id) => serviceById.get(id)!);
   @media (max-width: 900px) {
     .cols,
     .tickets {
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(0, 1fr);
     }
   }
 </style>

@@ -171,12 +171,12 @@ const b2c = named.every((s) => s.audience === 'b2c');
   }
   @media (max-width: 900px) {
     .hero {
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(0, 1fr);
     }
   }
   @media (max-width: 600px) {
     .dl li {
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(0, 1fr);
       gap: var(--s-1);
     }
   }

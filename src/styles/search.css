@@ -67,7 +67,7 @@
 }
 @media (max-width: 480px) {
   .sr-opt {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
   .sr-opt .pl {
     grid-row: auto;

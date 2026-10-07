@@ -1,6 +1,6 @@
 // Combobox controller shared by the ⌘K palette and the hero command bar.
 // ARIA: input[role=combobox] + aria-activedescendant, results[role=listbox] with grouped options.
-import { loadIndex, search, group, suggestions, type Entry, type Grouped } from './search.ts';
+import { loadIndex, search, group, suggestions, isUrgent, type Entry, type Grouped } from './search.ts';
 
 const KIND_LABEL: Record<Entry['k'], string> = {
   service: 'Leistung',
@@ -135,7 +135,7 @@ export class Combobox {
       return;
     }
 
-    const groups = group(search(index, q));
+    const groups = group(search(index, q), isUrgent(q));
     const count = groups.reduce((n, g) => n + g.results.length, 0);
     if (!count) {
       const empty = el('div', 'sr-empty');

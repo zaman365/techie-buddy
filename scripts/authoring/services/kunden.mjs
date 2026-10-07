@@ -125,7 +125,7 @@ export default [
     "Laufender Betrieb für 29 €/Monat"
   ],
   exc: [
-    "SMS-Kosten über das vereinbarte Kontingent hinaus",
+    "Kosten für SMS-Versand, soweit sie über das Angebot hinausgehen",
     "Wechsel des Buchungssystems (eigene Leistung)"
   ],
   needs: [
@@ -143,7 +143,7 @@ export default [
   fact: null,
   faq: [
     ["Mit welchen Kalendern funktioniert das?", "Mit gängigen Buchungssystemen und Kalendern. Wir prüfen deins vor der Zahlung."],
-    ["Was ist im Monatspreis enthalten?", "Betrieb, Pflege und ein Kontingent an Nachrichten. Die genauen Konditionen stehen im Angebot."]
+    ["Was ist im Monatspreis enthalten?", "Betrieb und Pflege der Erinnerungen. Was genau enthalten ist, steht im Angebot, bevor du zahlst."]
   ],
   rel: ["41", "37", "17"],
   guard: false
@@ -242,7 +242,7 @@ export default [
   steps: [
     "Du schickst Karte und Angaben.",
     "Festpreis und Zahlungslink.",
-    "Aufbau und Korrekturrunde.",
+    "Aufbau und Abstimmung mit dir.",
     "Livegang mit QR-Dateien."
   ],
   result: "Eine digitale Karte mit Kennzeichnung, druckfertige QR-Aufsteller und eine Anleitung zum Ändern.",

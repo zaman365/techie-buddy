@@ -112,6 +112,7 @@ const href = serviceUrl(s);
     padding: var(--s-4) var(--s-6);
     border-top: 1px dashed var(--line-2);
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     gap: var(--s-3);
@@ -138,6 +139,8 @@ const href = serviceUrl(s);
     display: grid;
     gap: 4px;
     justify-items: start;
+    flex: 0 1 auto;
+    min-width: 0;
   }
   .ticket__vat {
     font-size: var(--fs-12);
@@ -147,6 +150,7 @@ const href = serviceUrl(s);
     position: relative;
     z-index: 1;
     flex: none;
+    margin-left: auto;
   }
   @media (max-width: 480px) {
     .ticket__body {
@@ -154,7 +158,6 @@ const href = serviceUrl(s);
     }
     .ticket__stub {
       padding: var(--s-4) var(--s-5);
-      flex-wrap: wrap;
     }
   }
 </style>

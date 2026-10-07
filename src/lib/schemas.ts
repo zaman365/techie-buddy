@@ -65,7 +65,7 @@ export const serviceSchema = z.object({
   faq: z.array(z.object({ q: nonEmpty, a: nonEmpty })).min(2).max(4),
   related: z.array(z.string()).length(3),
   seo: z.object({ title: nonEmpty.max(60), description: nonEmpty.max(155) }),
-  stripePaymentLink: z.union([z.literal(''), z.string().url()]),
+  stripePaymentLink: z.union([z.literal(''), z.url()]),
   moments: z.array(z.string().regex(/^g\d{2}$/)).min(1),
   keywords: z.array(z.string())
 });

@@ -166,20 +166,20 @@ import { site } from '../lib/data.ts';
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
     .cols {
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(0, 1fr);
       gap: var(--s-4);
     }
   }
   @media (max-width: 767px) {
     .intro {
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(0, 1fr);
     }
     .portrait {
       max-width: 220px;
       aspect-ratio: 1;
     }
     .grid {
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(0, 1fr);
     }
   }
 </style>

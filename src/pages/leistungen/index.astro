@@ -88,7 +88,7 @@ const { categories, serviceById, totalOffers } = await getData();
   }
   @media (max-width: 960px) {
     .cat {
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(0, 1fr);
       gap: var(--s-6);
     }
     .cat__intro {

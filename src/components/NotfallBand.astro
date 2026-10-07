@@ -90,10 +90,10 @@ const items = ids.map((id) => serviceById.get(id)!);
   }
   @media (max-width: 900px) {
     .band__inner {
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(0, 1fr);
     }
     .band__list {
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(0, 1fr);
     }
     .band__all {
       grid-column: 1;

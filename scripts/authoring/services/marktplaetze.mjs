@@ -318,7 +318,7 @@ export default [
   ],
   needs: [
     "Lesezugriff auf die Amazon-Werbekonsole",
-    "Ziel-ACoS oder Margenrahmen, falls vorhanden"
+    "Ziel-ACoS oder andere Zielwerte, falls vorhanden"
   ],
   steps: [
     "Du gibst uns Lesezugriff.",

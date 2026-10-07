@@ -41,7 +41,7 @@ const STOP_RAW =
 const SYNONYMS_RAW: string[][] = [
   ['gesperrt', 'sperre', 'sperrung', 'blockiert', 'suspendiert', 'suspended', 'blocked', 'banned', 'deaktiviert', 'eingeschrankt', 'unterdruckt', 'suppressed', 'abgelehnt', 'rejected', 'limitation'],
   ['gehackt', 'hack', 'hacked', 'gekapert', 'kompromittiert', 'compromised', 'hijacked', 'malware', 'angriff'],
-  ['kaputt', 'defekt', 'broken', 'streikt', 'fehler', 'error', 'ausgefallen', 'ausfall', 'down', 'offline', 'stopped', 'failure', 'notfall'],
+  ['kaputt', 'defekt', 'broken', 'streikt', 'fehler', 'error', 'ausgefallen', 'ausfall', 'down', 'offline', 'stopped', 'failure', 'notfall', 'notaufnahme', 'rettung', 'retten', 'reparieren', 'reparatur', 'repair', 'rescue'],
   ['website', 'webseite', 'homepage', 'internetseite', 'site', 'wordpress'],
   ['email', 'mail', 'postfach', 'outlook', 'mailbox', 'inbox'],
   ['rechnung', 'invoice', 'erechnung', 'xrechnung', 'zugferd'],
@@ -65,7 +65,7 @@ const SYNONYMS_RAW: string[][] = [
   ['shop', 'onlineshop', 'shopify', 'woocommerce', 'checkout', 'store'],
   ['amazon', 'seller', 'asin', 'fba', 'marktplatz', 'marketplace'],
   ['mitarbeiter', 'mitarbeitende', 'personal', 'recruiting', 'bewerber', 'fachkrafte', 'azubi', 'employee'],
-  ['wlan', 'wifi', 'wi', 'router', 'internet', 'netzwerk'],
+  ['wlan', 'wifi', 'router', 'internet', 'netzwerk'],
   ['drucker', 'printer', 'scanner']
 ];
 
@@ -97,19 +97,21 @@ export function tokens(s: string): string[] {
 }
 
 function lev(a: string, b: string, max: number): number {
+  // Optimal string alignment distance: insert, delete, substitute, swap neighbours.
   if (Math.abs(a.length - b.length) > max) return max + 1;
-  let prev = Array.from({ length: b.length + 1 }, (_, i) => i);
+  const d: number[][] = Array.from({ length: a.length + 1 }, (_, i) => [i, ...Array(b.length).fill(0)]);
+  for (let j = 0; j <= b.length; j++) d[0][j] = j;
   for (let i = 1; i <= a.length; i++) {
-    const cur = [i];
-    let best = i;
+    let best = Infinity;
     for (let j = 1; j <= b.length; j++) {
-      cur[j] = Math.min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
-      best = Math.min(best, cur[j]);
+      const cost = a[i - 1] === b[j - 1] ? 0 : 1;
+      d[i][j] = Math.min(d[i - 1][j] + 1, d[i][j - 1] + 1, d[i - 1][j - 1] + cost);
+      if (i > 1 && j > 1 && a[i - 1] === b[j - 2] && a[i - 2] === b[j - 1]) d[i][j] = Math.min(d[i][j], d[i - 2][j - 2] + 1);
+      best = Math.min(best, d[i][j]);
     }
     if (best > max) return max + 1;
-    prev = cur;
   }
-  return prev[b.length];
+  return d[a.length][b.length];
 }
 
 function matchToken(q: string, t: string): number {
@@ -119,7 +121,7 @@ function matchToken(q: string, t: string): number {
   if (q.length >= 4) {
     const max = q.length >= 7 ? 2 : 1;
     if (lev(q, t, max) <= max) return 0.45;
-    if (t.length > q.length && lev(q, t.slice(0, q.length), max) <= max) return 0.4;
+    if (q.length >= 6 && t.length > q.length && lev(q, t.slice(0, q.length), max) <= max) return 0.4;
   }
   return 0;
 }
@@ -176,7 +178,7 @@ export function search(index: Prepared[], query: string): Result[] {
   if (!qs.length) return [];
   const urgent = qs.some((q) => URGENT.has(q));
   const altsPerToken = qs.map(alternatives);
-  const need = qs.length <= 2 ? qs.length : Math.ceil(qs.length * 0.6);
+  const need = qs.length === 1 ? 1 : Math.ceil(qs.length * 0.5);
   const out: Result[] = [];
   for (const e of index) {
     let score = 0;
@@ -191,31 +193,41 @@ export function search(index: Prepared[], query: string): Result[] {
       score += tokenBest;
     }
     if (matched < need) continue;
-    score *= matched / qs.length;
+    score *= (matched / qs.length) ** 2;
     if (e.k === 'service') score *= 1.15;
     if (e.k === 'page' || e.k === 'sector') score *= 0.9;
     if (urgent && e.n) score *= 1.3;
     out.push({ entry: e, score });
   }
-  return out.sort((a, b) => b.score - a.score);
+  out.sort((a, b) => b.score - a.score);
+  // Drop the long tail of weak matches.
+  const floor = out.length ? out[0].score * 0.3 : 0;
+  return out.filter((r) => r.score >= floor);
 }
 
 const LIMITS: Record<string, number> = { notfall: 3, service: 7, catalog: 6, sector: 3, page: 3 };
 
-export function group(results: Result[]): Grouped[] {
+export function group(results: Result[], urgent = false): Grouped[] {
   const buckets: Record<string, Entry[]> = { notfall: [], service: [], catalog: [], sector: [], page: [] };
-  for (const { entry } of results) {
+  const best: Record<string, number> = {};
+  for (const { entry, score } of results) {
     const key = entry.k === 'service' && entry.n && buckets.notfall.length < LIMITS.notfall ? 'notfall' : entry.k;
-    if (buckets[key].length < LIMITS[key]) buckets[key].push(entry);
+    if (buckets[key].length < LIMITS[key]) {
+      buckets[key].push(entry);
+      best[key] = Math.max(best[key] ?? 0, score);
+    }
   }
-  const labels: [string, string][] = [
-    ['notfall', 'Notfall'],
-    ['service', 'Leistungen'],
-    ['catalog', 'Katalog'],
-    ['sector', 'Branchen'],
-    ['page', 'Seiten']
-  ];
-  return labels.filter(([k]) => buckets[k].length).map(([k, label]) => ({ id: k, label, results: buckets[k] }));
+  const labels: Record<string, string> = { notfall: 'Notfall', service: 'Leistungen', catalog: 'Katalog', sector: 'Branchen', page: 'Seiten' };
+  // Strongest group first; urgent queries always lead with Notfall.
+  const order = Object.keys(labels)
+    .filter((k) => buckets[k].length)
+    .sort((a, b) => (urgent && a === 'notfall' ? -1 : urgent && b === 'notfall' ? 1 : (best[b] ?? 0) - (best[a] ?? 0)));
+  return order.map((k) => ({ id: k, label: labels[k], results: buckets[k] }));
+}
+
+/** True when the query contains a word that signals urgency. */
+export function isUrgent(query: string): boolean {
+  return tokens(query).some((q) => URGENT.has(q));
 }
 
 /** Suggestions for an empty query: urgent fixes and the launch services. */

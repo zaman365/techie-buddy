@@ -28,7 +28,7 @@ export default [
     "Du füllst einen kurzen Fragebogen aus.",
     "Festpreis und Zahlungslink.",
     "Wir bauen die Seite und schicken dir einen Vorschau-Link.",
-    "Eine Korrekturrunde, dann geht die Seite live."
+    "Du gibst Feedback, wir setzen es um, dann geht die Seite live."
   ],
   result: "Eine fertige Website auf deiner Domain, alle Zugänge bei dir und eine kurze Anleitung für kleine Änderungen.",
   note: "Festpreis je nach Umfang, Domain und Hosting separat",
@@ -213,7 +213,7 @@ export default [
     "Du schickst Fotos und Stichpunkte.",
     "Festpreis und Zahlungslink.",
     "Aufbereitung, Texte und Einbau.",
-    "Korrekturrunde und Livegang."
+    "Abstimmung mit dir und Livegang."
   ],
   result: "Eine fertige Referenzseite auf deiner Website mit bis zu 15 Projekten.",
   note: "Festpreis für bis zu 15 Projekte",

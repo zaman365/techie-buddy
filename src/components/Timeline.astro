@@ -95,13 +95,11 @@ const { steps, compact = false } = Astro.props;
   /* Blur-to-focus reveal, only when JS has armed it and motion is allowed. */
   @media (prefers-reduced-motion: no-preference) {
     :global(.js-reveal) .tl__step {
-      opacity: 0.25;
-      filter: blur(6px);
-      transform: translateY(8px);
-      transition: opacity 600ms var(--ease), filter 600ms var(--ease), transform 600ms var(--ease);
+      filter: blur(7px);
+      transform: translateY(10px);
+      transition: filter 650ms var(--ease), transform 650ms var(--ease);
     }
     :global(.js-reveal) .tl__step.is-in {
-      opacity: 1;
       filter: none;
       transform: none;
     }

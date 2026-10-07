@@ -75,7 +75,7 @@ const upcoming = site.deadlines.filter((d) => d.status === 'frist').slice(0, lim
   }
   @media (max-width: 900px) {
     .dstrip {
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(0, 1fr);
       gap: var(--s-5);
       padding-top: 0;
       padding-left: var(--s-6);

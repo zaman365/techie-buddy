@@ -134,7 +134,7 @@ export default [
     "Du schickst Fotos und Stilbeispiele.",
     "Festpreis und Zahlungslink.",
     "Bearbeitung und Vorschau.",
-    "Eine Korrekturrunde, dann Übergabe aller Dateien."
+    "Abstimmung mit dir, dann Übergabe aller Dateien."
   ],
   result: "20 fertige Bilder in allen benötigten Formaten.",
   note: "für 20 Bilder",

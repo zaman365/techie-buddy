@@ -15,10 +15,14 @@ export default defineConfig({
     // Strict CSP (style-src 'self'): no inline <style>, everything as files.
     inlineStylesheets: 'never'
   },
+  // Shorter markup than the default attribute strategy.
+  scopedStyleStrategy: 'class',
   vite: {
     build: {
       // Strict CSP (script-src 'self'): never inline scripts or assets as data.
-      assetsInlineLimit: 0
+      assetsInlineLimit: 0,
+      // One stylesheet for the whole site: a single render-blocking request, cached across pages.
+      cssCodeSplit: false
     }
   },
   prefetch: false,

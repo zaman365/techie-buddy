@@ -97,9 +97,15 @@ h4 {
   font-weight: 600;
   color: var(--text);
   text-wrap: balance;
+  overflow-wrap: break-word;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  hyphenate-limit-chars: 10 4 4;
 }
 h1 {
-  font-size: clamp(2.5rem, 6vw, var(--fs-64));
+  /* Real browsers hyphenate German (lang=de); "anywhere" is the fallback for long compounds on narrow screens. */
+  overflow-wrap: anywhere;
+  font-size: clamp(2.125rem, 6vw, var(--fs-64));
   line-height: 1.02;
   letter-spacing: -0.04em;
 }
@@ -408,32 +414,37 @@ p {
   --pl-fs: 0.84rem;
   display: inline-flex;
   align-items: stretch;
-  height: var(--pl-h);
+  min-height: var(--pl-h);
+  max-width: 100%;
   border: 1px solid var(--line-2);
   border-radius: var(--r-pill);
   background: rgba(255, 255, 255, 0.03);
   font-family: var(--font-mono);
   font-variant-numeric: tabular-nums;
   font-size: var(--pl-fs);
-  line-height: 1;
+  line-height: 1.15;
   letter-spacing: -0.01em;
-  white-space: nowrap;
   vertical-align: middle;
-  flex: none;
+  flex: 0 0 auto;
+  min-width: 0;
 }
 .pl__price,
 .pl__time {
   display: inline-flex;
   align-items: center;
-  padding: 0 calc(var(--pl-h) * 0.38);
+  padding: 3px calc(var(--pl-h) * 0.38);
 }
 .pl__price {
   color: var(--text);
   font-weight: 500;
+  /* Price strings use non-breaking spaces inside amounts, so they only wrap at "+". */
+  flex: 0 1 auto;
 }
 .pl__time {
   color: var(--accent);
   border-left: 1px solid var(--line-2);
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 .pl--s {
   --pl-h: 24px;

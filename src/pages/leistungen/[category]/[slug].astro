@@ -248,6 +248,12 @@ const steps = s.steps.map((t) => ({ title: t, text: '' }));
   .svc {
     padding-bottom: var(--s-16);
   }
+  .svc__head,
+  .svc__aside,
+  .svc__sections,
+  .svc__main {
+    min-width: 0;
+  }
   .svc__layout {
     margin-top: var(--s-8);
     display: grid;
@@ -428,7 +434,7 @@ const steps = s.steps.map((t) => ({ title: t, text: '' }));
   }
   @media (max-width: 1079px) {
     .svc__layout {
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(0, 1fr);
       gap: var(--s-8);
     }
     .svc__aside {
@@ -439,7 +445,10 @@ const steps = s.steps.map((t) => ({ title: t, text: '' }));
       display: none;
     }
     .related {
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(0, 1fr);
+    }
+    .sticky-bar :global(.btn) {
+      flex: none;
     }
     .sticky-bar {
       position: fixed;
@@ -471,6 +480,7 @@ const steps = s.steps.map((t) => ({ title: t, text: '' }));
     .svc__layout {
       display: flex;
       flex-direction: column;
+      align-items: stretch;
     }
     .svc__main {
       display: contents;
@@ -489,7 +499,7 @@ const steps = s.steps.map((t) => ({ title: t, text: '' }));
   }
   @media (max-width: 767px) {
     .row {
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(0, 1fr);
       gap: var(--s-3);
       padding-block: var(--s-6);
     }

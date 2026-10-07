@@ -50,7 +50,7 @@
   "faq": [
     {
       "q": "Ist meine Datei bei euch sicher?",
-      "a": "Wir arbeiten mit der Datei nur für den Auftrag und löschen sie nach Abschluss. Sensible Daten kannst du vorher anonymisieren."
+      "a": "Wir nutzen die Datei nur für deinen Auftrag. Sensible Daten kannst du vorher anonymisieren oder durch Beispieldaten ersetzen."
     },
     {
       "q": "Geht das auch mit Google Sheets?",

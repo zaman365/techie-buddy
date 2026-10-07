@@ -22,7 +22,7 @@
     "Laufender Betrieb für 29 €/Monat"
   ],
   "excludes": [
-    "SMS-Kosten über das vereinbarte Kontingent hinaus",
+    "Kosten für SMS-Versand, soweit sie über das Angebot hinausgehen",
     "Wechsel des Buchungssystems (eigene Leistung)"
   ],
   "needs": [
@@ -57,7 +57,7 @@
     },
     {
       "q": "Was ist im Monatspreis enthalten?",
-      "a": "Betrieb, Pflege und ein Kontingent an Nachrichten. Die genauen Konditionen stehen im Angebot."
+      "a": "Betrieb und Pflege der Erinnerungen. Was genau enthalten ist, steht im Angebot, bevor du zahlst."
     }
   ],
   "related": [

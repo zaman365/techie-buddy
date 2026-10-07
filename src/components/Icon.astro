@@ -21,7 +21,7 @@ if (!inner) {
   inner = raw.replace(/<!--[\s\S]*?-->/g, '').replace(/^[\s\S]*?<svg[^>]*>/, '').replace(/<\/svg>\s*$/, '').replace(/\s+/g, ' ').trim();
   globalCache.__lucide.set(name, inner);
 }
-const a11y = label ? { role: 'img', 'aria-label': label } : { 'aria-hidden': 'true', focusable: 'false' };
+const a11y = label ? { role: 'img' as const, 'aria-label': label } : { 'aria-hidden': 'true' as const, focusable: 'false' as const };
 ---
 <svg
   class:list={['icon', cls]}

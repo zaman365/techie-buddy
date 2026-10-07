@@ -233,7 +233,7 @@ const ld = {
   <!-- 11 Betreuung -->
   <section class="section section--raised" aria-labelledby="care-title">
     <div class="container">
-      <SectionHeader id="care-title" title="Laufende Betreuung" text="Wenn ein Problem nicht wiederkommen soll: feste Monatspreise, klarer Umfang, monatlich kündbar nach Angebot." row>
+      <SectionHeader id="care-title" title="Laufende Betreuung" text="Wenn ein Problem nicht wiederkommen soll: feste Monatspreise und ein klarer Umfang. Laufzeit und Kündigung stehen im Angebot." row>
         <a class="link-arrow" href="/pakete/#betreuung">Alle Abos <Icon name="arrow-right" /></a>
       </SectionHeader>
       <RecurringTable limit={4} />
@@ -512,7 +512,7 @@ const ld = {
   }
   @media (max-width: 1079px) {
     .hero__grid {
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(0, 1fr);
     }
     .hero__tickets {
       max-width: 560px;
@@ -539,7 +539,7 @@ const ld = {
     }
     .process,
     .faq {
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(0, 1fr);
       gap: var(--s-8);
     }
   }
@@ -548,13 +548,13 @@ const ld = {
       padding-top: calc(80px + var(--s-10));
     }
     .tickets {
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(0, 1fr);
     }
     .tickets > li:nth-child(5) {
       grid-column: auto;
     }
     .bento-grid {
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(0, 1fr);
       grid-template-areas: 'comp' 'markt' 's1' 's2' 's3' 's4' 's5' 's6' 's7' 'all';
       grid-auto-rows: auto;
     }

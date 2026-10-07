@@ -77,16 +77,23 @@ if (form) {
     const full = `${subject}\n\n${body}`;
     try {
       await navigator.clipboard.writeText(full);
+      setStatus(data.msg.copied, true);
     } catch {
-      const ta = document.createElement('textarea');
-      ta.value = full;
-      ta.setAttribute('readonly', '');
-      ta.className = 'sr-only';
-      document.body.append(ta);
-      ta.select();
-      document.execCommand('copy');
-      ta.remove();
+      // Clipboard blocked: show the full text in a read-only field, selected, so it can be copied by hand.
+      let out = form.querySelector<HTMLTextAreaElement>('[data-copy-out]');
+      if (!out) {
+        out = document.createElement('textarea');
+        out.className = 'textarea';
+        out.readOnly = true;
+        out.rows = 8;
+        out.dataset.copyOut = '';
+        out.setAttribute('aria-label', en ? 'Text to copy' : 'Text zum Kopieren');
+        status.after(out);
+      }
+      out.value = full;
+      out.focus();
+      out.select();
+      setStatus(en ? 'Copying is blocked in this browser. The text below is selected; copy it by hand.' : 'Kopieren ist in diesem Browser gesperrt. Der Text unten ist markiert; kopiere ihn von Hand.');
     }
-    setStatus(data.msg.copied, true);
   });
 }
