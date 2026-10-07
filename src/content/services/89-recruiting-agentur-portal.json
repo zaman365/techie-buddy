@@ -1,0 +1,75 @@
+{
+  "id": "89",
+  "slug": "recruiting-agentur-portal",
+  "category": "wachstum",
+  "categorySlug": "foerderung-team-nachfolge",
+  "alsoIn": [],
+  "sectors": [
+    "internationale-fachkraefte"
+  ],
+  "tier": "catalog",
+  "audience": "b2b",
+  "name": "Technik für Recruiting-Agenturen (Bangladesch → Deutschland)",
+  "problem": "Wir vermitteln Pflegekräfte aus Bangladesch, und alles läuft über WhatsApp und Papier.",
+  "summary": "Wir bauen Bewerberportal, Dokumenten-Workflow, Videointerview-Setup und Status-Dashboards für Agenturen, die Fachkräfte und Auszubildende nach Deutschland vermitteln, zweisprachig und als laufende Betreuung.",
+  "includes": [
+    "Bewerberportal mit strukturierter Erfassung",
+    "Workflow für Dokumente und Nachweise",
+    "Setup für Videointerviews",
+    "Status-Dashboard für Agentur und Arbeitgeber",
+    "Zweisprachige Umsetzung (Deutsch/Englisch, Bengali auf Anfrage)"
+  ],
+  "excludes": [
+    "Rechtliche Beratung zu Visa und Anerkennung",
+    "Vermittlungsleistung",
+    "Lizenzkosten der Tools"
+  ],
+  "needs": [
+    "Ablauf deiner Vermittlung",
+    "Dokumente und Status, die erfasst werden sollen"
+  ],
+  "steps": [
+    "Erstgespräch zu deinem Ablauf.",
+    "Projektangebot zum Festpreis.",
+    "Aufbau in Etappen.",
+    "Laufende Betreuung."
+  ],
+  "result": "Ein Portal mit Dokumenten-Workflow und Dashboard, dokumentiert und betreut.",
+  "price": {
+    "type": "from",
+    "from": 1500,
+    "display": "ab 1.500 € + Betreuung",
+    "note": "Projekt plus monatliche Betreuung nach Umfang",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "je Projekt",
+  "tags": [
+    "abo"
+  ],
+  "factNote": null,
+  "guardrail": true,
+  "faq": [
+    {
+      "q": "Wie wird die Betreuung abgerechnet?",
+      "a": "Als monatliche Pauschale nach Umfang, festgelegt im Angebot."
+    },
+    {
+      "q": "Arbeitet ihr auf Bengali?",
+      "a": "Ja. Deutsch, Englisch und Bengali."
+    }
+  ],
+  "related": [
+    "90",
+    "88",
+    "36"
+  ],
+  "seo": {
+    "title": "Technik für Recruiting-Agenturen (Bangladesch → Deutschland)",
+    "description": "Wir bauen Bewerberportal, Dokumenten-Workflow, Videointerview-Setup und Status-Dashboards für Agenturen, die Fachkräfte und Auszubildende nach …"
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g18"
+  ],
+  "keywords": []
+}

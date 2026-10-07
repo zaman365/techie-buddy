@@ -1,0 +1,573 @@
+---
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+import CommandBar from '../components/CommandBar.astro';
+import PriceLabel from '../components/PriceLabel.astro';
+import ProofStrip from '../components/ProofStrip.astro';
+import ProblemTile from '../components/ProblemTile.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+import TicketCard from '../components/TicketCard.astro';
+import ServiceRow from '../components/ServiceRow.astro';
+import BentoTile from '../components/BentoTile.astro';
+import Timeline from '../components/Timeline.astro';
+import NotfallBand from '../components/NotfallBand.astro';
+import SectorList from '../components/SectorList.astro';
+import DeadlineStrip from '../components/DeadlineStrip.astro';
+import Packages from '../components/Packages.astro';
+import RecurringTable from '../components/RecurringTable.astro';
+import Accordion from '../components/Accordion.astro';
+import FinalCta from '../components/FinalCta.astro';
+import ConsentVignette from '../components/vignettes/ConsentVignette.astro';
+import ListingVignette from '../components/vignettes/ListingVignette.astro';
+import { getData, site, serviceUrl, countPhrase } from '../lib/data.ts';
+
+const { serviceById, services, moments, categoryById, catalogListed, totalOffers } = await getData();
+const launch = site.launch.public_first.map((id) => serviceById.get(id)!);
+const next = site.launch.next_wave.map((id) => serviceById.get(id)!);
+const examples = [
+  { s: serviceById.get('02')!, problem: 'Listings wegen GPSR gesperrt.', status: 'Gelöst', wip: false },
+  { s: serviceById.get('05')!, problem: 'Pixel feuert vor der Einwilligung.', status: 'Gelöst', wip: false },
+  { s: serviceById.get('16')!, problem: 'ChatGPT empfiehlt nur die Konkurrenz.', status: 'In Arbeit', wip: true }
+];
+const momentCount = (id: string) => catalogListed.filter((r) => r.moment === id).length + services.filter((s) => s.moments.includes(id)).length;
+const chips = [
+  { label: 'Listing gesperrt', query: 'Listing gesperrt' },
+  { label: 'Abmahnung vermeiden', query: 'Abmahnung Datenschutz' },
+  { label: 'Website gehackt', query: 'Website gehackt' },
+  { label: 'KI-Sichtbarkeit', query: 'KI Sichtbarkeit ChatGPT' },
+  { label: 'Excel kaputt', query: 'Excel kaputt' },
+  { label: 'Förderung', query: 'Förderung' }
+];
+const bentoSmall = ['ki', 'website', 'kunden', 'buero', 'wachstum', 'zuhause', 'branchen-pakete'].map((id) => categoryById.get(id)!);
+const ld = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': `${site.brand.url}/#org`,
+      name: 'TechieBuddy',
+      url: `${site.brand.url}/`,
+      logo: `${site.brand.url}/apple-touch-icon.png`,
+      email: site.contact.email,
+      slogan: site.brand.promise
+    },
+    {
+      '@type': 'ProfessionalService',
+      '@id': `${site.brand.url}/#service`,
+      name: 'TechieBuddy',
+      url: `${site.brand.url}/`,
+      image: `${site.brand.url}/og/default.png`,
+      email: site.contact.email,
+      priceRange: '39–4.999 €',
+      areaServed: { '@type': 'Country', name: 'DE' },
+      address: { '@type': 'PostalAddress', addressLocality: 'Chemnitz', addressRegion: 'Sachsen', addressCountry: 'DE' },
+      openingHours: site.contact.hoursSchema,
+      availableLanguage: ['de', 'en', 'bn'],
+      parentOrganization: { '@id': `${site.brand.url}/#org` }
+    }
+  ]
+};
+---
+<Base
+  title="TechieBuddy – Digitale Probleme zum Festpreis gelöst"
+  description={`Amazon gesperrt, Website gehackt, E-Rechnung, Barrierefreiheit: ${countPhrase(totalOffers)} digitale Fixes mit Festpreis und Lieferzeit, meist in 24–72 h. Aus Chemnitz.`}
+  translations={[
+    { lang: 'de', href: '/' },
+    { lang: 'en', href: '/en/' },
+    { lang: 'bn', href: '/bn/' }
+  ]}
+>
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(ld)} />
+
+  <!-- 1 Hero -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="container hero__grid">
+      <div class="hero__main">
+        <h1 id="hero-title" class="display hero__title">
+          {site.brand.promiseLines.map((l) => <span>{l}</span>)}
+        </h1>
+        <p class="lede hero__sub">
+          Kleine, dringende Digitalprobleme für Betriebe und Haushalte: gelöst zum festen Preis, mit Lieferzeit auf jedem Angebot. Aus Chemnitz, für ganz Deutschland.
+        </p>
+        <div class="hero__search">
+          <CommandBar chips={chips} />
+        </div>
+      </div>
+
+      <div class="hero__tickets" aria-label="Beispiele: So sieht ein Auftrag aus">
+        <ol role="list" class="stack">
+          {
+            examples.map((e) => (
+              <li class="stack__card">
+                <span class="stack__tag">Beispiel</span>
+                <p class="quote stack__problem">{e.problem}</p>
+                <div class="stack__row">
+                  <a class="stack__svc" href={serviceUrl(e.s)}>{e.s.name}</a>
+                  <span class:list={['status', e.wip && 'status--wip']}>{e.status}</span>
+                </div>
+                <PriceLabel price={e.s.price.display} time={e.s.turnaround} size="s" />
+              </li>
+            ))
+          }
+        </ol>
+      </div>
+
+      <ul class="hero__trust" role="list">
+        <li><Icon name="badge-euro" size={18} />Preis steht vorher fest</li>
+        <li><Icon name="clock" size={18} />Lieferzeit auf jedem Angebot</li>
+        <li><Icon name="key-round" size={18} />Zugänge bleiben bei dir</li>
+        <li><Icon name="languages" size={18} />Deutsch, English, <span lang="bn">বাংলা</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 2 Proof -->
+  <section class="section--raised proof-wrap" aria-label="Erfahrung aus dem eigenen Betrieb">
+    <div class="container"><ProofStrip /></div>
+  </section>
+
+  <!-- 3 Was ist passiert? -->
+  <section class="section" aria-labelledby="moments-title">
+    <div class="container">
+      <SectionHeader
+        id="moments-title"
+        title="Was ist passiert?"
+        text={`Fang beim Problem an, nicht beim Fachbegriff. ${countPhrase(totalOffers, true)} Festpreis-Leistungen, sortiert nach dem Moment, in dem du sie brauchst.`}
+      />
+      <ul class="moments" role="list">
+        {moments.map((m) => <li><ProblemTile moment={m} count={momentCount(m.id)} /></li>)}
+      </ul>
+    </div>
+  </section>
+
+  <!-- 4 Die häufigsten Fixes -->
+  <section class="section section--raised" aria-labelledby="top-title">
+    <div class="container">
+      <SectionHeader id="top-title" title="Die häufigsten Fixes" text="Fünf Probleme, die wir jede Woche lösen. Jedes mit festem Preis, gedruckter Lieferzeit und einem Bericht, den du weitergeben kannst." row>
+        <a class="link-arrow" href="/alle-leistungen/">Alle {totalOffers} Leistungen ansehen <Icon name="arrow-right" /></a>
+      </SectionHeader>
+      <ul class="tickets" role="list">
+        {launch.map((s) => <li><TicketCard service={s} /></li>)}
+      </ul>
+      <div class="next">
+        <h3 class="next__title">Ebenfalls gefragt</h3>
+        <div class="hairline-list">
+          {next.map((s) => <ServiceRow service={s} />)}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5 Alle Bereiche -->
+  <section class="section" aria-labelledby="areas-title">
+    <div class="container">
+      <SectionHeader id="areas-title" title="Alle Bereiche" text="Neun Bereiche, von Pflichten bis Familie. Jeder mit benannten Leistungen und einem dichten Katalog kleiner Fixes." />
+      <div class="bento-grid">
+        <div class="b-compliance"><BentoTile category={categoryById.get('compliance')!} size="lg"><ConsentVignette /></BentoTile></div>
+        {bentoSmall.slice(0, 4).map((c, i) => <div class={`b-s${i + 1}`}><BentoTile category={c} /></div>)}
+        <div class="b-markt"><BentoTile category={categoryById.get('marktplaetze')!} size="lg"><ListingVignette /></BentoTile></div>
+        {bentoSmall.slice(4).map((c, i) => <div class={`b-s${i + 5}`}><BentoTile category={c} /></div>)}
+        <div class="b-all">
+          <a class="bento-all" href="/alle-leistungen/">
+            <span class="bento-all__n mono">{totalOffers}</span>
+            <span class="bento-all__t">Festpreis-Leistungen, filterbar nach Problem, Branche, Preis und Lieferzeit</span>
+            <span class="link-arrow">Alle Leistungen <Icon name="arrow-right" /></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6 So läuft's -->
+  <section class="section section--raised" aria-labelledby="process-title">
+    <div class="container process">
+      <div>
+        <SectionHeader id="process-title" title="So läuft’s" text="Kein Erstgespräch, kein Stundenzettel, keine Überraschung auf der Rechnung. Du weißt vor dem Start, was du bekommst, bis wann und zu welchem Preis." />
+        <a class="link-arrow" href="/so-laeufts/">Ablauf und Prinzipien im Detail <Icon name="arrow-right" /></a>
+      </div>
+      <Timeline steps={site.process} />
+    </div>
+  </section>
+
+  <!-- 7 Notfall -->
+  <NotfallBand />
+
+  <!-- 8 Branchen -->
+  <section class="section" aria-labelledby="sectors-title">
+    <div class="container">
+      <SectionHeader id="sectors-title" title="Für deine Branche" text="Zwölf Branchen mit typischen Problemen, passenden Leistungen und Pflichten im Blick." />
+      <SectorList />
+    </div>
+  </section>
+
+  <!-- 9 Pflichten -->
+  <section class="section section--raised" aria-labelledby="deadlines-title">
+    <div class="container">
+      <SectionHeader id="deadlines-title" title="Fristen, die bald kommen" text="Gesetzliche Pflichten mit Datum. Wer betroffen ist und was zu tun ist, steht im Pflichten-Kalender." row>
+        <a class="link-arrow" href="/wissen/pflichten-kalender/">Zum Pflichten-Kalender <Icon name="arrow-right" /></a>
+      </SectionHeader>
+      <DeadlineStrip />
+    </div>
+  </section>
+
+  <!-- 10 Projekte & Förderung -->
+  <section class="section" aria-labelledby="projects-title">
+    <div class="container">
+      <SectionHeader id="projects-title" title="Wenn aus dem Fix ein Projekt wird" text="Neue Website, neuer Shop, Digitalisierung im Betrieb: feste Pakete und ein kostenloses Erstgespräch." row>
+        <a class="link-arrow" href="/pakete/">Pakete und Betreuung <Icon name="arrow-right" /></a>
+      </SectionHeader>
+      <Packages />
+      <div class="sab">
+        <div class="sab__text">
+          <h3 class="sab__title">Förderung in Sachsen</h3>
+          <p>
+            Für berechtigte erste Digitalisierungsprojekte kann die SAB laut Programm bis zu 60 % der Kosten übernehmen. Der Antrag muss vor Projektstart gestellt werden; ob dein Vorhaben passt, prüfen wir für jeden Fall neu.
+          </p>
+        </div>
+        <a class="btn btn--secondary" href="/foerderung/">Förderung prüfen lassen</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11 Betreuung -->
+  <section class="section section--raised" aria-labelledby="care-title">
+    <div class="container">
+      <SectionHeader id="care-title" title="Laufende Betreuung" text="Wenn ein Problem nicht wiederkommen soll: feste Monatspreise und ein klarer Umfang. Laufzeit und Kündigung stehen im Angebot." row>
+        <a class="link-arrow" href="/pakete/#betreuung">Alle Abos <Icon name="arrow-right" /></a>
+      </SectionHeader>
+      <RecurringTable limit={4} />
+    </div>
+  </section>
+
+  <!-- 12 FAQ -->
+  <section class="section" aria-labelledby="faq-title">
+    <div class="container faq">
+      <SectionHeader id="faq-title" title="Häufige Fragen" text="Was du vor der ersten Anfrage wissen willst." />
+      <Accordion items={site.faq} schema />
+    </div>
+  </section>
+
+  <!-- 13 Final CTA -->
+  <FinalCta />
+</Base>
+
+<script>
+  import '../scripts/hero.ts';
+</script>
+
+<style>
+  .hero {
+    position: relative;
+    padding-top: calc(92px + var(--s-16));
+    padding-bottom: var(--s-16);
+    overflow: hidden;
+  }
+  .hero__bg {
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px);
+    background-size: 64px 64px;
+    background-position: center top;
+    -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 20%, #000 20%, transparent 75%);
+    mask-image: radial-gradient(ellipse 80% 70% at 50% 20%, #000 20%, transparent 75%);
+    opacity: 0.6;
+  }
+  .hero__bg::after {
+    content: '';
+    position: absolute;
+    top: -20%;
+    right: -10%;
+    width: 60%;
+    height: 80%;
+    background: radial-gradient(closest-side, rgba(96, 208, 207, 0.16), transparent);
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+  .hero__grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+    gap: var(--s-12) var(--s-16);
+    align-items: start;
+  }
+  .hero__title span {
+    display: block;
+  }
+  .hero__sub {
+    margin-top: var(--s-6);
+  }
+  .hero__search {
+    margin-top: var(--s-10);
+    max-width: 640px;
+  }
+  .hero__tickets {
+    padding-top: var(--s-3);
+  }
+  .stack {
+    display: grid;
+    gap: 0;
+  }
+  .stack__card {
+    position: relative;
+    display: grid;
+    gap: var(--s-2);
+    padding: var(--s-5) var(--s-5) var(--s-5);
+    border: 1px solid var(--line-2);
+    border-radius: var(--r-16);
+    background: var(--card-fill);
+    box-shadow: var(--highlight), 0 20px 50px -24px rgba(0, 0, 0, 0.9);
+  }
+  .stack__card + .stack__card {
+    margin-top: -6px;
+  }
+  .stack__card:nth-child(2) {
+    margin-left: var(--s-6);
+  }
+  .stack__card:nth-child(3) {
+    margin-left: var(--s-12);
+  }
+  .stack__tag {
+    position: absolute;
+    top: var(--s-4);
+    right: var(--s-4);
+    font-size: var(--fs-12);
+    color: var(--text-3);
+  }
+  .stack__problem {
+    padding-right: var(--s-16);
+  }
+  .stack__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--s-3);
+  }
+  .stack__svc {
+    font-weight: 560;
+    text-decoration: none;
+    letter-spacing: -0.01em;
+  }
+  .stack__svc:hover {
+    color: var(--accent-hover);
+  }
+  .stack__card :global(.pl) {
+    justify-self: start;
+  }
+  /* Motion moment 1: the stack settles in once. */
+  @media (prefers-reduced-motion: no-preference) {
+    .stack__card {
+      animation: settle 700ms var(--ease) both;
+    }
+    .stack__card:nth-child(2) {
+      animation-delay: 120ms;
+    }
+    .stack__card:nth-child(3) {
+      animation-delay: 240ms;
+    }
+  }
+  @keyframes settle {
+    from {
+      opacity: 0;
+      transform: translateY(14px);
+    }
+  }
+  .hero__trust {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--s-3) var(--s-8);
+    padding-top: var(--s-8);
+    border-top: 1px solid var(--line);
+    color: var(--text-2);
+    font-size: var(--fs-14);
+  }
+  .hero__trust li {
+    display: flex;
+    align-items: center;
+    gap: var(--s-2);
+  }
+  .hero__trust :global(.icon) {
+    color: var(--accent);
+  }
+  .proof-wrap {
+    padding-block: var(--s-12);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .moments {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 210px), 1fr));
+    gap: var(--s-3);
+  }
+  @media (max-width: 600px) {
+    .moments {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: var(--s-2);
+    }
+  }
+  .moments > li {
+    display: grid;
+  }
+  .tickets {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: var(--s-4);
+  }
+  .tickets > li {
+    grid-column: span 2;
+  }
+  .tickets > li:nth-child(4) {
+    grid-column: 2 / span 2;
+  }
+  .next {
+    margin-top: var(--s-12);
+  }
+  .next__title {
+    font-size: var(--fs-14);
+    font-weight: 500;
+    color: var(--text-2);
+    margin-bottom: var(--s-2);
+  }
+  .bento-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-auto-rows: minmax(220px, auto);
+    gap: var(--s-4);
+    grid-template-areas:
+      'comp comp s1 s2'
+      'comp comp s3 s4'
+      's5 s6 markt markt'
+      's7 all markt markt';
+  }
+  .bento-grid > div {
+    display: grid;
+  }
+  .b-compliance { grid-area: comp; }
+  .b-markt { grid-area: markt; }
+  .b-s1 { grid-area: s1; }
+  .b-s2 { grid-area: s2; }
+  .b-s3 { grid-area: s3; }
+  .b-s4 { grid-area: s4; }
+  .b-s5 { grid-area: s5; }
+  .b-s6 { grid-area: s6; }
+  .b-s7 { grid-area: s7; }
+  .b-all { grid-area: all; }
+  .bento-all {
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-3);
+    padding: var(--s-6);
+    border-radius: var(--r-24);
+    border: 1px dashed var(--line-3);
+    text-decoration: none;
+    transition: border-color var(--t-fast) var(--ease);
+  }
+  .bento-all:hover {
+    border-color: var(--accent-line);
+  }
+  .bento-all__n {
+    font-size: var(--fs-48);
+    letter-spacing: -0.04em;
+    color: var(--text);
+    line-height: 1;
+  }
+  .bento-all__t {
+    color: var(--text-2);
+    font-size: var(--fs-14);
+  }
+  .bento-all .link-arrow {
+    margin-top: auto;
+  }
+  .process {
+    display: grid;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    gap: var(--s-16);
+    align-items: start;
+  }
+  .sab {
+    margin-top: var(--s-8);
+    display: flex;
+    gap: var(--s-6);
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--s-6);
+    border: 1px solid var(--line);
+    border-radius: var(--r-24);
+    background: rgba(255, 255, 255, 0.015);
+  }
+  .sab__title {
+    font-size: var(--fs-18);
+    margin-bottom: var(--s-2);
+  }
+  .sab__text p {
+    color: var(--text-2);
+    max-width: 72ch;
+    font-size: var(--fs-14);
+  }
+  .faq {
+    display: grid;
+    grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
+    gap: var(--s-12);
+  }
+  @media (max-width: 1079px) {
+    .hero__grid {
+      grid-template-columns: minmax(0, 1fr);
+    }
+    .hero__tickets {
+      max-width: 560px;
+    }
+    .tickets {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .tickets > li,
+    .tickets > li:nth-child(4) {
+      grid-column: auto;
+    }
+    .tickets > li:nth-child(5) {
+      grid-column: 1 / -1;
+    }
+    .bento-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-areas:
+        'comp comp'
+        's1 s2'
+        's3 s4'
+        'markt markt'
+        's5 s6'
+        's7 all';
+    }
+    .process,
+    .faq {
+      grid-template-columns: minmax(0, 1fr);
+      gap: var(--s-8);
+    }
+  }
+  @media (max-width: 767px) {
+    .hero {
+      padding-top: calc(80px + var(--s-10));
+    }
+    .tickets {
+      grid-template-columns: minmax(0, 1fr);
+    }
+    .tickets > li:nth-child(5) {
+      grid-column: auto;
+    }
+    .bento-grid {
+      grid-template-columns: minmax(0, 1fr);
+      grid-template-areas: 'comp' 'markt' 's1' 's2' 's3' 's4' 's5' 's6' 's7' 'all';
+      grid-auto-rows: auto;
+    }
+    .stack__card:nth-child(2),
+    .stack__card:nth-child(3) {
+      margin-left: 0;
+    }
+    .stack__card + .stack__card {
+      margin-top: var(--s-2);
+    }
+    .sab {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+</style>

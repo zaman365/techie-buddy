@@ -1,0 +1,73 @@
+{
+  "id": "32",
+  "slug": "familien-sicherheitspaket",
+  "category": "zuhause",
+  "categorySlug": "zuhause-familie-energie",
+  "alsoIn": [],
+  "sectors": [
+    "familien-senioren"
+  ],
+  "tier": "catalog",
+  "audience": "b2c",
+  "name": "Familien-Sicherheitspaket",
+  "problem": "Wir nutzen überall dasselbe Passwort. Irgendwann geht das schief.",
+  "summary": "Der digitale Sicherheitsgurt für die Familie: Passwortmanager für alle, Zwei-Faktor-Anmeldung auf wichtigen Konten, Check auf geleakte Daten, Sicherung unersetzlicher Fotos und ein Notfallblatt.",
+  "includes": [
+    "Passwortmanager für alle Familienmitglieder",
+    "Zwei-Faktor-Anmeldung auf den wichtigsten Konten",
+    "Check, ob eure Daten in bekannten Datenlecks auftauchen",
+    "Sicherung unersetzlicher Daten",
+    "Ein Notfallblatt für den Ernstfall"
+  ],
+  "excludes": [
+    "Kosten für Passwortmanager oder Speicher",
+    "Reparatur von Geräten"
+  ],
+  "needs": [
+    "Zugriff auf die Geräte der Familie",
+    "Liste der wichtigsten Konten"
+  ],
+  "steps": [
+    "Du nennst Personen und Geräte.",
+    "Festpreis und Zahlungslink.",
+    "Ein halber Tag Einrichtung bei dir oder per Fernhilfe.",
+    "Übergabe des Notfallblatts."
+  ],
+  "result": "Ein eingerichteter Passwortmanager, abgesicherte Konten, gesicherte Daten und ein Notfallblatt.",
+  "price": {
+    "type": "fixed",
+    "from": 199,
+    "display": "199 €",
+    "note": "Festpreis pro Haushalt",
+    "vat": "inkl. MwSt."
+  },
+  "turnaround": "½ Tag",
+  "tags": [],
+  "factNote": null,
+  "guardrail": false,
+  "faq": [
+    {
+      "q": "Ist ein Passwortmanager sicher?",
+      "a": "Ein seriöser Passwortmanager mit starkem Hauptpasswort und Zwei-Faktor-Anmeldung ist deutlich sicherer als wiederverwendete Passwörter."
+    },
+    {
+      "q": "Muss jeder in der Familie mitmachen?",
+      "a": "Am besten ja. Jede Person bekommt einen eigenen Tresor im Passwortmanager; geteilte Passwörter liegen in einem gemeinsamen."
+    }
+  ],
+  "related": [
+    "30",
+    "31",
+    "33"
+  ],
+  "seo": {
+    "title": "Familien-Sicherheitspaket | TechieBuddy",
+    "description": "Der digitale Sicherheitsgurt für die Familie: Passwortmanager für alle, Zwei-Faktor-Anmeldung auf wichtigen Konten, Check auf geleakte Daten, Sicherung …"
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g12",
+    "g19"
+  ],
+  "keywords": []
+}

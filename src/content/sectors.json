@@ -1,0 +1,317 @@
+[
+  {
+    "id": "online-handel",
+    "order": 1,
+    "name": "Online-Händler & Amazon-Seller",
+    "icon": "shopping-cart",
+    "short": "Amazon, Otto, TikTok Shop, Shopify und Pflichten",
+    "intro": "Für Händlerinnen und Händler auf Amazon, Otto, Kaufland, TikTok Shop und im eigenen Shop: gesperrte Listings, Feed-Fehler, GPSR, Verpackung, Datenschutz und Barrierefreiheit, gelöst aus eigener Verkaufserfahrung.",
+    "problems": [
+      "Amazon hat meine Listings wegen fehlender GPSR-Angaben gesperrt.",
+      "Meine Varianten sind zerschossen.",
+      "Google Shopping hat die Hälfte meiner Produkte abgelehnt."
+    ],
+    "services": [
+      "01",
+      "02",
+      "05",
+      "06",
+      "07",
+      "08",
+      "09",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "19",
+      "23",
+      "24",
+      "59",
+      "FT",
+      "03",
+      "04",
+      "22",
+      "26"
+    ],
+    "catalogCount": 35
+  },
+  {
+    "id": "handwerk",
+    "order": 2,
+    "name": "Handwerk & lokale Betriebe",
+    "icon": "hammer",
+    "short": "Website, Google, Personal, Software und Förderung",
+    "intro": "Für Handwerksbetriebe und lokale Dienstleister: gefunden werden, Mitarbeitende gewinnen, Angebote und Rechnungen digital, Zeiterfassung und Förderprojekte in Sachsen.",
+    "problems": [
+      "Wir finden keine Gesellen.",
+      "Wer in der Nähe sucht, findet zuerst die Konkurrenz.",
+      "Angebote schreiben wir in Word, Rechnungen in Excel."
+    ],
+    "services": [
+      "36",
+      "37",
+      "38",
+      "39",
+      "25",
+      "43",
+      "52",
+      "53",
+      "66",
+      "21",
+      "62",
+      "63",
+      "64",
+      "03",
+      "80",
+      "22",
+      "26",
+      "27",
+      "28",
+      "20"
+    ],
+    "catalogCount": 33
+  },
+  {
+    "id": "praxen-salons",
+    "order": 3,
+    "name": "Praxen, Salons & Studios",
+    "icon": "calendar-check",
+    "short": "Terminbuchung, Erinnerungen, Anamnese, Fax-Ausstieg",
+    "intro": "Für Arztpraxen, Therapie, Salons und Studios: weniger Telefon, weniger Terminausfälle, digitale Formulare und ein sicherer Weg weg vom Fax.",
+    "problems": [
+      "Das Telefon klingelt den ganzen Tag, nur für Termine.",
+      "Jede Woche erscheinen Kunden nicht.",
+      "Unsere Patienten füllen Papierbögen aus, die keiner lesen kann."
+    ],
+    "services": [
+      "40",
+      "41",
+      "42",
+      "43",
+      "25",
+      "81",
+      "82",
+      "52",
+      "17",
+      "26",
+      "28",
+      "22"
+    ],
+    "catalogCount": 13
+  },
+  {
+    "id": "gastronomie-hotellerie",
+    "order": 4,
+    "name": "Gastronomie, Pensionen & Ferienwohnungen",
+    "icon": "utensils",
+    "short": "Speisekarte, Bestellseite, Kasse, Booking.com",
+    "intro": "Für Restaurants, Cafés, Pensionen und Ferienwohnungen: digitale Speisekarte mit Allergenen, eigene Bestellseite ohne Provision, Kassen-Pflichten und mehr Buchungen.",
+    "problems": [
+      "Lieferando nimmt uns bis zu 30 Prozent Provision ab.",
+      "Das TSE-Zertifikat unserer Kasse läuft ab.",
+      "Wir hatten schon zwei Doppelbuchungen."
+    ],
+    "services": [
+      "44",
+      "45",
+      "46",
+      "47",
+      "68",
+      "43",
+      "25",
+      "17",
+      "26",
+      "80",
+      "28"
+    ],
+    "catalogCount": 21
+  },
+  {
+    "id": "vereine-gemeinden",
+    "order": 5,
+    "name": "Vereine, NGOs & Gemeinden",
+    "icon": "users",
+    "short": "Mitglieder, Beiträge, Spenden, Ad Grants",
+    "intro": "Für Vereine, gemeinnützige Organisationen und Gemeinden: Mitgliederverwaltung mit Beitragseinzug, Online-Spenden, Livestreams und die Prüfung, ob Google Ad Grants für euch in Frage kommen.",
+    "problems": [
+      "Unsere Mitgliederliste versteht nur der Kassenwart.",
+      "Wir haben kein Budget für Werbung.",
+      "Wir wollen Veranstaltungen übertragen."
+    ],
+    "services": [
+      "48",
+      "49",
+      "50"
+    ],
+    "catalogCount": 13
+  },
+  {
+    "id": "kanzleien-bueros",
+    "order": 6,
+    "name": "Kanzleien, Büros & Selbständige",
+    "icon": "briefcase",
+    "short": "E-Mail, DATEV, Backups, EU-Cloud, Fragebögen",
+    "intro": "Für Kanzleien, Steuer- und Ingenieurbüros und Selbständige: E-Mail und Cloud, DATEV, Backups, Excel, Datenschutz und die Fragebögen von Kunden und Versicherern.",
+    "problems": [
+      "Der Einzige, der unsere IT kannte, ist weg.",
+      "Die Versicherung will wissen, ob wir MFA haben.",
+      "Gestern hat die Tabelle noch funktioniert."
+    ],
+    "services": [
+      "81",
+      "82",
+      "52",
+      "53",
+      "54",
+      "55",
+      "56",
+      "57",
+      "58",
+      "51",
+      "29",
+      "67",
+      "79",
+      "78",
+      "66",
+      "03",
+      "04",
+      "20",
+      "27",
+      "63",
+      "64"
+    ],
+    "catalogCount": 25
+  },
+  {
+    "id": "creator-coaches",
+    "order": 7,
+    "name": "Creator, Coaches & Podcaster",
+    "icon": "mic",
+    "short": "Podcast, Buchung, KI-Sichtbarkeit, Automationen",
+    "intro": "Für Creator, Coaches und Podcaster: Podcast-Technik, Buchung mit Bezahlung, Automationen und Sichtbarkeit in KI-Assistenten.",
+    "problems": [
+      "Mein Podcast ist immer noch nicht online.",
+      "Interessenten buchen, zahlen nicht und finden den Zoom-Link nicht.",
+      "ChatGPT empfiehlt nur die Konkurrenz."
+    ],
+    "services": [
+      "60",
+      "61",
+      "16",
+      "19",
+      "18",
+      "FT"
+    ],
+    "catalogCount": 7
+  },
+  {
+    "id": "familien-senioren",
+    "order": 8,
+    "name": "Familien & Senioren",
+    "icon": "heart-handshake",
+    "short": "Kinderschutz, Betrug, Fotos, Eltern-Technik",
+    "intro": "Für Familien und ältere Menschen: Kinderschutz auf allen Geräten, Hilfe nach Betrug, Ordnung in den Fotos und regelmäßige Technik-Betreuung für die Eltern.",
+    "problems": [
+      "Meine Eltern rufen bei jeder App-Frage an.",
+      "Ich habe auf einen Link geklickt und meine Bankdaten eingegeben.",
+      "Mein Kind hat ein Handy, und ich weiß nicht, was es sieht."
+    ],
+    "services": [
+      "30",
+      "31",
+      "32",
+      "33",
+      "34",
+      "35",
+      "71",
+      "73"
+    ],
+    "catalogCount": 21
+  },
+  {
+    "id": "energie",
+    "order": 9,
+    "name": "Solar, Wallbox & E-Auto",
+    "icon": "sun",
+    "short": "Balkonkraftwerk, PV, Wallbox, THG-Quote",
+    "intro": "Für Haushalte mit Balkonkraftwerk, PV-Anlage, Wallbox oder E-Auto: Registrierungen, Monitoring, THG-Quote und ein Zuhause, das günstigen Strom von allein nutzt. Alle Preise inklusive Mehrwertsteuer.",
+    "problems": [
+      "Vor dem Marktstammdatenregister drücke ich mich.",
+      "Der Installateur ist weg, und die Apps verwirren mich.",
+      "Man bekommt fürs E-Auto Geld? Wie geht das?"
+    ],
+    "services": [
+      "74",
+      "75",
+      "76",
+      "77",
+      "65"
+    ],
+    "catalogCount": 0
+  },
+  {
+    "id": "nachfolge",
+    "order": 10,
+    "name": "Unternehmensnachfolge",
+    "icon": "key-round",
+    "short": "Übergabe vorbereiten, Betrieb modernisieren",
+    "intro": "Für Inhaber vor der Übergabe und für neue Eigentümer: Systeme dokumentieren, Zugänge sichern und den übernommenen Betrieb digital modernisieren.",
+    "problems": [
+      "Ich will übergeben, und die IT kennt nur ich.",
+      "Ich habe einen Betrieb mit Fax und Papier übernommen.",
+      "Der alte Webmaster hat die Domain."
+    ],
+    "services": [
+      "69",
+      "70",
+      "29",
+      "71",
+      "72"
+    ],
+    "catalogCount": 6
+  },
+  {
+    "id": "internationale-fachkraefte",
+    "order": 11,
+    "name": "Internationale Fachkräfte & Newcomer",
+    "icon": "globe",
+    "short": "Ankommen, Onboarding, Agentur-Technik",
+    "intro": "Für internationale Fachkräfte, Studierende und ihre Arbeitgeber: digital ankommen in Deutschland, mehrsprachiges Onboarding und Technik für Vermittlungsagenturen. Auf Deutsch, Englisch und Bengali.",
+    "problems": [
+      "SIM, Bank, ELSTER: Alles ist digital, aber auf Deutsch.",
+      "Unsere neuen Pflegekräfte kommen nächsten Monat.",
+      "Unsere Vermittlung läuft über WhatsApp und Papier."
+    ],
+    "services": [
+      "88",
+      "89",
+      "90",
+      "36"
+    ],
+    "catalogCount": 2
+  },
+  {
+    "id": "laendliche-nischen",
+    "order": 12,
+    "name": "Jagd, Reitställe, Fahrschulen & Hofläden",
+    "icon": "tractor",
+    "short": "Jagd, Reitställe, Fahrschulen, Hofläden, Märkte",
+    "intro": "Für Betriebe auf dem Land und mit eigenen Abläufen: Wildkameras, Stallverwaltung, Fahrschul-Buchung, Selbstbedienungsläden und Kartenzahlung am Marktstand.",
+    "problems": [
+      "Auf dem Markt fragen alle, ob sie mit Karte zahlen können.",
+      "Einsteller und Reitstunden laufen über WhatsApp.",
+      "Wir eröffnen einen Selbstbedienungs-Hofladen."
+    ],
+    "services": [
+      "83",
+      "84",
+      "85",
+      "86",
+      "87"
+    ],
+    "catalogCount": 1
+  }
+]

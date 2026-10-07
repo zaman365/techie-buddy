@@ -1,0 +1,80 @@
+{
+  "id": "04",
+  "slug": "ki-compliance-eu-ai-act",
+  "category": "compliance",
+  "categorySlug": "compliance",
+  "alsoIn": [],
+  "sectors": [
+    "online-handel",
+    "kanzleien-bueros"
+  ],
+  "tier": "catalog",
+  "audience": "b2b",
+  "name": "KI-Kompetenz und KI-Richtlinie nach EU AI Act",
+  "problem": "Mein Team nutzt ChatGPT. Müssen wir dafür nach dem AI Act etwas nachweisen?",
+  "summary": "Wir erfassen, welche KI-Tools bei dir im Einsatz sind, schreiben eine verständliche KI-Richtlinie und schulen dein Team zwei Stunden lang. So erfüllst du die schon geltende Pflicht zur KI-Kompetenz praktisch.",
+  "includes": [
+    "Bestandsaufnahme: welche KI-Tools wofür genutzt werden",
+    "Einordnung der Anwendungen nach Risiko (technische Einschätzung)",
+    "KI-Richtlinie als Dokument für dein Team",
+    "2 Stunden Schulung zu KI-Kompetenz (Art. 4 AI Act)",
+    "Teilnahmenachweis für deine Unterlagen"
+  ],
+  "excludes": [
+    "Rechtliche Bewertung einzelner KI-Systeme",
+    "Konformitätsbewertung für Hochrisiko-KI",
+    "Lizenzkosten für KI-Tools"
+  ],
+  "needs": [
+    "Liste der genutzten Tools oder Zugang zu einer Ansprechperson",
+    "Termin für die Teamschulung (vor Ort in Chemnitz oder online)"
+  ],
+  "steps": [
+    "Kurzer Fragebogen zu deiner KI-Nutzung.",
+    "Festpreis und Zahlungslink.",
+    "Bestandsaufnahme und Entwurf der Richtlinie zur Abstimmung.",
+    "Schulung des Teams und Übergabe aller Unterlagen."
+  ],
+  "result": "Eine dokumentierte KI-Bestandsaufnahme, eine Richtlinie für dein Team und ein Nachweis über die Schulung zur KI-Kompetenz.",
+  "price": {
+    "type": "fixed",
+    "from": 499,
+    "display": "499 €",
+    "note": "Festpreis inkl. 2 Stunden Schulung",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "1 Woche",
+  "tags": [
+    "pflicht"
+  ],
+  "factNote": "Die Pflicht zur KI-Kompetenz (Art. 4 AI Act) gilt bereits. Die Regeln für Hochrisiko-KI wurden verschoben: für Anwendungen nach Anhang III ab dem 2. Dezember 2027, für in Produkte eingebettete Hochrisiko-KI ab dem 2. August 2028.",
+  "guardrail": true,
+  "faq": [
+    {
+      "q": "Betrifft der AI Act auch kleine Firmen?",
+      "a": "Wer KI-Tools beruflich einsetzt, muss für ausreichende KI-Kompetenz der Beschäftigten sorgen. Das gilt unabhängig von der Größe. Weitere Pflichten hängen davon ab, wie du KI einsetzt."
+    },
+    {
+      "q": "Ist die Richtlinie rechtlich geprüft?",
+      "a": "Nein. Wir liefern eine praktische, technische und organisatorische Grundlage. Für eine rechtliche Prüfung gibst du sie an deine Rechtsberatung weiter."
+    },
+    {
+      "q": "Kann die Schulung online stattfinden?",
+      "a": "Ja, online oder vor Ort in Chemnitz und Umgebung."
+    }
+  ],
+  "related": [
+    "20",
+    "17",
+    "18"
+  ],
+  "seo": {
+    "title": "KI-Kompetenz und KI-Richtlinie nach EU AI Act | TechieBuddy",
+    "description": "Wir erfassen, welche KI-Tools bei dir im Einsatz sind, schreiben eine verständliche KI-Richtlinie und schulen dein Team zwei Stunden lang."
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g06"
+  ],
+  "keywords": []
+}

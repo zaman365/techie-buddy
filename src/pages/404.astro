@@ -1,0 +1,60 @@
+---
+import Base from '../layouts/Base.astro';
+import CommandBar from '../components/CommandBar.astro';
+import Icon from '../components/Icon.astro';
+import { getData, categoryUrl } from '../lib/data.ts';
+const { categories } = await getData();
+---
+<Base title="Seite nicht gefunden" description="Diese Seite gibt es nicht. Such nach deinem Problem oder wähle einen Bereich." noindex>
+  <div class="container page-top nf">
+    <p class="mono code">404</p>
+    <h1>Diese Seite gibt es nicht.</h1>
+    <p class="lede">Vielleicht hilft die Suche weiter. Beschreib einfach, was kaputt ist.</p>
+    <div class="search"><CommandBar id="nf-search" /></div>
+    <ul class="cats" role="list">
+      {categories.map((c) => <li><a href={categoryUrl(c)}><Icon name={c.icon} size={16} />{c.name}</a></li>)}
+    </ul>
+    <a class="link-arrow" href="/">Zur Startseite <Icon name="arrow-right" /></a>
+  </div>
+</Base>
+<script>
+  import '../scripts/hero.ts';
+</script>
+<style>
+  .nf {
+    display: grid;
+    gap: var(--s-5);
+    justify-items: start;
+    padding-bottom: var(--s-20);
+    max-width: 820px;
+  }
+  .code {
+    color: var(--accent);
+  }
+  .search {
+    width: 100%;
+    max-width: 640px;
+    margin-top: var(--s-4);
+  }
+  .cats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--s-2);
+    margin-top: var(--s-6);
+  }
+  .cats a {
+    display: inline-flex;
+    gap: 6px;
+    align-items: center;
+    min-height: 36px;
+    padding: 0 12px;
+    border: 1px solid var(--line-2);
+    border-radius: var(--r-pill);
+    font-size: var(--fs-13);
+    color: var(--text-2);
+    text-decoration: none;
+  }
+  .cats a:hover {
+    color: var(--text);
+  }
+</style>

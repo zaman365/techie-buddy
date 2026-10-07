@@ -1,0 +1,72 @@
+{
+  "id": "72",
+  "slug": "bestatter-digital-paket",
+  "category": "branchen-pakete",
+  "categorySlug": "branchen-loesungen",
+  "alsoIn": [],
+  "sectors": [
+    "nachfolge"
+  ],
+  "tier": "catalog",
+  "audience": "b2b",
+  "name": "Bestatter-Digital-Paket",
+  "problem": "Angehörige wohnen weit weg und fragen, ob sie die Trauerfeier online verfolgen können.",
+  "summary": "Online-Kondolenzseiten, Livestream für weit entfernte Angehörige, ein gepflegter Google-Auftritt und digitale Terminanfragen für Bestattungshäuser.",
+  "includes": [
+    "Online-Kondolenzseiten",
+    "Einfaches Livestream-Set für Trauerfeiern",
+    "Google-Unternehmensprofil",
+    "Digitale Terminanfrage",
+    "Einweisung fürs Team"
+  ],
+  "excludes": [
+    "Hardwarekosten",
+    "Begleitung einzelner Trauerfeiern (auf Anfrage)"
+  ],
+  "needs": [
+    "Zugang zur Website",
+    "Räumlichkeiten für den Livestream"
+  ],
+  "steps": [
+    "Kurzes Gespräch zu Abläufen.",
+    "Festpreis und Zahlungslink.",
+    "Einrichtung und Probestream.",
+    "Einweisung und Übergabe."
+  ],
+  "result": "Kondolenzseiten, ein Livestream-Set und ein digitaler Anfrageweg, den dein Team selbst bedient.",
+  "price": {
+    "type": "fixed",
+    "from": 599,
+    "display": "599 €",
+    "note": "Festpreis, Hardware separat",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "1 Woche",
+  "tags": [],
+  "factNote": null,
+  "guardrail": false,
+  "faq": [
+    {
+      "q": "Ist das pietätvoll umsetzbar?",
+      "a": "Ja. Livestreams sind nur mit Zustimmung der Familie und auf Wunsch geschützt zugänglich."
+    },
+    {
+      "q": "Wer bedient den Livestream?",
+      "a": "Dein Team. Das Set ist so einfach gehalten, dass es nach der Einweisung ohne Technikkenntnisse läuft."
+    }
+  ],
+  "related": [
+    "34",
+    "71",
+    "25"
+  ],
+  "seo": {
+    "title": "Bestatter-Digital-Paket | TechieBuddy",
+    "description": "Online-Kondolenzseiten, Livestream für weit entfernte Angehörige, ein gepflegter Google-Auftritt und digitale Terminanfragen für Bestattungshäuser."
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g07"
+  ],
+  "keywords": []
+}

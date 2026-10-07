@@ -1,0 +1,486 @@
+# TechieBuddy catalog: German public copy for the operating-catalog rows.
+# Format: key|category|merged_into|flags|name|outcome
+# category codes: co=compliance mp=marktplaetze we=website ki=ki ku=kunden bu=buero wa=wachstum zh=zuhause br=branchen-pakete
+# merged_into: named service id (e.g. 22) or catalog key (e.g. c252-15) when the row is the same job; blank otherwise.
+# flags: c = Privatkunden (Preis inkl. MwSt.), r = laufende Betreuung (Abo); blank = einmalig für Unternehmen (zzgl. MwSt.)
+## g01 Konto gesperrt oder abgelehnt
+c252-1|ku|||Google-Profil gesperrt: wieder sichtbar werden|Wir finden die Ursache und bereiten einen sauberen Antrag auf Wiederherstellung vor.
+c252-2|mp|24||Google Merchant Center: abgelehnte Produkte|Wir finden die Richtlinien- oder Feed-Ursache und reichen korrigierte Produkte neu ein.
+c252-3|ku|||Meta-Unternehmensverifizierung reparieren|Verifizierung, Eigentümerdaten und widersprüchliche Dokumente werden bereinigt.
+c252-4|ku|||Meta-Werbekonto oder Business Manager: Zugriff zurück|Rechtmäßiger Admin-Zugang wird wiederhergestellt, Konto und Assets werden abgesichert.
+c252-5|mp|||Unterdrücktes Amazon-Listing reparieren|Fehlende Attribute, Bild-, Compliance- oder Katalogkonflikte werden behoben.
+c252-6|mp|09||Amazon-Variantenfamilie reparieren|Kaputte Parent-Child-Strukturen werden neu aufgebaut, ohne den Katalog neu anzulegen.
+c252-7|mp|||Otto-Partnerportal: Fehler beheben|Feed-, Attribut- und Onboarding-Blocker werden gefunden und gelöst.
+c252-8|mp|||Kaufland: abgelehnte Angebote reparieren|Produktdaten, EAN, Bilder und Kategorien werden korrigiert und Angebote neu veröffentlicht.
+c252-9|mp|||PayPal-Konto eingeschränkt: Nachweise ordnen|Wir bündeln die angeforderten Nachweise und begleiten den Klärungsprozess.
+c252-10|mp|||Stripe-Verifizierung reparieren|Lücken bei Firmendaten, Bankkonto, Vertretung und Website-Prüfung werden geschlossen.
+c252-11|we|||Domain-Inhaberschaft bestätigen|DNS-, HTML- oder Plattform-Verifizierung wird sauber abgeschlossen.
+c252-12|mp|||Marktplatz: Markenkonflikt klären|Eigentum dokumentieren und Katalog- oder Markenkorrekturen koordinieren.
+c240-2|mp|11||Meta-Commerce-Konto abgelehnt|Katalog-, Richtlinien-, Domain- oder Verifizierungsblocker werden gelöst.
+c240-5|mp|||Amazon: verwaisten FBA-Bestand reaktivieren|Gestrandeter FBA-Bestand wird wieder mit verkaufsfähigen Listings verbunden.
+c240-6|mp|c252-7||Otto: Onboarding-Blocker lösen|Onboarding-, Katalog-, Dokumenten- oder Feed-Fehler werden behoben.
+c240-7|mp|c252-8||Kaufland: Feed-Fehler bereinigen|Attribut-, EAN-, Bild-, Preis- und Kategoriefehler im Feed werden behoben.
+c240-8|mp|||Shopify Payments: Auszahlung zurückgehalten|Nachweise werden vorbereitet, Firmen- und Shopdaten korrigiert.
+c240-10|ku|||Doppelte Google-Profile bereinigen|Dubletten werden zusammengeführt oder entfernt, ohne Bewertungen zu verlieren.
+c240-12|ku|||YouTube-Kanal: Inhaberschaft zurückholen|Nachweise für die Wiederherstellung werden geordnet, der Firmenzugang kommt zurück.
+c240-13|ku|c252-4||Facebook Business Manager: Zugriff retten|Zugänge, Rechte und Eigentum an Seiten und Konten werden wiederhergestellt.
+c240-14|ku|||Instagram-Business-Konten neu verbinden|Instagram, Facebook-Seite, Werbekonto und Katalog sind wieder verknüpft.
+c240-15|mp|11||Pinterest-Händlerkonto verifizieren|Claim-, Feed-, Richtlinien- und Domain-Blocker werden behoben.
+c240-17|mp|c252-10||Stripe-Identitätsprüfung bereinigen|Firmendaten werden korrigiert, Unterlagen für die Prüfung vorbereitet.
+c240-18|ku|||Booking.com: Zugang zur Unterkunft zurück|Admin-Zugang wird wiederhergestellt, die Inhaberprüfung geklärt.
+c240-19|ku|||Lieferplattform: Speisekarte oder Konto blockiert|Gesperrte Karte, Auszahlung, Öffnungszeiten oder Kontoprobleme werden gelöst.
+## g02 Etwas funktioniert seit heute nicht mehr
+c252-13|bu|||Firmen-E-Mail fällt aus: Notfallhilfe|Mailfluss, DNS-Einträge und Kontozugang werden wiederhergestellt.
+c252-14|we|22||Website zeigt nur noch weiße Seite|Seite wiederherstellen, Ursache isolieren, sichere Version zurückspielen.
+c252-15|we|||SSL-Zertifikat abgelaufen|HTTPS läuft wieder, Browser-Warnungen verschwinden, die Verlängerung ist abgesichert.
+c252-16|we|||Domain abgelaufen oder falsch weitergeleitet|Verlängerung, DNS und Weiterleitungen werden gerettet, bevor Besucher verloren gehen.
+c252-17|bu|||WLAN im Büro ausgefallen|Stabile Verbindung für Team und Gäste, Router und Access Points geprüft.
+c252-18|bu|||Drucker oder Scanner streikt|Geräte werden neu verbunden, Scan-to-Mail und PDF laufen wieder.
+c252-19|bu|||NAS nicht mehr erreichbar|Sicherer Zugriff wird wiederhergestellt, ohne riskante Resets.
+c252-20|bu|||Cloud-Sync-Chaos bereinigen|Dubletten, fehlende Dateien und kaputte Synchronisation werden aufgelöst.
+c252-21|bu|||Kasse: Bondrucker, Scanner oder Terminal offline|Bondrucker, Scanner und Zahlungsgeräte sind wieder verbunden.
+c252-22|ku|||Terminbuchung nimmt keine Termine mehr an|Kalender, Formulare, Benachrichtigungen und Verfügbarkeiten werden repariert.
+c252-23|we|||Kontaktformular kommt nicht mehr an|Formular-Zustellung ins Postfach wird repariert und von Anfang bis Ende getestet.
+c252-24|bu|||Besprechungsraum: Kamera, Ton oder Bildschirm streikt|Kamera, Mikrofon, Bildschirm und Videokonferenz laufen wieder.
+c240-22|we|22||Website ist offline|Erreichbarkeit wiederherstellen, Ursache isolieren, vorübergehenden Schutz einrichten.
+c240-23|we|c252-15||SSL-Fehler beheben|HTTPS ist sicher wiederhergestellt, die automatische Verlängerung funktioniert.
+c240-24|we|c252-16||Abgelaufene Domain zurückholen|Domain wird gerettet und alle Dienste neu verbunden.
+c240-25|we|||DNS falsch konfiguriert|Website-, E-Mail- und Verifizierungseinträge stimmen wieder.
+c240-26|bu|c252-21||Kassenterminal offline|Verbindung, Updates, Drucker und Zahlungsablauf sind wiederhergestellt.
+c240-27|br|||Küchendrucker druckt keine Bestellungen|Bestellsystem und Küchendrucker-Routing laufen wieder.
+c240-28|bu|c252-18||Gemeinsamer Drucker: Notfall|Nutzer, Treiber, Netzwerk, Scannen und Standards neu eingerichtet.
+c240-29|bu|c252-17||WLAN-Ausfall im Büro|Router, Access Point, DHCP und Störungen werden geprüft und behoben.
+c240-31|bu|||Backup läuft nicht mehr|Sicherungsplan läuft wieder, eine Testwiederherstellung ist dokumentiert.
+c240-32|bu|||Windows-Update hat den PC zerschossen|Gerät, Treiber und wichtige Programme laufen wieder.
+c240-33|bu|||Mac-Umzug abgebrochen|Unterbrochene Geräte- oder Kontomigration wird sauber abgeschlossen.
+c240-34|bu|||Outlook-Profil beschädigt|Mail, Kalender, Signatur und Archiv sind wieder zugänglich.
+c240-35|bu|||Microsoft 365: Anmeldeschleife|MFA-, Token-, Lizenz- und Kontokonflikte werden gelöst.
+c240-37|we|c252-23||Website-Formular sendet nicht mehr|Formulare, SMTP, Spamschutz und Benachrichtigungen laufen wieder.
+c240-38|we|||Checkout bricht plötzlich ab|Zahlungs-, Versand-, Steuer-, App- oder Theme-Konflikte werden gefunden und behoben.
+c240-39|br|||Livestream für ein Event: kurzfristig|Ein stabiler Stream mit Backup-Lösung für dein Event.
+c240-40|zh||c|Hausbesuch bei Technik-Notfall|Handy, Fernseher, Drucker, WLAN oder Konten: das dringende Problem wird gelöst.
+## g03 Neue Mitarbeitende, Rollenwechsel oder Austritt
+c252-25|bu|||Arbeitsplatz für neue Mitarbeitende einrichten|Konten, Rechte, E-Mail und Gerätezugang sind am ersten Tag bereit.
+c252-26|bu|||Laptop für neue Mitarbeitende vorbereiten|Ein sicheres, aktuelles und einsatzbereites Gerät.
+c252-27|bu|||Zugriffsrechte nach Rollen ordnen|Jeder bekommt nur die Rechte, die seine Rolle braucht, nach wiederverwendbarer Vorlage.
+c252-28|bu|||Einheitliche E-Mail-Signaturen|Einheitliche, vollständige Signaturen für das ganze Team.
+c252-29|bu|||Passwortmanager im Team einführen|Tresore, Gruppen und Notfallzugang sind eingerichtet.
+c252-30|bu|||Zwei-Faktor-Anmeldung fürs Team|MFA ist für alle wichtigen Dienste aktiv und dokumentiert.
+c252-31|bu|||Microsoft 365 einrichten|Outlook, Teams, OneDrive und gemeinsame Ressourcen sind konfiguriert.
+c252-32|bu|||Google Workspace einrichten|Gmail, Drive, Kalender und gemeinsame Ressourcen sind konfiguriert.
+c252-33|bu|||Homeoffice-Arbeitsplatz einrichten|VPN, Headset, Kamera und Dateizugriff funktionieren sicher.
+c252-34|bu|||Team-Kalender und Buchungsregeln|Kalender, Buchungsregeln, Rechte und Räume sind verbunden.
+c252-35|bu|||Onboarding-Checkliste für Geräte und Apps|Ein dokumentiertes, wiederholbares Paket für jeden Neustart.
+c252-36|wa|90||IT-Start für internationale Mitarbeitende|Wichtige deutsche Digitaldienste und Arbeitgeber-Tools sind eingerichtet.
+c252-37|bu|||Austritt: Zugänge noch heute sperren|E-Mail, Cloud und Plattformen werden gesperrt, Firmendaten gesichert.
+c252-38|bu|||Postfach übergeben und weiterleiten|Geschäftskontinuität ohne geteilte Passwörter.
+c252-39|bu|||Dateien aus Privatkonten ins Firmenkonto|Dateien liegen danach im Speicher, den die Firma kontrolliert.
+c252-40|bu|||Geteilte Passwörter austauschen|Bekannt gewordene Betriebszugänge werden geordnet erneuert.
+c252-41|bu|||Rückgabe-Check für Firmengeräte|Verschlüsselung, Datensicherung und sichere Weitergabe sind geprüft.
+c252-42|bu|||Software-Lizenzen kündigen oder umziehen|Bezahlte Plätze werden gekündigt oder neu zugewiesen.
+c252-43|bu|||Admin-Rechte zurück in Firmenhand|Super-Admin-Rollen liegen wieder bei der Firma.
+c252-44|bu|||CRM: Kunden und Pipelines neu zuweisen|Konten, Aufgaben und Pipelines werden sauber übertragen.
+c252-45|bu|||Kalender und Termine übergeben|Künftige Termine und Zuständigkeiten bleiben erhalten.
+c252-46|bu|||Austritt dokumentieren: Nachweis-Bericht|Maßnahmen, Zeitpunkte und offene Risiken sind festgehalten.
+c252-47|bu|||Zugänge ehemaliger Freelancer entfernen|Externe Zugriffe werden entfernt, ohne Dienste zu unterbrechen.
+c252-48|ku|||Social-Media-Kanäle in Firmenbesitz holen|Seiten und Kanäle gehören danach nachweislich der Firma.
+c240-41|bu|c252-25||Digitales Onboarding neuer Mitarbeitender|Konten, Rechte, Geräte und Sicherheits-Checkliste.
+c240-42|bu|c252-37||Austritt: Zugänge sperren und Daten sichern|Zugriffe entfernen, Eigentum übertragen, Firmendaten erhalten.
+c240-43|bu|c252-27||Zugriffsrechte aufräumen|Wildwuchs wird durch rollenbasierte Rechte ersetzt.
+c240-45|bu|c252-26||Firmenlaptop einsatzbereit machen|Sicher, aktuell, verschlüsselt und eingerichtet.
+c240-46|bu|||Diensthandy einrichten|Firmenkonten, Sicherheit, Backup und Apps sind eingerichtet.
+c240-48|bu|c252-30||Zwei-Faktor-Anmeldung für alle|MFA aktivieren und dokumentieren.
+c240-49|bu|c252-28||Signaturen vereinheitlichen|Einheitliche, vollständige Signaturen im Firmendesign.
+c240-50|br|||Handy-Setup für Außendienst und Baustelle|Auftrags-Apps, Foto-Upload, Navigation und Zeiterfassung laufen.
+c240-51|br|||Geräte für Pflegekräfte einrichten|Sichere Apps, Konten und Kurzanleitungen für den Dienst.
+c240-52|bu|||Saisonkräfte schnell startklar|Befristete Zugänge, Kassen-Nutzer und automatisches Ablaufdatum.
+c240-53|bu|||Zugänge von der Agentur zurückholen|Konten, die eine Agentur angelegt hat, gehören danach der Firma.
+c240-54|bu|||Vergessene Zugänge ehemaliger Mitarbeitender finden|Offene Zugriffe werden gefunden, Firmenkonten zurückgeholt.
+c240-55|bu|||Dateiablage fürs Team einrichten|Sichere Ordner, klare Zuständigkeiten und Namensregeln.
+c240-56|bu|c252-33||Homeoffice-Startpaket|VPN, Videocalls, Dateizugriff, Sicherheit und Geräteregeln.
+c240-57|bu|||Eingeschränkte Zugänge für Praktikum und Azubis|Begrenzte Konten mit automatischem Ablaufdatum.
+c240-58|bu|c252-34||Team-Kalender vereinheitlichen|Kalender, Buchungsregeln, Rechte und Räume.
+c240-59|bu|||Digitales Mitarbeiterhandbuch|Betriebsregeln werden zu einem durchsuchbaren Online-Handbuch.
+c240-60|bu|||Systemübergabe an neue Führungskraft|Dashboards, Zugänge, Berichte und Inhaberrechte werden übertragen.
+## g04 Neues Unternehmen, Büro oder neuer Standort
+c252-49|bu|52||Eigene Domain und E-Mail zum Start|Professionelle Domain, Postfächer und klare Inhaberschaft.
+c252-50|ku|25||Google-Unternehmensprofil anlegen|Ein verifiziertes Profil, das Anfragen bringt.
+c252-51|bu|||Digitales Fundament an einem Tag|Domain, E-Mail, Cloud, Kalender und Basis-Sicherheit stehen.
+c252-52|bu|||Rechnungsprogramm einrichten|Nummernkreise, Vorlagen, Steuerfelder und Exporte sind eingerichtet.
+c252-53|ku|41||Online-Terminbuchung starten|Buchung, Erinnerungen und Kalender-Sync laufen.
+c252-54|ku|37||WhatsApp Business starten|Profil, Labels, Schnellantworten und klare Inhaberschaft.
+c252-55|ku|43||Bewertungen sammeln: Startsystem|QR-Code, Link und Nachfass-Ablauf sind live.
+c252-56|bu|||Sicherer Dateiaustausch mit Kunden|Strukturierte Ordner für Kunden und intern.
+c252-57|bu|||Cyber-Grundschutz für Kleinstbetriebe|MFA, Passwortmanager, Backup und Update-Routine.
+c252-58|co|||Rechtstexte korrekt auf der Website einbauen|Gelieferte Rechtstexte (Impressum, Datenschutz) erscheinen überall korrekt.
+c252-59|br|||Kartenzahlung einrichten|Kartenleser oder Online-Zahlung sind eingerichtet und getestet.
+c252-60|bu|||Gründer-Konten in Firmenbesitz überführen|Tools aus Privatkonten wandern in die Firma.
+c252-97|bu|||Büroumzug: Internet und Dienste umstellen|Internet, Router und wichtige Dienste werden koordiniert umgezogen.
+c252-98|ku|||Google-Profil: neue Adresse eintragen|Adresse wird aktualisiert, das Profil bleibt erhalten.
+c252-99|bu|||Telefonnummern umziehen|Nummern werden portiert, eingehende Anrufwege getestet.
+c252-100|bu|||Drucker und Scanner am neuen Standort|Geräte sind am neuen Ort wieder verbunden.
+c252-101|bu|||WLAN-Ausleuchtung einrichten|Stabiles WLAN überall und ein getrennter Gastzugang.
+c252-102|bu|||Netzwerkschrank beschriften|Ports, Geräte und Kabel sind dokumentiert.
+c252-103|bu|||Neuen Besprechungsraum einrichten|Bildschirm, Kamera, Mikrofon und Videokonferenz laufen.
+c252-104|bu|||Zutritts-App einrichten|Nutzer, Zeitpläne und Notfall-Admins sind angelegt.
+c252-105|ku|||Neue Adresse überall aktualisieren|Veraltete Adressen in Website und Verzeichnissen werden ersetzt.
+c252-106|bu|||Neue Adresse in Signaturen und Vorlagen|Signaturen und Dokumentvorlagen zeigen die neue Adresse.
+c252-107|bu|||IT-Bereitschaft am Umzugstag|Kleine Ausfälle am Umzugstag werden sofort gelöst.
+c252-108|bu|||Alten Standort digital abschalten|Altes WLAN, Weiterleitungen und Zugänge werden sauber entfernt.
+c240-61|bu|c252-51||Digitales Startpaket für Gründer|Domain, E-Mail, Cloud-Dateien, Passwörter und Kernkonten.
+c240-62|we|||Google-Konten in Firmenbesitz|Analytics, Ads, Search Console und Unternehmensprofil mit klaren Zugängen.
+c240-63|bu|52||E-Mail mit eigener Domain|Postfächer, DNS, Authentifizierung und Signaturen.
+c240-64|we|21||Einfache Website zum Start|Eine klare, mobilfreundliche Onepage-Website.
+c240-65|ku|25||Lokaler Start mit Google|Unternehmensprofil, Einsatzgebiet, Fotos, Bewertungen und Messung.
+c240-66|br|||Technik-Checkliste für die Restauranteröffnung|WLAN, Kasse, Reservierung, Lieferdienste, Drucker und Profile.
+c240-67|br|||Digitaler Start für die Praxiseröffnung|E-Mail, sichere Geräte, Website, Terminbuchung und Teamzugänge.
+c240-68|bu|||Neuer Laden: Internet, WLAN, Kasse|Internet, WLAN, Kasse, Drucker, Kamera und Mitarbeiterzugänge.
+c240-69|br|||Digitales Startpaket für Vereine|Domain, E-Mail, Mitgliederdateien, Kalender und Rechte.
+c240-70|br|||Digitales Startpaket für Vermieter|E-Mail, Dokumentenablage, Mieterkommunikation und Vorlagen.
+c240-71|ku|||Ferienwohnung startklar machen|Buchungsprofile, Gästekommunikation, smarter Zugang und Gästemappe.
+c240-72|br|||Business-Grundausstattung für Creator|Domain, E-Mail, Mediakit, Buchung und Rechnungen.
+c240-73|bu|c252-97||Büroumzug: Technik koordinieren|Internet, WLAN, Geräte, Drucker und Umzug der Daten werden geplant.
+c240-74|bu|||Zweiter Standort: Systeme übertragen|Systeme, Rechte, Profile und Auswertungen für den neuen Standort.
+c240-75|ku|25||Google-Präsenz für die neue Filiale|Standortprofil, Messung, Fotos und Bewertungsablauf.
+c240-76|br|87||Bargeldlos verkaufen: Startpaket|Kartenleser, Preise, Belege, Hinweisschild und Einweisung.
+c240-77|br|||Startpaket für die eigene Praxis|E-Mail, Terminbuchung, Website, Dokumente und Einwilligungen.
+c240-78|bu|||Digitales Büro für Beratende|E-Mail, Angebote, Terminbuchung, Dateiaustausch, Rechnungen und CRM.
+c240-79|mp|||Marktplatz-Start vorbereiten|Konten, Dokumente, Artikeldaten, Bilder und Feed-Checkliste.
+## g05 Software gekauft, aber nicht eingerichtet
+c252-61|ku|41||Calendly einrichten|Leistungen, Verfügbarkeiten, Puffer und Erinnerungen sind konfiguriert.
+c252-62|bu|||Microsoft Teams aufräumen|Sinnvolle Teams, Kanäle und Namensregeln statt Wildwuchs.
+c252-63|bu|||SharePoint-Ablage einrichten|Berechtigungen, Ordner und Versionierung sind sauber aufgebaut.
+c252-64|bu|||Google Drive fürs Team strukturieren|Geteilte Ablagen ersetzen das Chaos in privaten Ordnern.
+c252-65|ku|||Klaviyo einrichten: die wichtigsten Flows|Absender, Kern-Flows, Segmente und Tracking sind eingerichtet.
+c252-66|ku|||Brevo einrichten: Newsletter und Automationen|Listen, Vorlagen, Absender-Authentifizierung und Willkommensstrecke.
+c252-67|bu|||HubSpot startklar machen|Pipeline, Eigenschaften, Formulare und Aufgabenregeln sind konfiguriert.
+c252-68|bu|||Pipedrive startklar machen|Phasen, Felder, Automationen und Dashboards sind eingerichtet.
+c252-69|bu|||Notion als Firmen-Wiki einrichten|Praktische Bereiche, Rechte, Vorlagen und Arbeitsanweisungen.
+c252-70|bu|||Canva fürs Team mit Markenvorlagen|Marken-Assets, Ordner und wiederverwendbare Vorlagen sind bereit.
+c252-71|we|||Cloudflare einrichten und absichern|DNS, SSL, Caching und Basisschutz sind konfiguriert.
+c252-72|ki|18||Erste Automatisierung mit Zapier oder Make|Ein wiederkehrender Ablauf zwischen zwei Tools läuft automatisch.
+c240-104|ku|37||WhatsApp Business professionell einrichten|Profil, Katalog, Labels, Schnellantworten und Geräte.
+c240-105|bu|||CRM einrichten: Pipeline und erste Automatisierung|Pipeline, Felder, Phasen, Kontakte und eine erste Automatisierung.
+c240-106|ku|c252-65||Klaviyo starten|Listen, Formulare, Tracking und die wichtigsten Flows.
+c240-107|ku|c252-66||Brevo-Automationen einrichten|Listen, Formulare, Vorlagen und Willkommensstrecke.
+c240-108|bu|c252-70||Canva-Teambereich aufräumen|Markenkit, Ordner, Vorlagen und Rechte.
+c240-109|bu|c252-69||Notion für Abläufe einrichten|Arbeitsanweisungen, Aufgaben, Wissensbasis und Rechte.
+c240-110|bu|||Trello oder Asana für Projekte einrichten|Boards, Verantwortliche, Vorlagen, Automationen und Berichte.
+c240-111|bu|||Cloud-Telefonanlage konfigurieren|Durchwahlen, Weiterleitung, Warteschleifen, Mailbox und Zeiten.
+c240-112|ku|||Online-Tischreservierung einrichten|Zeiten, Bestätigungen und Zugänge fürs Team sind eingerichtet.
+c240-113|ku|||Software für Ferienwohnungen einrichten|Einheiten, Preise, Nachrichten, Zahlungen und Nutzer konfiguriert.
+c240-114|br|38||Auftragssoftware fürs Handwerk einrichten|Kunden, Aufträge, mobile Formulare und Rechnungen.
+c240-115|ku|41||Terminplattform für die Praxis konfigurieren|Terminarten, Puffer, Erinnerungen und Team.
+c240-116|br|49||Vereinssoftware einrichten|Mitgliederfelder, Beiträge, Kommunikation und Exporte.
+c240-117|bu|||Warenwirtschaft für den Laden starten|Artikel, Barcodes, Bestand, Rollen und Auswertungen.
+c240-120|bu|||Scan-Workflow für Dokumente|Scanprofile, Dateinamen, Texterkennung und Ablage in der Cloud.
+## g06 Gesetzliche Pflicht oder Frist
+c252-73|co|03||E-Rechnungen empfangen können|Empfang, Weiterleitung und Archivierung von E-Rechnungen sind eingerichtet.
+c252-74|co|66||Zeiterfassung einführen|Ein praktikables Tool und ein klarer Ablauf fürs Team.
+c252-75|co|68||Kassenmeldung: technische Unterstützung|Systemdaten werden vorbereitet und die Meldung technisch abgeschlossen.
+c252-76|co|06||LUCID-Registrierung: Unterstützung|Konto und Verpackungsdaten sind eingerichtet.
+c252-77|co|||EORI-Nummer beantragen: Unterstützung|Der digitale Antrag wird vorbereitet und eingereicht.
+c252-78|co|02||GPSR-Daten im Marktplatz nachtragen|Hersteller, verantwortliche Person und Sicherheitsangaben ergänzt.
+c252-79|co|01||Barrierefreiheit: schnelle Fixes|Tastatur, Kontraste, Beschriftungen und Struktur mit größter Wirkung repariert.
+c252-80|co|05||Cookie-Einwilligung reparieren|Kategorien, Skripte und Blockierung funktionieren korrekt.
+c252-81|co|05||Google Consent Mode umsetzen|Einwilligungssignale erreichen die Google-Messwerkzeuge korrekt.
+c252-82|co|67||Hinweisgeber-Tool einrichten|Meldetool und interne Hinweise sind eingerichtet.
+c252-83|co|||Aufbewahrung: digitale Ablagestruktur|Eine dokumentierte Ablage mit Aufbewahrungs- und Löschfristen.
+c252-84|co|78||Lieferanten-Fragebogen: Sprint|Nachweise sammeln, ehrliche Antworten entwerfen, Lücken benennen.
+c240-81|co|02||GPSR-Angaben in allen Listings|Verantwortliche Person und Sicherheitsinfos in allen Listings.
+c240-82|co|06||VerpackG/LUCID einrichten|Konto und Systembeteiligung sind erledigt.
+c240-84|co|66||Arbeitszeiterfassung ausrollen|Zeiterfassungs-Tool auswählen und einrichten.
+c240-85|co|67||Hinweisgeber-Meldekanal umsetzen|Meldetool, Zugriffe, Ablauf und Aushänge.
+c240-86|co|68||Kassendaten über ELSTER melden|Die erforderlichen Kassendaten werden vorbereitet und übermittelt.
+c240-87|co|68||TSE-Ablauf prüfen und erneuern|Zertifikatsstatus prüfen, Verlängerung oder Austausch koordinieren.
+c240-88|co|05||Cookie-Banner und Einwilligung reparieren|Kategorien, Skripte und Google Consent Mode korrekt umgesetzt.
+c240-91|co|||DSGVO-Anfragen: Ablauf einrichten|Eingang, Identitätsprüfung, Export, Löschung und Antwort als klarer Ablauf.
+c240-92|co|||Sicherer Dokumentenaustausch für Praxen|Ein für die Praxis passender, sicherer Austauschweg.
+c240-93|co|||Kanzlei: Zugriffe auf Mandantendaten prüfen|Dateirechte und externe Freigaben werden geprüft und korrigiert.
+c240-95|co|||AV-Verträge: Übersicht anlegen|Ein praktisches Verzeichnis aller Dienstleister und Verträge.
+c240-96|co|||Software-Lizenzen ordnen|Nutzer, Geräte, Lizenzen und Inhaberlücken sind erfasst.
+c240-97|co|c252-83||Aufbewahrungs- und Löschplan einrichten|Ablageordner und Erinnerungen für Löschfristen.
+c240-98|co|||Vermieter: Mieterdaten raus aus WhatsApp|Sensible Dokumente wandern aus WhatsApp und Privat-Mail in eine sichere Ablage.
+c240-99|co|||Verein: Mitgliederdaten datenschutzgerecht ordnen|Listen, Rechte, Newsletter-Tools und Archiv sind abgesichert.
+c240-100|co|||Pflichtangaben auf der Website prüfen|Fehlende Firmen-, Preis- und Kontaktangaben werden ergänzt.
+## g07 Kunden finden oder erreichen dich nicht
+c252-85|ku|||In Google Maps nicht gefunden|Kategorie, Einsatzgebiet und Profil werden vervollständigt.
+c252-86|ku|||Falsche Öffnungszeiten überall korrigieren|Öffnungszeiten stimmen auf allen wichtigen Plattformen.
+c252-87|ku|||Telefon: Ansage und Weiterleitung einrichten|Ansage, Weiterleitung und Umgang mit verpassten Anrufen.
+c252-88|we|||Kontaktformular, das wirklich Anfragen bringt|Weniger Felder, sichere Zustellung und eine klare Bestätigung.
+c252-89|ku|||WhatsApp-Chat-Button auf der Website|Richtige Links, Messung und vorausgefüllte Nachrichten.
+c252-90|ku|||Einträge in Verzeichnissen vereinheitlichen|Name, Adresse und Telefonnummer stimmen überall überein.
+c252-91|ku|43||Google-Bewertungslink und QR-Code|Ein einfacher Weg zur Bewertung für deine Kundschaft.
+c252-92|ku|||Buchungslink überall platzieren|Buchungslinks auf Website, Google-Profil und Social Media.
+c252-93|we|||Notfall-Kontaktbanner auf der Website|Ein klarer vorübergehender Kontaktweg ist sofort online.
+c252-94|ku|||Mehrsprachige Kontaktwege|Klare Kontaktmöglichkeiten je Sprache.
+c252-95|ku|||Verpasster Anruf: automatische SMS|Sofortige Rückmeldung, wenn ein Anruf verpasst wurde.
+c252-96|ku|||Kartenpin und Anfahrt korrigieren|Pin, Eingangsbeschreibung und Parkhinweise stimmen.
+## g08 Anfragen, Verkäufe oder Buchungen gehen zurück
+c252-157|we|||Checkout-Hürden finden und beheben|Offensichtliche Blocker bei Versand, Zahlung und Vertrauen werden repariert.
+c252-158|we|||Warenkorbabbrecher zurückholen|Eine kurze, wirksame Erinnerungsstrecke ist live.
+c252-159|we|||Benachrichtigung bei ausverkauften Produkten|Nachfrage für nicht lieferbare Produkte wird erfasst.
+c252-160|mp|24||Produktfeed analysieren|Fehlende Felder und Ablehnungsgründe werden gefunden.
+c252-161|we|||Versandkosten-Regeln reparieren|Zonen, Schwellen und Ausnahmen stimmen wieder.
+c252-162|we|||Zahlungsarten freischalten|Ausgewählte Zahlungsarten werden aktiviert und getestet.
+c252-163|we|||Produktseite mobil verbessern|Die wichtigsten mobilen Conversion-Probleme werden repariert.
+c252-164|we|||Varianten und Farbauswahl im Shop reparieren|Verwirrende oder kaputte Variantenauswahl wird behoben.
+c252-165|we|||Bestell-E-Mails kommen nicht an|Kunden- und Team-Benachrichtigungen funktionieren wieder.
+c252-166|we|||Retourenportal einrichten|Ein einfacher Self-Service für Rücksendungen.
+c252-167|we|||Bundle oder Zusatzangebot einrichten|Ein passendes Ergänzungsangebot ist live.
+c252-168|we|||Vertrauensblock auf der Produktseite|Versand, Rückgabe, Zahlung und Support sind sichtbar.
+c240-121|ku|25||Google-Profil auf Anfragen trimmen|Kategorien, Leistungen, Fotos, Handlungsaufrufe und Messung verbessert.
+c240-122|ku|43||Bewertungen systematisch sammeln|QR, SMS, E-Mail und ein Ablauf fürs Team.
+c240-123|ku|||Antworten auf negative Bewertungen|Markensichere Antwortvorlagen und Eskalationsregeln.
+c240-124|we|||Landingpage für dein Einsatzgebiet|Eine starke Seite für eine Leistung in deiner Region.
+c240-125|ku|||Speisekarte verständlicher machen|Klare Struktur, Fotos, Preise und einfacher Bestellweg.
+c240-126|ku|c252-95||Praxis: verpasste Anrufe auffangen|Mailbox, Rückrufformular, SMS und Online-Termin als Ausweichweg.
+c240-127|we|c252-88||Anfrageformular reparieren|Weniger Hürden, jede Anfrage wird messbar.
+c240-128|ki|||Offene Anfragen automatisch nachfassen|Automatische Erinnerungen für nicht abgeschlossene Anfragen.
+c240-130|we|||Produktseite: Einwände ausräumen|Eine Seite wird bei Vertrauen, Passform, Lieferung, Rückgabe und Belegen verbessert.
+c240-131|ku|||Mehr Direktbuchungen für Unterkünfte|Buchungsstrecke, Vertrauen, FAQ und Kontakt werden verbessert.
+c240-132|we|||Woher kommen deine Anfragen? Messung einrichten|Anrufe, Formulare, Kampagnen und Kanäle werden messbar.
+c240-133|ku|40||Weniger Terminausfälle|Bestätigungen, Erinnerungen, Anzahlungen und Umbuchung.
+c240-134|ki|||Angebote automatisch nachfassen|Eine strukturierte Erinnerungsstrecke nach dem Angebot.
+c240-135|ku|||Bewertungen und WhatsApp im Laden sammeln|QR-Kontaktpunkte an Kasse und Verpackung.
+c240-136|br|||Verein: Mitglieder gewinnen mit Landingpage|Fokussierte Seite, Formular und Nachfass-Ablauf.
+c240-137|wa|||Pflegeeinrichtung: Bewerbungen erleichtern|Stellenseite, einfache Bewerbung und automatische Antwort.
+c240-138|ku|||Google-Ads-Konto aufräumen|Conversion-Messung, Streuverluste, Zugänge und Kampagnenstruktur.
+c240-139|ku|||Meta-Lead-Formular umsetzen|Formular, Weiterleitung und Nachfass-Ablauf, bereit für Kampagnen.
+c240-140|ku|||Empfehlungen systematisch erfragen|Eine einfache, wiederholbare Empfehlungsfrage mit Messung.
+## g09 Bewertungen oder Ruf
+c252-169|ku|||Google-Bewertungen professionell beantworten|Antworten auf aktuelle Bewertungen werden formuliert und veröffentlicht.
+c252-170|ku|43||Bewertungen nach dem Termin anfragen|Ein sauberer Ablauf für Bewertungsanfragen nach der Leistung.
+c252-171|ku|43||Bewertungs-QR für die Theke|QR-Aufsteller wird erstellt und platziert.
+c252-172|ku|80||kununu-Arbeitgeberprofil aufräumen|Profil übernehmen, vervollständigen und strukturieren.
+c252-173|ku|c240-123||Eskalationsplan für negative Bewertungen|Antwortvorlagen und interne Zuständigkeiten.
+c252-174|ku|c240-10||Doppelte Google-Profile auflösen|Doppelte oder veraltete Profile werden bereinigt.
+c252-175|ku|||Tripadvisor-Profil reparieren|Profil, Links und Antwortablauf werden korrigiert.
+c252-176|ku|||Bewertungen auf Buchungsportalen managen|Benachrichtigungen und klare Zuständigkeit für Antworten.
+c252-177|mp|||Verkäuferbewertungen im Marktplatz überwachen|Alarme und eine feste Antwortroutine.
+c252-178|ku|||Bewertungs-Widget auf der Website|Ausgewählte echte Bewertungen werden korrekt angezeigt.
+c252-179|ku|||Alarm bei Erwähnungen deiner Marke|Benachrichtigungen bei neuen öffentlichen Erwähnungen.
+c252-180|ku|||Team-Schulung: auf Bewertungen antworten|Eine wiederholbare, gelassene Antwortmethode fürs Team.
+## g10 Portale, Formulare und Papierkram
+c252-181|bu|||ELSTER-Zugang und Zertifikat einrichten|Zugang steht, das Zertifikat ist sicher abgelegt.
+c252-182|bu|||Mein Unternehmenskonto einrichten|Zugang angelegt und mit dem passenden Identitätsnachweis verbunden.
+c252-183|bu|||BundID einrichten|Konto für digitale Anträge angelegt und abgesichert.
+c252-184|zh|75|c|Marktstammdatenregister: Anmeldung|Registrierung anhand deiner Anlagendaten abgeschlossen.
+c252-185|wa|64||Vergabeportal: Start für Ausschreibungen|Konten, Suchaufträge und Bereitschaft für das erste Angebot.
+c252-186|wa|62||SAB-Antrag: Unterlagen und Portal ordnen|Zugänge, Unterlagen und Einreichungsablauf sind organisiert.
+c252-187|bu|||IHK- oder Kammerportal: Zugang retten|Zugang wiederhergestellt, Firmennutzer aktualisiert.
+c252-188|co|||Zollportal einrichten|Zugang steht, wiederkehrende Unterlagen sind geordnet.
+c252-189|wa|||Gewerbeanmeldung online: Unterstützung|Digitales Formular und Unterlagen werden gemeinsam vorbereitet.
+c252-190|bu|||Digitale Signatur einrichten|Signaturlösung und Ablauf sind eingerichtet.
+c252-191|bu|||PDF-Formular, das nicht mitspielt|Widerspenstige Formulare werden ausfüllbar und einreichungsfertig.
+c252-192|bu|||Nachweise für Portal-Fristen sichern|Bestätigungen, Screenshots und eingereichte Dateien sind geordnet abgelegt.
+c240-141|zh|74|c|Balkonkraftwerk anmelden: Unterstützung|Korrekte Registrierung im Marktstammdatenregister.
+c240-142|zh|75|c|PV-Anlage registrieren: Unterstützung|Die wichtigsten Registrierungsschritte werden erledigt.
+c240-143|zh|76|c|THG-Quote beantragen: Unterstützung|Jährlicher Antrag über einen seriösen Anbieter.
+c240-144|bu|c252-181||ELSTER-Zugang fürs Unternehmen|Zertifikatszugang einrichten und sicher ablegen.
+c240-147|co|||OSS-Verfahren: Ablauf vorbereiten|Kontozugang, Ablauf und Daten-Checkliste für das One-Stop-Shop-Verfahren.
+c240-148|co|||Lebensmittelbetrieb: Online-Registrierungen|Unterstützung bei Online-Konten und der Einreichung von Unterlagen.
+c240-150|wa|63||Passt ein Förderprogramm?|Wahrscheinlich passende Digitalisierungsförderungen und nächste Schritte.
+c240-151|wa|||Förderantrag: Unterlagen zusammenstellen|Angebote, Projektbeschreibung, Budget und Anlagen sind geordnet.
+c240-152|br|||Vermieter: Versorger-Portale ordnen|Zugänge zu Gebäude-, Zähler- und Versorgerportalen gebündelt.
+c240-153|zh||c|Papierkram digital: Haushalts-Termin|BundID, Versicherungen, Mobilität und wichtige Apps eingerichtet.
+c240-154|wa|88|c|Digital ankommen in Deutschland|SIM, Bank, Versicherung, Mobilität und wichtige Portale.
+c240-155|wa|||Verein: bereit für Förderportale|Konten, Unterlagen, Signaturen und Ordnerstruktur sind vorbereitet.
+c240-156|co|78||Lieferanten-Fragebogen beantworten|Antworten, Nachweise, Lücken und Maßnahmenplan.
+c240-157|bu|79||Cyber-Versicherung: Fragebogen vorbereiten|Zutreffende Antworten und nötige Fixes werden erarbeitet.
+c240-158|wa|||Lieferanten-Registrierung im Kundenportal|Die vom Kunden geforderte Registrierung ist abgeschlossen.
+c240-159|bu|||Bank-Nachweise (KYC) zusammenstellen|Eigentümer-, Tätigkeits-, Adress- und Umsatznachweise geordnet.
+c240-160|co|||Nachweis-Ablage für Marktplatz-Prüfungen|Eine geordnete Ablage für wiederkehrende Prüfungen.
+## g11 Umzug, Übergabe oder Nachfolge
+c252-229|wa|69||Digitale Bestandsaufnahme für die Nachfolge|Systeme, Konten, Verantwortliche, Kosten und Verlängerungen auf einer Liste.
+c252-230|wa|69||Zugangsdossier für den Firmenverkauf|Ein sauberes, kontrolliertes Übergabepaket.
+c252-231|wa|70||Modernisierungs-Sprint für neue Inhaber|Die schlimmsten Altlasten werden ersetzt.
+c252-232|we|||Website und Domain übertragen|Kontrolle wechselt ohne vermeidbare Ausfallzeit.
+c252-233|ku|||Google-Profil an neue Inhaber übertragen|Hauptinhaberschaft wechselt, die Firmendaten werden aktualisiert.
+c252-234|wa|||Software-Verträge und Admins übertragen|Tools, Abrechnung und Super-Admins werden neu zugewiesen.
+c252-235|bu|||Übergabe: geteilte Ablage aufräumen|Alte, aktive und sensible Dateien werden getrennt.
+c252-236|wa|||Postfach der Vorgänger weiterführen|Kundenkontakt bleibt während der Übergabe erhalten.
+c252-237|wa|||Zugänge von Dienstleistern neu ordnen|Externe Zugriffe werden geprüft und neu aufgebaut.
+c252-238|wa|||Passwort-Tresor übergeben|Zugangsdaten wechseln über einen kontrollierten Tresor.
+c252-239|we|||Geerbte alte Website stabilisieren|Die übernommene Website wird abgesichert und gesichert.
+c252-240|wa|||Die ersten 30 Tage nach der Übernahme|Digitale Betriebsunterstützung nach dem Kauf.
+c240-161|bu|||Alter Laptop, neuer Laptop: Umzug|Dateien, Mail, Programme, Browserdaten und Einstellungen ziehen um.
+c240-162|zh|35|c|Altes Handy, neues Handy: Umzug|Kontakte, Fotos, Apps, Konten und WhatsApp.
+c240-163|bu|||E-Mail-Anbieter wechseln|Postfächer, Kalender, DNS und Geräte ziehen um.
+c240-164|bu|||Von Google Drive zu Microsoft 365|Dateien und Rechte ziehen um, mit strukturierter Bereinigung.
+c240-165|bu|||Von Dropbox in eine EU-Cloud|Dateien ziehen um, werden neu geordnet und Zugriffe kontrolliert.
+c240-166|bu|81||Kanzlei: Dateien auf EU-Plattform umziehen|Vertrauliche Dateien liegen sicher in der EU.
+c240-167|bu|||Altes NAS, neues NAS: Umzug|Daten, Rechte, Backups und Nutzerzugänge ziehen um.
+c240-168|bu|||Alte Outlook-Archive (PST) retten|Alte Mailarchive werden gerettet und neu geordnet.
+c240-169|bu|56||Excel-Monster stabilisieren|Formeln, Struktur, Schutz und Sicherung.
+c240-170|bu|57||Access-Datenbank: Risiko-Check|Risiken dokumentiert, sicherer Migrationsweg festgelegt.
+c240-171|we|||Inhalte der alten Website umziehen|Seiten, Bilder, Weiterleitungen und Metadaten wandern mit.
+c240-172|we|||Joomla oder Typo3: Notfall-Stabilisierung|Eine veraltete Firmenwebsite wird abgesichert und stabilisiert.
+c240-173|we|||Alte WordPress-Seite aufräumen|Sichere Updates, verwaiste Plugins entfernt, Backups eingerichtet.
+c240-174|zh|71|c|Fotoarchiv digitalisieren|Familienfotos scannen, ordnen und digital übergeben.
+c240-175|zh|71|c|VHS- und MiniDV-Kassetten digitalisieren|Alte Videoerinnerungen werden umgewandelt und geordnet.
+c240-176|bu|||Geteilte Ablage neu strukturieren|Klare Ordner, Zuständigkeiten, Namen und Zugriffsregeln.
+c240-177|bu|58||CRM-Kontakte bereinigen und importieren|Dubletten entfernt, Daten vereinheitlicht und importiert.
+c240-178|bu|58||Produktkatalog bereinigen und importieren|Artikelnummern, Titel, Bilder, Attribute und Kategorien vereinheitlicht.
+c240-179|wa|c252-238||Übergabedossier für Passwörter und Konten|Ein strukturiertes Paket für Inhaberschaft und Wiederherstellung.
+c240-180|wa|69||Digitale Übergabe dokumentieren|Systeme, Konten, Dienstleister, Risiken und nächste Schritte.
+## g12 Sicherheitsvorfall oder Versicherungsanfrage
+c252-133|bu|c252-30||MFA-Sprint für alle wichtigen Konten|MFA auf den kritischsten Konten aktiviert.
+c252-134|bu|c252-29||Passwortmanager in der Firma ausrollen|Tresore, Regeln und Wiederherstellung.
+c252-135|bu|||Backup-Check: lässt sich wirklich etwas zurückholen?|Wir prüfen, ob Sicherungen existieren und wiederherstellbar sind.
+c252-136|bu|||Ransomware-Kurzcheck|Getrennte Backups, Admin-Zugänge und Updates werden geprüft.
+c252-137|bu|79||Cyber-Versicherung: Anforderungen umsetzen|Praktische Maßnahmen, die der Versicherer verlangt.
+c252-138|bu|c240-183||Phishing-Vorfall eindämmen|Konten absichern und die unmittelbare Gefahr prüfen.
+c252-139|bu|||E-Mail-Konto gekapert: aufräumen|Zugänge, Regeln, Sitzungen und Weiterleitungen werden zurückgesetzt.
+c252-140|bu|||Wer hat Admin-Rechte? Bestandsaufnahme|Klar dokumentiert, wer kritische Systeme kontrolliert.
+c252-141|bu|||Update-Tag für Geräte und Software|Ausgewählte Geräte und wichtige Programme sind aktuell.
+c252-142|bu|||Gäste-WLAN sicher trennen|Kundschaft und Betriebsgeräte sind im Netz getrennt.
+c252-143|bu|c252-47||Zugänge externer Dienstleister prüfen|Alte Zugänge von Agenturen, Freelancern und Lieferanten entfernen.
+c252-144|bu|||Notfallplan auf einer Seite|Wen du anrufst und was du zuerst trennst.
+c240-181|bu|c252-139||E-Mail-Konto kompromittiert|Konto absichern, Weiterleitungen prüfen, Kontakte warnen.
+c240-182|we|22||Verdacht auf gehackte Website|Seite eindämmen, Spuren sichern, saubere Version zurückspielen.
+c240-183|bu|||Phishing-Klick im Team: Soforthilfe|Betroffene Konten eindämmen, kompromittierte Zugangsdaten zurücksetzen.
+c240-184|bu|||Gefälschte Rechnung: Betrug eindämmen|Postfächer, Regeln, Identitäten und Freigabeablauf werden abgesichert.
+c240-185|bu|||MFA im Eilverfahren nach einem Schreck|Die wichtigsten Konten sind sofort zusätzlich geschützt.
+c240-186|bu|||Passwörter zurücksetzen und Wiederherstellung sichern|Kritische Konten zurückgesetzt, Wiederherstellungswege dokumentiert.
+c240-187|bu|c252-140||Admin-Konten mit zu vielen Rechten finden|Unnötige Administratoren entfernen, Risiko senken.
+c240-188|bu|c252-135||Wiederherstellung testen|Beweis, dass wichtige Dateien wirklich zurückkommen.
+c240-189|bu|||Geräte verschlüsseln|Verschlüsselung aktiv, Wiederherstellungsschlüssel dokumentiert.
+c240-190|bu|||Laptop verloren: Sofortmaßnahmen|Sitzungen beenden, Konten sichern, Risiko einschätzen.
+c240-191|bu|c252-47||Alte Zugänge externer Kräfte entfernen|Vergessene Nutzer, Tokens und API-Zugänge werden entfernt.
+c240-192|we|||Domain gegen Übernahme absichern|Registrar-Sperre, sicheres DNS und Wiederherstellungswege.
+c240-193|bu|||Notfallmappe für Firmenkonten|Wiederherstellungsdaten wichtiger Dienste, offline verwahrt.
+c240-194|zh|c252-241|c|Senioren vor Betrug schützen|Sperren, sicherere Zahlungen und Familien-Notfallzugang.
+c240-196|bu|||Kamerasystem: Zugänge absichern|Geteilte Passwörter ersetzt, Fernzugriff kontrolliert.
+c240-197|bu|c252-57||Sicherheits-Grundschutz an einem Tag|MFA, Updates, Backups, Passwörter, Verschlüsselung und Verantwortliche.
+c240-198|bu|||Microsoft 365 sicherer machen|Die wirksamsten Sicherheitseinstellungen im Tenant umgesetzt.
+c240-199|bu|||Google Workspace sicherer machen|Admin, Freigaben, Wiederherstellung und Anmeldung abgesichert.
+c240-200|bu|||Vorfall dokumentieren|Zeitlinie, Konten, Maßnahmen und Lehren festgehalten.
+## g13 Neues Gerät oder Technik vor Ort
+c252-109|bu|c240-161||Windows-PC umziehen|Dateien, Browser, E-Mail und wichtige Programme.
+c252-110|bu|||Mac umziehen und einrichten|Daten übertragen, sicherer Alltag eingerichtet.
+c252-111|bu|||iPhone umziehen und aufräumen|Daten, eSIM, Authenticator und Backups.
+c252-112|bu|||Android-Handy umziehen und aufräumen|Konten, WhatsApp und Sicherheitseinstellungen.
+c252-113|bu|c252-26||Neuen Firmenlaptop absichern|Aktualisieren, verschlüsseln, schützen, dokumentieren.
+c252-114|bu|||Neuen Drucker einrichten|Zuverlässiges Drucken und Scannen.
+c252-115|bu|||Neuen Router einrichten|Sicheres WLAN, Gastnetz und alle Geräte wieder verbunden.
+c252-116|bu|||Neues NAS einrichten|Speicher, Nutzer und Backup sind konfiguriert.
+c252-117|bu|||Tablet als Kiosk-Gerät einrichten|Ein gesperrtes, eingerichtetes Gerät für die Kundschaft.
+c252-118|br|c252-59||Neues Kartenterminal einrichten|Netzwerk, Belege und Bedienung fürs Team.
+c252-119|bu|||Authenticator-App umziehen|MFA-Konten wechseln aufs neue Handy, ohne Aussperren.
+c252-120|bu|||Altgerät sicher löschen|Nötige Daten gesichert, das alte Gerät sicher gelöscht.
+c240-201|zh||c|WLAN im ganzen Haus verbessern|Bessere Abdeckung, Übergabe zwischen Räumen, Platzierung und Sicherheit.
+c240-202|bu|c252-101||WLAN im kleinen Büro optimieren|Abdeckung, Gastzugang und stabile Geräte.
+c240-203|bu|||Kamerasystem-App einrichten|Ansicht, Alarme, Nutzer und Speicherdauer.
+c240-204|br|||Smarte Gegensprechanlage einrichten|Bewohner, mobiler Zugang und Ausweichlösung.
+c240-205|ku|||Smartes Schloss für Gäste|Zugangscodes, Ablaufzeit, Notfallzugang und Gästenachricht.
+c240-206|ku|44||QR-Speisekarte starten|Mobile Karte, QR-Aufsteller und einfache Aktualisierung.
+c240-207|bu|c252-103||Technik im Besprechungsraum|Bildschirm, Kamera, Ton und Ein-Klick-Beitritt.
+c240-209|br|87||Kartenzahlung aktivieren|Lesegerät, Belege, Team und Hinweisschild.
+c240-210|br|86||Selbstbedienungsladen: Technik einrichten|Zahlung, Kamera, Zugang und Fernüberwachung.
+c240-211|br|84||Reitstall: Buchung und Zahlung|Online-Reitstunden, Erinnerungen und Zahlungseinzug.
+c240-212|br|85||Fahrschule: digitale Abläufe|Buchung, WhatsApp, Bewertungen und Dokumente.
+c240-213|br|83||Wildkamera und App einrichten|Übertragung, Speicher, Alarme und Zugriffe.
+c240-214|br|||Vermieter: Zählerfotos einsammeln|Ein wiederholbarer Upload- und Archivablauf für Mieter.
+c240-215|ku|||Digitale Gästemappe|Mehrsprachiger mobiler Gästeleitfaden mit Regeln und Tipps vor Ort.
+c240-216|br|||Infobildschirm im Wartezimmer|Inhalte, Zeitpläne und Aktualisierung aus der Ferne.
+c240-217|bu|||Barcode-Scanner und Etiketten im Laden|Scannen, Etiketten, Vorlagen und Bedienung fürs Team.
+c240-218|bu|||Nach dem Büroumzug: alles neu verbinden|Arbeitsplätze, Telefone, Drucker und gemeinsame Dienste.
+c240-219|bu|||Digitale Anzeigetafel einrichten|Bildschirm, Zeitplan, Vorlagen und Fernsteuerung.
+c240-220|zh||c|Seniorengerechtes Smart Home|Licht, Erinnerungen, Anrufe und Notfallzugang.
+## g14 Chaotische oder unzugängliche Daten
+c252-121|bu|c240-176||Geteilte Ablage aufräumen: Sprint|Dubletten archiviert, eine brauchbare Struktur angelegt.
+c252-122|bu|||Outlook-Postfach aufräumen|Weniger Durcheinander, praktische Ordner und Regeln.
+c252-123|zh|33|c|Foto-Dubletten aufräumen|Sammlungen ordnen und offensichtliche Dubletten entfernen.
+c252-124|bu|56||Excel-Masterliste reparieren|Formeln, Prüfregeln, Struktur und Bedienbarkeit.
+c252-125|bu|58||CSV-Import, der endlich klappt|Daten werden für einen erfolgreichen Import vereinheitlicht.
+c252-126|bu|||Kundendatenbank: Dubletten zusammenführen|Doppelte Einträge zusammengeführt, wichtige Felder vereinheitlicht.
+c252-127|bu|||Einheitliche Dateinamen einführen|Ein klarer Namensstandard für ausgewählte Dokumente.
+c252-128|bu|||Durchsuchbares Archiv aus Scans|Ausgewählte Dokumente als geordnetes, durchsuchbares Archiv.
+c252-129|bu|c240-168||Outlook-Archive retten und zusammenführen|Alte Mailarchive werden gerettet und vereint.
+c252-130|bu|||USB-Sticks und Festplatten zusammenführen|Verstreute Daten werden sicher an einem Ort gebündelt.
+c252-131|bu|c252-39||Cloud-Speicher: Inhaberschaft klären|Private Inhaberschaft finden, wichtige Dateien übertragen.
+c252-132|zh|33|c|Familienarchiv: Grundstruktur|Eine dauerhafte Ordnung für Fotos, Videos und Dokumente.
+## g15 Website neu gestartet oder geändert
+c252-145|we|||Website-Start: technische Checkliste|DNS, SSL, Formulare, Messung, Indexierung und Backups geprüft.
+c252-146|we|59||GA4: Basis-Messung reparieren|Seitenaufrufe und wichtige Conversions werden wieder gemessen.
+c252-147|we|||Google Search Console einrichten|Inhaberschaft bestätigt, Sitemap eingereicht, Indexierung geprüft.
+c252-148|we|||Kaputte Weiterleitungen aufräumen|Wichtige tote Links und Weiterleitungsketten repariert.
+c252-149|we|||Website schneller: Bilder optimieren|Die schwersten Bilder werden komprimiert und ersetzt.
+c252-150|we|||Mobile Darstellung: schnelle Fixes|Die wichtigsten Layoutprobleme auf dem Handy werden behoben.
+c252-151|we|||Spam über das Formular stoppen|Weniger Müll, ohne echte Anfragen zu blockieren.
+c252-152|we|||E-Mail-Absender authentifizieren (SPF, DKIM, DMARC)|Systemmails landen im Postfach statt im Spam.
+c252-153|we|||Website-Backup einrichten|Automatische Sicherung plus Anleitung zur Wiederherstellung.
+c252-154|we|||Website-Überwachung einrichten|Alarme bei Ausfällen und Zertifikatsproblemen.
+c252-155|we|||Analytics in Firmenbesitz übertragen|Messwerkzeuge liegen in Konten, die die Firma kontrolliert.
+c252-156|we|||SEO-Check nach dem Relaunch|Weiterleitungen, Canonicals, Sitemap und Indexierung geprüft.
+## g16 Chaos bei Terminen und Kommunikation
+c252-193|ku|37||WhatsApp Business aufräumen|Labels, Schnellantworten und klare Zuständigkeiten.
+c252-194|bu|||Gemeinsames Team-Postfach einrichten|Team-Mails richtig verteilt, ohne geteilte Passwörter.
+c252-195|ku|40||Automatische Terminerinnerungen|Weniger Ausfälle durch Erinnerungen.
+c252-196|ku|||Rückruf-Formular für verpasste Anrufe|Strukturierte Anfragen, wenn niemand ans Telefon kann.
+c252-197|ku|||Antwortbausteine für häufige Kundenfragen|Freigegebene Antworten auf wiederkehrende Fragen.
+c252-198|bu|c252-34||Team-Kalender aufräumen|Dubletten, Rechte und Sichtbarkeit geklärt.
+c252-199|ku|||Online-Fragebogen vor dem Termin|Nötige Angaben liegen vor dem Termin vor.
+c252-200|ku|c252-87||Mailbox und Urlaubsansage einrichten|Klare Abwesenheits- und Überlaufregeln.
+c252-201|ku|||Mehrsprachige automatische Antworten|Eingangsbestätigungen in der Sprache deiner Kundschaft.
+c252-202|ki|||Anfragen automatisch ins CRM|Website-Anfragen landen in der richtigen Pipeline.
+c252-203|ku|||Benachrichtigung bei neuen Anfragen reparieren|Neue Anfragen erreichen sicher die zuständige Person.
+c252-204|ku|||Ein Kanal statt Nachrichten-Chaos|Verstreute Nachrichten laufen in einem Hauptkanal zusammen.
+## g17 Saison- oder Event-Termin
+c252-205|br|87||Weihnachtsmarkt: Kartenzahlung einrichten|Terminal, Belege und Hinweisschild.
+c252-206|br|||Pop-up-Store: digitales Startpaket|Zahlung, WLAN, QR-Codes und Kontakterfassung.
+c252-207|ku|||Messe: Kontakte digital erfassen|Formulare, QR-Codes und Export für das Nachfassen.
+c252-208|ku|c252-86||Feiertags-Öffnungszeiten überall eintragen|Wichtige Plattformen vor der Schließung aktualisiert.
+c252-209|ku|||Saison-Buchungskalender einrichten|Verfügbarkeiten, Sperrzeiten und Anzahlungen.
+c252-210|ku|||Anmeldeseite für Veranstaltungen|Anmeldung, Bestätigung und Teilnehmerexport.
+c252-211|br|||Event: WLAN und Check-in|Gästezugang und Einlasskontrolle sind eingerichtet.
+c252-212|bu|c240-52||Befristete Zugänge für Aushilfen|Begrenzter Zugriff mit Ablaufdatum.
+c252-213|we|||Kampagnen-Landingpage technisch starten|Formular, Messung und Bestätigungsablauf sind live.
+c252-214|ku|||Saisonkarte: QR-Codes austauschen|Menülinks auf allen Tischmaterialien ersetzt und getestet.
+c252-215|br|||Anmeldeformular für Schule oder Verein|Ein einfacher, strukturierter Anmeldeablauf.
+c252-216|bu|||Jahresabschluss für digitale Ablagen|Dateien des Jahres abschließen, exportieren und ordnen.
+## g18 Zu viele Kleinigkeiten oder laufende Betreuung
+c252-217|bu|||Halber Tag digitales Aufräumen|Eine priorisierte Liste aufgestauter Digital-Ärgernisse wird abgearbeitet.
+c252-218|bu|||Technik-Sprechstunde vor Ort|Mehrere kleine Geräte- und Kontoprobleme werden vor Ort gelöst.
+c252-219|bu|||Digitaler Risiko-Check in 90 Minuten|Ein Ampel-Bericht mit klaren Maßnahmen.
+c252-220|bu|||Wem gehören deine Konten? Kontroll-Check|Bestätigt, dass die Firma, nicht Dienstleister, die kritischen Systeme besitzt.
+c252-221|bu|55||Abo-Verschwendung aufräumen|Ungenutzte Lizenzen und doppelte Tools finden.
+c252-222|bu|||Browser und Lesezeichen aufräumen|Ein aufgeräumter Arbeitsplatz für jeden Tag.
+c252-223|ki|18||Automatisierungs-Suche für kleine Firmen|Eine Automatisierung mit hohem Nutzen finden und umsetzen.
+c252-224|bu|||Arbeitsanweisungen für fünf digitale Routinen|Fünf wiederkehrende Aufgaben, sauber dokumentiert.
+c252-225|bu||r|Monatliche Digital-Betreuung|Eine festgelegte Zahl kleiner Anliegen pro Monat wird erledigt.
+c252-226|bu||r|Quartals-Check für Konten und Zugänge|Admins, Lizenzen und Wiederherstellungswege werden regelmäßig geprüft.
+c252-227|bu|c240-53||Nach der Agentur: Zugänge und Dateien sichern|Assets und Zugänge nach dem Ende einer Zusammenarbeit einsammeln.
+c252-228|bu|||Rettungstag ohne eigene IT|Die dringendsten Technik-Lücken werden stabilisiert.
+c240-221|bu|c252-225|r|Laufende Digital-Hilfe im Monat|Kleine wiederkehrende Technik- und Kontoaufgaben.
+c240-222|we||r|Website-Pflege|Updates, Backups, Erreichbarkeits-Checks und kleine Fixes.
+c240-223|ku||r|Google-Profil-Pflege|Leistungen, Fotos, Beiträge und Öffnungszeiten bleiben aktuell.
+c240-225|bu||r|Monatliche Backup-Kontrolle|Sicherungsstatus prüfen und regelmäßig Wiederherstellung testen.
+c240-226|bu||r|Onboarding-Abo für neue Mitarbeitende|Fester Ablauf für jeden Neustart im Team.
+c240-227|bu||r|Offboarding-Abo für Austritte|Sicherer, fester Ablauf bei jedem Austritt.
+c240-228|ku||r|Speisekarte und Plattformen pflegen|Karte, Zeiten, Lieferdienste und Angebote bleiben aktuell.
+c240-229|mp||r|Marktplatz-Fehler überwachen|Listing- und Feed-Fehler werden überwacht und Routinefälle gelöst.
+c240-230|mp||r|Katalog-Compliance pflegen|Produktdaten und Pflichtdokumente bleiben aktuell.
+c240-231|ku||r|Lokale Sichtbarkeit monatlich pflegen|Google-Profil, Bewertungen, Landingpages und Messung im Blick.
+c240-233|ku||r|Technik-Pflege für Gastgeber|Schlösser, Gästemappe, Buchungsnachrichten und WLAN.
+c240-234|br||r|Digitale Vereinsbetreuung|Konten, Website, Mitglieder-Tools und Übergaben.
+c240-235|bu||r|Software-Verlängerungen im Blick|Abläufe, Verlängerungen, ungenutzte Lizenzen und Inhaberschaft.
+c240-236|ki||r|Betreuung deiner Automationen|No-Code-Abläufe werden gepflegt und repariert.
+c240-237|bu||r|Quartals-Check Cyber-Hygiene|MFA, Backups, Updates, Admins und Vorfälle im Blick.
+c240-238|br||r|Technik-Betreuung für Creator|Links, Buchungen, E-Mail, Shop und Auswertungen.
+c240-239|br||r|Digitale Betreuung für Vermieter|Mieterformulare, Dokumente, Portale und Erinnerungen.
+c240-240|bu||r|Digital-Operator in Teilzeit|Kümmert sich um die kleinen Digitalprobleme und die Abstimmung mit Dienstleistern.
+## g19 Privathaushalt oder Senioren brauchen Hilfe
+c252-241|zh||c|Seniorenhandy sicher einrichten|Vereinfachtes Handy mit Betrugsschutz und Notfallzugang.
+c252-242|zh||c|Fernhilfe für die Familie einrichten|Sichere Bildschirmfreigabe und Hilfezugang.
+c252-243|zh||c|E-Rezept-App einrichten|Die App wird mit deinen Zugangsdaten installiert und eingerichtet.
+c252-244|zh||c|Videoanruf mit einem Tipp|Schnellwahl für Videoanrufe mit der Familie.
+c252-245|zh||c|Handyfotos automatisch sichern|Automatische Sicherung der Handyfotos.
+c252-246|zh||c|Drucker und Scannen zu Hause|Einfaches Drucken und Scannen als PDF.
+c252-247|zh||c|Fernseher und Streaming vereinfachen|Apps, Profile und Fernbedienungen werden übersichtlich.
+c252-248|zh|35|c|Neues Handy: kompletter Umzug|Daten, Nachrichten, Apps und Anmeldungen.
+c252-249|zh|30|c|Nach dem Betrug: Konten sichern|E-Mail, bankbezogene und soziale Konten werden abgesichert.
+c252-250|zh|34|c|Digitaler Nachlass: erste Bestandsaufnahme|Wichtige Konten und Zugangshinweise dokumentiert.
+c252-251|zh|73|c|Technik-Betreuung für Eltern|Regelmäßige Hilfe für deine Eltern.
+c252-252|zh|71|c|Familienarchiv digitalisieren: erster Schwung|Eine ausgewählte erste Menge wird digitalisiert und geordnet.

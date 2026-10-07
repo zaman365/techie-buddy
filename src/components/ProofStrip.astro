@@ -1,0 +1,87 @@
+---
+import { site } from '../lib/data.ts';
+interface Props {
+  limit?: number;
+}
+const { limit = 6 } = Astro.props;
+const items = site.proof.slice(0, limit);
+---
+<div class="proof">
+  <p class="proof__lead">Aus dem eigenen Betrieb, nicht aus dem Lehrbuch</p>
+  <ul class="proof__list" role="list">
+    {
+      items.map((p) => (
+        <li class="proof__item">
+          <span class="proof__value">{p.value}</span>
+          <span class="proof__label">{p.label}</span>
+        </li>
+      ))
+    }
+  </ul>
+</div>
+<style>
+  .proof {
+    display: grid;
+    gap: var(--s-6);
+  }
+  .proof__lead {
+    font-size: var(--fs-14);
+    color: var(--text-2);
+  }
+  .proof__list {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .proof__item {
+    display: grid;
+    align-content: start;
+    gap: 6px;
+    padding: var(--s-5) var(--s-5) var(--s-5) 0;
+  }
+  .proof__item + .proof__item {
+    padding-left: var(--s-5);
+    border-left: 1px solid var(--line);
+  }
+  .proof__value {
+    font-size: var(--fs-24);
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    color: var(--text);
+  }
+  .proof__label {
+    font-size: var(--fs-13);
+    line-height: 1.45;
+    color: var(--text-2);
+  }
+  @media (max-width: 1079px) {
+    .proof__list {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .proof__item:nth-child(4) {
+      border-left: 0;
+      padding-left: 0;
+    }
+    .proof__item:nth-child(n + 4) {
+      border-top: 1px solid var(--line);
+    }
+  }
+  @media (max-width: 600px) {
+    .proof__list {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .proof__item:nth-child(n) {
+      border-left: 0;
+      padding-left: 0;
+      border-top: 0;
+    }
+    .proof__item:nth-child(even) {
+      border-left: 1px solid var(--line);
+      padding-left: var(--s-4);
+    }
+    .proof__item:nth-child(n + 3) {
+      border-top: 1px solid var(--line);
+    }
+  }
+</style>

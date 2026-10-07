@@ -1,0 +1,75 @@
+{
+  "id": "54",
+  "slug": "datev-unternehmen-online",
+  "category": "buero",
+  "categorySlug": "buero-it-daten",
+  "alsoIn": [],
+  "sectors": [
+    "kanzleien-bueros"
+  ],
+  "tier": "next",
+  "audience": "b2b",
+  "name": "DATEV Unternehmen online anbinden",
+  "problem": "Mein Steuerberater will, dass ich DATEV Unternehmen online nutze, aber ich komme mit der Einrichtung nicht klar.",
+  "summary": "Wir richten DATEV Unternehmen online ein: Scan-Ablauf für Belege, Bankanbindung, Routine für den Beleg-Upload und eine Stunde Einweisung. Die Schuhkarton-Buchhaltung hat ein Ende.",
+  "includes": [
+    "Einrichtung des Zugangs mit deiner Steuerberatung",
+    "Bankanbindung",
+    "Scan- und Upload-Ablauf für Belege (Handy und Scanner)",
+    "Routine für wiederkehrende Belege",
+    "1 Stunde Einweisung"
+  ],
+  "excludes": [
+    "Steuerberatung und Buchhaltung",
+    "DATEV-Lizenzkosten",
+    "Nacherfassung alter Belege"
+  ],
+  "needs": [
+    "Freischaltung durch deine Steuerberatung",
+    "Online-Banking-Zugang",
+    "Scanner oder Smartphone"
+  ],
+  "steps": [
+    "Du klärst die Freischaltung mit deiner Steuerberatung.",
+    "Festpreis und Zahlungslink.",
+    "Einrichtung von Bank, Scan und Upload.",
+    "Einweisung und Kurzanleitung."
+  ],
+  "result": "Ein laufender digitaler Belegfluss zu deiner Steuerberatung und eine Kurzanleitung für den Alltag.",
+  "price": {
+    "type": "fixed",
+    "from": 299,
+    "display": "299 €",
+    "note": "Festpreis inkl. 1 Stunde Einweisung",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "72 h",
+  "tags": [],
+  "factNote": null,
+  "guardrail": true,
+  "faq": [
+    {
+      "q": "Arbeitet ihr mit meiner Steuerberatung zusammen?",
+      "a": "Ja, wir stimmen die Einrichtung mit ihr ab. Steuerliche Fragen beantwortet sie, wir kümmern uns um die Technik."
+    },
+    {
+      "q": "Bin ich Steuerberater, kann ich Mandanten schicken?",
+      "a": "Ja. Auf der Partnerseite steht, wie das ohne Provision funktioniert."
+    }
+  ],
+  "related": [
+    "03",
+    "66",
+    "56"
+  ],
+  "seo": {
+    "title": "DATEV Unternehmen online anbinden | TechieBuddy",
+    "description": "Wir richten DATEV Unternehmen online ein: Scan-Ablauf für Belege, Bankanbindung, Routine für den Beleg-Upload und eine Stunde Einweisung."
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g05",
+    "g10"
+  ],
+  "keywords": []
+}

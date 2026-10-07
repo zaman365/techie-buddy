@@ -1,0 +1,77 @@
+---
+import '../styles/tokens.css';
+import '../styles/global.css';
+import '../styles/search.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import CommandPalette from '../components/CommandPalette.astro';
+import { site } from '../lib/data.ts';
+
+export interface Translation {
+  lang: 'de' | 'en' | 'bn';
+  href: string;
+}
+interface Props {
+  title: string;
+  description: string;
+  lang?: 'de' | 'en' | 'bn';
+  noindex?: boolean;
+  ogImage?: string;
+  translations?: Translation[];
+  /** Pages that are not linked publicly (styleguide, legal drafts). */
+  bare?: boolean;
+}
+const { title, description, lang = 'de', noindex = false, ogImage = '/og/default.png', translations = [], bare = false } = Astro.props;
+const canonical = new URL(Astro.url.pathname, site.brand.url).href;
+const fullTitle = title.includes('TechieBuddy') ? title : `${title} | TechieBuddy`;
+const ogUrl = new URL(ogImage, site.brand.url).href;
+const LOCALE = { de: 'de_DE', en: 'en_GB', bn: 'bn_BD' } as const;
+const chromeLang = lang === 'de' ? undefined : 'de';
+---
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
+    {
+      translations.map((t) => (
+        <link rel="alternate" hreflang={t.lang} href={new URL(t.href, site.brand.url).href} />
+      ))
+    }
+    {translations.length > 0 && <link rel="alternate" hreflang="x-default" href={new URL(translations.find((t) => t.lang === 'de')?.href ?? '/', site.brand.url).href} />}
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="TechieBuddy" />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogUrl} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content={LOCALE[lang]} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#070B12" />
+    <meta name="color-scheme" content="dark" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="preload" href="/fonts/geist-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/geist-mono-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <slot name="head" />
+    <noscript><link rel="stylesheet" href="/noscript.css" /></noscript>
+  </head>
+  <body>
+    <a class="skip-link" href="#main" lang={chromeLang}>{lang === 'en' ? 'Skip to content' : 'Zum Inhalt springen'}</a>
+    {!bare && <div lang={chromeLang}><Header /></div>}
+    <main id="main" tabindex="-1">
+      <slot />
+    </main>
+    {!bare && <div lang={chromeLang}><Footer translations={translations} /></div>}
+    <div lang={chromeLang}><CommandPalette /></div>
+    <script>
+      import '../scripts/site.ts';
+    </script>
+  </body>
+</html>

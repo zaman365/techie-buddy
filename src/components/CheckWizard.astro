@@ -1,0 +1,155 @@
+---
+// Client-side self-check (BFSG, Förderung). Questions render as fieldsets; the
+// evaluation runs in the browser (scripts/checks.ts). Nothing is sent anywhere.
+import Icon from './Icon.astro';
+interface Option {
+  value: string;
+  label: string;
+}
+interface Question {
+  id: string;
+  text: string;
+  hint?: string;
+  options: Option[];
+}
+interface Props {
+  id: 'bfsg' | 'foerder';
+  questions: Question[];
+  title: string;
+  links?: Record<string, string>;
+}
+const { id, questions, title, links = {} } = Astro.props;
+---
+<form class="wizard card" data-check={id} data-links={JSON.stringify(links)} novalidate aria-label={title}>
+  <div class="wizard__progress" aria-hidden="true"><span data-progress></span></div>
+  {
+    questions.map((q, i) => (
+      <fieldset class="wizard__q" data-step={i} hidden={i > 0}>
+        <legend class="wizard__legend">
+          <span class="wizard__n mono">
+            Frage {i + 1} von {questions.length}
+          </span>
+          <span class="wizard__text">{q.text}</span>
+        </legend>
+        {q.hint && <p class="field__hint">{q.hint}</p>}
+        <div class="wizard__opts">
+          {q.options.map((o) => (
+            <label class="choice">
+              <input type="radio" name={q.id} value={o.value} required />
+              <span>{o.label}</span>
+            </label>
+          ))}
+        </div>
+      </fieldset>
+    ))
+  }
+  <div class="wizard__actions">
+    <button type="button" class="btn btn--ghost" data-prev hidden><Icon name="arrow-left" />Zurück</button>
+    <button type="button" class="btn btn--primary" data-next>Weiter<Icon name="arrow-right" /></button>
+    <button type="submit" class="btn btn--primary" data-submit hidden>Ergebnis anzeigen</button>
+  </div>
+  <p class="wizard__error" data-error role="alert" hidden>Bitte wähle eine Antwort aus.</p>
+  <div class="wizard__result" data-result tabindex="-1" hidden aria-live="polite"></div>
+  <p class="meta wizard__privacy"><Icon name="lock" size={14} /> Läuft komplett in deinem Browser. Es wird nichts gesendet oder gespeichert.</p>
+</form>
+<style>
+  .wizard {
+    padding: var(--s-8);
+    display: grid;
+    gap: var(--s-6);
+    max-width: 760px;
+  }
+  .wizard__progress {
+    height: 2px;
+    background: var(--line);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  .wizard__progress span {
+    display: block;
+    height: 100%;
+    width: 0;
+    background: var(--accent);
+    transition: width var(--t) var(--ease);
+  }
+  .wizard__q {
+    border: 0;
+    padding: 0;
+    min-width: 0;
+    display: grid;
+    gap: var(--s-4);
+  }
+  .wizard__legend {
+    display: grid;
+    gap: var(--s-2);
+    padding: 0;
+    margin-bottom: var(--s-2);
+  }
+  .wizard__n {
+    font-size: var(--fs-12);
+    color: var(--text-3);
+  }
+  .wizard__text {
+    font-size: var(--fs-24);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.25;
+  }
+  .wizard__opts {
+    display: grid;
+    gap: var(--s-2);
+  }
+  .wizard__actions {
+    display: flex;
+    gap: var(--s-2);
+    justify-content: space-between;
+  }
+  .wizard__actions [data-next],
+  .wizard__actions [data-submit] {
+    margin-left: auto;
+  }
+  .wizard__error {
+    color: #ffb3b3;
+    font-size: var(--fs-14);
+  }
+  .wizard__privacy {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: var(--fs-13);
+  }
+  .wizard__result:focus {
+    outline: none;
+  }
+  .wizard :global(.result) {
+    display: grid;
+    gap: var(--s-4);
+  }
+  .wizard :global(.result__title) {
+    font-size: var(--fs-24);
+  }
+  .wizard :global(.result__text) {
+    color: var(--text-2);
+  }
+  .wizard :global(.result__title)::before {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
+    border-radius: 50%;
+    vertical-align: middle;
+    background: var(--accent);
+  }
+  .wizard :global(.result--ok .result__title)::before {
+    background: var(--ok);
+  }
+  .wizard :global(.result--warn .result__title)::before {
+    background: var(--warn);
+  }
+  @media (max-width: 600px) {
+    .wizard {
+      padding: var(--s-5);
+    }
+  }
+</style>

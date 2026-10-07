@@ -1,0 +1,73 @@
+{
+  "id": "31",
+  "slug": "kinderschutz-einrichten",
+  "category": "zuhause",
+  "categorySlug": "zuhause-familie-energie",
+  "alsoIn": [],
+  "sectors": [
+    "familien-senioren"
+  ],
+  "tier": "catalog",
+  "audience": "b2c",
+  "name": "Kinderschutz auf allen Geräten einrichten",
+  "problem": "Mein Kind hat ein Handy und ich habe keine Ahnung, was es darauf sieht.",
+  "summary": "Wir richten Jugendschutz auf allen Geräten der Familie richtig ein: Family Link oder Bildschirmzeit, Filter im Heimnetz, Einschränkungen für YouTube und TikTok, Spielzeiten. Mit 30 Minuten Erklärung für dich.",
+  "includes": [
+    "Family Link (Android) oder Bildschirmzeit (Apple)",
+    "Filter im Heimnetz (DNS-Filter)",
+    "Einschränkungen für YouTube, TikTok und App-Stores",
+    "Zeitlimits für Spiele und Konsolen",
+    "30 Minuten Erklärung für die Eltern"
+  ],
+  "excludes": [
+    "Überwachung von Nachrichteninhalten",
+    "Hardware wie neue Router",
+    "Pädagogische Beratung"
+  ],
+  "needs": [
+    "Alle Geräte der Kinder und Zugang zu den Eltern-Konten",
+    "Alter der Kinder und eure Regeln"
+  ],
+  "steps": [
+    "Du nennst Geräte und Alter der Kinder.",
+    "Festpreis und Zahlungslink.",
+    "Einrichtung bei dir zu Hause oder per Fernhilfe.",
+    "Erklärung und kurze Anleitung zum Anpassen."
+  ],
+  "result": "Jugendschutz auf allen Geräten, eine Anleitung zum Anpassen und Eltern, die wissen, was eingestellt ist.",
+  "price": {
+    "type": "fixed",
+    "from": 179,
+    "display": "179 €",
+    "note": "pro Familie",
+    "vat": "inkl. MwSt."
+  },
+  "turnaround": "1 Termin oder Fernhilfe",
+  "tags": [],
+  "factNote": null,
+  "guardrail": false,
+  "faq": [
+    {
+      "q": "Kann mein Kind das umgehen?",
+      "a": "Kein Schutz ist perfekt. Wir richten es so ein, dass Umgehungen schwer sind, und zeigen dir, woran du sie erkennst."
+    },
+    {
+      "q": "Kommt ihr zu uns nach Hause?",
+      "a": "In Chemnitz und Umgebung ja. Sonst richten wir es per Fernhilfe ein."
+    }
+  ],
+  "related": [
+    "32",
+    "35",
+    "73"
+  ],
+  "seo": {
+    "title": "Kinderschutz auf allen Geräten einrichten | TechieBuddy",
+    "description": "Wir richten Jugendschutz auf allen Geräten der Familie richtig ein: Family Link oder Bildschirmzeit, Filter im Heimnetz, Einschränkungen für YouTube …"
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g19"
+  ],
+  "keywords": []
+}

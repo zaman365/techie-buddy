@@ -1,0 +1,73 @@
+{
+  "id": "39",
+  "slug": "vorher-nachher-referenzseite",
+  "category": "website",
+  "categorySlug": "website-shop",
+  "alsoIn": [],
+  "sectors": [
+    "handwerk"
+  ],
+  "tier": "catalog",
+  "audience": "b2b",
+  "name": "Referenzseite mit Vorher-Nachher-Fotos",
+  "problem": "Unsere besten Arbeiten verstauben als Fotos in WhatsApp-Chats.",
+  "summary": "Eine Projektgalerie, die für dich verkauft, während du arbeitest: deine 15 besten Aufträge, nach Gewerk sortiert, mit Vorher-Nachher-Bildern und für Google auffindbar.",
+  "includes": [
+    "Auswahl und Aufbereitung von bis zu 15 Projekten",
+    "Vorher-Nachher-Darstellung",
+    "Kurze Texte je Projekt aus deinen Stichpunkten",
+    "Sortierung nach Gewerk oder Leistung",
+    "Einbau in deine Website und Grundlagen für Google"
+  ],
+  "excludes": [
+    "Fotoshooting",
+    "Neubau der Website"
+  ],
+  "needs": [
+    "Fotos deiner Projekte",
+    "Stichpunkte zu jedem Projekt",
+    "Zugang zu deiner Website"
+  ],
+  "steps": [
+    "Du schickst Fotos und Stichpunkte.",
+    "Festpreis und Zahlungslink.",
+    "Aufbereitung, Texte und Einbau.",
+    "Abstimmung mit dir und Livegang."
+  ],
+  "result": "Eine fertige Referenzseite auf deiner Website mit bis zu 15 Projekten.",
+  "price": {
+    "type": "fixed",
+    "from": 349,
+    "display": "349 €",
+    "note": "Festpreis für bis zu 15 Projekte",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "72 h",
+  "tags": [],
+  "factNote": null,
+  "guardrail": false,
+  "faq": [
+    {
+      "q": "Hilft das auch beim Recruiting?",
+      "a": "Ja. Bewerbende sehen, woran sie mitarbeiten würden. Die Seite lässt sich gut mit dem Mitarbeiter-Funnel verbinden."
+    },
+    {
+      "q": "Brauche ich gute Kamerafotos?",
+      "a": "Handyfotos reichen meist. Wir wählen die besten aus und bereiten sie auf."
+    }
+  ],
+  "related": [
+    "21",
+    "36",
+    "25"
+  ],
+  "seo": {
+    "title": "Referenzseite mit Vorher-Nachher-Fotos | TechieBuddy",
+    "description": "Eine Projektgalerie, die für dich verkauft, während du arbeitest: deine 15 besten Aufträge, nach Gewerk sortiert, mit Vorher-Nachher-Bildern und für …"
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g08"
+  ],
+  "keywords": []
+}

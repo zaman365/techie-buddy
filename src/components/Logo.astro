@@ -1,0 +1,32 @@
+---
+// Turquoise rounded square with a navy </> glyph, plus the wordmark.
+interface Props {
+  size?: number;
+  wordmark?: boolean;
+}
+const { size = 28, wordmark = true } = Astro.props;
+---
+<span class="logo">
+  <svg class="logo__mark" width={size} height={size} viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+    <rect width="32" height="32" rx="8" fill="#60D0CF"></rect>
+    <g fill="none" stroke="#0D1B31" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M11 11.5 6.5 16l4.5 4.5"></path>
+      <path d="M21 11.5 25.5 16 21 20.5"></path>
+      <path d="m17.6 9.5-3.2 13"></path>
+    </g>
+  </svg>
+  {wordmark && <span class="logo__word">TechieBuddy</span>}
+</span>
+<style>
+  .logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .logo__word {
+    font-weight: 650;
+    font-size: 1.0625rem;
+    letter-spacing: -0.03em;
+    color: var(--text);
+  }
+</style>

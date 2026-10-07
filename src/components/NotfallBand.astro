@@ -1,0 +1,103 @@
+---
+// Slim red-tinted band for urgent help.
+import Icon from './Icon.astro';
+import PriceLabel from './PriceLabel.astro';
+import { getData, serviceUrl } from '../lib/data.ts';
+interface Props {
+  ids?: string[];
+}
+const { ids = ['22', '10', '26', '30'] } = Astro.props;
+const { serviceById } = await getData();
+const items = ids.map((id) => serviceById.get(id)!);
+---
+<section class="band" aria-labelledby="band-title">
+  <div class="container band__inner">
+    <div class="band__head">
+      <h2 id="band-title" class="band__title"><span class="dot-danger" aria-hidden="true"></span>Gerade passiert? Hilfe noch heute möglich.</h2>
+      <p class="band__text">Start noch am selben Werktag möglich, sobald Zahlung und Zugänge da sind.</p>
+    </div>
+    <ul class="band__list" role="list">
+      {
+        items.map((s) => (
+          <li>
+            <a class="band__item" href={serviceUrl(s)}>
+              <span class="band__name">{s.name}</span>
+              <PriceLabel price={s.price.display} time={s.turnaround} size="s" />
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+    <a class="link-arrow band__all" href="/notfall/">Zur Notfall-Hilfe <Icon name="arrow-right" /></a>
+  </div>
+</section>
+<style>
+  .band {
+    background: linear-gradient(90deg, rgba(255, 107, 107, 0.08), rgba(255, 107, 107, 0.03) 60%, transparent), var(--bg);
+    border-top: 1px solid rgba(255, 107, 107, 0.18);
+    border-bottom: 1px solid rgba(255, 107, 107, 0.18);
+    padding-block: var(--s-12);
+  }
+  .band__inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+    gap: var(--s-6) var(--s-12);
+    align-items: center;
+  }
+  .band__title {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--s-3);
+    font-size: var(--fs-24);
+    letter-spacing: -0.02em;
+  }
+  .band__title :global(.dot-danger) {
+    margin-top: 0.5em;
+  }
+  .band__text {
+    margin-top: var(--s-2);
+    color: var(--text-2);
+    font-size: var(--fs-14);
+  }
+  .band__list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--s-2);
+  }
+  .band__item {
+    display: grid;
+    gap: var(--s-2);
+    padding: var(--s-3) var(--s-4);
+    border: 1px solid var(--line);
+    border-radius: var(--r-16);
+    background: rgba(7, 11, 18, 0.5);
+    text-decoration: none;
+    transition: border-color var(--t-fast) var(--ease);
+  }
+  .band__item:hover {
+    border-color: rgba(255, 107, 107, 0.4);
+  }
+  .band__name {
+    font-size: var(--fs-14);
+    font-weight: 540;
+  }
+  .band__item :global(.pl) {
+    justify-self: start;
+  }
+  .band__all {
+    grid-column: 2;
+    justify-self: end;
+  }
+  @media (max-width: 900px) {
+    .band__inner {
+      grid-template-columns: minmax(0, 1fr);
+    }
+    .band__list {
+      grid-template-columns: minmax(0, 1fr);
+    }
+    .band__all {
+      grid-column: 1;
+      justify-self: start;
+    }
+  }
+</style>

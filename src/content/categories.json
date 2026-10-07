@@ -1,0 +1,422 @@
+[
+  {
+    "id": "compliance",
+    "slug": "compliance",
+    "name": "Compliance & Pflichten",
+    "icon": "shield-check",
+    "order": 1,
+    "short": "Barrierefreiheit, Datenschutz, E-Rechnung, Fristen",
+    "intro": "Gesetzliche und Plattform-Pflichten technisch umgesetzt: Barrierefreiheit, Datenschutz, E-Rechnung, Verpackung, Zeiterfassung, Kasse und Lieferanten-Fragebögen. Wir setzen um, die rechtliche Bewertung bleibt bei deiner Beratung.",
+    "services": [
+      "01",
+      "03",
+      "04",
+      "05",
+      "06",
+      "07",
+      "66",
+      "67",
+      "68",
+      "78"
+    ],
+    "problems": [
+      {
+        "id": "01",
+        "quote": "Das Barrierefreiheitsgesetz gilt seit Juni 2025. Betrifft das meinen Shop überhaupt?"
+      },
+      {
+        "id": "05",
+        "quote": "Mein Meta-Pixel feuert vor der Einwilligung. Was ist sonst noch falsch?"
+      },
+      {
+        "id": "03",
+        "quote": "Mein Steuerberater sagt, ich muss E-Rechnungen empfangen können. Wie geht das technisch?"
+      },
+      {
+        "id": "68",
+        "quote": "Das TSE-Zertifikat meiner Kasse läuft ab, und ich weiß nicht, wie die ELSTER-Meldung geht."
+      },
+      {
+        "id": "78",
+        "quote": "Unser größter Kunde will bis Freitag einen ESG-Fragebogen. Wir wissen nicht, was wir antworten sollen."
+      }
+    ],
+    "counts": {
+      "named": 10,
+      "catalog": 15
+    }
+  },
+  {
+    "id": "marktplaetze",
+    "slug": "amazon-marktplaetze",
+    "name": "Amazon & Marktplätze",
+    "icon": "shopping-bag",
+    "order": 2,
+    "short": "Gesperrte Listings, Varianten, Otto, TikTok Shop",
+    "intro": "Gesperrte Listings, kaputte Varianten, Freischaltungen und neue Verkaufskanäle: Amazon, Otto, Kaufland, TikTok Shop und Google Shopping, gelöst von jemandem, der selbst dort verkauft.",
+    "services": [
+      "02",
+      "08",
+      "09",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "24"
+    ],
+    "problems": [
+      {
+        "id": "02",
+        "quote": "Amazon hat meine Listings wegen fehlender GPSR-Angaben gesperrt."
+      },
+      {
+        "id": "09",
+        "quote": "Meine Varianten sind zerschossen, und die Massenänderung hängt seit Tagen."
+      },
+      {
+        "id": "10",
+        "quote": "Amazon hat mein Verkäuferkonto gesperrt. Jeder Tag kostet Umsatz."
+      },
+      {
+        "id": "11",
+        "quote": "Google Merchant Center hat meinen Shop gesperrt, und ich verstehe die Begründung nicht."
+      },
+      {
+        "id": "24",
+        "quote": "Google Shopping hat die Hälfte meiner Produkte abgelehnt. Fehlende GTINs, sagt der Bericht."
+      }
+    ],
+    "counts": {
+      "named": 10,
+      "catalog": 12
+    }
+  },
+  {
+    "id": "website",
+    "slug": "website-shop",
+    "name": "Website & Shop",
+    "icon": "monitor-smartphone",
+    "order": 3,
+    "short": "Neue Website, gehackte Seite, Speed, Tracking",
+    "intro": "Neue Websites in 48 Stunden, Rettung gehackter Seiten, Ladezeit, Messung und eigene Bestellseiten. Für größere Vorhaben gibt es feste Pakete.",
+    "services": [
+      "21",
+      "22",
+      "23",
+      "27",
+      "28",
+      "39",
+      "45",
+      "59"
+    ],
+    "problems": [
+      {
+        "id": "22",
+        "quote": "Unsere Website ist gehackt, Google warnt vor ihr."
+      },
+      {
+        "id": "21",
+        "quote": "Ich habe seit Jahren keine richtige Website, und die Agentur will sechs Wochen."
+      },
+      {
+        "id": "28",
+        "quote": "Seit Wochen kommen keine Anfragen mehr über die Website. Liegt es an uns?"
+      },
+      {
+        "id": "23",
+        "quote": "Mein Shop lädt ewig, und viele brechen vor dem Kauf ab."
+      },
+      {
+        "id": "59",
+        "quote": "Seit der Umstellung auf GA4 sehe ich meine Zahlen nicht mehr."
+      }
+    ],
+    "counts": {
+      "named": 8,
+      "catalog": 43
+    }
+  },
+  {
+    "id": "ki",
+    "slug": "ki-automatisierung",
+    "name": "KI & Automatisierung",
+    "icon": "sparkles",
+    "order": 4,
+    "short": "Sichtbarkeit in ChatGPT, Bots, Automationen",
+    "intro": "Sichtbarkeit in ChatGPT und anderen KI-Assistenten, Kundenservice-Bots, automatisierte Abläufe und KI-Produktfotos. Pragmatisch eingesetzt, wo es wirklich Zeit spart.",
+    "services": [
+      "16",
+      "17",
+      "18",
+      "19",
+      "20",
+      "FT"
+    ],
+    "problems": [
+      {
+        "id": "16",
+        "quote": "Fragt man ChatGPT nach meinem Produkt, empfiehlt es nur die Konkurrenz."
+      },
+      {
+        "id": "18",
+        "quote": "Wir tippen jede Woche dieselben Daten von einem Programm ins andere."
+      },
+      {
+        "id": "17",
+        "quote": "Wir beantworten jeden Tag dieselben zwanzig Fragen, oft nach Feierabend."
+      },
+      {
+        "id": "20",
+        "quote": "Alle reden über KI. Was davon bringt meinem Betrieb wirklich etwas?"
+      }
+    ],
+    "counts": {
+      "named": 6,
+      "catalog": 4
+    }
+  },
+  {
+    "id": "kunden",
+    "slug": "sichtbarkeit-termine",
+    "name": "Sichtbarkeit, Termine & Bewertungen",
+    "icon": "map-pin",
+    "order": 5,
+    "short": "Google-Profil, Bewertungen, Termine, WhatsApp",
+    "intro": "Gefunden werden, erreichbar sein, Termine füllen: Google-Unternehmensprofil, Bewertungen, WhatsApp, Online-Buchung, Booking.com und Social-Media-Konten.",
+    "services": [
+      "25",
+      "26",
+      "37",
+      "40",
+      "41",
+      "43",
+      "44",
+      "46",
+      "47",
+      "48",
+      "80"
+    ],
+    "problems": [
+      {
+        "id": "25",
+        "quote": "Wer in der Nähe nach uns sucht, findet zuerst die Konkurrenz."
+      },
+      {
+        "id": "26",
+        "quote": "Unser Instagram-Konto wurde gehackt. Meta antwortet nicht."
+      },
+      {
+        "id": "40",
+        "quote": "Jede Woche erscheinen Kunden nicht zum Termin, und der Stuhl bleibt leer."
+      },
+      {
+        "id": "43",
+        "quote": "Zufriedene Kunden bewerten fast nie, unzufriedene immer."
+      },
+      {
+        "id": "41",
+        "quote": "Das Telefon klingelt den ganzen Tag, nur für Terminabsprachen."
+      }
+    ],
+    "counts": {
+      "named": 11,
+      "catalog": 56
+    }
+  },
+  {
+    "id": "buero",
+    "slug": "buero-it-daten",
+    "name": "Büro-IT, Daten & Sicherheit",
+    "icon": "server",
+    "order": 6,
+    "short": "E-Mail, Backup, Excel, DATEV, Sicherheit",
+    "intro": "E-Mail, Backups, Excel- und Datenbank-Rettung, DATEV, Windows-Umstieg, EU-Cloud und Cyber-Versicherung: die Technik, die im Büro einfach laufen muss.",
+    "services": [
+      "29",
+      "51",
+      "52",
+      "53",
+      "54",
+      "55",
+      "56",
+      "57",
+      "58",
+      "79",
+      "81",
+      "82"
+    ],
+    "problems": [
+      {
+        "id": "56",
+        "quote": "Gestern hat die Tabelle noch funktioniert, heute steht überall #BEZUG!."
+      },
+      {
+        "id": "29",
+        "quote": "Der Einzige, der unsere Systeme kannte, hat die Firma verlassen."
+      },
+      {
+        "id": "53",
+        "quote": "Wir haben kein richtiges Backup. Wenn der Rechner stirbt, ist alles weg."
+      },
+      {
+        "id": "54",
+        "quote": "Mein Steuerberater will, dass ich DATEV Unternehmen online nutze, aber ich komme mit der Einrichtung nicht klar."
+      },
+      {
+        "id": "79",
+        "quote": "Die Versicherung will wissen, ob wir MFA und getestete Backups haben. Haben wir nicht."
+      }
+    ],
+    "counts": {
+      "named": 12,
+      "catalog": 141
+    }
+  },
+  {
+    "id": "wachstum",
+    "slug": "foerderung-team-nachfolge",
+    "name": "Förderung, Team & Nachfolge",
+    "icon": "trending-up",
+    "order": 7,
+    "short": "Förderung, Ausschreibungen, Personal, Nachfolge",
+    "intro": "Förderprogramme nutzen, öffentliche Aufträge erschließen, Mitarbeitende gewinnen, internationale Fachkräfte ankommen lassen und die Nachfolge vorbereiten.",
+    "services": [
+      "36",
+      "62",
+      "63",
+      "64",
+      "69",
+      "70",
+      "88",
+      "89",
+      "90"
+    ],
+    "problems": [
+      {
+        "id": "62",
+        "quote": "Ich will digitalisieren, aber 9.000 € kann ich nicht einfach so ausgeben."
+      },
+      {
+        "id": "36",
+        "quote": "Wir finden keine Gesellen. Auf Stellenanzeigen meldet sich niemand."
+      },
+      {
+        "id": "69",
+        "quote": "Ich will meinen Betrieb in zwei Jahren übergeben. Die IT kennt nur ich."
+      },
+      {
+        "id": "64",
+        "quote": "Öffentliche Ausschreibungen wären interessant, aber die Portale sind ein Albtraum."
+      },
+      {
+        "id": "88",
+        "quote": "Ich bin neu in Deutschland. SIM, Bank, Versicherung, ELSTER: Alles ist digital, aber auf Deutsch."
+      }
+    ],
+    "counts": {
+      "named": 9,
+      "catalog": 10
+    }
+  },
+  {
+    "id": "zuhause",
+    "slug": "zuhause-familie-energie",
+    "name": "Zuhause, Familie & Energie",
+    "icon": "house",
+    "order": 8,
+    "short": "Kinderschutz, Betrug, Fotos, Eltern, Solar",
+    "intro": "Für Privathaushalte: Kinderschutz, Familien-Sicherheit, Fotos, digitaler Nachlass, Technik-Betreuung für die Eltern, Balkonkraftwerk, PV und THG-Quote. Alle Preise inklusive Mehrwertsteuer.",
+    "services": [
+      "30",
+      "31",
+      "32",
+      "33",
+      "34",
+      "35",
+      "65",
+      "71",
+      "73",
+      "74",
+      "75",
+      "76",
+      "77"
+    ],
+    "problems": [
+      {
+        "id": "73",
+        "quote": "Meine Eltern rufen bei jeder App-Frage an, und ich wohne 400 km weg."
+      },
+      {
+        "id": "30",
+        "quote": "Ich habe auf einen Link geklickt und meine Bankdaten eingegeben. Was jetzt?"
+      },
+      {
+        "id": "31",
+        "quote": "Mein Kind hat ein Handy und ich habe keine Ahnung, was es darauf sieht."
+      },
+      {
+        "id": "33",
+        "quote": "30.000 Fotos auf drei Handys, zwei Laptops und vier USB-Sticks. Und eine Festplatte macht komische Geräusche."
+      },
+      {
+        "id": "74",
+        "quote": "Das Balkonkraftwerk hängt, aber vor dem Marktstammdatenregister drücke ich mich."
+      }
+    ],
+    "counts": {
+      "named": 13,
+      "catalog": 11
+    }
+  },
+  {
+    "id": "branchen-pakete",
+    "slug": "branchen-loesungen",
+    "name": "Spezial-Lösungen für Branchen",
+    "icon": "layers",
+    "order": 9,
+    "short": "Handwerk, Praxen, Vereine, Creator, Hofläden",
+    "intro": "Fertige Digital-Pakete für Betriebe mit eigenen Abläufen: Handwerk, Praxen, Vereine und Gemeinden, Creator, Bestatter, Jagd, Reitställe, Fahrschulen, Hofläden und Marktstände.",
+    "services": [
+      "38",
+      "42",
+      "49",
+      "50",
+      "60",
+      "61",
+      "72",
+      "83",
+      "84",
+      "85",
+      "86",
+      "87"
+    ],
+    "problems": [
+      {
+        "id": "38",
+        "quote": "Angebote schreiben wir in Word, Rechnungen in Excel und Termine im Kopf."
+      },
+      {
+        "id": "42",
+        "quote": "Unsere Patienten füllen Papierbögen aus, die wir danach kaum lesen können."
+      },
+      {
+        "id": "49",
+        "quote": "Unsere Mitgliederliste ist eine Excel-Datei, die nur der Kassenwart versteht."
+      },
+      {
+        "id": "85",
+        "quote": "Wir sind ausgebucht und ertrinken in Telefonaten und Papier."
+      },
+      {
+        "id": "87",
+        "quote": "Auf dem Wochenmarkt fragen ständig Leute, ob sie mit Karte zahlen können."
+      }
+    ],
+    "counts": {
+      "named": 12,
+      "catalog": 22
+    }
+  }
+]

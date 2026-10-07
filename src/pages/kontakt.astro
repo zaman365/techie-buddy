@@ -1,0 +1,85 @@
+---
+import Base from '../layouts/Base.astro';
+import ContactForm from '../components/ContactForm.astro';
+import Icon from '../components/Icon.astro';
+import { site } from '../lib/data.ts';
+---
+<Base
+  title="Kontakt: Problem schildern, Festpreis bekommen"
+  description="Schildere dein digitales Problem in ein paar Sätzen. Du bekommst Umfang, Festpreis und Lieferzeit. Per E-Mail, auf Deutsch, Englisch oder Bengali."
+  translations={[
+    { lang: 'de', href: '/kontakt/' },
+    { lang: 'en', href: '/en/contact/' }
+  ]}
+>
+  <div class="container page-top">
+    <div class="layout">
+      <div class="intro">
+        <h1>Schreib uns, was los ist.</h1>
+        <p class="lede">Ein paar Sätze reichen. Du bekommst eine Antwort mit Umfang, Festpreis und Lieferzeit. Screenshots kannst du in der E-Mail anhängen.</p>
+        <dl class="facts">
+          <div><dt><Icon name="mail" />E-Mail</dt><dd><a href={`mailto:${site.contact.email}`}>{site.contact.email}</a></dd></div>
+          <div><dt><Icon name="clock" />Erreichbar</dt><dd>{site.contact.hours}</dd></div>
+          <div><dt><Icon name="map-pin" />Standort</dt><dd>{site.contact.location}. {site.contact.serviceArea}.</dd></div>
+          <div><dt><Icon name="languages" />Sprachen</dt><dd>Deutsch, English, <span lang="bn">বাংলা</span></dd></div>
+        </dl>
+        {site.contact.whatsapp && <a class="btn btn--secondary" href={`https://wa.me/${site.contact.whatsapp}`} rel="noopener">WhatsApp</a>}
+        <p class="meta">Für Festpreis-Leistungen brauchst du keinen Termin. Für Projekte und Förderprojekte gibt es ein kostenloses Erstgespräch.</p>
+      </div>
+      <ContactForm />
+    </div>
+  </div>
+</Base>
+<script>
+  import '../scripts/contact.ts';
+</script>
+<style>
+  .layout {
+    display: grid;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    gap: var(--s-12);
+    align-items: start;
+    margin-bottom: var(--s-20);
+  }
+  .intro {
+    display: grid;
+    gap: var(--s-6);
+    position: sticky;
+    top: 110px;
+  }
+  .facts {
+    display: grid;
+    gap: var(--s-3);
+    padding-block: var(--s-5);
+    border-block: 1px solid var(--line);
+  }
+  .facts div {
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    gap: var(--s-3);
+    font-size: var(--fs-14);
+  }
+  .facts dt {
+    display: flex;
+    align-items: center;
+    gap: var(--s-2);
+    color: var(--text-2);
+  }
+  .facts a {
+    color: var(--text);
+  }
+  @media (max-width: 960px) {
+    .layout {
+      grid-template-columns: minmax(0, 1fr);
+    }
+    .intro {
+      position: static;
+    }
+  }
+  @media (max-width: 480px) {
+    .facts div {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 2px;
+    }
+  }
+</style>

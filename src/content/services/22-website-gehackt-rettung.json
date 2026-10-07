@@ -1,0 +1,86 @@
+{
+  "id": "22",
+  "slug": "website-gehackt-rettung",
+  "category": "website",
+  "categorySlug": "website-shop",
+  "alsoIn": [],
+  "sectors": [
+    "online-handel",
+    "handwerk",
+    "praxen-salons"
+  ],
+  "tier": "catalog",
+  "audience": "b2b",
+  "name": "Website gehackt oder kaputt: Rettung in 24 h",
+  "problem": "Unsere Website ist gehackt, Google warnt vor ihr.",
+  "summary": "Wir bereinigen gehackte WordPress-Seiten, entfernen Schadcode, beantragen die Löschung von Warnungen und härten die Seite gegen den nächsten Angriff. Auch wenn die Seite nur noch weiß ist.",
+  "includes": [
+    "Sicherung des aktuellen Zustands als Beweis",
+    "Entfernung von Schadcode und unbekannten Nutzern",
+    "Wiederherstellung einer sauberen Version",
+    "Antrag auf Entfernung von Google-Warnungen",
+    "Härtung: Updates, Passwörter, Zwei-Faktor-Anmeldung",
+    "Bericht mit Ursache und Vorbeugung"
+  ],
+  "excludes": [
+    "Neubau der Website",
+    "Datenschutzrechtliche Meldung (wir liefern die technischen Fakten dafür)",
+    "Garantie, dass Suchmaschinen sofort reagieren"
+  ],
+  "needs": [
+    "Zugang zu Hosting, WordPress-Admin und Domain",
+    "Wann es dir aufgefallen ist und was du siehst"
+  ],
+  "steps": [
+    "Du schilderst, was du siehst.",
+    "Festpreis und Zahlungslink.",
+    "Sicherung, Bereinigung, Wiederherstellung und Härtung.",
+    "Bericht und Übergabe neuer Zugangsdaten."
+  ],
+  "result": "Eine saubere, aktualisierte Website, neue Zugangsdaten und ein Bericht, was passiert ist und wie es nicht wieder passiert.",
+  "price": {
+    "type": "fixed",
+    "from": 349,
+    "display": "349 €",
+    "note": "Festpreis pro Website",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "24 h",
+  "tags": [
+    "notfall"
+  ],
+  "factNote": null,
+  "guardrail": false,
+  "faq": [
+    {
+      "q": "Nur WordPress?",
+      "a": "Schwerpunkt ist WordPress. Joomla, Typo3 und andere Systeme prüfen wir vor der Zahlung."
+    },
+    {
+      "q": "Muss ich den Vorfall melden?",
+      "a": "Wenn personenbezogene Daten betroffen sind, kann eine Meldepflicht bestehen. Das klärst du mit deiner Datenschutz- oder Rechtsberatung; wir liefern die technischen Fakten."
+    }
+  ],
+  "related": [
+    "28",
+    "27",
+    "53"
+  ],
+  "seo": {
+    "title": "Website gehackt oder kaputt: Rettung in 24 h | TechieBuddy",
+    "description": "Wir bereinigen gehackte WordPress-Seiten, entfernen Schadcode, beantragen die Löschung von Warnungen und härten die Seite gegen den nächsten Angriff."
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g02",
+    "g12"
+  ],
+  "keywords": [
+    "Website zeigt nur noch weiße Seite",
+    "Website white-screen emergency",
+    "Website ist offline",
+    "Website down emergency",
+    "Verdacht auf gehackte Website",
+    "Suspected website hack triage"
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "id": "07",
+  "slug": "eudr-readiness-check",
+  "category": "compliance",
+  "categorySlug": "compliance",
+  "alsoIn": [],
+  "sectors": [
+    "online-handel"
+  ],
+  "tier": "catalog",
+  "audience": "b2b",
+  "name": "EUDR-Check: Betrifft dich die Entwaldungsverordnung?",
+  "problem": "Ich verkaufe Möbel und Papierwaren. Fällt das unter die EUDR, und was muss ich vorbereiten?",
+  "summary": "Wir prüfen, welche deiner Produkte unter die EU-Entwaldungsverordnung fallen, welche Geodaten nötig sind und wie du die Sorgfaltserklärung vorbereitest. Du bekommst einen klaren Plan mit Fristen.",
+  "includes": [
+    "Produkt-Check: Welche Artikel und Zolltarifnummern sind betroffen?",
+    "Übersicht der nötigen Geolokalisierungs- und Lieferantendaten",
+    "Vorbereitung der Sorgfaltserklärung oder der vereinfachten Erklärung für Kleinst- und Kleinunternehmen",
+    "Fristen-Plan für dein Unternehmen",
+    "Vorlage für Lieferantenanfragen"
+  ],
+  "excludes": [
+    "Rechtliche Bewertung im Einzelfall",
+    "Beschaffung der Daten bei deinen Lieferanten",
+    "Abgabe der Erklärung in deinem Namen"
+  ],
+  "needs": [
+    "Produktliste mit Material und, falls vorhanden, Zolltarifnummern",
+    "Angaben zu Lieferanten und Herkunftsländern",
+    "Unternehmensgröße für die Fristen-Einordnung"
+  ],
+  "steps": [
+    "Du schickst Produktliste und Lieferantendaten.",
+    "Festpreis und Zahlungslink.",
+    "Wir ordnen Produkte zu und erarbeiten Datenbedarf und Fristen.",
+    "Übergabe von Bericht, Plan und Vorlagen."
+  ],
+  "result": "Ein Bericht mit betroffenen Produkten, Datenbedarf, deinem Fristen-Plan und einer Vorlage für Lieferantenanfragen.",
+  "price": {
+    "type": "fixed",
+    "from": 249,
+    "display": "249 €",
+    "note": "Festpreis für den Check",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "72 h",
+  "tags": [
+    "pflicht",
+    "erprobt"
+  ],
+  "factNote": "Die EUDR-Fristen wurden aufgeteilt: 30. Dezember 2026 für große und mittlere Marktteilnehmer (und Kleinst- und Kleinunternehmen, die bereits unter die EU-Holzhandelsverordnung fallen), 30. Juni 2027 für alle anderen Kleinst- und Kleinunternehmen. Der genaue Produktumfang wird je Artikel geprüft.",
+  "guardrail": true,
+  "faq": [
+    {
+      "q": "Welche Produkte sind betroffen?",
+      "a": "Die Verordnung erfasst unter anderem Holz, Papier, Kautschuk, Kaffee, Kakao, Soja, Palmöl und Rinder sowie daraus hergestellte Produkte. Welche deiner Artikel konkret betroffen sind, prüfen wir anhand der Produktliste."
+    },
+    {
+      "q": "Ab wann gilt das für mich?",
+      "a": "Das hängt von deiner Unternehmensgröße ab. Den passenden Termin findest du im Pflichten-Kalender und im Bericht."
+    }
+  ],
+  "related": [
+    "06",
+    "78",
+    "02"
+  ],
+  "seo": {
+    "title": "EUDR-Check: Betrifft dich die Entwaldungsverordnung?",
+    "description": "Wir prüfen, welche deiner Produkte unter die EU-Entwaldungsverordnung fallen, welche Geodaten nötig sind und wie du die Sorgfaltserklärung vorbereitest."
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g06"
+  ],
+  "keywords": []
+}

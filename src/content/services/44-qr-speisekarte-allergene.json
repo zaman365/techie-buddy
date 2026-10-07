@@ -1,0 +1,76 @@
+{
+  "id": "44",
+  "slug": "qr-speisekarte-allergene",
+  "category": "kunden",
+  "categorySlug": "sichtbarkeit-termine",
+  "alsoIn": [],
+  "sectors": [
+    "gastronomie-hotellerie"
+  ],
+  "tier": "catalog",
+  "audience": "b2b",
+  "name": "QR-Speisekarte mit Allergen-Kennzeichnung",
+  "problem": "Unsere gedruckte Karte ist veraltet, und bei den Allergenen sind wir unsicher.",
+  "summary": "Eine digitale Speisekarte, sofort änderbar, mit sauber umgesetzter Kennzeichnung von Allergenen und Zusatzstoffen nach LMIV. Dazu QR-Aufsteller für die Tische.",
+  "includes": [
+    "Digitale Speisekarte auf deiner Domain oder Seite",
+    "Kennzeichnung von Allergenen und Zusatzstoffen",
+    "QR-Aufsteller als Druckdatei",
+    "Einfache Aktualisierung durch dich",
+    "Auf Wunsch: Fotos fürs Google-Profil und Bewertungs-QR"
+  ],
+  "excludes": [
+    "Lebensmittelrechtliche Prüfung deiner Angaben",
+    "Druckkosten",
+    "Bestellfunktion (dafür gibt es die eigene Bestellseite)"
+  ],
+  "needs": [
+    "Aktuelle Karte mit Preisen",
+    "Allergen- und Zusatzstoffangaben je Gericht"
+  ],
+  "steps": [
+    "Du schickst Karte und Angaben.",
+    "Festpreis und Zahlungslink.",
+    "Aufbau und Abstimmung mit dir.",
+    "Livegang mit QR-Dateien."
+  ],
+  "result": "Eine digitale Karte mit Kennzeichnung, druckfertige QR-Aufsteller und eine Anleitung zum Ändern.",
+  "price": {
+    "type": "fixed",
+    "from": 199,
+    "display": "199 €",
+    "note": "Festpreis",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "48 h",
+  "tags": [],
+  "factNote": null,
+  "guardrail": true,
+  "faq": [
+    {
+      "q": "Prüft ihr meine Allergenangaben?",
+      "a": "Nein. Die Angaben kommen von dir. Wir sorgen dafür, dass sie vollständig und gut lesbar dargestellt werden."
+    },
+    {
+      "q": "Kann ich Preise selbst ändern?",
+      "a": "Ja, ohne Technikkenntnisse. Wir zeigen dir, wie."
+    }
+  ],
+  "related": [
+    "45",
+    "68",
+    "43"
+  ],
+  "seo": {
+    "title": "QR-Speisekarte mit Allergen-Kennzeichnung | TechieBuddy",
+    "description": "Eine digitale Speisekarte, sofort änderbar, mit sauber umgesetzter Kennzeichnung von Allergenen und Zusatzstoffen nach LMIV."
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g13"
+  ],
+  "keywords": [
+    "QR-Speisekarte starten",
+    "QR menu launch"
+  ]
+}

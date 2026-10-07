@@ -1,0 +1,279 @@
+---
+// Component reference. noindex and excluded from the sitemap.
+import Base from '../layouts/Base.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+import PriceLabel from '../components/PriceLabel.astro';
+import Badge from '../components/Badge.astro';
+import Button from '../components/Button.astro';
+import TicketCard from '../components/TicketCard.astro';
+import ProblemTile from '../components/ProblemTile.astro';
+import ServiceRow from '../components/ServiceRow.astro';
+import Timeline from '../components/Timeline.astro';
+import Accordion from '../components/Accordion.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import ProofStrip from '../components/ProofStrip.astro';
+import BentoTile from '../components/BentoTile.astro';
+import CatalogTable from '../components/CatalogTable.astro';
+import CheckWizard from '../components/CheckWizard.astro';
+import Testimonial from '../components/Testimonial.astro';
+import Icon from '../components/Icon.astro';
+import Logo from '../components/Logo.astro';
+import ListingVignette from '../components/vignettes/ListingVignette.astro';
+import ConsentVignette from '../components/vignettes/ConsentVignette.astro';
+import AiAnswerVignette from '../components/vignettes/AiAnswerVignette.astro';
+import CalendarVignette from '../components/vignettes/CalendarVignette.astro';
+import InvoiceVignette from '../components/vignettes/InvoiceVignette.astro';
+import FlatFileVignette from '../components/vignettes/FlatFileVignette.astro';
+import { getData, site } from '../lib/data.ts';
+
+const { serviceById, moments, categoryById, catalogListed } = await getData();
+const swatches = [
+  ['--bg', '#070B12'],
+  ['--bg-raised', '#0B111C'],
+  ['--surface', '#0F1726'],
+  ['--surface-2', '#141F33'],
+  ['--navy', '#0D1B31'],
+  ['--text', '#EEF2F7'],
+  ['--text-2', '#A3AFC2'],
+  ['--text-3', '#7D8BA1'],
+  ['--accent', '#60D0CF'],
+  ['--accent-hover', '#8FE3E1'],
+  ['--accent-deep', '#2FA3A1'],
+  ['--warn', '#FFB45C'],
+  ['--danger', '#FF6B6B'],
+  ['--ok', '#5EE3A1']
+];
+const sizes = ['88', '64', '48', '38', '30', '24', '20', '18', '16', '14', '13', '12'];
+---
+<Base title="Styleguide" description="Komponenten-Referenz für techiebuddy.de." noindex>
+  <div class="container page-top sg">
+    <SectionHeader level="h1" title="Styleguide" text="Die Bausteine von techiebuddy.de. Diese Seite ist nicht verlinkt und wird nicht indexiert." />
+
+    <section class="sg__block" aria-labelledby="sg-color">
+      <h2 id="sg-color">Farben</h2>
+      <ul role="list" class="sg__swatches">
+        {
+          swatches.map(([name, hex]) => (
+            <li>
+              <span class={`sg__swatch sw-${name.slice(2)}`} />
+              <span class="mono">{name}</span>
+              <span class="meta mono">{hex}</span>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+
+    <section class="sg__block" aria-labelledby="sg-type">
+      <h2 id="sg-type">Typografie</h2>
+      <p class="display">Dein digitales Problem.</p>
+      <ul role="list" class="sg__scale">
+        {sizes.map((s) => <li class={`fs-${s}`}><span class="mono meta">{s}</span> Klarer Festpreis. Sauber gelöst.</li>)}
+      </ul>
+      <p class="mono">0123456789 · 1.499 € · 24–48 h · ⌘K</p>
+    </section>
+
+    <section class="sg__block" aria-labelledby="sg-logo">
+      <h2 id="sg-logo">Logo und Icons</h2>
+      <div class="cluster"><Logo size={40} /><Logo size={28} wordmark={false} /></div>
+      <div class="cluster sg__icons">
+        {['shield-check', 'shopping-bag', 'monitor-smartphone', 'sparkles', 'map-pin', 'server', 'trending-up', 'house', 'layers', 'search', 'check', 'arrow-right'].map((i) => <Icon name={i} size={20} />)}
+      </div>
+    </section>
+
+    <section class="sg__block" aria-labelledby="sg-pl">
+      <h2 id="sg-pl">PriceLabel</h2>
+      <div class="cluster">
+        <PriceLabel price="149 €" time="24 h" size="s" />
+        <PriceLabel price="ab 149 €" time="48 h" />
+        <PriceLabel price="79–149 €" time="24–48 h" />
+        <PriceLabel price="49 €/Monat" time="laufend" />
+        <PriceLabel price="599 € + 49 €/Monat" time="1 Woche" />
+        <PriceLabel price="5.000–10.000 €" time="je nach Förderverfahren" />
+        <PriceLabel price="299 €" time="72 h" size="l" />
+      </div>
+    </section>
+
+    <section class="sg__block" aria-labelledby="sg-btn">
+      <h2 id="sg-btn">Buttons und Badges</h2>
+      <div class="cluster">
+        <Button variant="primary">Problem schildern</Button>
+        <Button variant="secondary">Anfragen</Button>
+        <Button variant="ghost" iconAfter="arrow-right">Alle Leistungen ansehen</Button>
+        <Button variant="primary" size="sm">Jetzt buchen</Button>
+        <Button variant="secondary" size="lg" icon="search">Suchen</Button>
+      </div>
+      <div class="cluster sg__gap">
+        <Badge tag="notfall" /><Badge tag="abo" /><Badge tag="pflicht" /><Badge tag="erprobt" /><Badge label="Leistung mit Detailseite" variant="detail" /><span class="status">Gelöst</span><span class="status status--wip">In Arbeit</span>
+      </div>
+    </section>
+
+    <section class="sg__block" aria-labelledby="sg-ticket">
+      <h2 id="sg-ticket">TicketCard</h2>
+      <div class="grid-2">
+        <TicketCard service={serviceById.get('02')!} />
+        <TicketCard service={serviceById.get('73')!} />
+      </div>
+    </section>
+
+    <section class="sg__block" aria-labelledby="sg-rows">
+      <h2 id="sg-rows">ServiceRow und ProblemTile</h2>
+      <div class="hairline-list">
+        <ServiceRow service={serviceById.get('56')!} showTags />
+        <ServiceRow service={serviceById.get('26')!} showTags />
+      </div>
+      <div class="sg__tiles">{moments.slice(0, 4).map((m) => <ProblemTile moment={m} />)}</div>
+    </section>
+
+    <section class="sg__block" aria-labelledby="sg-bento">
+      <h2 id="sg-bento">BentoTile und Vignetten</h2>
+      <div class="sg__bento">
+        <BentoTile category={categoryById.get('compliance')!} size="lg"><ConsentVignette /></BentoTile>
+        <BentoTile category={categoryById.get('marktplaetze')!} size="lg"><ListingVignette /></BentoTile>
+        <BentoTile category={categoryById.get('ki')!}><AiAnswerVignette /></BentoTile>
+        <BentoTile category={categoryById.get('kunden')!}><CalendarVignette /></BentoTile>
+        <BentoTile category={categoryById.get('buero')!}><InvoiceVignette /></BentoTile>
+        <BentoTile category={categoryById.get('website')!}><FlatFileVignette /></BentoTile>
+      </div>
+    </section>
+
+    <section class="sg__block" aria-labelledby="sg-tl">
+      <h2 id="sg-tl">Timeline</h2>
+      <Timeline steps={site.process} />
+    </section>
+
+    <section class="sg__block" aria-labelledby="sg-table">
+      <h2 id="sg-table">DataTable</h2>
+      <CatalogTable rows={catalogListed.slice(0, 4)} caption="Beispielzeilen aus dem Katalog" />
+    </section>
+
+    <section class="sg__block" aria-labelledby="sg-acc">
+      <h2 id="sg-acc">Accordion, Breadcrumb, Hinweise</h2>
+      <Breadcrumb items={[{ label: 'Leistungen', href: '/leistungen/' }, { label: 'Styleguide' }]} />
+      <div class="sg__gap"><Accordion items={site.faq.slice(0, 3)} /></div>
+      <div class="note sg__gap"><Icon name="info" /><p><strong>Hinweis.</strong> {site.guardrail}</p></div>
+      <div class="note note--fact sg__gap"><Icon name="calendar" /><p><strong>Stand {site.asOf.label}.</strong> Fakten werden datiert geprüft.</p></div>
+    </section>
+
+    <section class="sg__block" aria-labelledby="sg-proof">
+      <h2 id="sg-proof">ProofStrip</h2>
+      <ProofStrip />
+    </section>
+
+    <section class="sg__block" aria-labelledby="sg-wiz">
+      <h2 id="sg-wiz">CheckWizard</h2>
+      <CheckWizard
+        id="bfsg"
+        title="Beispiel-Check"
+        questions={[
+          { id: 'a', text: 'Verkaufst du an Verbraucher?', options: [{ value: 'ja', label: 'Ja' }, { value: 'nein', label: 'Nein' }] },
+          { id: 'b', text: 'Hast du weniger als 10 Beschäftigte?', options: [{ value: 'ja', label: 'Ja' }, { value: 'nein', label: 'Nein' }] }
+        ]}
+      />
+    </section>
+
+    <section class="sg__block" aria-labelledby="sg-forms">
+      <h2 id="sg-forms">Formulare</h2>
+      <div class="sg__form">
+        <div class="field"><label class="field__label" for="sg-name">Name</label><input class="input" id="sg-name" type="text" placeholder="Max Mustermann" /></div>
+        <div class="field"><label class="field__label" for="sg-sel">Leistung</label><select class="select" id="sg-sel"><option>Anderes Problem</option></select></div>
+        <div class="field"><label class="field__label" for="sg-msg">Was ist passiert?</label><textarea class="textarea" id="sg-msg"></textarea><span class="field__hint">Ein paar Sätze reichen.</span></div>
+      </div>
+    </section>
+
+    <section class="sg__block" aria-labelledby="sg-tm">
+      <h2 id="sg-tm">Testimonial</h2>
+      <p class="muted">Gebaut, aber ohne echte Stimmen leer. Es werden keine Bewertungen erfunden.</p>
+      <Testimonial items={[]} />
+    </section>
+  </div>
+</Base>
+<style>
+  .sg {
+    padding-bottom: var(--s-20);
+  }
+  .sg__block {
+    padding-block: var(--s-12);
+    border-top: 1px solid var(--line);
+    display: grid;
+    gap: var(--s-6);
+  }
+  .sg__block > h2 {
+    font-size: var(--fs-24);
+  }
+  .sg__swatches {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: var(--s-4);
+  }
+  .sg__swatches li {
+    display: grid;
+    gap: 4px;
+    font-size: var(--fs-13);
+  }
+  .sg__swatch {
+    display: block;
+    height: 56px;
+    border-radius: var(--r-10);
+    border: 1px solid var(--line-2);
+  }
+  .sw-bg { background: var(--bg); }
+  .sw-bg-raised { background: var(--bg-raised); }
+  .sw-surface { background: var(--surface); }
+  .sw-surface-2 { background: var(--surface-2); }
+  .sw-navy { background: var(--navy); }
+  .sw-text { background: var(--text); }
+  .sw-text-2 { background: var(--text-2); }
+  .sw-text-3 { background: var(--text-3); }
+  .sw-accent { background: var(--accent); }
+  .sw-accent-hover { background: var(--accent-hover); }
+  .sw-accent-deep { background: var(--accent-deep); }
+  .sw-warn { background: var(--warn); }
+  .sw-danger { background: var(--danger); }
+  .sw-ok { background: var(--ok); }
+  .sg__scale {
+    display: grid;
+    gap: var(--s-2);
+    overflow: hidden;
+  }
+  .sg__scale li {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+  }
+  .fs-88 { font-size: var(--fs-88); font-weight: 600; letter-spacing: -0.045em; }
+  .fs-64 { font-size: var(--fs-64); font-weight: 600; letter-spacing: -0.04em; }
+  .fs-48 { font-size: var(--fs-48); font-weight: 600; }
+  .fs-38 { font-size: var(--fs-38); font-weight: 600; }
+  .fs-30 { font-size: var(--fs-30); font-weight: 600; }
+  .fs-24 { font-size: var(--fs-24); font-weight: 600; }
+  .fs-20 { font-size: var(--fs-20); }
+  .fs-18 { font-size: var(--fs-18); }
+  .fs-16 { font-size: var(--fs-16); }
+  .fs-14 { font-size: var(--fs-14); }
+  .fs-13 { font-size: var(--fs-13); }
+  .fs-12 { font-size: var(--fs-12); }
+  .sg__icons {
+    color: var(--text-2);
+  }
+  .sg__gap {
+    margin-top: var(--s-4);
+  }
+  .sg__tiles {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: var(--s-3);
+  }
+  .sg__bento {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
+    gap: var(--s-4);
+  }
+  .sg__form {
+    display: grid;
+    gap: var(--s-4);
+    max-width: 520px;
+  }
+</style>

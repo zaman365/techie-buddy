@@ -1,0 +1,63 @@
+---
+// Decorative: an AI assistant answer that lists competitors (generic names, no logos).
+---
+<div class="vg" aria-hidden="true">
+  <p class="q">Welcher Anbieter für Leinenhemden ist gut?</p>
+  <div class="a">
+    <span class="av"></span>
+    <div>
+      <p>Empfehlenswert sind zum Beispiel:</p>
+      <ol>
+        <li>Marke A <span class="tag">genannt</span></li>
+        <li>Marke B <span class="tag">genannt</span></li>
+        <li>Deine Marke <span class="tag tag--miss">fehlt</span></li>
+      </ol>
+    </div>
+  </div>
+</div>
+<style>
+  .vg {
+    border: 1px solid var(--line-2);
+    border-radius: var(--r-10);
+    background: rgba(7, 11, 18, 0.6);
+    padding: 12px;
+    font-size: 12px;
+    display: grid;
+    gap: 10px;
+  }
+  .q {
+    justify-self: end;
+    max-width: 85%;
+    padding: 6px 10px;
+    border-radius: 10px 10px 2px 10px;
+    background: var(--surface-2);
+    color: var(--text);
+  }
+  .a {
+    display: grid;
+    grid-template-columns: 18px 1fr;
+    gap: 8px;
+    color: var(--text-2);
+  }
+  .av {
+    width: 18px;
+    height: 18px;
+    border-radius: 6px;
+    background: conic-gradient(from 90deg, var(--accent-deep), #3b4a66, var(--accent-deep));
+  }
+  ol {
+    padding-left: 16px;
+    margin-top: 4px;
+    display: grid;
+    gap: 3px;
+  }
+  .tag {
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    color: var(--text-3);
+    margin-left: 4px;
+  }
+  .tag--miss {
+    color: var(--warn);
+  }
+</style>

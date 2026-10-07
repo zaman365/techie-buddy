@@ -1,0 +1,84 @@
+---
+import Base from '../../layouts/Base.astro';
+import SectionHeader from '../../components/SectionHeader.astro';
+import Icon from '../../components/Icon.astro';
+import DeadlineStrip from '../../components/DeadlineStrip.astro';
+const items = [
+  { href: '/wissen/pflichten-kalender/', title: 'Pflichten-Kalender', text: 'Gesetzliche Fristen von 2025 bis 2028: wer betroffen ist, was zu tun ist, mit Quelle und Stand.', icon: 'calendar' },
+  { href: '/wissen/bfsg-check/', title: 'BFSG-Check', text: 'Gilt das Barrierefreiheitsstärkungsgesetz für dich? Sieben Fragen, Ergebnis sofort, nichts wird gesendet.', icon: 'accessibility' },
+  { href: '/wissen/foerder-check/', title: 'Förder-Check', text: 'Passt dein Vorhaben zur Digitalisierungsförderung in Sachsen? Fünf Fragen, Orientierung in einer Minute.', icon: 'hand-coins' },
+  { href: '/preise/', title: 'Preisübersicht', text: 'Alle Festpreise in einer sortierbaren Tabelle.', icon: 'receipt-euro' }
+];
+---
+<Base title="Wissen: Fristen, Checks und Preise" description="Pflichten-Kalender mit Quellen, BFSG-Check, Förder-Check und alle Festpreise: Orientierung für kleine Betriebe, kostenlos und ohne Tracking.">
+  <div class="container page-top">
+    <SectionHeader level="h1" title="Wissen" text="Orientierung, bevor du etwas kaufst. Kostenlos, ohne Anmeldung und ohne Tracking." />
+    <ul class="grid" role="list">
+      {
+        items.map((i) => (
+          <li>
+            <a class="item" href={i.href}>
+              <Icon name={i.icon} size={22} />
+              <span class="item__title">{i.title}</span>
+              <span class="item__text">{i.text}</span>
+              <span class="link-arrow">Öffnen <Icon name="arrow-right" /></span>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+  <section class="section section--raised section--line" aria-labelledby="next-title">
+    <div class="container">
+      <SectionHeader id="next-title" title="Die nächsten Fristen" />
+      <DeadlineStrip />
+    </div>
+  </section>
+</Base>
+<style>
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--s-4);
+    margin-bottom: var(--s-20);
+  }
+  .grid > li {
+    display: grid;
+  }
+  .item {
+    display: grid;
+    gap: var(--s-3);
+    align-content: start;
+    padding: var(--s-8);
+    border: 1px solid var(--line);
+    border-radius: var(--r-24);
+    background: var(--card-fill);
+    text-decoration: none;
+    transition: border-color var(--t-fast) var(--ease);
+  }
+  .item:hover {
+    border-color: var(--line-3);
+  }
+  .item :global(.icon) {
+    color: var(--accent);
+  }
+  .item__title {
+    font-size: var(--fs-24);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+  .item__text {
+    color: var(--text-2);
+  }
+  .item .link-arrow {
+    margin-top: var(--s-3);
+  }
+  @media (max-width: 767px) {
+    .grid {
+      grid-template-columns: minmax(0, 1fr);
+    }
+    .item {
+      padding: var(--s-6);
+    }
+  }
+</style>

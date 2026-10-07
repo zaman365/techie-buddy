@@ -1,0 +1,64 @@
+---
+// Decorative: a flat-file grid with one corrected cell.
+const rows = [
+  ['SKU-104-S', 'parent', 'Größe'],
+  ['SKU-104-M', 'child', 'Größe'],
+  ['SKU-104-L', 'child', 'Größe']
+];
+---
+<div class="vg" aria-hidden="true">
+  <div class="hd"><span>item_sku</span><span>parent_child</span><span>variation_theme</span></div>
+  {
+    rows.map((r, i) => (
+      <div class="rw">
+        <span>{r[0]}</span>
+        <span class:list={[i === 0 && 'fix']}>{i === 0 ? <><s>child</s> {r[1]}</> : r[1]}</span>
+        <span>{r[2]}</span>
+      </div>
+    ))
+  }
+</div>
+<style>
+  .vg {
+    border: 1px solid var(--line-2);
+    border-radius: var(--r-10);
+    background: rgba(7, 11, 18, 0.6);
+    overflow: hidden;
+    font-family: var(--font-mono);
+    font-size: 11px;
+  }
+  .hd,
+  .rw {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr 1fr;
+  }
+  .hd span,
+  .rw span {
+    padding: 6px 8px;
+    border-right: 1px solid var(--line);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .hd span:last-child,
+  .rw span:last-child {
+    border-right: 0;
+  }
+  .hd {
+    color: var(--text-3);
+    background: var(--surface-2);
+  }
+  .rw {
+    color: var(--text-2);
+    border-top: 1px solid var(--line);
+  }
+  .fix {
+    color: var(--text);
+    background: var(--accent-wash);
+    box-shadow: inset 0 0 0 1px var(--accent-line);
+  }
+  .fix s {
+    color: var(--text-3);
+    margin-right: 4px;
+  }
+</style>

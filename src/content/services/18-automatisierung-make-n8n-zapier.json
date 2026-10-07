@@ -1,0 +1,80 @@
+{
+  "id": "18",
+  "slug": "automatisierung-make-n8n-zapier",
+  "category": "ki",
+  "categorySlug": "ki-automatisierung",
+  "alsoIn": [],
+  "sectors": [
+    "creator-coaches"
+  ],
+  "tier": "catalog",
+  "audience": "b2b",
+  "name": "Automatisierungs-Sprint mit Make, n8n oder Zapier",
+  "problem": "Wir tippen jede Woche dieselben Daten von einem Programm ins andere.",
+  "summary": "Ein wiederkehrender Ablauf, etwa Rechnungen, Auftragsweiterleitung, Bewertungsanfragen oder Berichts-Mails, wird in einer Woche komplett automatisiert und dokumentiert.",
+  "includes": [
+    "Aufnahme des Ablaufs mit dir",
+    "Umsetzung in Make, n8n oder Zapier",
+    "Tests mit echten Daten",
+    "Fehlerbenachrichtigung, falls etwas hakt",
+    "Dokumentation für dich"
+  ],
+  "excludes": [
+    "Lizenzkosten der Tools",
+    "Mehr als ein Ablauf (jeder weitere zum Festpreis)",
+    "Programmierung eigener Schnittstellen"
+  ],
+  "needs": [
+    "Beschreibung des Ablaufs mit Beispiel",
+    "Zugänge zu den beteiligten Tools"
+  ],
+  "steps": [
+    "Du beschreibst den Ablauf.",
+    "Festpreis und Zahlungslink.",
+    "Umsetzung und Tests.",
+    "Übergabe mit Dokumentation."
+  ],
+  "result": "Ein laufender, dokumentierter Ablauf, der ohne Handarbeit läuft.",
+  "price": {
+    "type": "fixed",
+    "from": 499,
+    "display": "499 €",
+    "note": "Festpreis pro Ablauf",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "1 Woche",
+  "tags": [],
+  "factNote": null,
+  "guardrail": false,
+  "faq": [
+    {
+      "q": "Welches Tool ist das richtige?",
+      "a": "Das hängt von deinen Programmen und deinem Datenschutzbedarf ab. n8n lässt sich zum Beispiel selbst hosten. Wir empfehlen, was passt."
+    },
+    {
+      "q": "Was, wenn sich später etwas ändert?",
+      "a": "Für laufende Pflege gibt es eine monatliche Betreuung deiner Automationen."
+    }
+  ],
+  "related": [
+    "17",
+    "20",
+    "56"
+  ],
+  "seo": {
+    "title": "Automatisierungs-Sprint mit Make, n8n oder Zapier",
+    "description": "Ein wiederkehrender Ablauf, etwa Rechnungen, Auftragsweiterleitung, Bewertungsanfragen oder Berichts-Mails, wird in einer Woche komplett automatisiert …"
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g05",
+    "g18"
+  ],
+  "keywords": [
+    "Erste Automatisierung mit Zapier oder Make",
+    "Zapier or Make first automation",
+    "Zapier/Make first automation",
+    "Automatisierungs-Suche für kleine Firmen",
+    "Small-business automation hunt"
+  ]
+}

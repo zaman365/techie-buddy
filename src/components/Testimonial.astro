@@ -1,0 +1,41 @@
+---
+// Testimonial component. Not rendered anywhere until real, approved testimonials exist
+// (brief: no invented reviews). Pass an empty list and it renders nothing.
+interface Props {
+  items: { quote: string; name: string; role?: string }[];
+}
+const { items } = Astro.props;
+---
+{
+  items.length > 0 && (
+    <ul class="tm" role="list">
+      {items.map((t) => (
+        <li class="card tm__item">
+          <blockquote>
+            <p>„{t.quote}“</p>
+          </blockquote>
+          <p class="meta">
+            {t.name}
+            {t.role && <>, {t.role}</>}
+          </p>
+        </li>
+      ))}
+    </ul>
+  )
+}
+<style>
+  .tm {
+    display: grid;
+    gap: var(--s-6);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+  }
+  .tm__item {
+    padding: var(--s-6);
+    display: grid;
+    gap: var(--s-4);
+  }
+  blockquote p {
+    font-size: var(--fs-18);
+    line-height: 1.5;
+  }
+</style>

@@ -1,0 +1,122 @@
+---
+// Transparent price overview of all named services, sortable.
+import Base from '../layouts/Base.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+import Icon from '../components/Icon.astro';
+import Packages from '../components/Packages.astro';
+import RecurringTable from '../components/RecurringTable.astro';
+import { getData, serviceUrl } from '../lib/data.ts';
+import { turnaroundBucket } from '../lib/format.ts';
+
+const { services, categoryById, catalogListed } = await getData();
+const rows = [...services].sort((a, b) => a.price.from - b.price.from);
+const bucketRank: Record<string, number> = { heute: 0, '48h': 1, woche: 2, projekt: 3 };
+const hours = (t: string) => {
+  const h = t.match(/(\d+)(?:–(\d+))?\s?h$/);
+  if (h) return Number(h[1]);
+  return [24, 48, 168, 720][bucketRank[turnaroundBucket(t)]];
+};
+---
+<Base title="Preise: alle Festpreise auf einen Blick" description="Alle benannten TechieBuddy-Leistungen mit Preis, Mehrwertsteuer-Hinweis und Lieferzeit. Sortierbar nach Preis, Bereich und Lieferzeit.">
+  <div class="container page-top">
+    <SectionHeader level="h1" title="Preise" text="Jede Leistung mit Preis und Lieferzeit, ohne Anfrage-Hürde. Der Preis steht vorher fest; die Lieferzeit startet, sobald Zahlung, Zugänge und Unterlagen vollständig sind." />
+
+    <div class="table-wrap prices">
+      <table class="dtable dtable--stack" id="price-table" data-sortable>
+        <caption class="sr-only">Preise aller {services.length} Leistungen. Spalten lassen sich sortieren.</caption>
+        <thead>
+          <tr>
+            <th scope="col" aria-sort="none"><button type="button" class="sort-btn" data-sort="name">Leistung<Icon name="chevron-down" size={14} /></button></th>
+            <th scope="col" aria-sort="none"><button type="button" class="sort-btn" data-sort="cat">Bereich<Icon name="chevron-down" size={14} /></button></th>
+            <th scope="col" aria-sort="ascending" class="num"><button type="button" class="sort-btn" data-sort="price" data-type="number">Preis<Icon name="chevron-down" size={14} /></button></th>
+            <th scope="col" aria-sort="none"><button type="button" class="sort-btn" data-sort="time" data-type="number">Lieferzeit<Icon name="chevron-down" size={14} /></button></th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            rows.map((s) => (
+              <tr data-sort-name={s.name} data-sort-cat={categoryById.get(s.category)!.name} data-sort-price={s.price.from} data-sort-time={hours(s.turnaround)}>
+                <th scope="row">
+                  <a class="name" href={serviceUrl(s)}>{s.name}</a>
+                  {s.price.note && <div class="sub">{s.price.note}</div>}
+                </th>
+                <td data-label="Bereich" class="muted cat">{categoryById.get(s.category)!.name}</td>
+                <td data-label="Preis" class="num">
+                  <span class="price">{s.price.display}</span>
+                  <span class="sub">{s.price.vat}</span>
+                </td>
+                <td data-label="Lieferzeit" class="time mono">{s.turnaround}</td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+    <p class="sr-only" aria-live="polite" data-sort-status="price-table"></p>
+    <p class="meta note-line">
+      Dazu kommen {catalogListed.length} kleinere Fixes mit Richtpreis ab 49 €. Sie stehen mit Preisband und Lieferzeit unter <a href="/alle-leistungen/">Alle Leistungen</a>.
+    </p>
+  </div>
+
+  <section class="section section--raised section--line" aria-labelledby="pk-title">
+    <div class="container">
+      <SectionHeader id="pk-title" title="Projekte" text="Für größere Vorhaben: feste Pakete mit kostenlosem Erstgespräch. Mobile Apps auf individuelles Angebot." />
+      <Packages />
+    </div>
+  </section>
+  <section class="section" aria-labelledby="rc-title">
+    <div class="container">
+      <SectionHeader id="rc-title" title="Betreuung und Abos" text="Laufende Leistungen mit festem Monatspreis." />
+      <RecurringTable />
+    </div>
+  </section>
+</Base>
+<script>
+  import '../scripts/sort.ts';
+</script>
+<style>
+  .prices {
+    margin-top: var(--s-4);
+  }
+  .name {
+    color: var(--text);
+    font-weight: 520;
+    text-decoration: none;
+  }
+  .name:hover {
+    color: var(--accent-hover);
+  }
+  th[scope='row'] {
+    font-weight: 400;
+    min-width: 260px;
+  }
+  .cat {
+    font-size: var(--fs-13);
+  }
+  .price {
+    display: block;
+    white-space: nowrap;
+    color: var(--text);
+  }
+  .sub {
+    display: block;
+    font-family: var(--font-sans);
+    font-size: var(--fs-12);
+    color: var(--text-2);
+  }
+  .time {
+    color: var(--accent);
+    white-space: nowrap;
+  }
+  .note-line {
+    margin-top: var(--s-6);
+  }
+  .note-line a {
+    color: var(--text);
+  }
+  @media (max-width: 767px) {
+    th[scope='row'] {
+      min-width: 0;
+    }
+  }
+</style>

@@ -1,0 +1,47 @@
+---
+import Base from '../../layouts/Base.astro';
+import ContactForm from '../../components/ContactForm.astro';
+import { site } from '../../lib/data.ts';
+---
+<Base
+  title="Contact: describe your problem, get a fixed price"
+  description="Describe your digital problem in a few sentences. You get the scope, a fixed price and the turnaround. In English, German or Bengali."
+  lang="en"
+  translations={[
+    { lang: 'de', href: '/kontakt/' },
+    { lang: 'en', href: '/en/contact/' }
+  ]}
+>
+  <div class="container page-top layout">
+    <div class="intro">
+      <h1>Tell us what happened.</h1>
+      <p class="lede">A few sentences are enough. You get a reply with scope, fixed price and turnaround. Attach screenshots to the e-mail if you have them.</p>
+      <p>E-mail: <a href={`mailto:${site.contact.email}`}>{site.contact.email}</a><br />Mon–Fri, 9:00–18:00 (German time)<br />Chemnitz, Saxony, serving all of Germany</p>
+    </div>
+    <ContactForm lang="en" />
+  </div>
+</Base>
+<script>
+  import '../../scripts/contact.ts';
+</script>
+<style>
+  .layout {
+    display: grid;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    gap: var(--s-12);
+    align-items: start;
+    padding-bottom: var(--s-20);
+  }
+  .intro {
+    display: grid;
+    gap: var(--s-5);
+  }
+  .intro a {
+    color: var(--text);
+  }
+  @media (max-width: 960px) {
+    .layout {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+</style>

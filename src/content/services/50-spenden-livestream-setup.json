@@ -1,0 +1,72 @@
+{
+  "id": "50",
+  "slug": "spenden-livestream-setup",
+  "category": "branchen-pakete",
+  "categorySlug": "branchen-loesungen",
+  "alsoIn": [],
+  "sectors": [
+    "vereine-gemeinden"
+  ],
+  "tier": "catalog",
+  "audience": "b2b",
+  "name": "Online-Spenden und Livestream für Gemeinden",
+  "problem": "Unsere Gemeinde will online Spenden annehmen und Veranstaltungen übertragen.",
+  "summary": "Wir richten Spendenwege wie PayPal Giving, betterplace oder twingle ein und bauen ein einfaches Livestream-Set für Gottesdienste, Gebete und Veranstaltungen.",
+  "includes": [
+    "Einrichtung eines Online-Spendenwegs",
+    "Einbau auf Website und Social Media",
+    "Einfaches Livestream-Set mit Ablaufplan",
+    "Einweisung für Ehrenamtliche"
+  ],
+  "excludes": [
+    "Kosten für Kamera und Mikrofon",
+    "Gebühren der Spendenplattformen",
+    "Steuerliche Fragen zu Spendenquittungen"
+  ],
+  "needs": [
+    "Nachweis der Gemeinnützigkeit",
+    "Ort und Art der Veranstaltungen"
+  ],
+  "steps": [
+    "Kurzes Gespräch zu Raum und Bedarf.",
+    "Festpreis und Zahlungslink.",
+    "Einrichtung und Probestream.",
+    "Einweisung und Übergabe."
+  ],
+  "result": "Ein laufender Spendenweg und ein Livestream-Set, das Ehrenamtliche bedienen können.",
+  "price": {
+    "type": "fixed",
+    "from": 349,
+    "display": "349 €",
+    "note": "Festpreis, Hardware separat",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "1 Woche",
+  "tags": [],
+  "factNote": null,
+  "guardrail": false,
+  "faq": [
+    {
+      "q": "Welche Technik brauchen wir?",
+      "a": "Für den Anfang oft weniger als gedacht. Wir empfehlen passende Geräte für euer Budget."
+    },
+    {
+      "q": "Bekommen Spender eine Quittung?",
+      "a": "Viele Spendenplattformen erstellen Zuwendungsbestätigungen. Was steuerlich gilt, klärt eure Steuerberatung."
+    }
+  ],
+  "related": [
+    "49",
+    "48",
+    "21"
+  ],
+  "seo": {
+    "title": "Online-Spenden und Livestream für Gemeinden | TechieBuddy",
+    "description": "Wir richten Spendenwege wie PayPal Giving, betterplace oder twingle ein und bauen ein einfaches Livestream-Set für Gottesdienste, Gebete und …"
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g17"
+  ],
+  "keywords": []
+}

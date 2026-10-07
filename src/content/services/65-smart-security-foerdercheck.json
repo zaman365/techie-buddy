@@ -1,0 +1,74 @@
+{
+  "id": "65",
+  "slug": "smart-security-foerdercheck",
+  "category": "zuhause",
+  "categorySlug": "zuhause-familie-energie",
+  "alsoIn": [
+    "wachstum"
+  ],
+  "sectors": [
+    "energie"
+  ],
+  "tier": "catalog",
+  "audience": "b2c",
+  "name": "Smarte Sicherheitstechnik mit Förder-Check",
+  "problem": "Bei den Nachbarn wurde eingebrochen. Wir wollen Kameras und eine Alarmanlage, die wirklich funktionieren.",
+  "summary": "Wir richten Kameras, Alarm- und Zutrittssysteme für Wohnung, Haus oder kleinen Laden richtig ein und prüfen, ob aktuell Förderungen für Einbruchschutz in Frage kommen.",
+  "includes": [
+    "Beratung zur passenden Technik",
+    "Einrichtung von Kameras, Alarm und Zutritt",
+    "Sichere Zugänge und App-Einrichtung",
+    "Check, ob aktuell Förderungen für Einbruchschutz verfügbar sind"
+  ],
+  "excludes": [
+    "Kosten für Hardware",
+    "Elektroinstallation durch Fachbetrieb",
+    "Garantie auf Förderung"
+  ],
+  "needs": [
+    "Grundriss oder Fotos der Räume",
+    "Router- und WLAN-Zugang"
+  ],
+  "steps": [
+    "Kurzes Gespräch zu Objekt und Wünschen.",
+    "Festpreis und Zahlungslink.",
+    "Termin vor Ort: Einrichtung und Test.",
+    "Übergabe mit Anleitung."
+  ],
+  "result": "Eingerichtete, abgesicherte Sicherheitstechnik und eine Einschätzung zu möglichen Förderungen.",
+  "price": {
+    "type": "from",
+    "from": 349,
+    "display": "ab 349 €",
+    "note": "Festpreis für die Einrichtung, Hardware separat",
+    "vat": "inkl. MwSt."
+  },
+  "turnaround": "1 Termin vor Ort",
+  "tags": [],
+  "factNote": null,
+  "guardrail": true,
+  "faq": [
+    {
+      "q": "Darf ich Kameras überall aufhängen?",
+      "a": "Nicht überall. Öffentliche Bereiche und Nachbargrundstücke sind tabu. Klär Einzelheiten mit deiner Rechtsberatung; wir richten den Blickwinkel entsprechend ein."
+    },
+    {
+      "q": "Welche Förderungen gibt es?",
+      "a": "Das ändert sich. Wir prüfen beim Termin, was aktuell für dich in Frage kommt, und zeigen dir den Antragsweg. Eine Förderung können wir nicht zusagen."
+    }
+  ],
+  "related": [
+    "77",
+    "75",
+    "32"
+  ],
+  "seo": {
+    "title": "Smarte Sicherheitstechnik mit Förder-Check | TechieBuddy",
+    "description": "Wir richten Kameras, Alarm- und Zutrittssysteme für Wohnung, Haus oder kleinen Laden richtig ein und prüfen, ob aktuell Förderungen für Einbruchschutz …"
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g13"
+  ],
+  "keywords": []
+}

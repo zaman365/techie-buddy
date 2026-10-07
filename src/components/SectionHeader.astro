@@ -1,0 +1,21 @@
+---
+interface Props {
+  title: string;
+  text?: string;
+  id?: string;
+  chapter?: string;
+  chapterNo?: string;
+  level?: 'h1' | 'h2';
+  row?: boolean;
+}
+const { title, text, id, chapter, chapterNo, level = 'h2', row } = Astro.props;
+const Tag = level;
+---
+<header class:list={['sh', row && 'sh--row']}>
+  <div>
+    {chapter && <p class="chapter">{chapterNo && <span class="chapter__n">{chapterNo}</span>}{chapter}</p>}
+    <Tag class="sh__title" id={id}>{title}</Tag>
+    {text && <p class="sh__text">{text}</p>}
+  </div>
+  {Astro.slots.has('default') && <div class="sh__aside"><slot /></div>}
+</header>

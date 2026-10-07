@@ -1,0 +1,81 @@
+{
+  "id": "56",
+  "slug": "excel-notaufnahme",
+  "category": "buero",
+  "categorySlug": "buero-it-daten",
+  "alsoIn": [],
+  "sectors": [
+    "kanzleien-bueros"
+  ],
+  "tier": "next",
+  "audience": "b2b",
+  "name": "Excel-Notaufnahme",
+  "problem": "Gestern hat die Tabelle noch funktioniert, heute steht überall #BEZUG!.",
+  "summary": "Kaputte Formeln, beschädigte Dateien, #BEZUG!-Katastrophen: Wir reparieren deine Excel-Datei und bauen auf Wunsch fragile Monster-Tabellen zu stabilen, dokumentierten Werkzeugen um.",
+  "includes": [
+    "Diagnose und Reparatur von Formeln und Bezügen",
+    "Wiederherstellung beschädigter Dateien, soweit möglich",
+    "Absicherung gegen Wiederholung (Schutz, Prüfregeln)",
+    "Kurze Dokumentation der Logik"
+  ],
+  "excludes": [
+    "Datenrettung ohne lesbare Datei oder Sicherung",
+    "Umbau zu einer Datenbank (dafür gibt es eine eigene Leistung)",
+    "Steuerliche oder kaufmännische Prüfung der Inhalte"
+  ],
+  "needs": [
+    "Die Datei (oder eine Kopie)",
+    "Was sie tun soll und was gerade schiefgeht"
+  ],
+  "steps": [
+    "Du schickst die Datei und beschreibst das Problem.",
+    "Festpreis je nach Umfang und Zahlungslink.",
+    "Reparatur und Test mit dir.",
+    "Übergabe mit Dokumentation."
+  ],
+  "result": "Eine funktionierende Datei, abgesichert und dokumentiert.",
+  "price": {
+    "type": "from",
+    "from": 99,
+    "display": "ab 99 €",
+    "note": "Festpreis nach Blick auf die Datei",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "24–48 h",
+  "tags": [
+    "notfall"
+  ],
+  "factNote": null,
+  "guardrail": false,
+  "faq": [
+    {
+      "q": "Ist meine Datei bei euch sicher?",
+      "a": "Wir nutzen die Datei nur für deinen Auftrag. Sensible Daten kannst du vorher anonymisieren oder durch Beispieldaten ersetzen."
+    },
+    {
+      "q": "Geht das auch mit Google Sheets?",
+      "a": "Ja."
+    }
+  ],
+  "related": [
+    "57",
+    "58",
+    "18"
+  ],
+  "seo": {
+    "title": "Excel-Notaufnahme | TechieBuddy",
+    "description": "Kaputte Formeln, beschädigte Dateien, #BEZUG!-Katastrophen: Wir reparieren deine Excel-Datei und bauen auf Wunsch fragile Monster-Tabellen zu stabilen, …"
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g02",
+    "g11",
+    "g14"
+  ],
+  "keywords": [
+    "Excel-Masterliste reparieren",
+    "Excel master-sheet repair",
+    "Excel-Monster stabilisieren",
+    "Excel monster stabilization"
+  ]
+}

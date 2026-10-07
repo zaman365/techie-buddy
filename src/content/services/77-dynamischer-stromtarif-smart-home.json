@@ -1,0 +1,74 @@
+{
+  "id": "77",
+  "slug": "dynamischer-stromtarif-smart-home",
+  "category": "zuhause",
+  "categorySlug": "zuhause-familie-energie",
+  "alsoIn": [],
+  "sectors": [
+    "energie"
+  ],
+  "tier": "catalog",
+  "audience": "b2c",
+  "name": "Dynamischer Stromtarif und Smart Home zum Sparen",
+  "problem": "Ich habe einen dynamischen Stromtarif, aber die Spülmaschine läuft trotzdem zur teuersten Zeit.",
+  "summary": "Wir richten dein Zuhause so ein, dass es günstigen Strom von allein nutzt: Tarifwechsel, smarte Steckdosen und Automationen für Spülmaschine, Wallbox oder Wärmepumpe.",
+  "includes": [
+    "Check, ob ein dynamischer Tarif zu dir passt",
+    "Unterstützung beim Tarifwechsel",
+    "Smarte Steckdosen und Automationen",
+    "Einbindung von Wallbox oder Wärmepumpe, wo möglich",
+    "Erklärung, wo du die Ersparnis siehst"
+  ],
+  "excludes": [
+    "Kosten für Geräte und Smart Meter",
+    "Elektroinstallation",
+    "Zusage einer bestimmten Ersparnis"
+  ],
+  "needs": [
+    "Letzte Stromrechnung",
+    "Liste deiner großen Verbraucher",
+    "WLAN-Zugang"
+  ],
+  "steps": [
+    "Du schickst Rechnung und Geräteliste.",
+    "Festpreis und Zahlungslink.",
+    "Termin vor Ort: Einrichtung der Automationen.",
+    "Übergabe mit Erklärung."
+  ],
+  "result": "Ein Zuhause, das Strom zu günstigen Zeiten nutzt, und eine Übersicht, wo du das siehst.",
+  "price": {
+    "type": "fixed",
+    "from": 249,
+    "display": "249 €",
+    "note": "Festpreis, Geräte separat",
+    "vat": "inkl. MwSt."
+  },
+  "turnaround": "1 Termin vor Ort",
+  "tags": [],
+  "factNote": null,
+  "guardrail": false,
+  "faq": [
+    {
+      "q": "Brauche ich einen Smart Meter?",
+      "a": "Für dynamische Tarife in der Regel ja. Wir klären mit dir, wie du einen bekommst."
+    },
+    {
+      "q": "Wie viel spare ich?",
+      "a": "Das hängt von deinem Verbrauch und den Strompreisen ab. Wir zeigen dir, wo du die Ersparnis siehst, versprechen aber keinen Betrag."
+    }
+  ],
+  "related": [
+    "75",
+    "74",
+    "65"
+  ],
+  "seo": {
+    "title": "Dynamischer Stromtarif und Smart Home zum Sparen",
+    "description": "Wir richten dein Zuhause so ein, dass es günstigen Strom von allein nutzt: Tarifwechsel, smarte Steckdosen und Automationen für Spülmaschine, Wallbox …"
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g13"
+  ],
+  "keywords": []
+}

@@ -1,0 +1,77 @@
+{
+  "id": "27",
+  "slug": "domain-zurueckholen",
+  "category": "website",
+  "categorySlug": "website-shop",
+  "alsoIn": [],
+  "sectors": [
+    "handwerk",
+    "kanzleien-bueros"
+  ],
+  "tier": "catalog",
+  "audience": "b2b",
+  "name": "Domain zurückholen vom alten Webmaster",
+  "problem": "Der alte Webmaster ist weg, und die Domain läuft auf seinen Namen.",
+  "summary": "Wir holen Domain und Website über die offiziellen Wege der Registrare zurück (AuthCode, Providerwechsel bei der DENIC), ziehen die Website um und übergeben dir die volle Kontrolle mit dokumentierten Zugängen.",
+  "includes": [
+    "Ermittlung von Registrar, Inhaber und technischem Stand",
+    "Vorbereitung von Nachweisen und Anträgen",
+    "AuthCode und Providerwechsel",
+    "Umzug von Website und E-Mail",
+    "Dokumentierte Übergabe aller Zugänge"
+  ],
+  "excludes": [
+    "Rechtliche Auseinandersetzung mit dem bisherigen Dienstleister",
+    "Gebühren von Registraren",
+    "Fälle ohne Nachweis, dass dir die Domain zusteht"
+  ],
+  "needs": [
+    "Nachweise, dass die Domain zu deinem Unternehmen gehört (Rechnungen, Verträge)",
+    "Kontaktdaten des bisherigen Dienstleisters, falls vorhanden"
+  ],
+  "steps": [
+    "Du schickst die Domain und deine Unterlagen.",
+    "Festpreis und Zahlungslink.",
+    "Anträge, Providerwechsel und Umzug.",
+    "Übergabe mit Zugangsmappe."
+  ],
+  "result": "Domain und Website auf deinen Namen, mit Zugangsmappe für alle Konten.",
+  "price": {
+    "type": "fixed",
+    "from": 299,
+    "display": "299 €",
+    "note": "Festpreis, Registrargebühren separat",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "1 Woche",
+  "tags": [
+    "notfall"
+  ],
+  "factNote": null,
+  "guardrail": false,
+  "faq": [
+    {
+      "q": "Was, wenn der alte Dienstleister nicht reagiert?",
+      "a": "Dann nutzen wir die Wege der Registrare und der DENIC, mit deinen Nachweisen. Wenn es rechtlich strittig wird, brauchst du eine Anwältin oder einen Anwalt."
+    },
+    {
+      "q": "Geht meine Website dabei offline?",
+      "a": "Wir planen den Umzug so, dass die Ausfallzeit möglichst kurz bleibt."
+    }
+  ],
+  "related": [
+    "29",
+    "22",
+    "52"
+  ],
+  "seo": {
+    "title": "Domain zurückholen vom alten Webmaster | TechieBuddy",
+    "description": "Wir holen Domain und Website über die offiziellen Wege der Registrare zurück (AuthCode, Providerwechsel bei der DENIC), ziehen die Website um und …"
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g02",
+    "g11"
+  ],
+  "keywords": []
+}

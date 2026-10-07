@@ -1,0 +1,110 @@
+---
+import Base from '../layouts/Base.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+import TicketCard from '../components/TicketCard.astro';
+import CatalogTable from '../components/CatalogTable.astro';
+import Icon from '../components/Icon.astro';
+import { getData, site, byTier } from '../lib/data.ts';
+const { services, catalogListed } = await getData();
+const urgent = services.filter((s) => s.tags.includes('notfall')).sort(byTier);
+const sameDay = catalogListed.filter((r) => r.urgency === 'heute');
+---
+<Base title="Notfall-Hilfe: noch heute starten" description="Website gehackt, Konto gesperrt, Betrug, Ausfall: Notfall-Fixes mit Festpreis. Start noch am selben Werktag möglich.">
+  <div class="container page-top">
+    <header class="head">
+      <p class="eyebrow"><span class="dot-danger" aria-hidden="true"></span>Notfall</p>
+      <h1>Notfall-Hilfe: noch heute starten</h1>
+      <p class="lede">Wenn etwas gesperrt, gehackt oder ausgefallen ist, zählt jede Stunde. Start noch am selben Werktag möglich, sobald Zahlung und Zugänge da sind. Den Preis kennst du vorher.</p>
+    </header>
+
+    <section class="reach" aria-labelledby="reach-title">
+      <h2 id="reach-title" class="reach__title">So erreichst du uns am schnellsten</h2>
+      <ol class="reach__steps" role="list">
+        <li><span class="mono">1</span><p>Schreib an <a href={`mailto:${site.contact.email}?subject=${encodeURIComponent('Notfall: ')}`}>{site.contact.email}</a> mit „Notfall“ im Betreff, was passiert ist und seit wann. Screenshots helfen.</p></li>
+        <li><span class="mono">2</span><p>Du bekommst Umfang, Festpreis und Zahlungslink. Erreichbar {site.contact.hours.replace('Mo–Fr', 'montags bis freitags')}.</p></li>
+        <li><span class="mono">3</span><p>Nach Zahlung und Zugang starten wir, im besten Fall noch am selben Werktag.</p></li>
+      </ol>
+      <div class="cluster">
+        <a class="btn btn--primary" href="/kontakt/?leistung=notfall"><Icon name="siren" />Notfall schildern</a>
+        {site.contact.whatsapp && <a class="btn btn--secondary" href={`https://wa.me/${site.contact.whatsapp}`} rel="noopener">WhatsApp</a>}
+      </div>
+      <p class="meta">Wir versprechen keine Reaktionszeit, die wir nicht halten können. Wenn wir einen Fall heute nicht starten können, sagen wir dir das sofort.</p>
+    </section>
+  </div>
+
+  <section class="section section--raised section--line" aria-labelledby="urgent-title">
+    <div class="container">
+      <SectionHeader id="urgent-title" title="Notfall-Leistungen" text="Festpreis, Lieferzeit und Ablauf stehen auf jeder Seite." />
+      <ul class="tickets" role="list">
+        {urgent.map((s) => <li><TicketCard service={s} /></li>)}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="sameday-title">
+    <div class="container">
+      <SectionHeader id="sameday-title" title="Weitere Fixes mit Start am selben Tag" text={`${sameDay.length} kleinere Notfälle aus dem Katalog, mit Richtpreis.`} />
+      <CatalogTable rows={sameDay} caption="Fixes mit Start am selben Tag" />
+    </div>
+  </section>
+</Base>
+<style>
+  .head {
+    max-width: 820px;
+    display: grid;
+    gap: var(--s-4);
+  }
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: var(--fs-14);
+    color: var(--text-2);
+  }
+  .reach {
+    margin-block: var(--s-12) var(--s-16);
+    padding: var(--s-8);
+    border: 1px solid rgba(255, 107, 107, 0.22);
+    border-radius: var(--r-24);
+    background: linear-gradient(135deg, var(--danger-wash), transparent 60%);
+    display: grid;
+    gap: var(--s-5);
+    max-width: 880px;
+  }
+  .reach__title {
+    font-size: var(--fs-24);
+  }
+  .reach__steps {
+    display: grid;
+    gap: var(--s-3);
+  }
+  .reach__steps li {
+    display: grid;
+    grid-template-columns: 28px 1fr;
+    gap: var(--s-3);
+    color: var(--text-2);
+  }
+  .reach__steps .mono {
+    display: grid;
+    place-items: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    border: 1px solid var(--line-2);
+    font-size: var(--fs-12);
+    color: var(--text);
+  }
+  .reach a:not(.btn) {
+    color: var(--text);
+  }
+  .tickets {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
+    gap: var(--s-4);
+  }
+  @media (max-width: 600px) {
+    .reach {
+      padding: var(--s-5);
+    }
+  }
+</style>

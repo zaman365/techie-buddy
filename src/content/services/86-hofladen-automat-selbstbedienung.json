@@ -1,0 +1,75 @@
+{
+  "id": "86",
+  "slug": "hofladen-automat-selbstbedienung",
+  "category": "branchen-pakete",
+  "categorySlug": "branchen-loesungen",
+  "alsoIn": [],
+  "sectors": [
+    "laendliche-nischen"
+  ],
+  "tier": "catalog",
+  "audience": "b2b",
+  "name": "Selbstbedienung rund um die Uhr: Hofladen und Automaten",
+  "problem": "Wir eröffnen einen Selbstbedienungs-Hofladen. Wer kümmert sich um Zutritt, Kamera und Bezahlung?",
+  "summary": "Für Container-Läden, Hofautomaten und Selbstbedienungs-Shops: Zutrittskontrolle, Kameras, bargeldlose Zahlung und Fernüberwachung, alles aufeinander abgestimmt.",
+  "includes": [
+    "Zutrittskontrolle",
+    "Kamerasystem mit sicherem Fernzugriff",
+    "Bargeldlose Zahlung",
+    "Fernüberwachung und Alarme",
+    "Einweisung"
+  ],
+  "excludes": [
+    "Hardware und Elektroinstallation",
+    "Bau des Ladens oder Automaten"
+  ],
+  "needs": [
+    "Standort mit Strom und Internet",
+    "Gewählte Hardware oder Budget"
+  ],
+  "steps": [
+    "Kurzes Gespräch zu Standort und Hardware.",
+    "Festpreis und Zahlungslink.",
+    "Einrichtung vor Ort und Tests.",
+    "Übergabe mit Notfallplan."
+  ],
+  "result": "Ein Laden, der rund um die Uhr verkauft, mit Zutritt, Zahlung und Überwachung, die zusammenspielen.",
+  "price": {
+    "type": "from",
+    "from": 599,
+    "display": "ab 599 €",
+    "note": "Festpreis je nach Umfang, Hardware separat",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "1–2 Wochen",
+  "tags": [],
+  "factNote": null,
+  "guardrail": false,
+  "faq": [
+    {
+      "q": "Liefert ihr auch die Automaten?",
+      "a": "Nein. Wir richten die Technik ein, die Hardware kommt vom Hersteller oder Fachbetrieb."
+    },
+    {
+      "q": "Was passiert, wenn nachts etwas klemmt?",
+      "a": "Du bekommst Alarme aufs Handy und einen Notfallplan. Ein nächtlicher Bereitschaftsdienst ist nicht enthalten."
+    }
+  ],
+  "related": [
+    "87",
+    "65",
+    "83"
+  ],
+  "seo": {
+    "title": "Selbstbedienung rund um die Uhr: Hofladen und Automaten",
+    "description": "Für Container-Läden, Hofautomaten und Selbstbedienungs-Shops: Zutrittskontrolle, Kameras, bargeldlose Zahlung und Fernüberwachung, alles aufeinander …"
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g13"
+  ],
+  "keywords": [
+    "Selbstbedienungsladen: Technik einrichten",
+    "Self-service shop tech setup"
+  ]
+}

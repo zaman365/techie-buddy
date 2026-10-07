@@ -1,0 +1,83 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import CheckWizard from '../../components/CheckWizard.astro';
+import Icon from '../../components/Icon.astro';
+import { getData, site, serviceUrl } from '../../lib/data.ts';
+const { serviceById } = await getData();
+const yn = [
+  { value: 'ja', label: 'Ja' },
+  { value: 'nein', label: 'Nein' }
+];
+const questions = [
+  { id: 'b2c', text: 'Verkaufst du an Verbraucherinnen und Verbraucher?', hint: 'Also an Privatpersonen, nicht nur an Unternehmen.', options: [{ value: 'ja', label: 'Ja, auch an Privatpersonen' }, { value: 'nein', label: 'Nein, nur an Unternehmen' }] },
+  { id: 'online', text: 'Schließen Kundinnen und Kunden online Verträge mit dir ab?', hint: 'Zum Beispiel über einen Online-Shop, eine Buchung mit Bezahlung oder eine App.', options: yn },
+  { id: 'produkte', text: 'Verkaufst du Geräte wie Computer, Smartphones, E-Book-Reader oder Selbstbedienungsterminals?', hint: 'Diese Produkte sind im BFSG ausdrücklich erfasst.', options: yn },
+  { id: 'mitarbeitende', text: 'Wie viele Personen beschäftigt dein Unternehmen?', options: [{ value: 'unter10', label: 'Weniger als 10' }, { value: '10plus', label: '10 oder mehr' }] },
+  { id: 'umsatz', text: 'Liegt dein Jahresumsatz oder deine Bilanzsumme bei höchstens 2 Mio. €?', options: [{ value: 'bis2', label: 'Ja, höchstens 2 Mio. €' }, { value: 'mehr', label: 'Nein, mehr' }, { value: 'unklar', label: 'Weiß ich nicht genau' }] }
+];
+const links = { '01': serviceUrl(serviceById.get('01')!) };
+---
+<Base title="BFSG-Check: Gilt das Barrierefreiheitsgesetz für mich?" description="Fünf Fragen, Ergebnis sofort: Gilt das Barrierefreiheitsstärkungsgesetz (BFSG) für deinen Shop oder deine Website? Läuft im Browser, nichts wird gesendet.">
+  <div class="container page-top">
+    <Breadcrumb items={[{ label: 'Wissen', href: '/wissen/' }, { label: 'BFSG-Check' }]} />
+    <div class="layout">
+      <header class="head">
+        <h1>Gilt das BFSG für mich?</h1>
+        <p class="lede">Das Barrierefreiheitsstärkungsgesetz gilt seit dem 28. Juni 2025, aber nicht für jeden. Fünf Fragen geben dir eine erste Einschätzung.</p>
+        <ul class="facts" role="list">
+          <li><Icon name="check" />Kleinstunternehmen sind bei Dienstleistungen ausgenommen.</li>
+          <li><Icon name="check" />Für erfasste Produkte gelten Pflichten auch für kleine Händler.</li>
+          <li><Icon name="lock" />Läuft komplett im Browser. Nichts wird gesendet.</li>
+        </ul>
+        <p class="meta">Stand {site.asOf.label}. Quelle: <a href="https://www.bundesfachstelle-barrierefreiheit.de/SharedDocs/Downloads/DE/BFSG-Newsletter/bfsg-newsletter-1-2025.pdf?__blob=publicationFile" rel="noopener">Bundesfachstelle Barrierefreiheit</a>. Orientierung, keine Rechtsberatung.</p>
+      </header>
+      <CheckWizard id="bfsg" title="BFSG-Check" questions={questions} links={links} />
+    </div>
+    <noscript><p class="note nojs">Für die Auswertung braucht der Check JavaScript. Ohne JavaScript hilft dir das <a href={links['01']}>BFSG-Audit</a>: Dort klären wir die Geltung zuerst.</p></noscript>
+  </div>
+</Base>
+<script>
+  import '../../scripts/checks.ts';
+</script>
+<style>
+  .layout {
+    margin-block: var(--s-8) var(--s-20);
+    display: grid;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    gap: var(--s-12);
+    align-items: start;
+  }
+  .head {
+    display: grid;
+    gap: var(--s-5);
+  }
+  .facts {
+    display: grid;
+    gap: var(--s-2);
+    color: var(--text-2);
+    font-size: var(--fs-14);
+  }
+  .facts li {
+    display: flex;
+    gap: var(--s-2);
+    align-items: flex-start;
+  }
+  .facts :global(.icon) {
+    color: var(--accent);
+    margin-top: 3px;
+  }
+  .head a,
+  .nojs a {
+    color: var(--text);
+  }
+  .nojs {
+    display: block;
+    margin-bottom: var(--s-12);
+  }
+  @media (max-width: 960px) {
+    .layout {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+</style>

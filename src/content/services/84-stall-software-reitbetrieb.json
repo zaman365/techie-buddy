@@ -1,0 +1,75 @@
+{
+  "id": "84",
+  "slug": "stall-software-reitbetrieb",
+  "category": "branchen-pakete",
+  "categorySlug": "branchen-loesungen",
+  "alsoIn": [],
+  "sectors": [
+    "laendliche-nischen"
+  ],
+  "tier": "catalog",
+  "audience": "b2b",
+  "name": "Stall digital für Pferdebetriebe",
+  "problem": "Einsteller, Reitstunden und Rechnungen laufen bei uns über WhatsApp und Zettel.",
+  "summary": "Wir richten eine Stallverwaltung ein, dazu Online-Buchung für Reitstunden und den Einzug von Zahlungen.",
+  "includes": [
+    "Einrichtung einer Stallverwaltungs-Software",
+    "Online-Buchung für Reitstunden",
+    "Zahlungseinzug und Rechnungen",
+    "Einweisung"
+  ],
+  "excludes": [
+    "Lizenzkosten",
+    "Steuerliche Beratung"
+  ],
+  "needs": [
+    "Liste der Einsteller und Angebote",
+    "Bankverbindung"
+  ],
+  "steps": [
+    "Du schickst Angebote und Einstellerliste.",
+    "Festpreis und Zahlungslink.",
+    "Einrichtung und Tests.",
+    "Einweisung und Übergabe."
+  ],
+  "result": "Eine laufende Stallverwaltung mit Buchung und Zahlung.",
+  "price": {
+    "type": "fixed",
+    "from": 449,
+    "display": "449 €",
+    "note": "Festpreis, Lizenz separat",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "1 Woche",
+  "tags": [],
+  "factNote": null,
+  "guardrail": false,
+  "faq": [
+    {
+      "q": "Gibt es dafür passende Software?",
+      "a": "Ja, es gibt spezialisierte Lösungen für Pferdebetriebe. Wir empfehlen, was zu deiner Größe passt."
+    },
+    {
+      "q": "Können Einsteller ihre Rechnungen online sehen?",
+      "a": "Ja, wenn die gewählte Software das anbietet. Wir richten den Zugang für Einsteller mit ein."
+    }
+  ],
+  "related": [
+    "85",
+    "41",
+    "83"
+  ],
+  "seo": {
+    "title": "Stall digital für Pferdebetriebe | TechieBuddy",
+    "description": "Wir richten eine Stallverwaltung ein, dazu Online-Buchung für Reitstunden und den Einzug von Zahlungen. 449 € zzgl. MwSt., Lieferzeit 1 Woche."
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g05",
+    "g13"
+  ],
+  "keywords": [
+    "Reitstall: Buchung und Zahlung",
+    "Stable booking and payment setup"
+  ]
+}

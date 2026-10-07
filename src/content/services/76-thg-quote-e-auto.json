@@ -1,0 +1,73 @@
+{
+  "id": "76",
+  "slug": "thg-quote-e-auto",
+  "category": "zuhause",
+  "categorySlug": "zuhause-familie-energie",
+  "alsoIn": [],
+  "sectors": [
+    "energie"
+  ],
+  "tier": "catalog",
+  "audience": "b2c",
+  "name": "THG-Quote für E-Auto-Besitzer",
+  "problem": "Ich habe gehört, man bekommt fürs E-Auto jährlich Geld. Wie geht das?",
+  "summary": "Wir beantragen deine jährliche THG-Quote über einen seriösen Anbieter. Pauschal, in 30 Minuten erledigt.",
+  "includes": [
+    "Auswahl eines seriösen Anbieters",
+    "Beantragung mit deinem Fahrzeugschein",
+    "Erinnerung im nächsten Jahr"
+  ],
+  "excludes": [
+    "Höhe der Auszahlung (legt der Anbieter fest)",
+    "Steuerberatung"
+  ],
+  "needs": [
+    "Foto des Fahrzeugscheins",
+    "Deine Bankverbindung für die Auszahlung"
+  ],
+  "steps": [
+    "Du schickst Fahrzeugschein und Bankverbindung.",
+    "Festpreis und Zahlungslink.",
+    "Beantragung in 30 Minuten.",
+    "Bestätigung per E-Mail."
+  ],
+  "result": "Ein gestellter Antrag bei einem seriösen Anbieter mit Bestätigung.",
+  "price": {
+    "type": "fixed",
+    "from": 39,
+    "display": "39 €",
+    "note": "Festpreis pro Fahrzeug und Jahr",
+    "vat": "inkl. MwSt."
+  },
+  "turnaround": "30 min",
+  "tags": [],
+  "factNote": null,
+  "guardrail": true,
+  "faq": [
+    {
+      "q": "Wie viel bekomme ich?",
+      "a": "Das hängt vom Anbieter und Jahr ab. Den aktuellen Betrag siehst du vor der Beantragung."
+    },
+    {
+      "q": "Muss ich das jedes Jahr machen?",
+      "a": "Ja, die Quote wird jährlich beantragt. Wir erinnern dich im nächsten Jahr."
+    }
+  ],
+  "related": [
+    "74",
+    "75",
+    "77"
+  ],
+  "seo": {
+    "title": "THG-Quote für E-Auto-Besitzer | TechieBuddy",
+    "description": "Wir beantragen deine jährliche THG-Quote über einen seriösen Anbieter. 39 € inkl. MwSt., Lieferzeit 30 min."
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g10"
+  ],
+  "keywords": [
+    "THG-Quote beantragen: Unterstützung",
+    "THG quota application support"
+  ]
+}

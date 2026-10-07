@@ -1,0 +1,86 @@
+{
+  "id": "05",
+  "slug": "dsgvo-quickcheck-consent-fix",
+  "category": "compliance",
+  "categorySlug": "compliance",
+  "alsoIn": [],
+  "sectors": [
+    "online-handel"
+  ],
+  "tier": "launch",
+  "audience": "b2b",
+  "name": "DSGVO-Quickcheck und Consent-Fix",
+  "problem": "Mein Meta-Pixel feuert vor der Einwilligung. Was ist sonst noch falsch?",
+  "summary": "Wir prüfen Cookie-Banner, Pixel und Tags, Google Consent Mode v2 sowie Impressum und Datenschutzerklärung auf technische Fehler. Du bekommst in 24 Stunden einen klaren Bericht; die Fixes gibt es zum Festpreis.",
+  "includes": [
+    "Check: Welche Skripte und Pixel laden vor der Einwilligung?",
+    "Prüfung von Cookie-Banner und Einwilligungskategorien",
+    "Google Consent Mode v2 für Werbe- und Analysekonten",
+    "Sichtprüfung: Sind Impressum und Datenschutzerklärung erreichbar und vollständig verlinkt?",
+    "Bericht mit Belegen und Fix-Liste"
+  ],
+  "excludes": [
+    "Erstellung oder rechtliche Prüfung von Rechtstexten",
+    "Umsetzung der Fixes (separat zum Festpreis)",
+    "Abmahnungs- oder Rechtsberatung"
+  ],
+  "needs": [
+    "Link zu deiner Website oder deinem Shop",
+    "Zugang zum Consent-Tool oder Tag-Manager für die Umsetzung"
+  ],
+  "steps": [
+    "Du schickst den Link.",
+    "Festpreis und Zahlungslink.",
+    "Wir messen, was vor und nach der Einwilligung lädt, und dokumentieren es.",
+    "Bericht in 24 Stunden, auf Wunsch Umsetzung zum Festpreis."
+  ],
+  "result": "Ein Bericht mit Screenshots und Netzwerk-Belegen: was vor der Einwilligung lädt, was falsch konfiguriert ist und wie es behoben wird.",
+  "price": {
+    "type": "fixed",
+    "from": 149,
+    "display": "149 €",
+    "note": "Check-Preis, Fixes zum Festpreis nach dem Check",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "24 h",
+  "tags": [
+    "erprobt"
+  ],
+  "factNote": null,
+  "guardrail": true,
+  "faq": [
+    {
+      "q": "Schützt mich das vor einer Abmahnung?",
+      "a": "Niemand kann Abmahnungen ausschließen. Der Check senkt das Risiko, weil technische Fehler gefunden und behoben werden, bevor andere sie finden."
+    },
+    {
+      "q": "Schreibt ihr meine Datenschutzerklärung?",
+      "a": "Nein. Rechtstexte kommen von deiner Rechtsberatung oder einem Generator. Wir bauen sie korrekt ein und sorgen dafür, dass die Technik dazu passt."
+    },
+    {
+      "q": "Woher wisst ihr, dass das funktioniert?",
+      "a": "Den Fehler mit dem Meta-Pixel vor der Einwilligung haben wir im eigenen Shop gefunden und behoben."
+    }
+  ],
+  "related": [
+    "01",
+    "59",
+    "23"
+  ],
+  "seo": {
+    "title": "DSGVO-Quickcheck und Consent-Fix | TechieBuddy",
+    "description": "Wir prüfen Cookie-Banner, Pixel und Tags, Google Consent Mode v2 sowie Impressum und Datenschutzerklärung auf technische Fehler."
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g06"
+  ],
+  "keywords": [
+    "Cookie-Einwilligung reparieren",
+    "Cookie consent implementation repair",
+    "Google Consent Mode umsetzen",
+    "Google Consent Mode implementation",
+    "Cookie-Banner und Einwilligung reparieren",
+    "Cookie banner and consent repair"
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "id": "83",
+  "slug": "wildkamera-revier-setup",
+  "category": "branchen-pakete",
+  "categorySlug": "branchen-loesungen",
+  "alsoIn": [],
+  "sectors": [
+    "laendliche-nischen"
+  ],
+  "tier": "catalog",
+  "audience": "b2b",
+  "name": "Jagd digital: Wildkamera und Revier-Apps",
+  "problem": "Meine Wildkamera schickt keine Bilder, und die Revier-App ist leer.",
+  "summary": "Mobilfunk-Wildkameras richtig einrichten, Revier-Apps aufsetzen und Fotos sinnvoll ablegen.",
+  "includes": [
+    "Einrichtung von Wildkameras mit Mobilfunk",
+    "Alarme und Bildübertragung",
+    "Einrichtung einer Revier-App",
+    "Ablage und Freigabe der Fotos"
+  ],
+  "excludes": [
+    "Kosten für Kameras und SIM-Karten",
+    "Montage im Revier außerhalb des vereinbarten Termins"
+  ],
+  "needs": [
+    "Kameras und SIM-Karten",
+    "Revierdaten für die App"
+  ],
+  "steps": [
+    "Du nennst Kameras und App-Wunsch.",
+    "Festpreis und Zahlungslink.",
+    "Ein Termin vor Ort.",
+    "Übergabe mit Kurzanleitung."
+  ],
+  "result": "Funktionierende Kameras mit Bildübertragung und eine eingerichtete Revier-App.",
+  "price": {
+    "type": "fixed",
+    "from": 249,
+    "display": "249 €",
+    "note": "Festpreis für einen Termin",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "1 Termin vor Ort",
+  "tags": [],
+  "factNote": null,
+  "guardrail": false,
+  "faq": [
+    {
+      "q": "Kommt ihr ins Revier?",
+      "a": "Ja, im Rahmen des vereinbarten Termins in der Region Chemnitz."
+    },
+    {
+      "q": "Welche Kameras unterstützt ihr?",
+      "a": "Gängige Mobilfunk-Wildkameras. Nenn uns dein Modell vor der Zahlung, dann prüfen wir es."
+    }
+  ],
+  "related": [
+    "84",
+    "86",
+    "87"
+  ],
+  "seo": {
+    "title": "Jagd digital: Wildkamera und Revier-Apps | TechieBuddy",
+    "description": "Mobilfunk-Wildkameras richtig einrichten, Revier-Apps aufsetzen und Fotos sinnvoll ablegen. 249 € zzgl. MwSt., Lieferzeit 1 Termin vor Ort."
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g13"
+  ],
+  "keywords": [
+    "Wildkamera und App einrichten",
+    "Wildlife camera and app setup"
+  ]
+}

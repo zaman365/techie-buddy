@@ -1,0 +1,75 @@
+{
+  "id": "55",
+  "slug": "saas-kosten-audit",
+  "category": "buero",
+  "categorySlug": "buero-it-daten",
+  "alsoIn": [],
+  "sectors": [
+    "kanzleien-bueros"
+  ],
+  "tier": "catalog",
+  "audience": "b2b",
+  "name": "SaaS-Kosten-Audit: 14 Tools bezahlt, 6 genutzt",
+  "problem": "Jeden Monat gehen Abos ab, und keiner weiß mehr, wofür.",
+  "summary": "Wir erfassen alle Software-Abos, finden Überschneidungen und ungenutzte Lizenzen und liefern eine Kündigungsliste sowie günstigere Tarifoptionen.",
+  "includes": [
+    "Inventur aller Abos aus Kontoauszügen und Rechnungen",
+    "Abgleich mit der tatsächlichen Nutzung",
+    "Überschneidungen und ungenutzte Lizenzen",
+    "Kündigungsliste mit Fristen",
+    "Günstigere Tarifoptionen"
+  ],
+  "excludes": [
+    "Kündigung in deinem Namen ohne Freigabe",
+    "Vertrags- oder Rechtsberatung"
+  ],
+  "needs": [
+    "Kontoauszüge oder Kreditkartenabrechnungen der letzten 12 Monate",
+    "Liste der Nutzer"
+  ],
+  "steps": [
+    "Du schickst Abrechnungen.",
+    "Festpreis und Zahlungslink.",
+    "Inventur und Nutzungsabgleich.",
+    "Bericht mit Kündigungsliste und Einsparung."
+  ],
+  "result": "Eine vollständige Abo-Übersicht, eine Kündigungsliste mit Fristen und die geschätzte jährliche Einsparung.",
+  "price": {
+    "type": "fixed",
+    "from": 249,
+    "display": "249 €",
+    "note": "Festpreis",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "72 h",
+  "tags": [],
+  "factNote": null,
+  "guardrail": false,
+  "faq": [
+    {
+      "q": "Kündigt ihr auch?",
+      "a": "Auf Wunsch ja, nach deiner Freigabe für jede einzelne Kündigung."
+    },
+    {
+      "q": "Wie viel spare ich?",
+      "a": "Das hängt von deinen Abos ab. Im Bericht steht die geschätzte jährliche Einsparung für jedes Abo, das du kündigen oder herunterstufen kannst."
+    }
+  ],
+  "related": [
+    "29",
+    "58",
+    "52"
+  ],
+  "seo": {
+    "title": "SaaS-Kosten-Audit: 14 Tools bezahlt, 6 genutzt | TechieBuddy",
+    "description": "Wir erfassen alle Software-Abos, finden Überschneidungen und ungenutzte Lizenzen und liefern eine Kündigungsliste sowie günstigere Tarifoptionen."
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g18"
+  ],
+  "keywords": [
+    "Abo-Verschwendung aufräumen",
+    "Subscription waste cleanup"
+  ]
+}

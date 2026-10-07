@@ -1,0 +1,185 @@
+---
+import Base from '../layouts/Base.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+import ProofStrip from '../components/ProofStrip.astro';
+import Logo from '../components/Logo.astro';
+import Icon from '../components/Icon.astro';
+import FinalCta from '../components/FinalCta.astro';
+import { site } from '../lib/data.ts';
+---
+<Base title="Über uns: Betreiber statt Agentur" description="TechieBuddy aus Chemnitz: digitale Probleme zum Festpreis, gelöst aus eigener Erfahrung mit Amazon, Otto, TikTok Shop und deutschen Pflichten. Auf Deutsch, Englisch und Bengali.">
+  <div class="container page-top">
+    <div class="intro">
+      <div class="intro__text">
+        <h1>Betreiber, nicht Agentur.</h1>
+        <p class="lede">TechieBuddy kommt aus Chemnitz und löst kleine, dringende Digitalprobleme zum festen Preis. Nicht aus dem Lehrbuch, sondern aus dem eigenen Betrieb: mit einer eigenen Modemarke auf Amazon, Otto, TikTok Shop und im eigenen Shop, inklusive aller deutschen Pflichten, die dazugehören.</p>
+        <p class="muted">Wir sind in Chemnitz zu Hause und mit Bangladesch verbunden. Deshalb sprechen wir Deutsch, Englisch und Bengali und helfen auch Menschen, die neu in Deutschland sind.</p>
+      </div>
+      <!-- TODO_TUTUL: Foto des Betreibers einsetzen (kein Stockfoto). Bis dahin neutraler Platzhalter. -->
+      <figure class="portrait" aria-hidden="true">
+        <Logo size={56} wordmark={false} />
+      </figure>
+    </div>
+  </div>
+
+  <section class="section--raised proof-wrap" aria-label="Erfahrung aus dem eigenen Betrieb">
+    <div class="container"><ProofStrip /></div>
+  </section>
+
+  <section class="section" aria-labelledby="filter-title">
+    <div class="container cols">
+      <SectionHeader id="filter-title" title="Warum es TechieBuddy gibt" text="Viele digitale Probleme sind zu klein für eine Agentur, zu technisch für die Inhaberin und zu dringend für eine Angebotsrunde. Jede Leistung besteht vier Fragen:" />
+      <ol class="filter" role="list">
+        {
+          site.filter.map((f, i) => (
+            <li>
+              <span class="mono">{String(i + 1).padStart(2, '0')}</span>
+              <div>
+                <h3>{f.q}</h3>
+                <p>{f.a}</p>
+              </div>
+            </li>
+          ))
+        }
+      </ol>
+    </div>
+  </section>
+
+  <section class="section section--raised section--line" aria-labelledby="principles-title">
+    <div class="container">
+      <SectionHeader id="principles-title" title="Woran du uns messen kannst" />
+      <ul class="grid" role="list">
+        {
+          site.principles.map((p) => (
+            <li>
+              <h3>{p.title}</h3>
+              <p>{p.text}</p>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="not-title">
+    <div class="container">
+      <SectionHeader id="not-title" title="Was wir bewusst nicht tun" />
+      <ul class="grid" role="list">
+        {
+          site.notDoing.map((p) => (
+            <li>
+              <h3><Icon name="x" size={16} />{p.title}</h3>
+              <p>{p.text}</p>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <FinalCta />
+</Base>
+<style>
+  .intro {
+    display: grid;
+    grid-template-columns: minmax(0, 8fr) minmax(0, 4fr);
+    gap: var(--s-12);
+    align-items: center;
+    margin-bottom: var(--s-16);
+  }
+  .intro__text {
+    display: grid;
+    gap: var(--s-5);
+  }
+  .intro h1 {
+    font-size: clamp(2.5rem, 6vw, var(--fs-64));
+  }
+  .portrait {
+    aspect-ratio: 4 / 5;
+    display: grid;
+    place-items: center;
+    border: 1px solid var(--line);
+    border-radius: var(--r-24);
+    background:
+      radial-gradient(circle at 70% 20%, rgba(96, 208, 207, 0.12), transparent 60%),
+      var(--surface);
+  }
+  .proof-wrap {
+    padding-block: var(--s-12);
+    border-block: 1px solid var(--line);
+  }
+  .cols {
+    display: grid;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    gap: var(--s-12);
+  }
+  .filter {
+    border-top: 1px solid var(--line);
+  }
+  .filter li {
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    gap: var(--s-4);
+    padding-block: var(--s-6);
+    border-bottom: 1px solid var(--line);
+  }
+  .filter .mono {
+    color: var(--accent);
+    font-size: var(--fs-14);
+    padding-top: 4px;
+  }
+  .filter h3 {
+    font-size: var(--fs-20);
+  }
+  .filter p {
+    color: var(--text-2);
+    margin-top: var(--s-1);
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: var(--s-4);
+  }
+  .grid li {
+    display: grid;
+    gap: var(--s-2);
+    align-content: start;
+    padding: var(--s-6);
+    border: 1px solid var(--line);
+    border-radius: var(--r-16);
+  }
+  .grid h3 {
+    display: flex;
+    align-items: center;
+    gap: var(--s-2);
+    font-size: var(--fs-18);
+  }
+  .grid h3 :global(.icon) {
+    color: var(--text-3);
+  }
+  .grid p {
+    color: var(--text-2);
+    font-size: var(--fs-14);
+  }
+  @media (max-width: 1079px) {
+    .grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .cols {
+      grid-template-columns: minmax(0, 1fr);
+      gap: var(--s-4);
+    }
+  }
+  @media (max-width: 767px) {
+    .intro {
+      grid-template-columns: minmax(0, 1fr);
+    }
+    .portrait {
+      max-width: 220px;
+      aspect-ratio: 1;
+    }
+    .grid {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+</style>

@@ -1,0 +1,78 @@
+{
+  "id": "17",
+  "slug": "ki-kundenservice-chatbot",
+  "category": "ki",
+  "categorySlug": "ki-automatisierung",
+  "alsoIn": [],
+  "sectors": [
+    "praxen-salons",
+    "gastronomie-hotellerie"
+  ],
+  "tier": "catalog",
+  "audience": "b2b",
+  "name": "KI-Kundenservice-Bot für deine Website",
+  "problem": "Wir beantworten jeden Tag dieselben zwanzig Fragen, oft nach Feierabend.",
+  "summary": "Ein Chatbot, trainiert auf deine FAQ, Produkte und Regeln, beantwortet Fragen auf Deutsch rund um die Uhr. Einrichtung plus drei Monate Feinabstimmung, danach als monatliche Betreuung.",
+  "includes": [
+    "Aufbereitung deiner FAQ, Produkte und Regeln als Wissensbasis",
+    "Einrichtung und Einbau auf deiner Website",
+    "Übergabe an einen Menschen bei offenen Fragen",
+    "3 Monate Feinabstimmung",
+    "Danach Pflege und Tuning für 49 €/Monat"
+  ],
+  "excludes": [
+    "Kosten des KI-Anbieters oder der Chat-Plattform",
+    "Beratung zu medizinischen oder rechtlichen Inhalten",
+    "Rechtliche Prüfung des Einsatzes"
+  ],
+  "needs": [
+    "Deine häufigsten Fragen und Antworten",
+    "Produkt- oder Leistungsinformationen",
+    "Zugang zur Website"
+  ],
+  "steps": [
+    "Du schickst FAQ und Infos.",
+    "Festpreis und Zahlungslink.",
+    "Aufbau, Tests mit echten Fragen und Einbau.",
+    "Livegang und Feinabstimmung."
+  ],
+  "result": "Ein laufender Bot auf deiner Website, dokumentierte Wissensbasis und ein klarer Weg zum Menschen.",
+  "price": {
+    "type": "fixed",
+    "from": 599,
+    "monthly": 49,
+    "display": "599 € + 49 €/Monat",
+    "note": "Einrichtung plus 49 €/Monat Pflege",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "1 Woche",
+  "tags": [
+    "abo"
+  ],
+  "factNote": null,
+  "guardrail": false,
+  "faq": [
+    {
+      "q": "Wo laufen die Daten?",
+      "a": "Wir wählen mit dir einen Anbieter, der zu deinen Datenschutzanforderungen passt, und dokumentieren die Einstellungen. Die rechtliche Bewertung bleibt bei deiner Datenschutzberatung."
+    },
+    {
+      "q": "Kann ich die Betreuung kündigen?",
+      "a": "Ja. Die Konditionen stehen im Angebot, bevor du zahlst."
+    }
+  ],
+  "related": [
+    "18",
+    "04",
+    "40"
+  ],
+  "seo": {
+    "title": "KI-Kundenservice-Bot für deine Website | TechieBuddy",
+    "description": "Ein Chatbot, trainiert auf deine FAQ, Produkte und Regeln, beantwortet Fragen auf Deutsch rund um die Uhr."
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g16"
+  ],
+  "keywords": []
+}

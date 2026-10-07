@@ -1,0 +1,82 @@
+{
+  "id": "87",
+  "slug": "kartenzahlung-marktstand",
+  "category": "branchen-pakete",
+  "categorySlug": "branchen-loesungen",
+  "alsoIn": [],
+  "sectors": [
+    "laendliche-nischen"
+  ],
+  "tier": "catalog",
+  "audience": "b2b",
+  "name": "Kartenzahlung für Marktstände",
+  "problem": "Auf dem Wochenmarkt fragen ständig Leute, ob sie mit Karte zahlen können.",
+  "summary": "SumUp oder Zettle einrichten, Preise anlegen und ein Schild „Wir nehmen Karte“ für deinen Stand. Am selben Tag erledigt.",
+  "includes": [
+    "Einrichtung von SumUp, Zettle oder ähnlich",
+    "Artikel und Preise anlegen",
+    "Belege per E-Mail oder SMS",
+    "Schild „Wir nehmen Karte“ als Druckdatei"
+  ],
+  "excludes": [
+    "Kosten für das Kartenlesegerät",
+    "Transaktionsgebühren",
+    "Kassenführung nach Steuerrecht (klärst du mit deiner Steuerberatung)"
+  ],
+  "needs": [
+    "Smartphone und Kartenlesegerät (oder Budget dafür)",
+    "Preisliste",
+    "Bankverbindung"
+  ],
+  "steps": [
+    "Du schickst Preisliste.",
+    "Festpreis und Zahlungslink.",
+    "Einrichtung am selben Tag.",
+    "Testzahlung und Übergabe."
+  ],
+  "result": "Ein einsatzbereites Kartenterminal mit deinen Preisen und ein Schild für den Stand.",
+  "price": {
+    "type": "fixed",
+    "from": 99,
+    "display": "99 €",
+    "note": "Festpreis",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "am selben Tag",
+  "tags": [],
+  "factNote": null,
+  "guardrail": false,
+  "faq": [
+    {
+      "q": "Lohnt sich das für kleine Umsätze?",
+      "a": "Die meisten Anbieter haben keine Grundgebühr, nur eine Gebühr pro Zahlung. Wir rechnen es mit dir durch."
+    },
+    {
+      "q": "Brauche ich eine Kasse mit TSE?",
+      "a": "Das hängt von deinem Betrieb ab und ist eine steuerliche Frage. Kläre sie mit deiner Steuerberatung; wir richten die Technik passend ein."
+    }
+  ],
+  "related": [
+    "86",
+    "44",
+    "37"
+  ],
+  "seo": {
+    "title": "Kartenzahlung für Marktstände | TechieBuddy",
+    "description": "SumUp oder Zettle einrichten, Preise anlegen und ein Schild „Wir nehmen Karte“ für deinen Stand. 99 € zzgl. MwSt., Lieferzeit am selben Tag."
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g04",
+    "g13",
+    "g17"
+  ],
+  "keywords": [
+    "Weihnachtsmarkt: Kartenzahlung einrichten",
+    "Christmas market card-payment setup",
+    "Bargeldlos verkaufen: Startpaket",
+    "Cashless selling starter pack",
+    "Kartenzahlung aktivieren",
+    "Card payment activation"
+  ]
+}

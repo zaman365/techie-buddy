@@ -1,0 +1,221 @@
+---
+import Base from '../../../layouts/Base.astro';
+import Breadcrumb from '../../../components/Breadcrumb.astro';
+import SectionHeader from '../../../components/SectionHeader.astro';
+import TicketCard from '../../../components/TicketCard.astro';
+import ServiceRow from '../../../components/ServiceRow.astro';
+import CatalogTable from '../../../components/CatalogTable.astro';
+import Icon from '../../../components/Icon.astro';
+import FinalCta from '../../../components/FinalCta.astro';
+import { getData, site, byTier, serviceUrl, sectorUrl, type Category } from '../../../lib/data.ts';
+
+export async function getStaticPaths() {
+  const { categories } = await getData();
+  return categories.map((c) => ({ params: { category: c.slug }, props: { id: c.id } }));
+}
+const { id } = Astro.props as { id: string };
+const { categoryById, serviceById, services, catalogListed, sectors } = await getData();
+const c = categoryById.get(id) as Category;
+const named = c.services.map((x) => serviceById.get(x)!).sort(byTier);
+const alsoHere = services.filter((s) => s.alsoIn.includes(c.id)).sort(byTier);
+const rows = catalogListed.filter((r) => r.category === c.id);
+const relSectors = sectors.filter((x) => x.services.some((sid) => c.services.includes(sid)));
+const showGuard = named.some((s) => s.guardrail);
+const b2c = c.id === 'zuhause';
+---
+<Base title={`${c.name}: Festpreis-Leistungen`} description={`${c.intro.slice(0, 140).replace(/\s\S*$/, '')} …`} ogImage={`/og/${c.slug}.png`}>
+  <div class="container page-top">
+    <Breadcrumb items={[{ label: 'Leistungen', href: '/leistungen/' }, { label: c.name }]} />
+    <header class="cat__head">
+      <span class="cat__icon"><Icon name={c.icon} size={22} /></span>
+      <h1 class="cat__title">{c.name}</h1>
+      <p class="lede">{c.intro}</p>
+      <p class="meta mono cat__count">{c.counts.named} Leistungen mit Detailseite · {rows.length} weitere Festpreis-Fixes</p>
+    </header>
+
+    <section class="cat__problems" aria-labelledby="problems-title">
+      <h2 id="problems-title" class="small-h">Häufige Probleme</h2>
+      <ul role="list" class="problems">
+        {
+          c.problems.map((p) => (
+            <li>
+              <a href={serviceUrl(serviceById.get(p.id)!)}>
+                <span>„{p.quote}“</span>
+                <Icon name="arrow-right" size={16} />
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+  </div>
+
+  <section class="section section--raised section--line" aria-labelledby="named-title">
+    <div class="container">
+      <SectionHeader id="named-title" title="Leistungen mit Festpreis" text="Jede mit Umfang, Ausschlüssen, Lieferzeit und Nachweis auf einer eigenen Seite." />
+      <ul class="tickets" role="list">
+        {named.map((s) => <li><TicketCard service={s} /></li>)}
+      </ul>
+      {
+        alsoHere.length > 0 && (
+          <div class="also">
+            <h3 class="small-h">Auch hier relevant</h3>
+            <div class="hairline-list">
+              {alsoHere.map((s) => (
+                <ServiceRow service={s} />
+              ))}
+            </div>
+          </div>
+        )
+      }
+    </div>
+  </section>
+
+  {
+    rows.length > 0 && (
+      <section class="section" aria-labelledby="more-title">
+        <div class="container">
+          <SectionHeader
+            id="more-title"
+            title="Weitere Leistungen in diesem Bereich"
+            text={`${rows.length} kleinere Fixes mit Richtpreis. Den Festpreis bekommst du nach kurzer Prüfung, bevor du zahlst.`}
+          />
+          <CatalogTable rows={rows} caption={`Weitere Leistungen: ${c.name}`} />
+        </div>
+      </section>
+    )
+  }
+
+  <section class="section section--raised section--line section--tight" aria-label="Hinweise und Branchen">
+    <div class="container cat__foot">
+      {
+        (showGuard || b2c) && (
+          <div class="note">
+            <Icon name="info" />
+            <p>
+              {showGuard && (
+                <>
+                  <strong>Umsetzung, keine Beratung.</strong> {site.guardrail}{' '}
+                </>
+              )}
+              {b2c && <>Preise für Privathaushalte enthalten die Mehrwertsteuer.</>}
+            </p>
+          </div>
+        )
+      }
+      {
+        relSectors.length > 0 && (
+          <div>
+            <h2 class="small-h">Passende Branchen</h2>
+            <ul class="cluster" role="list">
+              {relSectors.map((x) => (
+                <li>
+                  <a class="chip-link" href={sectorUrl(x)}>
+                    <Icon name={x.icon} size={14} />
+                    {x.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )
+      }
+    </div>
+  </section>
+
+  <FinalCta title="Dein Problem ist nicht dabei?" text="Schildere es in ein paar Sätzen. Du bekommst Umfang, Festpreis und Lieferzeit, bevor irgendetwas beginnt." />
+</Base>
+
+<style>
+  .cat__head {
+    margin-top: var(--s-8);
+    max-width: 820px;
+    display: grid;
+    gap: var(--s-4);
+  }
+  .cat__icon {
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: var(--r-16);
+    border: 1px solid var(--line-2);
+    background: rgba(255, 255, 255, 0.03);
+  }
+  .cat__title {
+    font-size: clamp(2.375rem, 5vw, var(--fs-64));
+  }
+  .cat__count {
+    font-size: var(--fs-13);
+  }
+  .cat__problems {
+    margin-block: var(--s-12) var(--s-16);
+  }
+  .small-h {
+    font-size: var(--fs-14);
+    font-weight: 560;
+    color: var(--text-2);
+    letter-spacing: 0;
+    margin-bottom: var(--s-4);
+  }
+  .problems {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
+    gap: var(--s-2);
+  }
+  .problems a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--s-4);
+    height: 100%;
+    padding: var(--s-4) var(--s-5);
+    border: 1px solid var(--line);
+    border-radius: var(--r-16);
+    text-decoration: none;
+    font-size: var(--fs-16);
+    font-weight: 500;
+    line-height: 1.4;
+    transition: border-color var(--t-fast) var(--ease);
+  }
+  .problems a:hover {
+    border-color: var(--line-3);
+  }
+  .problems :global(.icon) {
+    color: var(--text-3);
+    flex: none;
+  }
+  .tickets {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--s-4);
+  }
+  .also {
+    margin-top: var(--s-12);
+  }
+  .cat__foot {
+    display: grid;
+    gap: var(--s-8);
+  }
+  .chip-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    min-height: 36px;
+    padding: 0 12px;
+    border: 1px solid var(--line-2);
+    border-radius: var(--r-pill);
+    font-size: var(--fs-13);
+    color: var(--text-2);
+    text-decoration: none;
+  }
+  .chip-link:hover {
+    color: var(--text);
+    border-color: var(--line-3);
+  }
+  @media (max-width: 860px) {
+    .tickets {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+</style>

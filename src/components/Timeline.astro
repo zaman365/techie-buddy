@@ -1,0 +1,107 @@
+---
+// Numbered vertical steps with a connecting hairline. Steps reveal from blur to focus
+// on scroll (scripts/motion.ts), the one scroll effect on the site.
+interface Props {
+  steps: { title: string; text: string }[];
+  compact?: boolean;
+}
+const { steps, compact = false } = Astro.props;
+---
+<ol class:list={['tl', compact && 'tl--compact']} role="list" data-reveal-group>
+  {
+    steps.map((s, i) => (
+      <li class="tl__step" data-reveal>
+        <span class="tl__n mono" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
+        <div class="tl__body">
+          <h3 class="tl__title">
+            <span class="sr-only">Schritt {i + 1}: </span>
+            {s.title}
+          </h3>
+          {s.text && <p class="tl__text">{s.text}</p>}
+        </div>
+      </li>
+    ))
+  }
+</ol>
+<style>
+  .tl {
+    list-style: none;
+    padding: 0;
+    position: relative;
+    display: grid;
+    gap: var(--s-10);
+  }
+  .tl::before {
+    content: '';
+    position: absolute;
+    left: 23px;
+    top: 24px;
+    bottom: 24px;
+    width: 1px;
+    background: linear-gradient(180deg, var(--accent-line), var(--line) 60%, transparent);
+  }
+  .tl__step {
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    gap: var(--s-6);
+    align-items: start;
+  }
+  .tl__n {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid var(--line-2);
+    background: var(--bg);
+    font-size: var(--fs-14);
+    color: var(--accent);
+  }
+  .tl__title {
+    font-size: var(--fs-24);
+    letter-spacing: -0.025em;
+    padding-top: 8px;
+  }
+  .tl__text {
+    color: var(--text-2);
+    margin-top: var(--s-2);
+    max-width: 56ch;
+  }
+  .tl--compact {
+    gap: var(--s-6);
+  }
+  .tl--compact .tl__title {
+    font-size: var(--fs-16);
+    font-weight: 500;
+    letter-spacing: -0.005em;
+    line-height: 1.5;
+    padding-top: 8px;
+  }
+  .tl--compact .tl__n {
+    width: 40px;
+    height: 40px;
+  }
+  .tl--compact::before {
+    left: 19px;
+  }
+  .tl--compact .tl__step {
+    grid-template-columns: 40px 1fr;
+    gap: var(--s-4);
+  }
+  :global(.section--raised) .tl__n {
+    background: var(--bg-raised);
+  }
+  /* Blur-to-focus reveal, only when JS has armed it and motion is allowed. */
+  @media (prefers-reduced-motion: no-preference) {
+    :global(.js-reveal) .tl__step {
+      filter: blur(7px);
+      transform: translateY(10px);
+      transition: filter 650ms var(--ease), transform 650ms var(--ease);
+    }
+    :global(.js-reveal) .tl__step.is-in {
+      filter: none;
+      transform: none;
+    }
+  }
+</style>

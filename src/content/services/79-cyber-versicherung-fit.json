@@ -1,0 +1,82 @@
+{
+  "id": "79",
+  "slug": "cyber-versicherung-fit",
+  "category": "buero",
+  "categorySlug": "buero-it-daten",
+  "alsoIn": [
+    "compliance"
+  ],
+  "sectors": [
+    "kanzleien-bueros"
+  ],
+  "tier": "catalog",
+  "audience": "b2b",
+  "name": "Cyber-Versicherung: Anforderungen technisch erfüllen",
+  "problem": "Die Versicherung will wissen, ob wir MFA und getestete Backups haben. Haben wir nicht.",
+  "summary": "Wir setzen genau um, was der Fragebogen deiner Cyber-Versicherung verlangt: MFA überall, getestete Backups, Update-Routine, Passwortmanager. So kannst du die Fragen wahrheitsgemäß beantworten.",
+  "includes": [
+    "Abgleich des Versicherungsfragebogens mit dem Ist-Zustand",
+    "Zwei-Faktor-Anmeldung für alle wichtigen Konten",
+    "Backup mit getesteter Wiederherstellung",
+    "Update-Routine und Passwortmanager",
+    "Nachweismappe für die Versicherung"
+  ],
+  "excludes": [
+    "Versicherungsberatung oder Zusage der Annahme",
+    "Hardware- und Lizenzkosten",
+    "Ausfüllen des Fragebogens in deinem Namen"
+  ],
+  "needs": [
+    "Der Fragebogen der Versicherung",
+    "Zugang zu den betroffenen Systemen"
+  ],
+  "steps": [
+    "Du schickst den Fragebogen.",
+    "Festpreis und Zahlungslink.",
+    "Umsetzung der geforderten Maßnahmen.",
+    "Übergabe der Nachweismappe."
+  ],
+  "result": "Umgesetzte Schutzmaßnahmen und eine Nachweismappe, mit der du den Fragebogen ehrlich beantworten kannst.",
+  "price": {
+    "type": "fixed",
+    "from": 499,
+    "display": "499 €",
+    "note": "Festpreis für ein kleines Team",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "1 Woche",
+  "tags": [],
+  "factNote": null,
+  "guardrail": true,
+  "faq": [
+    {
+      "q": "Nimmt mich die Versicherung danach sicher an?",
+      "a": "Das entscheidet die Versicherung. Wir setzen die geforderten Maßnahmen technisch um und dokumentieren sie."
+    },
+    {
+      "q": "Bin ich Versicherungsmakler, kann ich Kunden schicken?",
+      "a": "Ja. Auf der Partnerseite steht, wie das funktioniert."
+    }
+  ],
+  "related": [
+    "53",
+    "78",
+    "29"
+  ],
+  "seo": {
+    "title": "Cyber-Versicherung: Anforderungen technisch erfüllen",
+    "description": "Wir setzen genau um, was der Fragebogen deiner Cyber-Versicherung verlangt: MFA überall, getestete Backups, Update-Routine, Passwortmanager."
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g10",
+    "g12"
+  ],
+  "keywords": [
+    "Cyber-Versicherung: Anforderungen umsetzen",
+    "Cyber-insurance questionnaire implementation",
+    "Cyber-insurance control implementation",
+    "Cyber-Versicherung: Fragebogen vorbereiten",
+    "Cyber insurance questionnaire support"
+  ]
+}

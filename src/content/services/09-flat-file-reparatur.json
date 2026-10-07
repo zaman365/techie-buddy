@@ -1,0 +1,79 @@
+{
+  "id": "09",
+  "slug": "flat-file-reparatur",
+  "category": "marktplaetze",
+  "categorySlug": "amazon-marktplaetze",
+  "alsoIn": [],
+  "sectors": [
+    "online-handel"
+  ],
+  "tier": "launch",
+  "audience": "b2b",
+  "name": "Flat-File-Chirurgie: Varianten und Massenänderungen",
+  "problem": "Meine Varianten sind zerschossen, und die Massenänderung hängt seit Tagen.",
+  "summary": "Parent-Child-Beziehungen reparieren, Varianten zurückholen, Kategorien und Attribute in großen Mengen ändern: per Flat-File und mit erprobten Werkzeugen statt Handarbeit im Seller Central.",
+  "includes": [
+    "Diagnose der Fehlerberichte und Katalogkonflikte",
+    "Reparatur von Parent-Child-Beziehungen und Variationen",
+    "Massenänderungen an Kategorien und Attributen",
+    "Upload und Kontrolle des Verarbeitungsberichts"
+  ],
+  "excludes": [
+    "Neuanlage ganzer Kataloge",
+    "Fälle, die nur der Seller-Support lösen kann (wir bereiten den Fall vor)",
+    "Texte und Bilder"
+  ],
+  "needs": [
+    "Zugang zu Seller Central (Nutzerberechtigung)",
+    "Betroffene ASINs oder SKUs",
+    "Screenshots der Fehlermeldungen"
+  ],
+  "steps": [
+    "Du schickst die betroffenen ASINs und Fehlermeldungen.",
+    "Festpreis je nach Umfang und Zahlungslink.",
+    "Flat-File-Korrektur, Upload und Kontrolle.",
+    "Übergabe mit Upload-Protokoll und Tipp gegen Wiederholung."
+  ],
+  "result": "Funktionierende Variantenfamilien oder umgesetzte Massenänderungen, belegt durch den Verarbeitungsbericht.",
+  "price": {
+    "type": "range",
+    "from": 79,
+    "to": 149,
+    "display": "79–149 €",
+    "note": "pro Fix, je nach Umfang",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "24–48 h",
+  "tags": [
+    "erprobt"
+  ],
+  "factNote": null,
+  "guardrail": false,
+  "faq": [
+    {
+      "q": "Was ist ein Flat-File?",
+      "a": "Eine Excel-Vorlage von Amazon, mit der viele Produkte auf einmal angelegt oder geändert werden. Richtig eingesetzt spart sie Stunden Handarbeit."
+    },
+    {
+      "q": "Geht dabei etwas verloren?",
+      "a": "Wir sichern den Ausgangszustand vor jedem Upload und arbeiten mit Kontroll-Uploads, damit Bewertungen und Verkaufsrang erhalten bleiben."
+    }
+  ],
+  "related": [
+    "02",
+    "12",
+    "24"
+  ],
+  "seo": {
+    "title": "Flat-File-Chirurgie: Varianten und Massenänderungen",
+    "description": "Parent-Child-Beziehungen reparieren, Varianten zurückholen, Kategorien und Attribute in großen Mengen ändern: per Flat-File und mit erprobten …"
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g01"
+  ],
+  "keywords": [
+    "Amazon-Variantenfamilie reparieren",
+    "Amazon variation family repair"
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "id": "63",
+  "slug": "foerdermittel-check",
+  "category": "wachstum",
+  "categorySlug": "foerderung-team-nachfolge",
+  "alsoIn": [],
+  "sectors": [
+    "handwerk",
+    "kanzleien-bueros"
+  ],
+  "tier": "catalog",
+  "audience": "b2b",
+  "name": "Fördermittel-Check für Digitalisierung",
+  "problem": "Ich weiß, dass es Förderprogramme gibt, aber nicht, welche gerade für mich passen.",
+  "summary": "Ein bezahlter Check: Welche aktuell offenen Programme von Bund und Land passen zu deinem Betrieb, was ist förderfähig, welche Fristen gelten und wie läuft der Antrag?",
+  "includes": [
+    "Abgleich deines Betriebs mit aktuell offenen Programmen",
+    "Was förderfähig ist und was nicht",
+    "Fristen und Antragsschritte",
+    "Kurzbericht mit Empfehlung"
+  ],
+  "excludes": [
+    "Antragstellung (auf Wunsch als Projekt)",
+    "Garantie auf Förderung",
+    "Steuer- oder Rechtsberatung"
+  ],
+  "needs": [
+    "Unternehmensdaten: Sitz, Größe, Umsatz",
+    "Geplantes Vorhaben und Budget"
+  ],
+  "steps": [
+    "Du füllst einen kurzen Fragebogen aus.",
+    "Festpreis und Zahlungslink.",
+    "Recherche und Abgleich.",
+    "Kurzbericht in 48 Stunden."
+  ],
+  "result": "Ein Kurzbericht mit passenden Programmen, Fristen und nächsten Schritten.",
+  "price": {
+    "type": "fixed",
+    "from": 149,
+    "display": "149 €",
+    "note": "Festpreis",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "48 h",
+  "tags": [],
+  "factNote": null,
+  "guardrail": true,
+  "faq": [
+    {
+      "q": "Gibt es eine kostenlose Ersteinschätzung?",
+      "a": "Ja, der Förder-Check im Bereich Wissen gibt dir eine erste Orientierung im Browser. Der bezahlte Check prüft die aktuelle Programmlage für deinen Fall."
+    },
+    {
+      "q": "Wann bekomme ich das Ergebnis?",
+      "a": "In 48 Stunden, sobald Zahlung und Fragebogen da sind."
+    }
+  ],
+  "related": [
+    "62",
+    "64",
+    "65"
+  ],
+  "seo": {
+    "title": "Fördermittel-Check für Digitalisierung | TechieBuddy",
+    "description": "Ein bezahlter Check: Welche aktuell offenen Programme von Bund und Land passen zu deinem Betrieb, was ist förderfähig, welche Fristen gelten und wie …"
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g10"
+  ],
+  "keywords": [
+    "Passt ein Förderprogramm?",
+    "Funding program fit check"
+  ]
+}

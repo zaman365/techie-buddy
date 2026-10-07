@@ -1,0 +1,80 @@
+{
+  "id": "58",
+  "slug": "daten-umzug-systeme",
+  "category": "buero",
+  "categorySlug": "buero-it-daten",
+  "alsoIn": [],
+  "sectors": [
+    "kanzleien-bueros"
+  ],
+  "tier": "catalog",
+  "audience": "b2b",
+  "name": "Daten-Umzug zwischen Systemen",
+  "problem": "Der neue Anbieter sagt: einfach die CSV importieren. Es klappt einfach nicht.",
+  "summary": "Kundenlisten vom alten ins neue CRM, Produktdaten von Shop zu Shop, Kontakte aus Outlook in die Cloud: bereinigt, Felder zugeordnet und geprüft.",
+  "includes": [
+    "Export aus dem alten System",
+    "Bereinigung und Entfernung von Dubletten",
+    "Zuordnung der Felder",
+    "Import und Stichprobenkontrolle",
+    "Protokoll des Umzugs"
+  ],
+  "excludes": [
+    "Lizenzkosten",
+    "Neuaufbau von Prozessen im Zielsystem"
+  ],
+  "needs": [
+    "Zugang zu altem und neuem System",
+    "Welche Daten mitkommen sollen"
+  ],
+  "steps": [
+    "Du nennst Quelle, Ziel und Datenmenge.",
+    "Festpreis und Zahlungslink.",
+    "Export, Bereinigung, Import.",
+    "Kontrolle mit dir und Übergabe."
+  ],
+  "result": "Deine Daten vollständig und sauber im neuen System, mit Protokoll.",
+  "price": {
+    "type": "fixed",
+    "from": 249,
+    "display": "249 €",
+    "note": "Festpreis für einen Umzug",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "72 h",
+  "tags": [],
+  "factNote": null,
+  "guardrail": false,
+  "faq": [
+    {
+      "q": "Was passiert mit Dubletten?",
+      "a": "Wir führen sie nach Regeln zusammen, die wir vorher mit dir festlegen."
+    },
+    {
+      "q": "Wie groß darf der Umzug sein?",
+      "a": "Der Festpreis gilt für einen üblichen Umzug eines kleinen Betriebs. Bei großen Datenmengen nennen wir den Preis vor der Zahlung."
+    }
+  ],
+  "related": [
+    "56",
+    "57",
+    "52"
+  ],
+  "seo": {
+    "title": "Daten-Umzug zwischen Systemen | TechieBuddy",
+    "description": "Kundenlisten vom alten ins neue CRM, Produktdaten von Shop zu Shop, Kontakte aus Outlook in die Cloud: bereinigt, Felder zugeordnet und geprüft."
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g11",
+    "g14"
+  ],
+  "keywords": [
+    "CSV-Import, der endlich klappt",
+    "CSV import cleanup",
+    "CRM-Kontakte bereinigen und importieren",
+    "CRM contact cleanup and import",
+    "Produktkatalog bereinigen und importieren",
+    "Product catalog cleanup and import"
+  ]
+}

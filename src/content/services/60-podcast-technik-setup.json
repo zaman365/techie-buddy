@@ -1,0 +1,73 @@
+{
+  "id": "60",
+  "slug": "podcast-technik-setup",
+  "category": "branchen-pakete",
+  "categorySlug": "branchen-loesungen",
+  "alsoIn": [],
+  "sectors": [
+    "creator-coaches"
+  ],
+  "tier": "catalog",
+  "audience": "b2b",
+  "name": "Podcast-Technik komplett einrichten",
+  "problem": "Ich habe ein Mikrofon gekauft, aber mein Podcast ist immer noch nicht online.",
+  "summary": "Hosting, RSS-Feed, Verteilung auf Spotify und Apple Podcasts, Cover, Intro und Outro sowie ein Ablauf für jede neue Folge. In einer Woche vom Mikrofon zur ersten veröffentlichten Folge.",
+  "includes": [
+    "Podcast-Hosting und RSS-Feed",
+    "Anmeldung bei Spotify und Apple Podcasts",
+    "Cover nach Plattformvorgaben",
+    "Intro und Outro",
+    "Veröffentlichung der ersten Folge und Ablauf für weitere"
+  ],
+  "excludes": [
+    "Schnitt laufender Folgen",
+    "Musiklizenzen",
+    "Hosting-Kosten"
+  ],
+  "needs": [
+    "Name und Thema des Podcasts",
+    "Erste Folge als Aufnahme"
+  ],
+  "steps": [
+    "Du schickst Name, Thema und Aufnahme.",
+    "Festpreis und Zahlungslink.",
+    "Einrichtung, Cover und Veröffentlichung.",
+    "Übergabe mit Ablauf für neue Folgen."
+  ],
+  "result": "Ein veröffentlichter Podcast mit erster Folge und ein Ablauf für jede weitere.",
+  "price": {
+    "type": "fixed",
+    "from": 349,
+    "display": "349 €",
+    "note": "Festpreis",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "1 Woche",
+  "tags": [],
+  "factNote": null,
+  "guardrail": false,
+  "faq": [
+    {
+      "q": "Schneidet ihr auch meine Folgen?",
+      "a": "Nicht im Paket. Wir zeigen dir einen einfachen Ablauf dafür."
+    },
+    {
+      "q": "Wo wird der Podcast gehostet?",
+      "a": "Bei einem Podcast-Hoster deiner Wahl. Das Konto läuft auf dich, damit du jederzeit wechseln kannst."
+    }
+  ],
+  "related": [
+    "61",
+    "FT",
+    "18"
+  ],
+  "seo": {
+    "title": "Podcast-Technik komplett einrichten | TechieBuddy",
+    "description": "Hosting, RSS-Feed, Verteilung auf Spotify und Apple Podcasts, Cover, Intro und Outro sowie ein Ablauf für jede neue Folge."
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g05"
+  ],
+  "keywords": []
+}

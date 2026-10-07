@@ -1,0 +1,83 @@
+{
+  "id": "40",
+  "slug": "no-show-terminerinnerung",
+  "category": "kunden",
+  "categorySlug": "sichtbarkeit-termine",
+  "alsoIn": [
+    "branchen-pakete"
+  ],
+  "sectors": [
+    "praxen-salons"
+  ],
+  "tier": "next",
+  "audience": "b2b",
+  "name": "Weniger Terminausfälle: Erinnerung per SMS oder WhatsApp",
+  "problem": "Jede Woche erscheinen Kunden nicht zum Termin, und der Stuhl bleibt leer.",
+  "summary": "Der No-Show-Killer: Deine Kundschaft bekommt 24 Stunden vor dem Termin automatisch eine Erinnerung per SMS oder WhatsApp, mit Link zum Absagen oder Verschieben. Einrichtung plus kleine Monatsgebühr.",
+  "includes": [
+    "Anbindung an deinen Terminkalender oder dein Buchungssystem",
+    "Erinnerung 24 Stunden vorher per SMS oder WhatsApp",
+    "Link zum Absagen oder Verschieben",
+    "Texte in deinem Ton",
+    "Laufender Betrieb für 29 €/Monat"
+  ],
+  "excludes": [
+    "Kosten für SMS-Versand, soweit sie über das Angebot hinausgehen",
+    "Wechsel des Buchungssystems (eigene Leistung)"
+  ],
+  "needs": [
+    "Zugang zu Kalender oder Buchungssystem",
+    "Einwilligung deiner Kundschaft für Erinnerungen (wir zeigen dir, wie)"
+  ],
+  "steps": [
+    "Du nennst dein Kalender- oder Buchungssystem.",
+    "Festpreis und Zahlungslink.",
+    "Einrichtung, Texte und Testtermine.",
+    "Livegang, danach laufender Betrieb."
+  ],
+  "result": "Automatische Erinnerungen vor jedem Termin, mit Absage-Link und dokumentierter Einrichtung.",
+  "price": {
+    "type": "fixed",
+    "from": 299,
+    "monthly": 29,
+    "display": "299 € + 29 €/Monat",
+    "note": "Einrichtung plus 29 €/Monat",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "48 h",
+  "tags": [
+    "abo"
+  ],
+  "factNote": null,
+  "guardrail": false,
+  "faq": [
+    {
+      "q": "Mit welchen Kalendern funktioniert das?",
+      "a": "Mit gängigen Buchungssystemen und Kalendern. Wir prüfen deins vor der Zahlung."
+    },
+    {
+      "q": "Was ist im Monatspreis enthalten?",
+      "a": "Betrieb und Pflege der Erinnerungen. Was genau enthalten ist, steht im Angebot, bevor du zahlst."
+    }
+  ],
+  "related": [
+    "41",
+    "37",
+    "17"
+  ],
+  "seo": {
+    "title": "Weniger Terminausfälle: Erinnerung per SMS oder WhatsApp",
+    "description": "Der No-Show-Killer: Deine Kundschaft bekommt 24 Stunden vor dem Termin automatisch eine Erinnerung per SMS oder WhatsApp, mit Link zum Absagen oder …"
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g08",
+    "g16"
+  ],
+  "keywords": [
+    "Automatische Terminerinnerungen",
+    "Appointment reminder automation",
+    "Weniger Terminausfälle",
+    "No-show reduction workflow"
+  ]
+}

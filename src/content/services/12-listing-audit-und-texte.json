@@ -1,0 +1,74 @@
+{
+  "id": "12",
+  "slug": "listing-audit-und-texte",
+  "category": "marktplaetze",
+  "categorySlug": "amazon-marktplaetze",
+  "alsoIn": [],
+  "sectors": [
+    "online-handel"
+  ],
+  "tier": "catalog",
+  "audience": "b2b",
+  "name": "Listing-Audit mit neuem deutschem Text",
+  "problem": "Meine Listings klingen wie aus dem Übersetzer, und sie verkaufen nicht.",
+  "summary": "Wir prüfen Titel, Bullet Points, Backend-Suchbegriffe und Bildfolge und schreiben das Listing in natürlichem Deutsch neu. Du bekommst einen Bericht, den du weitergeben kannst.",
+  "includes": [
+    "Audit von Titel, Bullet Points, Beschreibung und Backend-Suchbegriffen",
+    "Prüfung der Bildfolge mit Empfehlungen",
+    "Neuer deutscher Text, suchwortbasiert",
+    "Bericht mit Vorher-Nachher-Vergleich"
+  ],
+  "excludes": [
+    "Neue Fotos oder Grafiken",
+    "A+ Content (eigene Leistung)",
+    "Werbekampagnen"
+  ],
+  "needs": [
+    "ASIN oder Link zum Listing",
+    "Zugang zu Seller Central für den Upload (optional)"
+  ],
+  "steps": [
+    "Du schickst die ASIN.",
+    "Festpreis und Zahlungslink.",
+    "Audit, Suchwortrecherche und Neutext.",
+    "Übergabe als Bericht, auf Wunsch mit Upload."
+  ],
+  "result": "Ein Bericht mit Audit und neuem Text, bereit zum Upload.",
+  "price": {
+    "type": "fixed",
+    "from": 199,
+    "display": "199 €",
+    "note": "pro Listing",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "48 h",
+  "tags": [
+    "erprobt"
+  ],
+  "factNote": null,
+  "guardrail": false,
+  "faq": [
+    {
+      "q": "Schreibt ihr auch für andere Marktplätze?",
+      "a": "Ja, Otto, Kaufland und eigene Shops auf Anfrage. Der Festpreis gilt pro Listing."
+    },
+    {
+      "q": "Verbessert das sicher mein Ranking?",
+      "a": "Ein besserer Text hilft bei Auffindbarkeit und Conversion. Das Ranking hängt aber von vielen Faktoren ab, die niemand allein steuert."
+    }
+  ],
+  "related": [
+    "08",
+    "15",
+    "19"
+  ],
+  "seo": {
+    "title": "Listing-Audit mit neuem deutschem Text | TechieBuddy",
+    "description": "Wir prüfen Titel, Bullet Points, Backend-Suchbegriffe und Bildfolge und schreiben das Listing in natürlichem Deutsch neu."
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g08"
+  ],
+  "keywords": []
+}

@@ -1,0 +1,76 @@
+{
+  "id": "85",
+  "slug": "fahrschule-digitalisierung",
+  "category": "branchen-pakete",
+  "categorySlug": "branchen-loesungen",
+  "alsoIn": [],
+  "sectors": [
+    "laendliche-nischen"
+  ],
+  "tier": "catalog",
+  "audience": "b2b",
+  "name": "Fahrschule digitalisieren",
+  "problem": "Wir sind ausgebucht und ertrinken in Telefonaten und Papier.",
+  "summary": "Online-Buchung, Anbindung der Theorie-App, WhatsApp Business und Google-Bewertungen: ein abgestimmtes Paket für Fahrschulen.",
+  "includes": [
+    "Online-Buchung von Fahrstunden",
+    "Anbindung der Theorie-App",
+    "WhatsApp Business",
+    "System für Google-Bewertungen",
+    "Einweisung"
+  ],
+  "excludes": [
+    "Lizenzkosten",
+    "Fahrschul-Verwaltungssoftware-Wechsel (prüfen wir vorher)"
+  ],
+  "needs": [
+    "Angebote und Fahrlehrer-Kalender",
+    "Zugänge zu bestehenden Tools"
+  ],
+  "steps": [
+    "Du nennst deine Tools.",
+    "Festpreis und Zahlungslink.",
+    "Einrichtung und Tests.",
+    "Einweisung und Übergabe."
+  ],
+  "result": "Buchung, Kommunikation und Bewertungen laufen digital und abgestimmt.",
+  "price": {
+    "type": "fixed",
+    "from": 499,
+    "display": "499 €",
+    "note": "Festpreis",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "1 Woche",
+  "tags": [],
+  "factNote": null,
+  "guardrail": false,
+  "faq": [
+    {
+      "q": "Funktioniert das mit unserer Verwaltungssoftware?",
+      "a": "Wir prüfen die Anbindung vor der Zahlung."
+    },
+    {
+      "q": "Bekommen Fahrschüler eine Erinnerung vor der Stunde?",
+      "a": "Ja, Erinnerungen per SMS oder WhatsApp lassen sich in die Buchung einbauen."
+    }
+  ],
+  "related": [
+    "41",
+    "37",
+    "43"
+  ],
+  "seo": {
+    "title": "Fahrschule digitalisieren | TechieBuddy",
+    "description": "Online-Buchung, Anbindung der Theorie-App, WhatsApp Business und Google-Bewertungen: ein abgestimmtes Paket für Fahrschulen."
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g05",
+    "g13"
+  ],
+  "keywords": [
+    "Fahrschule: digitale Abläufe",
+    "Driving school digital workflow"
+  ]
+}

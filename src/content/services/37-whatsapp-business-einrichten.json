@@ -1,0 +1,81 @@
+{
+  "id": "37",
+  "slug": "whatsapp-business-einrichten",
+  "category": "kunden",
+  "categorySlug": "sichtbarkeit-termine",
+  "alsoIn": [],
+  "sectors": [
+    "handwerk"
+  ],
+  "tier": "catalog",
+  "audience": "b2b",
+  "name": "WhatsApp Business professionell einrichten",
+  "problem": "Kunden schreiben uns längst per WhatsApp, aber alles läuft über mein Privathandy.",
+  "summary": "Wir richten WhatsApp Business ein: Unternehmensprofil, Katalog, Schnellantworten und Abwesenheitsnachricht für den Feierabend, dazu ein QR-Code für Auto, Laden oder Visitenkarte.",
+  "includes": [
+    "Unternehmensprofil mit Zeiten und Adresse",
+    "Katalog deiner Leistungen oder Produkte",
+    "Schnellantworten und Labels",
+    "Abwesenheits- und Begrüßungsnachricht",
+    "QR-Code zum Ausdrucken"
+  ],
+  "excludes": [
+    "WhatsApp Business API und Massenversand",
+    "Hardware"
+  ],
+  "needs": [
+    "Ein Handy mit der Geschäftsnummer",
+    "Logo und Leistungsliste"
+  ],
+  "steps": [
+    "Du schickst Nummer, Logo und Leistungen.",
+    "Festpreis und Zahlungslink.",
+    "Einrichtung gemeinsam am Handy oder per Fernhilfe.",
+    "Übergabe mit QR-Code und Kurzanleitung."
+  ],
+  "result": "Ein professionelles WhatsApp-Business-Profil, fertige Antworten und ein druckfertiger QR-Code.",
+  "price": {
+    "type": "fixed",
+    "from": 149,
+    "display": "149 €",
+    "note": "Festpreis",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "24 h",
+  "tags": [],
+  "factNote": null,
+  "guardrail": false,
+  "faq": [
+    {
+      "q": "Kann ich meine Nummer behalten?",
+      "a": "Ja, wenn die Nummer bisher privat in WhatsApp genutzt wurde, lässt sich das Konto übertragen. Wir prüfen das vorher."
+    },
+    {
+      "q": "Können mehrere Mitarbeitende antworten?",
+      "a": "Ja, WhatsApp Business lässt sich auf mehreren Geräten nutzen. Wir richten das mit ein."
+    }
+  ],
+  "related": [
+    "40",
+    "43",
+    "25"
+  ],
+  "seo": {
+    "title": "WhatsApp Business professionell einrichten | TechieBuddy",
+    "description": "Wir richten WhatsApp Business ein: Unternehmensprofil, Katalog, Schnellantworten und Abwesenheitsnachricht für den Feierabend, dazu ein QR-Code für …"
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g04",
+    "g05",
+    "g16"
+  ],
+  "keywords": [
+    "WhatsApp Business starten",
+    "Business WhatsApp starter",
+    "WhatsApp Business aufräumen",
+    "WhatsApp Business cleanup",
+    "WhatsApp Business professionell einrichten",
+    "WhatsApp Business professional setup"
+  ]
+}

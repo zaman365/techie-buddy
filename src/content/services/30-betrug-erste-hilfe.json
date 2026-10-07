@@ -1,0 +1,80 @@
+{
+  "id": "30",
+  "slug": "betrug-erste-hilfe",
+  "category": "zuhause",
+  "categorySlug": "zuhause-familie-energie",
+  "alsoIn": [],
+  "sectors": [
+    "familien-senioren"
+  ],
+  "tier": "catalog",
+  "audience": "b2c",
+  "name": "Betrugs-Erste-Hilfe für Privatpersonen",
+  "problem": "Ich habe auf einen Link geklickt und meine Bankdaten eingegeben. Was jetzt?",
+  "summary": "Nach Phishing, Fake-Shop oder gekapertem WhatsApp: Wir begrenzen den Schaden, sperren und sichern deine Konten, helfen bei der Meldung an Bank und Polizei und prüfen dein Gerät.",
+  "includes": [
+    "Sofort-Check: Was ist passiert, was ist betroffen?",
+    "Konten sperren, Passwörter ändern, Sitzungen beenden",
+    "Hilfe bei Bankmeldung und Online-Anzeige bei der Polizei",
+    "Prüfung deines Geräts",
+    "Neue Sicherheitseinstellungen und Zwei-Faktor-Anmeldung"
+  ],
+  "excludes": [
+    "Rückholung von Geld (das entscheidet deine Bank)",
+    "Rechtsberatung",
+    "Ermittlungen gegen Täter"
+  ],
+  "needs": [
+    "Was passiert ist, mit Screenshots",
+    "Zugriff auf dein Handy oder deinen Computer",
+    "Telefonnummer deiner Bank"
+  ],
+  "steps": [
+    "Du schilderst kurz, was passiert ist.",
+    "Festpreis und Zahlungslink.",
+    "Start noch am selben Tag: Schadensbegrenzung und Meldungen.",
+    "Absicherung und kurze Zusammenfassung für dich."
+  ],
+  "result": "Gesicherte Konten, erstattete Meldungen an Bank und Polizei und ein Gerät mit sicheren Einstellungen.",
+  "price": {
+    "type": "fixed",
+    "from": 149,
+    "display": "149 €",
+    "note": "Festpreis",
+    "vat": "inkl. MwSt."
+  },
+  "turnaround": "am selben Tag",
+  "tags": [
+    "notfall"
+  ],
+  "factNote": null,
+  "guardrail": false,
+  "faq": [
+    {
+      "q": "Was soll ich sofort tun?",
+      "a": "Wenn Bankdaten betroffen sind: Ruf deine Bank an oder nutze den Sperr-Notruf 116 116. Danach helfen wir beim Rest."
+    },
+    {
+      "q": "Bekomme ich mein Geld zurück?",
+      "a": "Das entscheidet deine Bank. Wir helfen dir, den Fall vollständig und schnell zu melden."
+    }
+  ],
+  "related": [
+    "32",
+    "26",
+    "73"
+  ],
+  "seo": {
+    "title": "Betrugs-Erste-Hilfe für Privatpersonen | TechieBuddy",
+    "description": "Nach Phishing, Fake-Shop oder gekapertem WhatsApp: Wir begrenzen den Schaden, sperren und sichern deine Konten, helfen bei der Meldung an Bank und …"
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g12",
+    "g19"
+  ],
+  "keywords": [
+    "Nach dem Betrug: Konten sichern",
+    "Scam incident account safety check"
+  ]
+}

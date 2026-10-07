@@ -1,0 +1,74 @@
+{
+  "id": "74",
+  "slug": "balkonkraftwerk-anmeldung",
+  "category": "zuhause",
+  "categorySlug": "zuhause-familie-energie",
+  "alsoIn": [],
+  "sectors": [
+    "energie"
+  ],
+  "tier": "catalog",
+  "audience": "b2c",
+  "name": "Balkonkraftwerk anmelden",
+  "problem": "Das Balkonkraftwerk hängt, aber vor dem Marktstammdatenregister drücke ich mich.",
+  "summary": "Wir melden dein Balkonkraftwerk korrekt im Marktstammdatenregister an, mit deinen Anlagendaten, in 24 Stunden.",
+  "includes": [
+    "Registrierung im Marktstammdatenregister",
+    "Prüfung der Angaben aus deinem Datenblatt",
+    "Bestätigung als PDF für deine Unterlagen"
+  ],
+  "excludes": [
+    "Elektroinstallation",
+    "Prüfung, ob deine Anlage zulässig montiert ist"
+  ],
+  "needs": [
+    "Datenblatt oder Fotos vom Typenschild (Modul und Wechselrichter)",
+    "Datum der Inbetriebnahme",
+    "Zählernummer"
+  ],
+  "steps": [
+    "Du schickst Datenblatt und Zählernummer.",
+    "Festpreis und Zahlungslink.",
+    "Registrierung in 24 Stunden.",
+    "Bestätigung per E-Mail."
+  ],
+  "result": "Eine erledigte Registrierung mit Bestätigung für deine Unterlagen.",
+  "price": {
+    "type": "fixed",
+    "from": 49,
+    "display": "49 €",
+    "note": "Festpreis",
+    "vat": "inkl. MwSt."
+  },
+  "turnaround": "24 h",
+  "tags": [],
+  "factNote": null,
+  "guardrail": true,
+  "faq": [
+    {
+      "q": "Muss ich mein Balkonkraftwerk anmelden?",
+      "a": "Ja, Balkonkraftwerke müssen im Marktstammdatenregister registriert werden."
+    },
+    {
+      "q": "Was brauche ich dafür?",
+      "a": "Ein Foto vom Typenschild des Wechselrichters und der Module, das Datum der Inbetriebnahme und die Zählernummer."
+    }
+  ],
+  "related": [
+    "75",
+    "76",
+    "77"
+  ],
+  "seo": {
+    "title": "Balkonkraftwerk anmelden | TechieBuddy",
+    "description": "Wir melden dein Balkonkraftwerk korrekt im Marktstammdatenregister an, mit deinen Anlagendaten, in 24 Stunden. 49 € inkl. MwSt., Lieferzeit 24 h."
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g10"
+  ],
+  "keywords": [
+    "Balkonkraftwerk anmelden: Unterstützung",
+    "Balcony solar registration assistance"
+  ]
+}

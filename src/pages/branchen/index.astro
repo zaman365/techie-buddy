@@ -1,0 +1,78 @@
+---
+import Base from '../../layouts/Base.astro';
+import SectionHeader from '../../components/SectionHeader.astro';
+import Icon from '../../components/Icon.astro';
+import FinalCta from '../../components/FinalCta.astro';
+import { getData, sectorUrl } from '../../lib/data.ts';
+const { sectors } = await getData();
+---
+<Base title="Branchen: digitale Fixes für deinen Betrieb" description="Zwölf Branchen von Online-Handel bis Hofladen: typische Probleme, passende Festpreis-Leistungen und Pflichten im Blick.">
+  <div class="container page-top">
+    <SectionHeader level="h1" title="Branchen" text="Jede Branche hat ihre eigenen Probleme. Hier findest du die typischen, mit den passenden Leistungen und Pflichten." />
+    <ul class="grid" role="list">
+      {
+        sectors.map((s) => (
+          <li>
+            <a class="sec" href={sectorUrl(s)}>
+              <span class="sec__head">
+                <Icon name={s.icon} size={20} />
+                <span class="sec__count mono">{s.services.length + s.catalogCount} Fixes</span>
+              </span>
+              <span class="sec__name">{s.name}</span>
+              <span class="sec__quote">„{s.problems[0]}“</span>
+              <span class="sec__short">{s.short}</span>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+  <FinalCta />
+</Base>
+<style>
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
+    gap: var(--s-3);
+    margin-bottom: var(--s-20);
+  }
+  .grid > li {
+    display: grid;
+  }
+  .sec {
+    display: grid;
+    gap: var(--s-2);
+    align-content: start;
+    padding: var(--s-6);
+    border: 1px solid var(--line);
+    border-radius: var(--r-16);
+    text-decoration: none;
+    transition: border-color var(--t-fast) var(--ease);
+  }
+  .sec:hover {
+    border-color: var(--line-3);
+  }
+  .sec__head {
+    display: flex;
+    justify-content: space-between;
+    color: var(--text-2);
+    margin-bottom: var(--s-2);
+  }
+  .sec__count {
+    font-size: var(--fs-12);
+    color: var(--text-3);
+  }
+  .sec__name {
+    font-size: var(--fs-20);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+  .sec__quote {
+    color: var(--accent);
+    font-size: var(--fs-14);
+  }
+  .sec__short {
+    color: var(--text-2);
+    font-size: var(--fs-14);
+  }
+</style>

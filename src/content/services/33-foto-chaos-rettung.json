@@ -1,0 +1,79 @@
+{
+  "id": "33",
+  "slug": "foto-chaos-rettung",
+  "category": "zuhause",
+  "categorySlug": "zuhause-familie-energie",
+  "alsoIn": [],
+  "sectors": [
+    "familien-senioren"
+  ],
+  "tier": "catalog",
+  "audience": "b2c",
+  "name": "Foto-Chaos-Rettung",
+  "problem": "30.000 Fotos auf drei Handys, zwei Laptops und vier USB-Sticks. Und eine Festplatte macht komische Geräusche.",
+  "summary": "Wir machen aus verstreuten Fotos eine geordnete Familienbibliothek: Dubletten entfernt, nach Jahren sortiert, in der Cloud und lokal gesichert.",
+  "includes": [
+    "Zusammenführung aus Handys, Laptops, USB-Sticks und Festplatten",
+    "Entfernung von Dubletten",
+    "Ordnung nach Jahr und Ereignis",
+    "Sicherung in der Cloud und lokal",
+    "Anleitung, wie es künftig ordentlich bleibt"
+  ],
+  "excludes": [
+    "Datenrettung von defekten Datenträgern im Labor",
+    "Kosten für Speicher oder Cloud",
+    "Bildbearbeitung"
+  ],
+  "needs": [
+    "Alle Geräte und Datenträger",
+    "Wunsch: welche Cloud, welcher Speicher"
+  ],
+  "steps": [
+    "Du nennst Geräte und ungefähre Menge.",
+    "Festpreis und Zahlungslink.",
+    "Zusammenführung, Ordnung und Sicherung.",
+    "Übergabe mit Anleitung."
+  ],
+  "result": "Eine geordnete, doppelt gesicherte Fotobibliothek für die ganze Familie.",
+  "price": {
+    "type": "fixed",
+    "from": 249,
+    "display": "249 €",
+    "note": "Festpreis für eine übliche Familienmenge",
+    "vat": "inkl. MwSt."
+  },
+  "turnaround": "1 Woche",
+  "tags": [],
+  "factNote": null,
+  "guardrail": false,
+  "faq": [
+    {
+      "q": "Was, wenn die alte Festplatte defekt ist?",
+      "a": "Solange sie noch lesbar ist, sichern wir zuerst. Bei echten Hardwareschäden empfehlen wir ein Datenrettungslabor."
+    },
+    {
+      "q": "Wie viele Fotos sind enthalten?",
+      "a": "Der Festpreis gilt für eine übliche Familienmenge. Bei sehr großen Sammlungen nennen wir den Preis vor der Zahlung."
+    }
+  ],
+  "related": [
+    "71",
+    "32",
+    "35"
+  ],
+  "seo": {
+    "title": "Foto-Chaos-Rettung | TechieBuddy",
+    "description": "Wir machen aus verstreuten Fotos eine geordnete Familienbibliothek: Dubletten entfernt, nach Jahren sortiert, in der Cloud und lokal gesichert."
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g14",
+    "g19"
+  ],
+  "keywords": [
+    "Foto-Dubletten aufräumen",
+    "Photo library deduplication",
+    "Familienarchiv: Grundstruktur",
+    "Family digital archive starter"
+  ]
+}

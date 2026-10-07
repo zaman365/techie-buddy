@@ -1,0 +1,74 @@
+{
+  "id": "FT",
+  "slug": "ki-content-starterpaket",
+  "category": "ki",
+  "categorySlug": "ki-automatisierung",
+  "alsoIn": [],
+  "sectors": [
+    "online-handel",
+    "creator-coaches"
+  ],
+  "tier": "catalog",
+  "audience": "b2b",
+  "name": "KI-Content-Starterpaket: Fotos, Posts, Google-Profil",
+  "problem": "Ich weiß, dass ich mehr posten sollte, aber ich habe weder Zeit noch Bilder.",
+  "summary": "Für Läden und Restaurants: Produktfotos werden aufbereitet, zehn Social-Media-Beiträge erstellt und dein Google-Unternehmensprofil optimiert. Als Paket, ohne dass du KI-Tools lernen musst.",
+  "includes": [
+    "Aufbereitung deiner Produkt- oder Gerichtsfotos",
+    "10 Social-Media-Beiträge mit Text",
+    "Optimierung deines Google-Unternehmensprofils",
+    "Übergabe als Paket zum Planen oder Veröffentlichen"
+  ],
+  "excludes": [
+    "Laufendes Posten (auf Wunsch als Betreuung)",
+    "Werbeanzeigen",
+    "Fotoshooting"
+  ],
+  "needs": [
+    "Handyfotos",
+    "Infos zu Angebot und Aktionen",
+    "Zugang zu Google-Profil und Social-Media-Konten"
+  ],
+  "steps": [
+    "Du schickst Fotos und Infos.",
+    "Festpreis und Zahlungslink.",
+    "Bearbeitung, Texte und Profiloptimierung.",
+    "Übergabe des Pakets."
+  ],
+  "result": "Aufbereitete Bilder, zehn fertige Beiträge und ein optimiertes Google-Profil.",
+  "price": {
+    "type": "fixed",
+    "from": 349,
+    "display": "349 €",
+    "note": "Festpreis als Paket",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "72 h",
+  "tags": [],
+  "factNote": null,
+  "guardrail": false,
+  "faq": [
+    {
+      "q": "Posten ihr auch für mich?",
+      "a": "Das Paket liefert fertige Beiträge. Laufendes Posten gibt es als monatliche Betreuung."
+    },
+    {
+      "q": "Brauche ich KI-Kenntnisse?",
+      "a": "Nein. Du schickst Fotos und Infos, wir liefern fertige Inhalte."
+    }
+  ],
+  "related": [
+    "19",
+    "25",
+    "16"
+  ],
+  "seo": {
+    "title": "KI-Content-Starterpaket: Fotos, Posts, Google-Profil",
+    "description": "Für Läden und Restaurants: Produktfotos werden aufbereitet, zehn Social-Media-Beiträge erstellt und dein Google-Unternehmensprofil optimiert."
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g08"
+  ],
+  "keywords": []
+}

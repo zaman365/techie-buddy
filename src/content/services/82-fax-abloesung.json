@@ -1,0 +1,73 @@
+{
+  "id": "82",
+  "slug": "fax-abloesung",
+  "category": "buero",
+  "categorySlug": "buero-it-daten",
+  "alsoIn": [],
+  "sectors": [
+    "praxen-salons",
+    "kanzleien-bueros"
+  ],
+  "tier": "catalog",
+  "audience": "b2b",
+  "name": "Fax-Ausstieg für Praxen und Kanzleien",
+  "problem": "Wir faxen immer noch Befunde und Schriftsätze. Das muss doch anders gehen.",
+  "summary": "Wir ersetzen das Faxgerät durch den passenden sicheren digitalen Kanal für deinen Beruf, richten ihn ein und schulen dein Team.",
+  "includes": [
+    "Analyse, wer dir faxt und an wen du faxt",
+    "Auswahl des passenden digitalen Kanals für deinen Beruf",
+    "Einrichtung und Test",
+    "Einweisung fürs Team",
+    "Plan für den Übergang"
+  ],
+  "excludes": [
+    "Kosten für Kommunikationsdienste oder Kartenlesegeräte",
+    "Berufsrechtliche Beratung"
+  ],
+  "needs": [
+    "Liste der häufigsten Fax-Kontakte",
+    "Zugang zu Praxis- oder Kanzleisoftware"
+  ],
+  "steps": [
+    "Du schickst die Kontaktliste.",
+    "Festpreis und Zahlungslink.",
+    "Einrichtung und Test des neuen Kanals.",
+    "Einweisung und Übergang."
+  ],
+  "result": "Ein eingerichteter digitaler Kanal, ein eingewiesenes Team und ein Plan, das Faxgerät abzuschalten.",
+  "price": {
+    "type": "fixed",
+    "from": 299,
+    "display": "299 €",
+    "note": "Festpreis",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "1 Woche",
+  "tags": [],
+  "factNote": null,
+  "guardrail": true,
+  "faq": [
+    {
+      "q": "Welcher Kanal ist der richtige?",
+      "a": "Das hängt vom Beruf ab: In Praxen etwa KIM, in Kanzleien das beA. Wir richten ein, was für dich vorgesehen ist."
+    },
+    {
+      "q": "Was passiert mit Kontakten, die noch faxen?",
+      "a": "Für eine Übergangszeit lässt sich ein Fax-Eingang digital empfangen, bis alle umgestellt sind."
+    }
+  ],
+  "related": [
+    "81",
+    "42",
+    "52"
+  ],
+  "seo": {
+    "title": "Fax-Ausstieg für Praxen und Kanzleien | TechieBuddy",
+    "description": "Wir ersetzen das Faxgerät durch den passenden sicheren digitalen Kanal für deinen Beruf, richten ihn ein und schulen dein Team."
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g11"
+  ],
+  "keywords": []
+}

@@ -1,0 +1,76 @@
+{
+  "id": "57",
+  "slug": "access-datenbank-abloesung",
+  "category": "buero",
+  "categorySlug": "buero-it-daten",
+  "alsoIn": [],
+  "sectors": [
+    "kanzleien-bueros"
+  ],
+  "tier": "catalog",
+  "audience": "b2b",
+  "name": "Access-Datenbank retten und ablösen",
+  "problem": "Unser ganzes Lager läuft über eine Access-Datenbank von 2005, und keiner traut sich ran.",
+  "summary": "Wir stabilisieren die alte Datenbank, exportieren die Daten sauber und ziehen sie in ein wartbares System um, zum Beispiel Airtable oder eine passende Branchenlösung.",
+  "includes": [
+    "Analyse von Tabellen, Formularen und Abläufen",
+    "Sicherung und Stabilisierung des Bestands",
+    "Sauberer Datenexport",
+    "Migration in ein wartbares System",
+    "Einweisung und Dokumentation"
+  ],
+  "excludes": [
+    "Lizenzkosten des neuen Systems",
+    "Entwicklung komplexer Individualsoftware"
+  ],
+  "needs": [
+    "Kopie der Datenbank",
+    "Ansprechperson, die die Abläufe kennt"
+  ],
+  "steps": [
+    "Du schickst eine Kopie der Datenbank.",
+    "Analyse und Festpreis.",
+    "Stabilisierung, Export und Migration.",
+    "Parallelbetrieb, Einweisung und Übergabe."
+  ],
+  "result": "Deine Daten in einem wartbaren System, dokumentiert, mit eingewiesenem Team.",
+  "price": {
+    "type": "from",
+    "from": 599,
+    "display": "ab 599 €",
+    "note": "Festpreis nach Analyse der Datenbank",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "1–3 Wochen",
+  "tags": [],
+  "factNote": null,
+  "guardrail": false,
+  "faq": [
+    {
+      "q": "Läuft der Betrieb währenddessen weiter?",
+      "a": "Ja. Wir planen einen Parallelbetrieb, bis das neue System sicher läuft."
+    },
+    {
+      "q": "Wohin ziehen die Daten?",
+      "a": "In ein System, das zu deinen Abläufen passt, etwa Airtable oder eine Branchenlösung. Wir empfehlen nach der Analyse."
+    }
+  ],
+  "related": [
+    "56",
+    "58",
+    "29"
+  ],
+  "seo": {
+    "title": "Access-Datenbank retten und ablösen | TechieBuddy",
+    "description": "Wir stabilisieren die alte Datenbank, exportieren die Daten sauber und ziehen sie in ein wartbares System um, zum Beispiel Airtable oder eine passende …"
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g11",
+    "g14"
+  ],
+  "keywords": [
+    "Access-Datenbank: Risiko-Check",
+    "Access database rescue assessment"
+  ]
+}

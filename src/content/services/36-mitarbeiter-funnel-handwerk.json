@@ -1,0 +1,77 @@
+{
+  "id": "36",
+  "slug": "mitarbeiter-funnel-handwerk",
+  "category": "wachstum",
+  "categorySlug": "foerderung-team-nachfolge",
+  "alsoIn": [
+    "branchen-pakete"
+  ],
+  "sectors": [
+    "handwerk",
+    "internationale-fachkraefte"
+  ],
+  "tier": "next",
+  "audience": "b2b",
+  "name": "Mitarbeiter-Funnel für Handwerksbetriebe",
+  "problem": "Wir finden keine Gesellen. Auf Stellenanzeigen meldet sich niemand.",
+  "summary": "Eine mobile Karriereseite und eine Bewerbung über WhatsApp in 60 Sekunden: fünf Fragen, kein Lebenslauf, kein Anschreiben. Dazu zwei Anzeigenmotive für deine Region.",
+  "includes": [
+    "Mobile Karriereseite mit Einblick in den Betrieb",
+    "Bewerbung in 60 Sekunden: 5 Fragen per WhatsApp oder Formular",
+    "Benachrichtigung bei neuen Bewerbungen",
+    "Zwei lokale Anzeigenmotive",
+    "Kurze Anleitung zum schnellen Rückmelden"
+  ],
+  "excludes": [
+    "Anzeigenbudget",
+    "Vorauswahl oder Gespräche mit Bewerbenden",
+    "Zusage von Einstellungen"
+  ],
+  "needs": [
+    "Infos zu Stellen, Benefits und Team",
+    "Fotos vom Betrieb und von Baustellen",
+    "Zugang zur Website"
+  ],
+  "steps": [
+    "Du schickst Stelleninfos und Fotos.",
+    "Festpreis und Zahlungslink.",
+    "Aufbau von Seite, Bewerbungsweg und Motiven.",
+    "Livegang und Übergabe."
+  ],
+  "result": "Eine fertige Karriereseite, ein laufender Bewerbungsweg und zwei Anzeigenmotive.",
+  "price": {
+    "type": "fixed",
+    "from": 799,
+    "display": "799 €",
+    "note": "Festpreis, Anzeigenbudget separat",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "1 Woche",
+  "tags": [],
+  "factNote": null,
+  "guardrail": false,
+  "faq": [
+    {
+      "q": "Ist das auch etwas für Pflege oder Gastronomie?",
+      "a": "Ja, das Prinzip funktioniert in jeder Branche. Für Pflegeeinrichtungen gibt es im Katalog eine eigene Variante."
+    },
+    {
+      "q": "Passt das zu Förderprogrammen?",
+      "a": "Als Teil eines größeren Digitalisierungsprojekts kann es förderfähig sein. Wir prüfen das im Förder-Check."
+    }
+  ],
+  "related": [
+    "39",
+    "80",
+    "62"
+  ],
+  "seo": {
+    "title": "Mitarbeiter-Funnel für Handwerksbetriebe | TechieBuddy",
+    "description": "Eine mobile Karriereseite und eine Bewerbung über WhatsApp in 60 Sekunden: fünf Fragen, kein Lebenslauf, kein Anschreiben."
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g03"
+  ],
+  "keywords": []
+}

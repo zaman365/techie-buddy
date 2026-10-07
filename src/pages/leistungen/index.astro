@@ -1,0 +1,98 @@
+---
+import Base from '../../layouts/Base.astro';
+import SectionHeader from '../../components/SectionHeader.astro';
+import CommandBar from '../../components/CommandBar.astro';
+import ServiceRow from '../../components/ServiceRow.astro';
+import Icon from '../../components/Icon.astro';
+import { getData, byTier, categoryUrl, countPhrase } from '../../lib/data.ts';
+const { categories, serviceById, totalOffers } = await getData();
+---
+<Base title="Leistungen: alle Bereiche im Überblick" description={`${countPhrase(totalOffers, true)} digitale Fixes mit Festpreis und Lieferzeit, sortiert in neun Bereiche: Compliance, Marktplätze, Website, KI, Sichtbarkeit, Büro-IT, Förderung, Zuhause und Branchen.`}>
+  <div class="container page-top">
+    <SectionHeader level="h1" title="Leistungen" text={`${countPhrase(totalOffers, true)} Festpreis-Leistungen in neun Bereichen. Such nach deinem Problem oder stöbere im Bereich, der passt.`} />
+    <div class="search"><CommandBar id="leistungen-search" /></div>
+  </div>
+  {
+    categories.map((c, i) => (
+      <section class:list={['section', 'section--line', 'section--tight', i % 2 === 1 && 'section--raised']} aria-labelledby={`cat-${c.id}`}>
+        <div class="container cat">
+          <div class="cat__intro">
+            <span class="cat__icon"><Icon name={c.icon} size={20} /></span>
+            <h2 id={`cat-${c.id}`} class="cat__title">
+              <a href={categoryUrl(c)}>{c.name}</a>
+            </h2>
+            <p class="muted">{c.intro}</p>
+            <a class="link-arrow" href={categoryUrl(c)}>
+              {c.counts.named + c.counts.catalog} Leistungen im Bereich <Icon name="arrow-right" />
+            </a>
+          </div>
+          <div class="hairline-list">
+            {c.services.map((id) => serviceById.get(id)!).sort(byTier).map((s) => <ServiceRow service={s} />)}
+          </div>
+        </div>
+      </section>
+    ))
+  }
+  <section class="section section--line" aria-labelledby="all-title">
+    <div class="container all">
+      <h2 id="all-title">Das ganze Angebot, filterbar</h2>
+      <p class="lede">Alle {totalOffers} Leistungen nach Problem, Bereich, Branche, Preis und Lieferzeit filtern.</p>
+      <a class="btn btn--primary btn--lg" href="/alle-leistungen/">Alle Leistungen ansehen</a>
+    </div>
+  </section>
+</Base>
+<script>
+  import '../../scripts/hero.ts';
+</script>
+<style>
+  .search {
+    max-width: 720px;
+    margin-bottom: var(--s-16);
+  }
+  .cat {
+    display: grid;
+    grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
+    gap: var(--s-12);
+    align-items: start;
+  }
+  .cat__intro {
+    display: grid;
+    gap: var(--s-3);
+    position: sticky;
+    top: 104px;
+  }
+  .cat__icon {
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--r-10);
+    border: 1px solid var(--line-2);
+  }
+  .cat__title {
+    font-size: var(--fs-30);
+  }
+  .cat__title a {
+    text-decoration: none;
+  }
+  .cat__title a:hover {
+    color: var(--accent-hover);
+  }
+  .cat__intro .muted {
+    font-size: var(--fs-14);
+  }
+  .all {
+    display: grid;
+    gap: var(--s-4);
+    justify-items: start;
+  }
+  @media (max-width: 960px) {
+    .cat {
+      grid-template-columns: minmax(0, 1fr);
+      gap: var(--s-6);
+    }
+    .cat__intro {
+      position: static;
+    }
+  }
+</style>

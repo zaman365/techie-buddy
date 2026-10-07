@@ -1,0 +1,84 @@
+{
+  "id": "01",
+  "slug": "bfsg-barrierefreiheit-audit",
+  "category": "compliance",
+  "categorySlug": "compliance",
+  "alsoIn": [],
+  "sectors": [
+    "online-handel"
+  ],
+  "tier": "launch",
+  "audience": "b2b",
+  "name": "BFSG-Audit: Barrierefreiheit prüfen, Fix-Liste erhalten",
+  "problem": "Das Barrierefreiheitsgesetz gilt seit Juni 2025. Betrifft das meinen Shop überhaupt?",
+  "summary": "Wir klären zuerst, ob das BFSG für dich gilt, und prüfen deinen Shop dann nach WCAG 2.1 AA. Du bekommst einen Bericht mit priorisierter Fix-Liste; die Umsetzung gibt es auf Wunsch zum Festpreis.",
+  "includes": [
+    "Geltungs-Check: Fällt dein Angebot unter das BFSG?",
+    "Prüfung der wichtigsten Seiten und Abläufe nach WCAG 2.1 AA",
+    "Tastaturbedienung, Kontraste, Beschriftungen, Struktur und Formulare",
+    "Bericht mit Barrieren nach Priorität und konkreter Fix-Liste",
+    "Festpreis-Angebot für die Umsetzung, wenn du willst"
+  ],
+  "excludes": [
+    "Rechtliche Bewertung deiner Pflichten (dafür ist eine Anwältin oder ein Anwalt zuständig)",
+    "Umsetzung der Fixes (separat zum Festpreis nach dem Audit)",
+    "Änderungen an Drittanbieter-Tools, auf die du keinen Zugriff hast"
+  ],
+  "needs": [
+    "Link zu deinem Shop oder deiner Website",
+    "Beschäftigtenzahl und Jahresumsatz für den Geltungs-Check",
+    "Testzugang, falls Bereiche nur nach Login erreichbar sind"
+  ],
+  "steps": [
+    "Du schilderst kurz dein Angebot, wir schätzen ein, ob das BFSG für dich gilt.",
+    "Du bekommst Festpreis und Zahlungslink.",
+    "Wir prüfen mit Tastatur, Screenreader und Kontrastmessung nach WCAG 2.1 AA.",
+    "Du erhältst den Bericht und ein Festpreis-Angebot für die Umsetzung."
+  ],
+  "result": "Ein weiterleitbarer Prüfbericht: Einschätzung zur Geltung, gefundene Barrieren nach Priorität und eine konkrete Fix-Liste.",
+  "price": {
+    "type": "fixed",
+    "from": 299,
+    "display": "299 €",
+    "note": "Audit-Preis, Umsetzung separat zum Festpreis",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "72 h",
+  "tags": [
+    "pflicht"
+  ],
+  "factNote": "Das BFSG gilt seit dem 28. Juni 2025 für erfasste Produkte und Dienstleistungen. Kleinstunternehmen (weniger als 10 Beschäftigte und höchstens 2 Mio. € Jahresumsatz oder Jahresbilanzsumme) sind bei Dienstleistungen ausgenommen. Deshalb prüfen wir zuerst, ob das Gesetz für dich überhaupt gilt.",
+  "guardrail": true,
+  "faq": [
+    {
+      "q": "Gilt das BFSG auch für meinen kleinen Shop?",
+      "a": "Nicht unbedingt. Kleinstunternehmen sind bei Dienstleistungen ausgenommen. Unser kostenloser BFSG-Check gibt dir eine erste Orientierung; im Audit klären wir die Einschätzung für deinen Fall."
+    },
+    {
+      "q": "Ist das Audit eine Rechtsberatung?",
+      "a": "Nein. Wir prüfen und setzen technisch um. Ob und wie das Gesetz für dich gilt, kann verbindlich nur eine Anwältin oder ein Anwalt beurteilen."
+    },
+    {
+      "q": "Was kostet die Umsetzung?",
+      "a": "Das hängt von den gefundenen Barrieren ab. Nach dem Audit bekommst du einen Festpreis für die Umsetzung, bevor irgendetwas beginnt."
+    }
+  ],
+  "related": [
+    "05",
+    "21",
+    "23"
+  ],
+  "seo": {
+    "title": "BFSG-Audit: Barrierefreiheit prüfen, Fix-Liste erhalten",
+    "description": "Wir klären zuerst, ob das BFSG für dich gilt, und prüfen deinen Shop dann nach WCAG 2.1 AA. 299 € zzgl. MwSt., Lieferzeit 72 h."
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g06"
+  ],
+  "keywords": [
+    "Barrierefreiheit: schnelle Fixes",
+    "Accessibility quick-fix implementation",
+    "Accessibility quick remediation"
+  ]
+}

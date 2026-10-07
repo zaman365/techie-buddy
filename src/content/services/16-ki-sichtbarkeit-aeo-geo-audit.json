@@ -1,0 +1,75 @@
+{
+  "id": "16",
+  "slug": "ki-sichtbarkeit-aeo-geo-audit",
+  "category": "ki",
+  "categorySlug": "ki-automatisierung",
+  "alsoIn": [],
+  "sectors": [
+    "online-handel",
+    "creator-coaches"
+  ],
+  "tier": "launch",
+  "audience": "b2b",
+  "name": "KI-Sichtbarkeits-Audit: Empfiehlt ChatGPT deine Marke?",
+  "problem": "Fragt man ChatGPT nach meinem Produkt, empfiehlt es nur die Konkurrenz.",
+  "summary": "Wir testen, ob ChatGPT, Gemini, Perplexity und Co. deine Marke empfehlen, zeigen dir die echten Antworten und liefern eine Fix-Liste, sortiert nach Wirkung.",
+  "includes": [
+    "Tests mit typischen Kundenfragen über mehrere KI-Assistenten",
+    "Dokumentation der Antworten mit Screenshots",
+    "Vergleich mit den genannten Wettbewerbern",
+    "Fix-Liste für Website, Profile und Inhalte, nach Wirkung sortiert"
+  ],
+  "excludes": [
+    "Umsetzung der Fixes (separat zum Festpreis)",
+    "Zusage, dass KI-Assistenten dich künftig nennen"
+  ],
+  "needs": [
+    "Deine Marke, Website und wichtigsten Produkte",
+    "Zwei bis drei Wettbewerber, falls bekannt"
+  ],
+  "steps": [
+    "Du nennst Marke und Produkte.",
+    "Festpreis und Zahlungslink.",
+    "Tests, Auswertung und Fix-Liste.",
+    "Bericht mit Screenshots in 48 Stunden."
+  ],
+  "result": "Ein Bericht mit den echten KI-Antworten, deiner Position gegenüber Wettbewerbern und einer priorisierten Fix-Liste.",
+  "price": {
+    "type": "fixed",
+    "from": 249,
+    "display": "249 €",
+    "note": "Audit-Preis, Umsetzung separat",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "48 h",
+  "tags": [
+    "erprobt"
+  ],
+  "factNote": null,
+  "guardrail": false,
+  "faq": [
+    {
+      "q": "Was ist AEO oder GEO?",
+      "a": "Answer Engine Optimization und Generative Engine Optimization: Maßnahmen, damit KI-Assistenten deine Marke finden, verstehen und empfehlen können."
+    },
+    {
+      "q": "Kann man KI-Empfehlungen garantieren?",
+      "a": "Nein. KI-Antworten ändern sich. Wir verbessern die Grundlagen, auf die diese Systeme zugreifen, und dokumentieren den Ausgangszustand."
+    }
+  ],
+  "related": [
+    "25",
+    "12",
+    "FT"
+  ],
+  "seo": {
+    "title": "KI-Sichtbarkeits-Audit: Empfiehlt ChatGPT deine Marke?",
+    "description": "Wir testen, ob ChatGPT, Gemini, Perplexity und Co. 249 € zzgl. MwSt., Lieferzeit 48 h."
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g07",
+    "g08"
+  ],
+  "keywords": []
+}

@@ -1,0 +1,73 @@
+{
+  "id": "42",
+  "slug": "anamnese-digital",
+  "category": "branchen-pakete",
+  "categorySlug": "branchen-loesungen",
+  "alsoIn": [],
+  "sectors": [
+    "praxen-salons"
+  ],
+  "tier": "catalog",
+  "audience": "b2b",
+  "name": "Anamnese digital: Papierbögen aufs Tablet",
+  "problem": "Unsere Patienten füllen Papierbögen aus, die wir danach kaum lesen können.",
+  "summary": "Anamnese- und Einwilligungsbögen werden zu datenschutzgerecht eingerichteten digitalen Formularen auf dem Tablet oder vorab online. Lesbare Daten statt Handschrift.",
+  "includes": [
+    "Umsetzung deiner Bögen als digitale Formulare",
+    "Ausfüllen am Tablet oder vorab online",
+    "Datenschutzgerechte technische Einrichtung",
+    "Übergabe an deine Praxissoftware oder als PDF",
+    "Einweisung fürs Team"
+  ],
+  "excludes": [
+    "Medizinische oder rechtliche Prüfung der Inhalte",
+    "Kosten für Tablets und Lizenzen",
+    "Schnittstellen, die deine Praxissoftware nicht anbietet"
+  ],
+  "needs": [
+    "Deine aktuellen Bögen",
+    "Name der Praxissoftware"
+  ],
+  "steps": [
+    "Du schickst deine Bögen.",
+    "Festpreis und Zahlungslink.",
+    "Umsetzung und Testlauf.",
+    "Einweisung und Übergabe."
+  ],
+  "result": "Digitale Bögen, die deine Patientinnen und Patienten ausfüllen und die dein Team sofort lesen kann.",
+  "price": {
+    "type": "fixed",
+    "from": 399,
+    "display": "399 €",
+    "note": "Festpreis, Lizenzen separat",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "1 Woche",
+  "tags": [],
+  "factNote": null,
+  "guardrail": true,
+  "faq": [
+    {
+      "q": "Ist das datenschutzkonform?",
+      "a": "Wir richten die Technik nach anerkannten Anforderungen ein und dokumentieren sie. Die rechtliche Bewertung bleibt bei deiner Datenschutzberatung."
+    },
+    {
+      "q": "Können Patientinnen und Patienten den Bogen schon zu Hause ausfüllen?",
+      "a": "Ja, auf Wunsch vorab online per Link. In der Praxis geht es am Tablet."
+    }
+  ],
+  "related": [
+    "41",
+    "82",
+    "81"
+  ],
+  "seo": {
+    "title": "Anamnese digital: Papierbögen aufs Tablet | TechieBuddy",
+    "description": "Anamnese- und Einwilligungsbögen werden zu datenschutzgerecht eingerichteten digitalen Formularen auf dem Tablet oder vorab online."
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g05"
+  ],
+  "keywords": []
+}

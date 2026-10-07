@@ -1,0 +1,87 @@
+{
+  "id": "21",
+  "slug": "website-in-48-stunden",
+  "category": "website",
+  "categorySlug": "website-shop",
+  "alsoIn": [],
+  "sectors": [
+    "handwerk"
+  ],
+  "tier": "catalog",
+  "audience": "b2b",
+  "name": "Website in 48 Stunden",
+  "problem": "Ich habe seit Jahren keine richtige Website, und die Agentur will sechs Wochen.",
+  "summary": "Eine klare Onepage-Website für deinen Betrieb, mit Impressum- und Datenschutzseite eingebaut und Barrierefreiheits-Grundlagen von Anfang an. In zwei Tagen online, zum festen Preis.",
+  "includes": [
+    "Onepage-Website, mobilfreundlich",
+    "Texte aus deinen Stichpunkten, in klarem Deutsch",
+    "Impressum- und Datenschutzseite eingebaut (Texte lieferst du)",
+    "Barrierefreiheits-Grundlagen: Kontraste, Struktur, Tastaturbedienung",
+    "Kontaktweg, Google-Maps-Link und Basis-SEO",
+    "Übergabe aller Zugänge an dich"
+  ],
+  "excludes": [
+    "Erstellung von Rechtstexten",
+    "Fotoshooting und Logo-Design",
+    "Shop-Funktionen (dafür gibt es Pakete)"
+  ],
+  "needs": [
+    "Stichpunkte zu deinem Angebot",
+    "Logo und Fotos, falls vorhanden",
+    "Impressumsangaben und Datenschutztext",
+    "Wunsch-Domain"
+  ],
+  "steps": [
+    "Du füllst einen kurzen Fragebogen aus.",
+    "Festpreis und Zahlungslink.",
+    "Wir bauen die Seite und schicken dir einen Vorschau-Link.",
+    "Du gibst Feedback, wir setzen es um, dann geht die Seite live."
+  ],
+  "result": "Eine fertige Website auf deiner Domain, alle Zugänge bei dir und eine kurze Anleitung für kleine Änderungen.",
+  "price": {
+    "type": "range",
+    "from": 599,
+    "to": 899,
+    "display": "599–899 €",
+    "note": "Festpreis je nach Umfang, Domain und Hosting separat",
+    "vat": "zzgl. MwSt."
+  },
+  "turnaround": "48 h",
+  "tags": [
+    "erprobt"
+  ],
+  "factNote": null,
+  "guardrail": false,
+  "faq": [
+    {
+      "q": "Wie geht das in 48 Stunden?",
+      "a": "Mit einem erprobten Aufbau und klarem Umfang. Die 48 Stunden laufen, sobald Zahlung und deine Inhalte vollständig da sind."
+    },
+    {
+      "q": "Was unterscheidet 599 € und 899 €?",
+      "a": "Der Umfang: Anzahl der Abschnitte, Texte und Sonderwünsche. Den Festpreis bekommst du nach dem Fragebogen, bevor du zahlst."
+    },
+    {
+      "q": "Gehört die Website danach mir?",
+      "a": "Ja. Domain, Hosting und Zugänge laufen auf dich."
+    }
+  ],
+  "related": [
+    "39",
+    "25",
+    "28"
+  ],
+  "seo": {
+    "title": "Website in 48 Stunden | TechieBuddy",
+    "description": "Eine klare Onepage-Website für deinen Betrieb, mit Impressum- und Datenschutzseite eingebaut und Barrierefreiheits-Grundlagen von Anfang an."
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g04",
+    "g15"
+  ],
+  "keywords": [
+    "Einfache Website zum Start",
+    "Basic website launch package"
+  ]
+}

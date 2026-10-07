@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /styleguide/
+Disallow: /agb/
+Disallow: /widerruf/
+
+Sitemap: https://techiebuddy.de/sitemap-index.xml

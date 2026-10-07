@@ -1,0 +1,111 @@
+---
+// The three project packages, middle one featured.
+import Icon from './Icon.astro';
+import { site } from '../lib/data.ts';
+import { eur } from '../lib/format.ts';
+interface Props {
+  headingLevel?: 'h2' | 'h3' | 'h4';
+}
+const { headingLevel = 'h3' } = Astro.props;
+const Tag = headingLevel;
+---
+<ul class="pkgs" role="list">
+  {
+    site.packages.map((p) => (
+      <li class:list={['pkg', p.featured && 'pkg--featured']}>
+        {p.featured && <span class="pkg__flag">Häufig gewählt</span>}
+        <Tag class="pkg__name">{p.name}</Tag>
+        <p class="pkg__for">{p.for}</p>
+        <p class="pkg__price">
+          <span class="pkg__amount mono">{eur(p.price)}</span>
+          <span class="pkg__vat">einmalig, zzgl. MwSt.</span>
+        </p>
+        <ul class="checks" role="list">
+          {p.features.map((f) => (
+            <li>
+              <Icon name="check" />
+              {f}
+            </li>
+          ))}
+        </ul>
+        <a class:list={['btn', p.featured ? 'btn--primary' : 'btn--secondary', 'btn--block']} href={`/kontakt/?leistung=paket-${p.id}`}>
+          Kostenloses Erstgespräch<span class="sr-only">: Paket {p.name}</span>
+        </a>
+      </li>
+    ))
+  }
+</ul>
+<style>
+  .pkgs {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--s-4);
+    align-items: stretch;
+  }
+  .pkg {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-3);
+    padding: var(--s-8) var(--s-6) var(--s-6);
+    border: 1px solid var(--line);
+    border-radius: var(--r-24);
+    background: var(--card-fill);
+    box-shadow: var(--highlight);
+  }
+  .pkg--featured {
+    border-color: var(--accent-line);
+    background: linear-gradient(180deg, rgba(96, 208, 207, 0.07), rgba(15, 23, 38, 0.9) 45%);
+  }
+  .pkg__flag {
+    position: absolute;
+    top: -12px;
+    left: var(--s-6);
+    height: 24px;
+    padding: 0 10px;
+    display: inline-flex;
+    align-items: center;
+    border-radius: var(--r-pill);
+    background: var(--accent);
+    color: var(--navy);
+    font-size: var(--fs-12);
+    font-weight: 600;
+  }
+  .pkg__name {
+    font-size: var(--fs-24);
+  }
+  .pkg__for {
+    color: var(--text-2);
+    font-size: var(--fs-14);
+  }
+  .pkg__price {
+    display: grid;
+    gap: 2px;
+    padding: var(--s-3) 0 var(--s-4);
+    border-bottom: 1px solid var(--line);
+  }
+  .pkg__amount {
+    font-size: var(--fs-38);
+    font-weight: 500;
+    letter-spacing: -0.04em;
+    color: var(--text);
+  }
+  .pkg__vat {
+    font-size: var(--fs-13);
+    color: var(--text-2);
+  }
+  .pkg .checks {
+    flex: 1;
+    font-size: var(--fs-14);
+    padding-top: var(--s-2);
+  }
+  .pkg .btn {
+    margin-top: var(--s-4);
+  }
+  @media (max-width: 960px) {
+    .pkgs {
+      grid-template-columns: minmax(0, 1fr);
+      gap: var(--s-6);
+    }
+  }
+</style>

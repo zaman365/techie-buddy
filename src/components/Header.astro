@@ -1,0 +1,748 @@
+---
+// Floating glass nav pill with two mega menus, a small dropdown and the mobile sheet.
+// Behaviour lives in scripts/nav.ts (disclosure pattern, Esc, hover intent).
+import Icon from './Icon.astro';
+import Logo from './Logo.astro';
+import PriceLabel from './PriceLabel.astro';
+import { getData, byTier, serviceUrl, categoryUrl, sectorUrl } from '../lib/data.ts';
+
+const { categories, services, serviceById, sectors, totalOffers } = await getData();
+const tiles = categories.map((c) => ({
+  c,
+  top: c.services
+    .map((id) => serviceById.get(id)!)
+    .sort(byTier)
+    .slice(0, 2)
+}));
+const urgent = ['22', '26', '10'].map((id) => serviceById.get(id)!);
+const wissen = [
+  { href: '/wissen/pflichten-kalender/', label: 'Pflichten-Kalender', text: 'Fristen 2025 bis 2028 mit Quellen', icon: 'calendar' },
+  { href: '/wissen/bfsg-check/', label: 'BFSG-Check', text: 'Gilt das Barrierefreiheitsgesetz für dich?', icon: 'accessibility' },
+  { href: '/wissen/foerder-check/', label: 'Förder-Check', text: 'Passt ein Förderprogramm in Sachsen?', icon: 'hand-coins' },
+  { href: '/preise/', label: 'Preise', text: 'Alle Festpreise in einer Tabelle', icon: 'receipt-euro' }
+];
+const path = Astro.url.pathname;
+const current = (p: string) => (path.startsWith(p) ? 'page' : undefined);
+void services;
+---
+<header class="nav" data-nav>
+  <div class="nav__pill">
+    <a class="nav__logo" href="/" aria-label="TechieBuddy, zur Startseite"><Logo /></a>
+
+    <nav class="nav__main" aria-label="Hauptnavigation">
+      <ul role="list" class="nav__list">
+        <li>
+          <button class="nav__item" type="button" aria-expanded="false" aria-controls="mm-leistungen" data-menu="mm-leistungen">
+            Leistungen <Icon name="chevron-down" size={14} class="nav__chev" />
+          </button>
+        </li>
+        <li>
+          <button class="nav__item" type="button" aria-expanded="false" aria-controls="mm-branchen" data-menu="mm-branchen">
+            Branchen <Icon name="chevron-down" size={14} class="nav__chev" />
+          </button>
+        </li>
+        <li><a class="nav__item" href="/pakete/" aria-current={current('/pakete/')}>Pakete</a></li>
+        <li><a class="nav__item" href="/so-laeufts/" aria-current={current('/so-laeufts/')}>So läuft’s</a></li>
+        <li class="nav__drop">
+          <button class="nav__item" type="button" aria-expanded="false" aria-controls="mm-wissen" data-menu="mm-wissen">
+            Wissen <Icon name="chevron-down" size={14} class="nav__chev" />
+          </button>
+          <div class="dropdown" id="mm-wissen" hidden data-panel>
+            <ul role="list">
+              {
+                wissen.map((w) => (
+                  <li>
+                    <a class="dropdown__link" href={w.href}>
+                      <Icon name={w.icon} size={18} />
+                      <span>
+                        <span class="dropdown__label">{w.label}</span>
+                        <span class="dropdown__text">{w.text}</span>
+                      </span>
+                    </a>
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="nav__actions">
+      <button class="nav__search" type="button" data-palette-open aria-haspopup="dialog" aria-label="Suchen">
+        <Icon name="search" size={16} />
+        <span class="nav__search-label">Suchen</span>
+        <kbd class="kbd" data-kbd>⌘K</kbd>
+      </button>
+      <a class="nav__notfall" href="/notfall/" aria-current={current('/notfall/')}><span class="dot-danger" aria-hidden="true"></span>Notfall</a>
+      <a class="btn btn--primary btn--sm nav__cta" href="/kontakt/">Problem schildern</a>
+      <button class="nav__menu-btn" type="button" data-sheet-open aria-haspopup="dialog" aria-controls="mobile-sheet">
+        <Icon name="menu" size={18} /><span class="nav__menu-label">Menü</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Leistungen mega menu -->
+  <div class="mega" id="mm-leistungen" hidden data-panel>
+    <div class="mega__grid">
+      <ul role="list" class="mega__cats">
+        {
+          tiles.map(({ c, top }) => (
+            <li class="mega__cat">
+              <a class="mega__cat-head" href={categoryUrl(c)}>
+                <Icon name={c.icon} size={18} />
+                <span class="mega__cat-name">{c.name}</span>
+                <span class="mega__count mono">{c.counts.named + c.counts.catalog}</span>
+              </a>
+              <ul role="list" class="mega__svc">
+                {top.map((s) => (
+                  <li>
+                    <a href={serviceUrl(s)}>
+                      <span class="mega__svc-name">{s.name}</span>
+                      <PriceLabel price={s.price.display} time={s.turnaround} size="s" />
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </li>
+          ))
+        }
+      </ul>
+      <aside class="mega__rail" aria-label="Schnellzugriff">
+        <a class="mega__urgent" href="/notfall/">
+          <span class="mega__urgent-title"><span class="dot-danger" aria-hidden="true"></span>Gerade passiert?</span>
+          <span class="mega__urgent-text">Start noch am selben Werktag möglich.</span>
+        </a>
+        <ul role="list" class="mega__urgent-list">
+          {
+            urgent.map((s) => (
+              <li>
+                <a href={serviceUrl(s)}>{s.name}</a>
+              </li>
+            ))
+          }
+        </ul>
+        <div class="mega__rail-links">
+          <button type="button" class="mega__rail-link" data-palette-open>
+            <Icon name="search" size={16} />Alle {totalOffers} Leistungen durchsuchen <kbd class="kbd" data-kbd>⌘K</kbd>
+          </button>
+          <a class="mega__rail-link" href="/alle-leistungen/"><Icon name="list-filter" size={16} />Gesamtes Angebot filtern</a>
+          <a class="mega__rail-link" href="/preise/"><Icon name="receipt-euro" size={16} />Preisübersicht</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <!-- Branchen mega menu -->
+  <div class="mega mega--sectors" id="mm-branchen" hidden data-panel>
+    <ul role="list" class="mega__sectors">
+      {
+        sectors.map((s) => (
+          <li>
+            <a class="mega__sector" href={sectorUrl(s)}>
+              <Icon name={s.icon} size={18} />
+              <span>
+                <span class="mega__sector-name">{s.name}</span>
+                <span class="mega__sector-text">{s.short}</span>
+              </span>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+    <div class="mega__foot">
+      <a class="link-arrow" href="/branchen/">Alle Branchen im Überblick <Icon name="arrow-right" /></a>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile sheet -->
+<dialog class="sheet" id="mobile-sheet" aria-label="Menü" data-sheet>
+  <div class="sheet__inner">
+    <div class="sheet__top">
+      <a class="nav__logo" href="/" aria-label="TechieBuddy, zur Startseite"><Logo /></a>
+      <button class="sheet__close" type="button" data-sheet-close aria-label="Menü schließen"><Icon name="x" size={20} /></button>
+    </div>
+    <button class="sheet__search" type="button" data-palette-open>
+      <Icon name="search" size={18} />
+      <span>Was ist kaputt?</span>
+    </button>
+    <div class="sheet__groups">
+      <details class="sheet__group">
+        <summary>Leistungen <Icon name="chevron-down" size={16} /></summary>
+        <ul role="list">
+          {categories.map((c) => <li><a href={categoryUrl(c)}><Icon name={c.icon} size={16} />{c.name}</a></li>)}
+          <li><a href="/alle-leistungen/"><Icon name="list-filter" size={16} />Alle Leistungen</a></li>
+        </ul>
+      </details>
+      <details class="sheet__group">
+        <summary>Branchen <Icon name="chevron-down" size={16} /></summary>
+        <ul role="list">
+          {sectors.map((s) => <li><a href={sectorUrl(s)}><Icon name={s.icon} size={16} />{s.name}</a></li>)}
+        </ul>
+      </details>
+      <details class="sheet__group">
+        <summary>Wissen <Icon name="chevron-down" size={16} /></summary>
+        <ul role="list">
+          {wissen.map((w) => <li><a href={w.href}><Icon name={w.icon} size={16} />{w.label}</a></li>)}
+        </ul>
+      </details>
+      <ul role="list" class="sheet__links">
+        <li><a href="/pakete/">Pakete</a></li>
+        <li><a href="/so-laeufts/">So läuft’s</a></li>
+        <li><a href="/notfall/"><span class="dot-danger" aria-hidden="true"></span>Notfall</a></li>
+        <li><a href="/kontakt/">Kontakt</a></li>
+      </ul>
+    </div>
+    <div class="sheet__bottom">
+      <a class="btn btn--primary btn--lg btn--block" href="/kontakt/">Problem schildern</a>
+    </div>
+  </div>
+</dialog>
+
+<style>
+  .nav {
+    position: fixed;
+    top: 14px;
+    left: 0;
+    right: 0;
+    z-index: var(--z-nav);
+    padding-inline: var(--gutter);
+    pointer-events: none;
+  }
+  .nav__pill {
+    pointer-events: auto;
+    max-width: var(--container);
+    margin-inline: auto;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    gap: var(--s-4);
+    padding: 0 10px 0 18px;
+    border: 1px solid var(--line-2);
+    border-radius: var(--r-pill);
+    background: var(--glass);
+    -webkit-backdrop-filter: blur(16px) saturate(140%);
+    backdrop-filter: blur(16px) saturate(140%);
+    transition: height var(--t) var(--ease), background-color var(--t) var(--ease), box-shadow var(--t) var(--ease);
+  }
+  :global([data-scrolled]) .nav__pill,
+  :global([data-menu-open]) .nav__pill {
+    height: 56px;
+    background: var(--glass-strong);
+    box-shadow: var(--float-shadow);
+  }
+  .nav__logo {
+    display: inline-flex;
+    text-decoration: none;
+    border-radius: var(--r-10);
+    flex: none;
+  }
+  .nav__main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  .nav__list {
+    display: flex;
+    gap: 2px;
+  }
+  .nav__item {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    height: 36px;
+    padding: 0 12px;
+    border: 0;
+    border-radius: var(--r-pill);
+    background: none;
+    color: var(--text-2);
+    font-size: var(--fs-14);
+    font-weight: 500;
+    text-decoration: none;
+    transition: color var(--t-fast) var(--ease), background-color var(--t-fast) var(--ease);
+  }
+  .nav__item:hover,
+  .nav__item[aria-expanded='true'],
+  .nav__item[aria-current='page'] {
+    color: var(--text);
+    background: rgba(255, 255, 255, 0.05);
+  }
+  .nav__item :global(.nav__chev) {
+    transition: transform var(--t) var(--ease);
+    color: var(--text-3);
+  }
+  .nav__item[aria-expanded='true'] :global(.nav__chev) {
+    transform: rotate(180deg);
+    color: var(--accent);
+  }
+  .nav__actions {
+    display: flex;
+    align-items: center;
+    gap: var(--s-2);
+    flex: none;
+  }
+  .nav__search {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--s-2);
+    height: 36px;
+    padding: 0 6px 0 12px;
+    border: 1px solid var(--line-2);
+    border-radius: var(--r-pill);
+    background: rgba(255, 255, 255, 0.03);
+    color: var(--text-2);
+    font-size: var(--fs-14);
+  }
+  .nav__search:hover {
+    border-color: var(--line-3);
+    color: var(--text);
+  }
+  .kbd {
+    white-space: nowrap;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    padding: 2px 6px;
+    border-radius: var(--r-6);
+    border: 1px solid var(--line-2);
+    color: var(--text-3);
+    background: rgba(255, 255, 255, 0.03);
+  }
+  .nav__notfall {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    height: 36px;
+    padding: 0 10px;
+    border-radius: var(--r-pill);
+    color: var(--text-2);
+    font-size: var(--fs-14);
+    font-weight: 500;
+    text-decoration: none;
+  }
+  .nav__notfall:hover,
+  .nav__notfall[aria-current='page'] {
+    color: var(--text);
+  }
+  .nav__cta {
+    border-radius: var(--r-pill);
+  }
+  .nav__menu-btn {
+    display: none;
+    align-items: center;
+    gap: 6px;
+    height: 44px;
+    padding: 0 14px;
+    border: 1px solid var(--line-2);
+    border-radius: var(--r-pill);
+    background: rgba(255, 255, 255, 0.04);
+    font-size: var(--fs-14);
+    font-weight: 500;
+  }
+
+  /* Panels */
+  .mega,
+  .dropdown {
+    pointer-events: auto;
+    background: var(--glass-strong);
+    -webkit-backdrop-filter: blur(20px) saturate(140%);
+    backdrop-filter: blur(20px) saturate(140%);
+    border: 1px solid var(--line-2);
+    box-shadow: var(--float-shadow);
+    animation: panel-in var(--t) var(--ease);
+  }
+  @keyframes panel-in {
+    from {
+      opacity: 0;
+      transform: translateY(-4px);
+    }
+  }
+  .mega {
+    max-width: var(--container);
+    margin: 10px auto 0;
+    border-radius: var(--r-24);
+    padding: var(--s-6);
+    max-height: calc(100vh - 110px);
+    overflow: auto;
+  }
+  .mega__grid {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: var(--s-6);
+  }
+  .mega__cats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--s-2);
+  }
+  .mega__cat {
+    padding: var(--s-3);
+    border-radius: var(--r-16);
+  }
+  .mega__cat:hover {
+    background: rgba(255, 255, 255, 0.025);
+  }
+  .mega__cat-head {
+    display: flex;
+    align-items: center;
+    gap: var(--s-2);
+    text-decoration: none;
+    font-weight: 560;
+    font-size: var(--fs-14);
+    color: var(--text);
+    padding: 4px;
+    margin: -4px;
+    border-radius: var(--r-6);
+  }
+  .mega__cat-head:hover {
+    color: var(--accent);
+  }
+  .mega__cat-head :global(.icon) {
+    color: var(--text-2);
+  }
+  .mega__cat-name {
+    flex: 1;
+    min-width: 0;
+  }
+  .mega__count {
+    font-size: var(--fs-12);
+    color: var(--text-3);
+  }
+  .mega__svc {
+    margin-top: var(--s-2);
+    display: grid;
+    gap: 2px;
+    padding-left: 26px;
+  }
+  .mega__svc a {
+    display: grid;
+    gap: 4px;
+    padding: 6px 8px;
+    margin-inline: -8px;
+    border-radius: var(--r-10);
+    text-decoration: none;
+    font-size: var(--fs-13);
+    color: var(--text-2);
+  }
+  .mega__svc a:hover {
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--text);
+  }
+  .mega__svc-name {
+    line-height: 1.35;
+  }
+  .mega__svc :global(.pl) {
+    justify-self: start;
+  }
+  .mega__rail {
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-3);
+    padding-left: var(--s-6);
+    border-left: 1px solid var(--line);
+  }
+  .mega__urgent {
+    display: grid;
+    gap: 4px;
+    padding: var(--s-4);
+    border-radius: var(--r-16);
+    border: 1px solid rgba(255, 107, 107, 0.22);
+    background: var(--danger-wash);
+    text-decoration: none;
+  }
+  .mega__urgent:hover {
+    border-color: rgba(255, 107, 107, 0.4);
+  }
+  .mega__urgent-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+  }
+  .mega__urgent-text {
+    font-size: var(--fs-13);
+    color: var(--text-2);
+  }
+  .mega__urgent-list {
+    display: grid;
+    gap: 2px;
+  }
+  .mega__urgent-list a {
+    display: block;
+    padding: 6px 8px;
+    border-radius: var(--r-10);
+    text-decoration: none;
+    font-size: var(--fs-13);
+    color: var(--text-2);
+  }
+  .mega__urgent-list a:hover {
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--text);
+  }
+  .mega__rail-links {
+    margin-top: auto;
+    display: grid;
+    gap: 2px;
+    padding-top: var(--s-3);
+    border-top: 1px solid var(--line);
+  }
+  .mega__rail-link {
+    display: flex;
+    align-items: center;
+    gap: var(--s-2);
+    width: 100%;
+    padding: 8px;
+    border: 0;
+    border-radius: var(--r-10);
+    background: none;
+    text-align: left;
+    text-decoration: none;
+    font-size: var(--fs-13);
+    color: var(--text);
+  }
+  .mega__rail-link:hover {
+    background: rgba(255, 255, 255, 0.04);
+  }
+  .mega__rail-link :global(.icon) {
+    color: var(--text-2);
+  }
+  .mega__rail-link .kbd {
+    margin-left: auto;
+  }
+  .mega__sectors {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2px var(--s-4);
+  }
+  .mega__sector {
+    display: flex;
+    gap: var(--s-3);
+    padding: var(--s-3);
+    border-radius: var(--r-16);
+    text-decoration: none;
+  }
+  .mega__sector:hover {
+    background: rgba(255, 255, 255, 0.04);
+  }
+  .mega__sector :global(.icon) {
+    margin-top: 2px;
+    color: var(--text-2);
+  }
+  .mega__sector-name {
+    display: block;
+    font-weight: 560;
+    font-size: var(--fs-14);
+  }
+  .mega__sector-text {
+    display: block;
+    font-size: var(--fs-13);
+    color: var(--text-2);
+  }
+  .mega__foot {
+    margin-top: var(--s-4);
+    padding-top: var(--s-4);
+    border-top: 1px solid var(--line);
+  }
+  .nav__drop {
+    position: relative;
+  }
+  .dropdown {
+    position: absolute;
+    top: calc(100% + 18px);
+    left: 50%;
+    translate: -50% 0;
+    width: 340px;
+    border-radius: var(--r-24);
+    padding: var(--s-2);
+  }
+  .dropdown__link {
+    display: flex;
+    gap: var(--s-3);
+    padding: var(--s-3);
+    border-radius: var(--r-16);
+    text-decoration: none;
+  }
+  .dropdown__link:hover {
+    background: rgba(255, 255, 255, 0.04);
+  }
+  .dropdown__link :global(.icon) {
+    margin-top: 2px;
+    color: var(--text-2);
+  }
+  .dropdown__label {
+    display: block;
+    font-weight: 560;
+    font-size: var(--fs-14);
+  }
+  .dropdown__text {
+    display: block;
+    font-size: var(--fs-13);
+    color: var(--text-2);
+  }
+
+  /* Mobile */
+  @media (max-width: 1079px) {
+    .nav__main,
+    .nav__notfall,
+    .nav__cta,
+    .nav__search-label,
+    .nav__search .kbd,
+    .mega {
+      display: none;
+    }
+    .nav__menu-btn {
+      display: inline-flex;
+    }
+    .nav__pill {
+      height: 60px;
+      padding-left: 16px;
+      padding-right: 8px;
+    }
+    .nav__search {
+      width: 44px;
+      height: 44px;
+      padding: 0;
+      justify-content: center;
+    }
+    .nav {
+      top: 10px;
+    }
+  }
+  @media (max-width: 400px) {
+    .nav__pill {
+      gap: var(--s-2);
+      padding-left: 12px;
+      padding-right: 6px;
+    }
+    .nav__menu-btn {
+      padding: 0 12px;
+    }
+  }
+  @media (max-width: 359px) {
+    .nav__menu-label {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+    }
+    .nav__menu-btn {
+      width: 44px;
+      padding: 0;
+      justify-content: center;
+    }
+  }
+  @media (min-width: 1080px) and (max-width: 1240px) {
+    .nav__search-label {
+      display: none;
+    }
+    .nav__item {
+      padding: 0 9px;
+    }
+  }
+
+  .sheet {
+    width: 100%;
+    max-width: none;
+    height: 100%;
+    max-height: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: var(--bg);
+    color: var(--text);
+  }
+  .sheet::backdrop {
+    background: rgba(0, 0, 0, 0.6);
+  }
+  .sheet[open] {
+    animation: panel-in var(--t) var(--ease);
+  }
+  .sheet__inner {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 18px var(--gutter) 0;
+  }
+  .sheet__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 56px;
+  }
+  .sheet__close {
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    border: 1px solid var(--line-2);
+    border-radius: 50%;
+    background: none;
+  }
+  .sheet__search {
+    margin-top: var(--s-4);
+    display: flex;
+    align-items: center;
+    gap: var(--s-3);
+    height: 52px;
+    padding: 0 var(--s-4);
+    border: 1px solid var(--line-2);
+    border-radius: var(--r-10);
+    background: rgba(255, 255, 255, 0.03);
+    color: var(--text-2);
+    text-align: left;
+  }
+  .sheet__groups {
+    flex: 1;
+    margin-top: var(--s-4);
+  }
+  .sheet__group {
+    border-bottom: 1px solid var(--line);
+  }
+  .sheet__group summary {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 56px;
+    font-size: var(--fs-18);
+    font-weight: 560;
+    cursor: pointer;
+  }
+  .sheet__group summary::-webkit-details-marker {
+    display: none;
+  }
+  .sheet__group[open] summary :global(.icon) {
+    transform: rotate(180deg);
+  }
+  .sheet__group ul {
+    padding-bottom: var(--s-3);
+  }
+  .sheet__group a {
+    display: flex;
+    align-items: center;
+    gap: var(--s-3);
+    min-height: 44px;
+    color: var(--text-2);
+    text-decoration: none;
+  }
+  .sheet__group a:hover {
+    color: var(--text);
+  }
+  .sheet__links a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 56px;
+    font-size: var(--fs-18);
+    font-weight: 560;
+    text-decoration: none;
+    border-bottom: 1px solid var(--line);
+  }
+  .sheet__bottom {
+    position: sticky;
+    bottom: 0;
+    padding: var(--s-4) 0 calc(var(--s-4) + env(safe-area-inset-bottom));
+    background: linear-gradient(180deg, transparent, var(--bg) 30%);
+  }
+</style>

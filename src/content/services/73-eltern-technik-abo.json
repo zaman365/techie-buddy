@@ -1,0 +1,81 @@
+{
+  "id": "73",
+  "slug": "eltern-technik-abo",
+  "category": "zuhause",
+  "categorySlug": "zuhause-familie-energie",
+  "alsoIn": [],
+  "sectors": [
+    "familien-senioren"
+  ],
+  "tier": "catalog",
+  "audience": "b2c",
+  "name": "Eltern-Technik-Abo",
+  "problem": "Meine Eltern rufen bei jeder App-Frage an, und ich wohne 400 km weg.",
+  "summary": "Einmal im Monat kommt jemand Kompetentes vorbei, dazwischen gibt es Fernhilfe: Handy, E-Rezept-App, Videoanrufe, Drucker und die Frage, ob eine Nachricht Betrug ist.",
+  "includes": [
+    "Ein Hausbesuch pro Monat (Chemnitz und Umgebung)",
+    "Fernhilfe zwischen den Besuchen",
+    "Handy, Tablet, Drucker, Fernseher",
+    "E-Rezept-App und Videoanrufe mit der Familie",
+    "Zweite Meinung bei verdächtigen Nachrichten"
+  ],
+  "excludes": [
+    "Hardware-Kosten und Reparaturen",
+    "Notdienst nachts",
+    "Pflege oder Betreuung außerhalb der Technik"
+  ],
+  "needs": [
+    "Adresse und Erreichbarkeit deiner Eltern",
+    "Ihr Einverständnis"
+  ],
+  "steps": [
+    "Du buchst für deine Eltern.",
+    "Erster Besuch: Bestandsaufnahme und Einrichtung.",
+    "Monatliche Besuche, dazwischen Fernhilfe.",
+    "Kurzer Bericht an dich nach jedem Besuch, wenn deine Eltern einverstanden sind."
+  ],
+  "result": "Eltern, die mit ihrer Technik zurechtkommen, und ein Kind, das nicht mehr jeden Abend telefonischer Support ist.",
+  "price": {
+    "type": "recurring",
+    "from": 49,
+    "monthly": 49,
+    "display": "49 €/Monat",
+    "note": "Laufzeit und Kündigung stehen im Angebot",
+    "vat": "inkl. MwSt."
+  },
+  "turnaround": "laufend",
+  "tags": [
+    "abo"
+  ],
+  "factNote": null,
+  "guardrail": false,
+  "faq": [
+    {
+      "q": "Wo bietet ihr Hausbesuche an?",
+      "a": "In Chemnitz und Umgebung. Für andere Orte fragen wir nach, ob es eine Lösung gibt."
+    },
+    {
+      "q": "Wer bucht und bezahlt?",
+      "a": "Meistens die erwachsenen Kinder. Deine Eltern müssen einverstanden sein."
+    }
+  ],
+  "related": [
+    "30",
+    "35",
+    "32"
+  ],
+  "seo": {
+    "title": "Eltern-Technik-Abo | TechieBuddy",
+    "description": "Einmal im Monat kommt jemand Kompetentes vorbei, dazwischen gibt es Fernhilfe: Handy, E-Rezept-App, Videoanrufe, Drucker und die Frage, ob eine …"
+  },
+  "stripePaymentLink": "",
+  "moments": [
+    "g18",
+    "g19"
+  ],
+  "keywords": [
+    "Technik-Betreuung für Eltern",
+    "Parent tech-care subscription",
+    "Parents tech-care subscription"
+  ]
+}

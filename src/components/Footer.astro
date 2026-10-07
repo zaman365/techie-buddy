@@ -1,0 +1,215 @@
+---
+import Logo from './Logo.astro';
+import Icon from './Icon.astro';
+import { getData, site, categoryUrl, sectorUrl } from '../lib/data.ts';
+interface Props {
+  translations?: { lang: 'de' | 'en' | 'bn'; href: string }[];
+}
+const { translations = [] } = Astro.props;
+const { categories, sectors } = await getData();
+const year = new Date().getFullYear();
+const LANG = { de: 'DE', en: 'EN', bn: 'বাংলা' } as const;
+const currentLang = (Astro.currentLocale ?? 'de') as 'de';
+void currentLang;
+---
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a href="/" class="footer__logo" aria-label="TechieBuddy, zur Startseite"><Logo /></a>
+        <p class="footer__promise">{site.brand.promise}</p>
+        <dl class="footer__contact">
+          <div><dt><Icon name="mail" size={16} /><span class="sr-only">E-Mail</span></dt><dd><a href={`mailto:${site.contact.email}`}>{site.contact.email}</a></dd></div>
+          <div><dt><Icon name="clock" size={16} /><span class="sr-only">Erreichbar</span></dt><dd>{site.contact.hours}</dd></div>
+          <div><dt><Icon name="map-pin" size={16} /><span class="sr-only">Standort</span></dt><dd>{site.contact.location}, für ganz Deutschland</dd></div>
+          <div><dt><Icon name="languages" size={16} /><span class="sr-only">Sprachen</span></dt><dd>Deutsch, English, <span lang="bn">বাংলা</span></dd></div>
+        </dl>
+      </div>
+      <nav class="footer__cols" aria-label="Fußnavigation">
+        <div>
+          <h2 class="footer__h">Leistungen</h2>
+          <ul role="list">
+            {categories.map((c) => <li><a href={categoryUrl(c)}>{c.name}</a></li>)}
+          </ul>
+        </div>
+        <div>
+          <h2 class="footer__h">Branchen</h2>
+          <ul role="list">
+            {sectors.map((s) => <li><a href={sectorUrl(s)}>{s.name}</a></li>)}
+          </ul>
+        </div>
+        <div>
+          <h2 class="footer__h">Wissen und Preise</h2>
+          <ul role="list">
+            <li><a href="/alle-leistungen/">Alle Leistungen</a></li>
+            <li><a href="/preise/">Preisübersicht</a></li>
+            <li><a href="/notfall/">Notfall-Hilfe</a></li>
+            <li><a href="/pakete/">Pakete und Betreuung</a></li>
+            <li><a href="/foerderung/">Förderung</a></li>
+            <li><a href="/wissen/pflichten-kalender/">Pflichten-Kalender</a></li>
+            <li><a href="/wissen/bfsg-check/">BFSG-Check</a></li>
+            <li><a href="/wissen/foerder-check/">Förder-Check</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="footer__h">Unternehmen</h2>
+          <ul role="list">
+            <li><a href="/ueber-uns/">Über uns</a></li>
+            <li><a href="/so-laeufts/">So läuft’s</a></li>
+            <li><a href="/partner/">Partner</a></li>
+            <li><a href="/kontakt/">Kontakt</a></li>
+          </ul>
+          <h2 class="footer__h footer__h--gap">Rechtliches</h2>
+          <ul role="list">
+            <li><a href="/impressum/">Impressum</a></li>
+            <li><a href="/datenschutz/">Datenschutz</a></li>
+            <li><a href="/barrierefreiheit/">Barrierefreiheit</a></li>
+            {site.legal.agbReviewed && <li><a href="/agb/">AGB</a></li>}
+            {site.legal.widerrufReviewed && <li><a href="/widerruf/">Widerruf</a></li>}
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__privacy"><Icon name="shield-check" size={16} />Diese Website setzt keine Cookies und nutzt kein Tracking.</p>
+      {
+        translations.length > 0 && (
+          <nav class="footer__lang" aria-label="Sprache">
+            <ul role="list">
+              {translations.map((t) => (
+                <li>
+                  <a href={t.href} hreflang={t.lang} lang={t.lang} aria-current={Astro.url.pathname === t.href ? 'page' : undefined}>
+                    {LANG[t.lang]}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        )
+      }
+      <p class="meta">© {year} TechieBuddy · Made in Chemnitz</p>
+    </div>
+  </div>
+</footer>
+<style>
+  .footer {
+    border-top: 1px solid var(--line);
+    background: var(--bg);
+    padding-block: var(--s-20) var(--s-10);
+    font-size: var(--fs-14);
+  }
+  .footer__top {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 3fr);
+    gap: var(--s-12);
+  }
+  .footer__logo {
+    display: inline-flex;
+    text-decoration: none;
+  }
+  .footer__promise {
+    margin-top: var(--s-4);
+    color: var(--text-2);
+    max-width: 30ch;
+  }
+  .footer__contact {
+    margin-top: var(--s-6);
+    display: grid;
+    gap: var(--s-2);
+    color: var(--text-2);
+  }
+  .footer__contact div {
+    display: flex;
+    gap: var(--s-2);
+    align-items: center;
+  }
+  .footer__contact dt {
+    display: flex;
+    color: var(--text-3);
+  }
+  .footer__contact a {
+    color: var(--text);
+  }
+  .footer__cols {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: var(--s-8);
+  }
+  .footer__h {
+    font-size: var(--fs-13);
+    font-weight: 560;
+    color: var(--text);
+    margin-bottom: var(--s-3);
+    letter-spacing: 0;
+  }
+  .footer__h--gap {
+    margin-top: var(--s-8);
+  }
+  .footer__cols ul {
+    display: grid;
+    gap: 6px;
+  }
+  .footer__cols a {
+    color: var(--text-2);
+    text-decoration: none;
+  }
+  .footer__cols a:hover {
+    color: var(--text);
+  }
+  .footer__bottom {
+    margin-top: var(--s-16);
+    padding-top: var(--s-6);
+    border-top: 1px solid var(--line);
+    display: flex;
+    gap: var(--s-6);
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .footer__privacy {
+    display: flex;
+    gap: var(--s-2);
+    align-items: center;
+    color: var(--text-2);
+  }
+  .footer__privacy :global(.icon) {
+    color: var(--ok);
+  }
+  .footer__lang ul {
+    display: flex;
+    gap: var(--s-1);
+  }
+  .footer__lang a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 32px;
+    padding: 0 10px;
+    border: 1px solid var(--line-2);
+    border-radius: var(--r-pill);
+    text-decoration: none;
+    color: var(--text-2);
+    font-size: var(--fs-13);
+  }
+  .footer__lang a[aria-current='page'] {
+    color: var(--text);
+    border-color: var(--accent-line);
+  }
+  @media (max-width: 1079px) {
+    .footer__top {
+      grid-template-columns: minmax(0, 1fr);
+    }
+    .footer__cols {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  @media (max-width: 480px) {
+    .footer__cols {
+      grid-template-columns: minmax(0, 1fr);
+    }
+    .footer__cols a {
+      display: inline-flex;
+      min-height: 32px;
+      align-items: center;
+    }
+  }
+</style>

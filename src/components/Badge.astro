@@ -1,0 +1,13 @@
+---
+import { TAG_LABEL, TAG_TITLE } from '../lib/data.ts';
+type Tag = keyof typeof TAG_LABEL;
+interface Props {
+  tag?: Tag;
+  label?: string;
+  variant?: 'plain' | 'detail';
+}
+const { tag, label, variant } = Astro.props;
+const text = tag ? TAG_LABEL[tag] : label;
+const title = tag ? TAG_TITLE[tag] : undefined;
+---
+<span class:list={['badge', tag && `badge--${tag}`, variant && `badge--${variant}`]} title={title}>{text}</span>
